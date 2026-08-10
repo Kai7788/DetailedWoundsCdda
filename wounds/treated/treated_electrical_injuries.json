@@ -6,13 +6,33 @@
       "str": "dressed minor electrical burn",
       "str_pl": "dressed minor electrical burns"
     },
-    "description": "The minor electrical burn has been cleaned and covered with a protective dressing.  The damaged skin remains mildly tender, but the local injury is protected while it heals.",
+    "description": "The minor electrical burn has been protected with a clean dressing. The damaged skin remains mildly tender, but the local injury is protected while it heals.",
     "weight": 1,
-    "limit": 2,
+    "limit": 3,
     "damage_types": [ "electric" ],
     "damage_required": [ 1000, 1000 ],
     "pain": [ 0, 2 ],
     "healing_time": [ "1 day", "4 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. A dressed minor electrical burn has no direct limb-score penalty."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_dressed_electrical_contact_burn",
+    "name": {
+      "str": "dressed electrical contact burn",
+      "str_pl": "dressed electrical contact burns"
+    },
+    "description": "The electrical contact burn has been protected with a clean dressing. The surface injury remains painful and stiff, although further mechanical irritation is reduced.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "electric" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 2, 5 ],
+    "healing_time": [ "3 days", "12 days" ],
     "limb_scores": [
       { "score": "manip", "value": 0.02 },
       { "score": "grip", "value": 0.02 },
@@ -26,37 +46,7 @@
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Treated-only wound. Contradictory BIONIC_LIMB filters prevent natural damage selection."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_dressed_electrical_contact_burn",
-    "name": {
-      "str": "dressed electrical contact burn",
-      "str_pl": "dressed electrical contact burns"
-    },
-    "description": "The electrical contact burn has been cleaned and protected with a dressing.  The surface injury remains painful and stiff, although further mechanical irritation and contamination are reduced.",
-    "weight": 1,
-    "limit": 2,
-    "damage_types": [ "electric" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 2, 5 ],
-    "healing_time": [ "3 days", "12 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.05 },
-      { "score": "grip", "value": 0.05 },
-      { "score": "lift", "value": 0.05 },
-      { "score": "block", "value": 0.07 },
-      { "score": "move_speed", "value": 0.05 },
-      { "score": "footing", "value": 0.05 },
-      { "score": "crawl", "value": 0.04 },
-      { "score": "swim", "value": 0.04 }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Treated-only wound. Dressing treats the local burn, not systemic electrical trauma."
+    "//": "Treated-only wound. Dressing treats the local contact burn, not deeper or systemic electrical trauma."
   },
 
   {
@@ -66,26 +56,86 @@
       "str": "dressed deep electrical burn",
       "str_pl": "dressed deep electrical burns"
     },
-    "description": "The visible electrical burn has been cleaned and covered, but significant damage remains beneath the surface.  Deep tissue may still be painful, weak, or numb despite the protected external wound.",
+    "description": "The visible electrical burn has been protected, but significant damage remains beneath the surface. Deep tissue may still be painful, weak, or numb despite the protected external wound.",
     "weight": 1,
-    "limit": 1,
+    "limit": 2,
     "damage_types": [ "electric" ],
     "damage_required": [ 1000, 1000 ],
     "pain": [ 4, 8 ],
     "healing_time": [ "8 days", "28 days" ],
     "limb_scores": [
-      { "score": "manip", "value": 0.10 },
-      { "score": "grip", "value": 0.10 },
-      { "score": "lift", "value": 0.10 },
-      { "score": "block", "value": 0.14 },
-      { "score": "move_speed", "value": 0.10 },
-      { "score": "footing", "value": 0.10 },
-      { "score": "crawl", "value": 0.08 },
-      { "score": "swim", "value": 0.08 }
+      { "score": "manip", "value": 0.06 },
+      { "score": "grip", "value": 0.06 },
+      { "score": "lift", "value": 0.05 },
+      { "score": "block", "value": 0.08 },
+      { "score": "move_speed", "value": 0.07 },
+      { "score": "footing", "value": 0.07 },
+      { "score": "crawl", "value": 0.05 },
+      { "score": "swim", "value": 0.04 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "Treated-only wound. Deep electrical damage may coexist with separate muscle or nerve injuries."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_debrided_severe_electrical_tissue_injury",
+    "name": {
+      "str": "debrided severe electrical tissue injury",
+      "str_pl": "debrided severe electrical tissue injuries"
+    },
+    "description": "Loose and clearly nonviable tissue has been removed from the severe electrical injury and the remaining wound has been protected. Deep tissue damage remains substantial, but the local injury is now able to begin a prolonged recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "electric" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 10 ],
+    "healing_time": [ "18 days", "60 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.11 },
+      { "score": "grip", "value": 0.11 },
+      { "score": "lift", "value": 0.10 },
+      { "score": "block", "value": 0.15 },
+      { "score": "move_speed", "value": 0.13 },
+      { "score": "footing", "value": 0.13 },
+      { "score": "crawl", "value": 0.09 },
+      { "score": "swim", "value": 0.08 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Debridement removes nonviable local tissue but does not resolve separate muscle, tendon, nerve, or systemic electrical complications."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_debrided_extensive_electrical_tissue_destruction",
+    "name": {
+      "str": "debrided extensive electrical tissue destruction",
+      "str_pl": "debrided extensive electrical tissue injuries"
+    },
+    "description": "Extensive dead and badly damaged tissue has been removed from the electrical injury and the remaining wound has been heavily protected. Severe deep tissue destruction remains, but the injury has been brought into a condition where long-term recovery can begin.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "electric" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 6, 12 ],
+    "healing_time": [ "35 days", "105 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.20 },
+      { "score": "grip", "value": 0.20 },
+      { "score": "lift", "value": 0.18 },
+      { "score": "block", "value": 0.25 },
+      { "score": "move_speed", "value": 0.22 },
+      { "score": "footing", "value": 0.22 },
+      { "score": "crawl", "value": 0.15 },
+      { "score": "swim", "value": 0.13 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Major local treatment makes healing possible, while structural and systemic complications remain independent."
   }
 ]

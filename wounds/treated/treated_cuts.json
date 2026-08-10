@@ -6,13 +6,33 @@
       "str": "dressed scratch",
       "str_pl": "dressed scratches"
     },
-    "description": "The superficial scratch has been cleaned and covered with a simple dressing.  The damaged skin remains mildly tender but is protected from further irritation and contamination.",
+    "description": "The superficial scratch has been cleaned and covered with a simple dressing. The damaged skin remains mildly tender but is protected from further irritation and contamination.",
     "weight": 1,
     "limit": 3,
     "damage_types": [ "cut" ],
     "damage_required": [ 1000, 1000 ],
     "pain": [ 0, 1 ],
     "healing_time": [ "6 hours", "1 day" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. A dressed scratch causes no direct limb-score penalty."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_dressed_shallow_cut",
+    "name": {
+      "str": "dressed shallow cut",
+      "str_pl": "dressed shallow cuts"
+    },
+    "description": "The shallow cut has been cleaned and covered. The wound remains tender but is protected while the damaged skin closes.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 0, 2 ],
+    "healing_time": [ "12 hours", "3 days" ],
     "limb_scores": [
       { "score": "manip", "value": 0.01 },
       { "score": "grip", "value": 0.01 },
@@ -28,39 +48,12 @@
 
   {
     "type": "wound",
-    "id": "dw_dressed_shallow_cut",
-    "name": {
-      "str": "dressed shallow cut",
-      "str_pl": "dressed shallow cuts"
-    },
-    "description": "The shallow cut has been cleaned and covered.  The wound remains tender but is protected while the damaged skin closes.",
-    "weight": 1,
-    "limit": 3,
-    "damage_types": [ "cut" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 0, 2 ],
-    "healing_time": [ "12 hours", "3 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.02 },
-      { "score": "grip", "value": 0.02 },
-      { "score": "block", "value": 0.02 },
-      { "score": "move_speed", "value": 0.02 },
-      { "score": "footing", "value": 0.02 }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Treated-only wound."
-  },
-
-  {
-    "type": "wound",
     "id": "dw_cleaned_laceration",
     "name": {
       "str": "cleaned laceration",
       "str_pl": "cleaned lacerations"
     },
-    "description": "The laceration has been thoroughly irrigated and disinfected.  The wound remains open and painful, but debris and contamination have been removed in preparation for closure or natural healing.",
+    "description": "The laceration has been thoroughly irrigated and disinfected. The wound remains open and painful, but debris and contamination have been removed in preparation for closure or natural healing.",
     "weight": 1,
     "limit": 2,
     "damage_types": [ "cut" ],
@@ -68,19 +61,19 @@
     "pain": [ 1, 4 ],
     "healing_time": [ "2 days", "8 days" ],
     "limb_scores": [
-      { "score": "manip", "value": 0.05 },
-      { "score": "grip", "value": 0.05 },
-      { "score": "lift", "value": 0.04 },
-      { "score": "block", "value": 0.07 },
-      { "score": "move_speed", "value": 0.05 },
-      { "score": "footing", "value": 0.05 },
-      { "score": "crawl", "value": 0.03 },
-      { "score": "swim", "value": 0.03 }
+      { "score": "manip", "value": 0.02 },
+      { "score": "grip", "value": 0.02 },
+      { "score": "lift", "value": 0.02 },
+      { "score": "block", "value": 0.04 },
+      { "score": "move_speed", "value": 0.03 },
+      { "score": "footing", "value": 0.03 },
+      { "score": "crawl", "value": 0.02 },
+      { "score": "swim", "value": 0.02 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Clean but still open wound."
+    "//": "Clean but still open wound. It may heal naturally or be closed with sutures."
   },
 
   {
@@ -90,7 +83,7 @@
       "str": "sutured laceration",
       "str_pl": "sutured lacerations"
     },
-    "description": "The cleaned edges of the laceration have been brought together with sutures.  The wound remains tender and vulnerable to strain, but the tissue is now positioned for more orderly healing.",
+    "description": "The cleaned edges of the laceration have been brought together with proper sutures. The wound remains tender and vulnerable to strain, but the tissue is positioned for orderly healing.",
     "weight": 1,
     "limit": 2,
     "damage_types": [ "cut" ],
@@ -98,10 +91,40 @@
     "pain": [ 1, 3 ],
     "healing_time": [ "2 days", "6 days" ],
     "limb_scores": [
-      { "score": "manip", "value": 0.03 },
-      { "score": "grip", "value": 0.03 },
-      { "score": "lift", "value": 0.03 },
-      { "score": "block", "value": 0.05 },
+      { "score": "manip", "value": 0.01 },
+      { "score": "grip", "value": 0.01 },
+      { "score": "lift", "value": 0.01 },
+      { "score": "block", "value": 0.02 },
+      { "score": "move_speed", "value": 0.02 },
+      { "score": "footing", "value": 0.02 },
+      { "score": "crawl", "value": 0.01 },
+      { "score": "swim", "value": 0.01 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Properly sutured treated-only wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_improvised_sutured_laceration",
+    "name": {
+      "str": "improvised sutured laceration",
+      "str_pl": "improvised sutured lacerations"
+    },
+    "description": "The cleaned laceration has been closed using improvised suturing materials. The wound edges are held together, but the closure is less reliable and more vulnerable to strain and contamination than proper suturing.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 1, 4 ],
+    "healing_time": [ "3 days", "8 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.02 },
+      { "score": "grip", "value": 0.02 },
+      { "score": "lift", "value": 0.02 },
+      { "score": "block", "value": 0.03 },
       { "score": "move_speed", "value": 0.03 },
       { "score": "footing", "value": 0.03 },
       { "score": "crawl", "value": 0.02 },
@@ -110,7 +133,7 @@
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Sutured treated-only wound."
+    "//": "Treated-only wound. Later EOCs should give improvised sutures greater reopening and contamination risk."
   },
 
   {
@@ -120,7 +143,7 @@
       "str": "cleaned deep laceration",
       "str_pl": "cleaned deep lacerations"
     },
-    "description": "The deep wound has been thoroughly irrigated and disinfected.  Significant tissue remains exposed and damaged, and movement continues to pull painfully at the open wound.",
+    "description": "The deep wound has been thoroughly irrigated and disinfected. Significant tissue remains exposed and damaged, and movement continues to pull painfully at the open wound.",
     "weight": 1,
     "limit": 2,
     "damage_types": [ "cut" ],
@@ -128,14 +151,14 @@
     "pain": [ 3, 7 ],
     "healing_time": [ "6 days", "20 days" ],
     "limb_scores": [
-      { "score": "manip", "value": 0.10 },
-      { "score": "grip", "value": 0.10 },
-      { "score": "lift", "value": 0.08 },
-      { "score": "block", "value": 0.13 },
-      { "score": "move_speed", "value": 0.10 },
-      { "score": "footing", "value": 0.10 },
-      { "score": "crawl", "value": 0.06 },
-      { "score": "swim", "value": 0.06 }
+      { "score": "manip", "value": 0.06 },
+      { "score": "grip", "value": 0.06 },
+      { "score": "lift", "value": 0.05 },
+      { "score": "block", "value": 0.09 },
+      { "score": "move_speed", "value": 0.07 },
+      { "score": "footing", "value": 0.07 },
+      { "score": "crawl", "value": 0.04 },
+      { "score": "swim", "value": 0.04 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
@@ -150,7 +173,7 @@
       "str": "sutured deep laceration",
       "str_pl": "sutured deep lacerations"
     },
-    "description": "The cleaned deep laceration has been closed with sutures.  Deep tissues remain injured and the wound must be protected from excessive strain while the layers beneath the skin recover.",
+    "description": "The cleaned deep laceration has been closed with proper sutures. Deep tissues remain injured and the wound must be protected from excessive strain while the layers beneath the skin recover.",
     "weight": 1,
     "limit": 2,
     "damage_types": [ "cut" ],
@@ -158,8 +181,38 @@
     "pain": [ 2, 5 ],
     "healing_time": [ "5 days", "14 days" ],
     "limb_scores": [
-      { "score": "manip", "value": 0.06 },
-      { "score": "grip", "value": 0.06 },
+      { "score": "manip", "value": 0.04 },
+      { "score": "grip", "value": 0.04 },
+      { "score": "lift", "value": 0.04 },
+      { "score": "block", "value": 0.06 },
+      { "score": "move_speed", "value": 0.05 },
+      { "score": "footing", "value": 0.05 },
+      { "score": "crawl", "value": 0.03 },
+      { "score": "swim", "value": 0.03 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Properly sutured treated-only wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_improvised_sutured_deep_laceration",
+    "name": {
+      "str": "improvised sutured deep laceration",
+      "str_pl": "improvised sutured deep lacerations"
+    },
+    "description": "The deep wound has been closed using improvised suturing materials. The closure reduces gaping and movement of the wound edges, but it is less secure and less hygienic than proper medical suturing.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 6 ],
+    "healing_time": [ "6 days", "18 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.05 },
+      { "score": "grip", "value": 0.05 },
       { "score": "lift", "value": 0.05 },
       { "score": "block", "value": 0.08 },
       { "score": "move_speed", "value": 0.06 },
@@ -170,7 +223,7 @@
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Sutured treated-only wound."
+    "//": "Treated-only wound. Later EOCs should give improvised sutures greater reopening and contamination risk."
   },
 
   {
@@ -180,27 +233,27 @@
       "str": "cleaned severe laceration",
       "str_pl": "cleaned severe lacerations"
     },
-    "description": "The extensive wound has been aggressively irrigated and disinfected.  Large areas of tissue remain exposed and badly damaged, making the injury painful and mechanically disruptive despite being clean.",
+    "description": "The extensive wound has been aggressively irrigated and disinfected. Large areas of tissue remain exposed and badly damaged, making the injury painful and mechanically disruptive despite being clean.",
     "weight": 1,
     "limit": 1,
     "damage_types": [ "cut" ],
     "damage_required": [ 1000, 1000 ],
     "pain": [ 5, 10 ],
-    "healing_time": [ "21 days", "60 days" ],
+    "healing_time": [ "18 days", "50 days" ],
     "limb_scores": [
-      { "score": "manip", "value": 0.18 },
-      { "score": "grip", "value": 0.18 },
-      { "score": "lift", "value": 0.15 },
-      { "score": "block", "value": 0.22 },
-      { "score": "move_speed", "value": 0.18 },
-      { "score": "footing", "value": 0.18 },
-      { "score": "crawl", "value": 0.12 },
-      { "score": "swim", "value": 0.10 }
+      { "score": "manip", "value": 0.11 },
+      { "score": "grip", "value": 0.11 },
+      { "score": "lift", "value": 0.09 },
+      { "score": "block", "value": 0.15 },
+      { "score": "move_speed", "value": 0.13 },
+      { "score": "footing", "value": 0.13 },
+      { "score": "crawl", "value": 0.08 },
+      { "score": "swim", "value": 0.07 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Severe wound may eventually heal open by secondary intention, but doing so is intentionally very slow."
+    "//": "A severe cleaned wound may heal open by secondary intention, but recovery is intentionally slow."
   },
 
   {
@@ -210,7 +263,7 @@
       "str": "sutured severe laceration",
       "str_pl": "sutured severe lacerations"
     },
-    "description": "The extensive cleaned wound has been carefully closed with multiple sutures.  The damaged tissue remains weak and painful, but closure has substantially improved stability and the conditions for healing.",
+    "description": "The extensive cleaned wound has been carefully closed with proper sutures. The damaged tissue remains weak and painful, but closure has substantially improved stability and the conditions for healing.",
     "weight": 1,
     "limit": 1,
     "damage_types": [ "cut" ],
@@ -218,19 +271,49 @@
     "pain": [ 4, 8 ],
     "healing_time": [ "14 days", "35 days" ],
     "limb_scores": [
-      { "score": "manip", "value": 0.12 },
-      { "score": "grip", "value": 0.12 },
-      { "score": "lift", "value": 0.10 },
-      { "score": "block", "value": 0.15 },
-      { "score": "move_speed", "value": 0.12 },
-      { "score": "footing", "value": 0.12 },
-      { "score": "crawl", "value": 0.08 },
-      { "score": "swim", "value": 0.07 }
+      { "score": "manip", "value": 0.08 },
+      { "score": "grip", "value": 0.08 },
+      { "score": "lift", "value": 0.07 },
+      { "score": "block", "value": 0.11 },
+      { "score": "move_speed", "value": 0.09 },
+      { "score": "footing", "value": 0.09 },
+      { "score": "crawl", "value": 0.06 },
+      { "score": "swim", "value": 0.05 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Sutured treated-only wound. It remains a major injury despite successful closure."
+    "//": "Properly sutured treated-only wound. It remains a major injury despite successful closure."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_improvised_sutured_severe_laceration",
+    "name": {
+      "str": "improvised sutured severe laceration",
+      "str_pl": "improvised sutured severe lacerations"
+    },
+    "description": "The extensive wound has been closed using improvised suturing materials. The closure reduces gaping and provides some mechanical stability, but the large wound remains vulnerable to contamination, failure, and reopening.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 9 ],
+    "healing_time": [ "18 days", "45 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.10 },
+      { "score": "grip", "value": 0.10 },
+      { "score": "lift", "value": 0.08 },
+      { "score": "block", "value": 0.13 },
+      { "score": "move_speed", "value": 0.11 },
+      { "score": "footing", "value": 0.11 },
+      { "score": "crawl", "value": 0.07 },
+      { "score": "swim", "value": 0.06 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Later EOCs should give improvised sutures substantially greater reopening and contamination risk."
   },
 
   {
@@ -240,7 +323,7 @@
       "str": "debrided avulsion wound",
       "str_pl": "debrided avulsion wounds"
     },
-    "description": "Loose and visibly nonviable tissue has been removed from the avulsion wound and the area has been thoroughly irrigated.  A substantial tissue defect remains, leaving the body part painful, exposed, and functionally impaired during a long recovery.",
+    "description": "Loose and visibly nonviable tissue has been removed from the avulsion wound and the area has been thoroughly irrigated. A substantial tissue defect remains, leaving the body part painful, exposed, and functionally impaired during a long recovery.",
     "weight": 1,
     "limit": 1,
     "damage_types": [ "cut" ],
@@ -248,18 +331,18 @@
     "pain": [ 6, 12 ],
     "healing_time": [ "28 days", "84 days" ],
     "limb_scores": [
-      { "score": "manip", "value": 0.25 },
-      { "score": "grip", "value": 0.25 },
-      { "score": "lift", "value": 0.22 },
-      { "score": "block", "value": 0.30 },
-      { "score": "move_speed", "value": 0.25 },
-      { "score": "footing", "value": 0.25 },
-      { "score": "crawl", "value": 0.16 },
-      { "score": "swim", "value": 0.14 }
+      { "score": "manip", "value": 0.18 },
+      { "score": "grip", "value": 0.18 },
+      { "score": "lift", "value": 0.15 },
+      { "score": "block", "value": 0.22 },
+      { "score": "move_speed", "value": 0.20 },
+      { "score": "footing", "value": 0.20 },
+      { "score": "crawl", "value": 0.13 },
+      { "score": "swim", "value": 0.11 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Debridement removes damaged tissue but leaves a major open tissue defect."
+    "//": "Debridement makes healing possible but leaves a major open tissue defect."
   }
 ]

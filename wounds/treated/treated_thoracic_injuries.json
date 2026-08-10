@@ -1,0 +1,141 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_supported_cracked_rib",
+    "name": {
+      "str": "supported cracked rib",
+      "str_pl": "supported cracked ribs"
+    },
+    "description": "The cracked rib has been supported and unnecessary movement of the injured chest wall has been reduced. The bone remains painful, especially during deep breathing or forceful movement, but the injury is better protected while it heals.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "bash", "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 2, 5 ],
+    "healing_time": [ "18 days", "36 days" ],
+    "whitelist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Conservative support reduces painful movement but does not instantly repair the cracked rib."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_supported_rib_fracture",
+    "name": {
+      "str": "supported rib fracture",
+      "str_pl": "supported rib fractures"
+    },
+    "description": "The fractured rib has been supported and movement of the injured chest wall has been limited as much as practical. The fracture remains painful and vulnerable to further trauma, but recovery can proceed under more stable conditions.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 4, 8 ],
+    "healing_time": [ "28 days", "56 days" ],
+    "whitelist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Support reduces movement and pain while the fracture heals."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_stabilized_displaced_rib_fracture",
+    "name": {
+      "str": "stabilized displaced rib fracture",
+      "str_pl": "stabilized displaced rib fractures"
+    },
+    "description": "The displaced rib fracture has been stabilized as well as possible to reduce further movement of the broken bone. The rib remains improperly aligned and the surrounding tissues are still significantly traumatized, but additional damage is less likely.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 10 ],
+    "healing_time": [ "42 days", "84 days" ],
+    "whitelist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Stabilization improves mechanical safety but does not restore normal rib alignment."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_stabilized_multiple_rib_fractures",
+    "name": {
+      "str": "stabilized multiple rib fractures",
+      "str_pl": "stabilized multiple rib fractures"
+    },
+    "description": "The extensively injured chest wall has been supported to reduce movement across several fractured ribs. Breathing and torso movement remain painful, but the fractures are better protected from repeated mechanical stress.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 6, 11 ],
+    "healing_time": [ "49 days", "98 days" ],
+    "whitelist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Any respiratory complication or internal trauma remains a separate Detailed Wounds injury."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_stabilized_sternal_fracture",
+    "name": {
+      "str": "stabilized sternal fracture",
+      "str_pl": "stabilized sternal fractures"
+    },
+    "description": "The fractured sternum has been supported and excessive movement of the damaged chest wall has been restricted. Deep chest pain remains substantial, but the injury is more stable during recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 9 ],
+    "healing_time": [ "35 days", "70 days" ],
+    "whitelist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Stabilization addresses the chest wall injury but not any associated internal trauma."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_stabilized_severe_chest_wall_trauma",
+    "name": {
+      "str": "stabilized severe chest wall trauma",
+      "str_pl": "stabilized severe chest wall injuries"
+    },
+    "description": "The severely damaged chest wall has been supported and unstable areas have been protected from unnecessary movement. Extensive bruising, fractures, and deep tissue trauma remain, but the chest wall is now more mechanically stable.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 7, 12 ],
+    "healing_time": [ "49 days", "105 days" ],
+    "whitelist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Stabilization improves the chest wall injury while rib, respiratory, hemorrhagic, and internal injuries remain separate."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_stabilized_flail_chest",
+    "name": {
+      "str": "stabilized flail chest",
+      "str_pl": "stabilized flail chest injuries"
+    },
+    "description": "The unstable section of the chest wall has been stabilized as securely as possible. Multiple fractured ribs and extensive soft tissue trauma remain, but paradoxical movement of the injured segment has been reduced enough for recovery to begin.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 8, 14 ],
+    "healing_time": [ "70 days", "140 days" ],
+    "whitelist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Stabilization converts the otherwise non-healing flail chest into a recoverable state. Respiratory impairment and internal injuries remain separate complications."
+  }
+]

@@ -6,7 +6,7 @@
       "str": "irrigated corneal abrasion",
       "str_pl": "irrigated corneal abrasions"
     },
-    "description": "The injured eye has been carefully flushed, removing loose particles and contaminants from its surface.  The cornea remains scratched and sensitive, causing discomfort and mildly impaired vision while it heals.",
+    "description": "The injured eye has been carefully flushed, removing loose particles and contaminants from its surface. The cornea remains scratched and sensitive, causing discomfort and mildly impaired vision while it heals.",
     "weight": 1,
     "limit": 1,
     "damage_types": [ "cut" ],
@@ -20,7 +20,7 @@
       },
       {
         "score": "night_vis",
-        "value": 0.04
+        "value": 0.05
       },
       {
         "score": "reaction",
@@ -40,7 +40,7 @@
       "str": "irrigated ocular chemical burn",
       "str_pl": "irrigated ocular chemical burns"
     },
-    "description": "The chemical contaminant has been thoroughly flushed from the eye.  Continued corrosive exposure has been stopped, but the ocular surface remains inflamed and damaged, leaving vision impaired and the eye painfully sensitive.",
+    "description": "The chemical contaminant has been thoroughly flushed from the eye. Continued corrosive exposure has been stopped, but the ocular surface remains inflamed and damaged, leaving vision impaired and the eye painfully sensitive.",
     "weight": 1,
     "limit": 1,
     "damage_types": [ "acid" ],
@@ -74,9 +74,9 @@
       "str": "dressed split lip",
       "str_pl": "dressed split lips"
     },
-    "description": "The split lip has been cleaned and protected as well as possible.  The tissue remains swollen and tender, making eating and drinking mildly uncomfortable while the wound closes.",
+    "description": "The split lip has been cleaned and protected as well as possible. The tissue remains swollen and tender, making eating and drinking mildly uncomfortable while the wound closes.",
     "weight": 1,
-    "limit": 2,
+    "limit": 1,
     "damage_types": [ "cut" ],
     "damage_required": [ 1000, 1000 ],
     "pain": [ 0, 2 ],
@@ -84,7 +84,7 @@
     "limb_scores": [
       {
         "score": "consume_solid",
-        "value": 0.04
+        "value": 0.03
       },
       {
         "score": "consume_liquid",
@@ -108,7 +108,7 @@
       "str": "cleaned oral laceration",
       "str_pl": "cleaned oral lacerations"
     },
-    "description": "The lacerated tissue inside the mouth has been thoroughly cleaned.  The wound remains open, swollen, and painful, making chewing and swallowing uncomfortable until the damaged tissue heals.",
+    "description": "The lacerated tissue inside the mouth has been thoroughly cleaned. The wound remains open, swollen, and painful, making chewing and swallowing uncomfortable until the damaged tissue heals.",
     "weight": 1,
     "limit": 2,
     "damage_types": [ "cut" ],
@@ -122,11 +122,11 @@
       },
       {
         "score": "consume_liquid",
-        "value": 0.05
+        "value": 0.06
       },
       {
         "score": "manip",
-        "value": 0.03
+        "value": 0.01
       }
     ],
     "whitelist_body_part_types": [ "mouth" ],
@@ -142,7 +142,7 @@
       "str": "cleaned deep facial laceration",
       "str_pl": "cleaned deep facial lacerations"
     },
-    "description": "The deep facial wound has been thoroughly irrigated and disinfected.  Significant tissue remains divided and exposed, leaving the area painful, swollen, and mechanically impaired despite being clean.",
+    "description": "The deep facial wound has been thoroughly irrigated and disinfected. Significant tissue remains divided and exposed, leaving the area painful, swollen, and mechanically impaired despite being clean.",
     "weight": 1,
     "limit": 1,
     "damage_types": [ "cut" ],
@@ -156,20 +156,84 @@
       },
       {
         "score": "consume_liquid",
-        "value": 0.09
-      },
-      {
-        "score": "breathing",
-        "value": 0.04
+        "value": 0.10
       },
       {
         "score": "manip",
-        "value": 0.05
+        "value": 0.03
       }
     ],
     "whitelist_body_part_types": [ "mouth" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Treated-only wound. A deep facial laceration remains a significant injury after cleaning and may later be eligible for closure."
+    "//": "Cleaned but still open. Proper or improvised closure can further improve the wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_sutured_deep_facial_laceration",
+    "name": {
+      "str": "sutured deep facial laceration",
+      "str_pl": "sutured deep facial lacerations"
+    },
+    "description": "The cleaned deep facial wound has been carefully closed with proper sutures. The underlying tissue remains injured and painful, but the wound edges are securely approximated and better protected during healing.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 6 ],
+    "healing_time": [ "6 days", "20 days" ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.11
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.07
+      },
+      {
+        "score": "manip",
+        "value": 0.02
+      }
+    ],
+    "whitelist_body_part_types": [ "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Properly sutured treated-only wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_improvised_sutured_deep_facial_laceration",
+    "name": {
+      "str": "improvised sutured deep facial laceration",
+      "str_pl": "improvised sutured deep facial lacerations"
+    },
+    "description": "The deep facial wound has been closed using improvised suturing materials. The wound edges are held together and movement is reduced, but the closure is less secure and less hygienic than proper suturing.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 4, 7 ],
+    "healing_time": [ "8 days", "24 days" ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.14
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.09
+      },
+      {
+        "score": "manip",
+        "value": 0.03
+      }
+    ],
+    "whitelist_body_part_types": [ "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Later EOCs should give improvised facial sutures greater contamination and reopening risk."
   }
 ]

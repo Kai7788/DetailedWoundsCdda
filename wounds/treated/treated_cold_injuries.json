@@ -1,0 +1,290 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_rewarmed_mild_cold_injury",
+    "name": {
+      "str": "rewarmed mild cold injury",
+      "str_pl": "rewarmed mild cold injuries"
+    },
+    "description": "The mildly cold-damaged tissue has been gradually rewarmed. Circulation has returned and the area remains tender and sensitive, but no significant lasting tissue damage is apparent.",
+    "weight": 1,
+    "limit": 3,
+    "damage_types": [ "cold" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 0, 1 ],
+    "healing_time": [ "6 hours", "2 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Controlled rewarming has restored circulation and the remaining superficial cold injury can heal normally."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_rewarmed_superficial_cold_injury",
+    "name": {
+      "str": "rewarmed superficial cold injury",
+      "str_pl": "rewarmed superficial cold injuries"
+    },
+    "description": "The superficially frozen tissue has been gradually rewarmed. The area remains swollen, painful, and unusually sensitive, but circulation has returned and the surviving tissue can begin to recover.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "cold" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 1, 3 ],
+    "healing_time": [ "2 days", "7 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.03
+      },
+      {
+        "score": "grip",
+        "value": 0.03
+      },
+      {
+        "score": "footing",
+        "value": 0.03
+      },
+      {
+        "score": "move_speed",
+        "value": 0.02
+      }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Rewarming improves circulation but does not instantly reverse superficial tissue damage."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_rewarmed_deep_cold_injury",
+    "name": {
+      "str": "rewarmed deep cold injury",
+      "str_pl": "rewarmed deep cold injuries"
+    },
+    "description": "The deeply cold-damaged tissue has been carefully rewarmed. Circulation has partially recovered, but swelling, pain, numbness, and substantial tissue injury remain and will require a prolonged recovery.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "cold" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 2, 6 ],
+    "healing_time": [ "8 days", "24 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.10
+      },
+      {
+        "score": "grip",
+        "value": 0.10
+      },
+      {
+        "score": "reaction",
+        "value": 0.06
+      },
+      {
+        "score": "lift",
+        "value": 0.05
+      },
+      {
+        "score": "block",
+        "value": 0.06
+      },
+      {
+        "score": "footing",
+        "value": 0.07
+      },
+      {
+        "score": "move_speed",
+        "value": 0.06
+      },
+      {
+        "score": "crawl",
+        "value": 0.05
+      },
+      {
+        "score": "swim",
+        "value": 0.04
+      }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Deep cold damage remains significant even after successful rewarming."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_rewarmed_severe_cold_injury",
+    "name": {
+      "str": "rewarmed severe cold injury",
+      "str_pl": "rewarmed severe cold injuries"
+    },
+    "description": "The severely frozen tissue has been carefully rewarmed and circulation has returned where the tissue remains viable. The body part is still badly swollen, painful, numb, and functionally impaired, and some damaged tissue may not fully recover.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "cold" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 8 ],
+    "healing_time": [ "18 days", "50 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.20
+      },
+      {
+        "score": "grip",
+        "value": 0.20
+      },
+      {
+        "score": "reaction",
+        "value": 0.14
+      },
+      {
+        "score": "lift",
+        "value": 0.10
+      },
+      {
+        "score": "block",
+        "value": 0.14
+      },
+      {
+        "score": "footing",
+        "value": 0.17
+      },
+      {
+        "score": "move_speed",
+        "value": 0.14
+      },
+      {
+        "score": "crawl",
+        "value": 0.10
+      },
+      {
+        "score": "swim",
+        "value": 0.09
+      }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Severe cold injury can recover after rewarming, while separate tissue necrosis or nerve complications remain independent."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_rewarmed_extensive_cold_injury",
+    "name": {
+      "str": "rewarmed extensive cold injury",
+      "str_pl": "rewarmed extensive cold injuries"
+    },
+    "description": "The extensively frozen body part has been rewarmed, restoring circulation to tissue that remains viable. Large areas are still deeply damaged, discolored, numb, and severely impaired, with substantial nonviable tissue remaining.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "cold" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 4, 9 ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.36
+      },
+      {
+        "score": "grip",
+        "value": 0.36
+      },
+      {
+        "score": "reaction",
+        "value": 0.25
+      },
+      {
+        "score": "lift",
+        "value": 0.22
+      },
+      {
+        "score": "block",
+        "value": 0.26
+      },
+      {
+        "score": "footing",
+        "value": 0.30
+      },
+      {
+        "score": "move_speed",
+        "value": 0.26
+      },
+      {
+        "score": "crawl",
+        "value": 0.18
+      },
+      {
+        "score": "swim",
+        "value": 0.17
+      }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only intermediate wound. Rewarming stops ongoing freezing injury, but extensive nonviable tissue prevents normal recovery until debridement."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_debrided_extensive_cold_injury",
+    "name": {
+      "str": "debrided extensive cold injury",
+      "str_pl": "debrided extensive cold injuries"
+    },
+    "description": "Clearly nonviable tissue has been removed from the extensively cold-damaged area after rewarming. A large amount of deep tissue remains injured and functionally compromised, but the surviving tissue can now begin a long recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "cold" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 4, 8 ],
+    "healing_time": [ "35 days", "100 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.28
+      },
+      {
+        "score": "grip",
+        "value": 0.28
+      },
+      {
+        "score": "reaction",
+        "value": 0.20
+      },
+      {
+        "score": "lift",
+        "value": 0.18
+      },
+      {
+        "score": "block",
+        "value": 0.21
+      },
+      {
+        "score": "footing",
+        "value": 0.24
+      },
+      {
+        "score": "move_speed",
+        "value": 0.21
+      },
+      {
+        "score": "crawl",
+        "value": 0.15
+      },
+      {
+        "score": "swim",
+        "value": 0.14
+      }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Debridement makes long-term recovery possible, while separate nerve injury or other structural complications remain independent."
+  }
+]

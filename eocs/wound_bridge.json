@@ -197,6 +197,7 @@
 
             "dw_irrigated_cornea_abrasion",
             "dw_irrigated_ocular_chemical_burn",
+
             "dw_dressed_split_lip",
             "dw_cleaned_oral_laceration",
             "dw_cleaned_deep_facial_laceration",
@@ -218,8 +219,21 @@
             { "context_val": "new_wound_id" },
 
             "dw_debrided_avulsion_wound",
+
+            "dw_debrided_severe_penetrating_wound",
+            "dw_debrided_devastating_penetrating_wound",
+
             "dw_debrided_severe_gunshot_wound",
-            "dw_debrided_full_thickness_burn"
+            "dw_debrided_devastating_ballistic_wound",
+
+            "dw_debrided_full_thickness_burn",
+            "dw_debrided_extensive_full_thickness_burn",
+
+            "dw_debrided_full_thickness_chemical_burn",
+            "dw_debrided_extensive_chemical_burn",
+
+            "dw_debrided_severe_electrical_tissue_injury",
+            "dw_debrided_extensive_electrical_tissue_destruction"
           ]
         },
         "then": {

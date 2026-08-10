@@ -1,0 +1,599 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_supported_muscle_strain",
+    "name": {
+      "str": "supported muscle strain",
+      "str_pl": "supported muscle strains"
+    },
+    "description": "The strained muscle has been supported and protected from excessive movement. The tissue remains sore and weakened, but reduced mechanical stress allows it to recover more reliably.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 1, 3 ],
+    "healing_time": [ "3 days", "10 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.03 },
+      { "score": "grip", "value": 0.03 },
+      { "score": "lift", "value": 0.05 },
+      { "score": "block", "value": 0.05 },
+      { "score": "move_speed", "value": 0.04 },
+      { "score": "footing", "value": 0.04 },
+      { "score": "crawl", "value": 0.03 },
+      { "score": "swim", "value": 0.03 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Conservative support reduces strain while the muscle heals."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_supported_partial_muscle_tear",
+    "name": {
+      "str": "supported partial muscle tear",
+      "str_pl": "supported partial muscle tears"
+    },
+    "description": "The partially torn muscle has been supported and movement through the injured tissue has been restricted. The muscle remains painful and weak, but the surviving fibers can begin to repair.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab", "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 6 ],
+    "healing_time": [ "10 days", "30 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.07 },
+      { "score": "grip", "value": 0.08 },
+      { "score": "lift", "value": 0.12 },
+      { "score": "block", "value": 0.13 },
+      { "score": "move_speed", "value": 0.10 },
+      { "score": "footing", "value": 0.10 },
+      { "score": "crawl", "value": 0.08 },
+      { "score": "swim", "value": 0.07 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_repaired_muscle_rupture",
+    "name": {
+      "str": "repaired muscle rupture",
+      "str_pl": "repaired muscle ruptures"
+    },
+    "description": "The completely ruptured muscle has been approximated and repaired as well as possible. The muscle remains severely weakened and painful, but continuity has been restored sufficiently for a long recovery to begin.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab", "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 9 ],
+    "healing_time": [ "35 days", "90 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.16 },
+      { "score": "grip", "value": 0.18 },
+      { "score": "lift", "value": 0.27 },
+      { "score": "block", "value": 0.28 },
+      { "score": "move_speed", "value": 0.23 },
+      { "score": "footing", "value": 0.23 },
+      { "score": "crawl", "value": 0.17 },
+      { "score": "swim", "value": 0.16 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Repair converts the otherwise non-healing muscle rupture into a recoverable state."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_repaired_muscle_laceration",
+    "name": {
+      "str": "repaired muscle laceration",
+      "str_pl": "repaired muscle lacerations"
+    },
+    "description": "The divided muscle fibers have been carefully approximated and supported after the overlying wound was treated. Deep muscular damage remains, but the tissue is now positioned for more orderly healing.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "cut", "stab", "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 7 ],
+    "healing_time": [ "14 days", "42 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.08 },
+      { "score": "grip", "value": 0.09 },
+      { "score": "lift", "value": 0.14 },
+      { "score": "block", "value": 0.15 },
+      { "score": "move_speed", "value": 0.12 },
+      { "score": "footing", "value": 0.12 },
+      { "score": "crawl", "value": 0.09 },
+      { "score": "swim", "value": 0.08 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. The overlying primary wound and contamination remain separate concerns."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_repaired_severe_muscle_laceration",
+    "name": {
+      "str": "repaired severe muscle laceration",
+      "str_pl": "repaired severe muscle lacerations"
+    },
+    "description": "The extensively divided muscle has been repaired and supported. Large areas of traumatized tissue remain weak and painful, but the muscle has regained enough continuity for prolonged recovery to begin.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "cut", "stab", "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 10 ],
+    "healing_time": [ "28 days", "75 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.14 },
+      { "score": "grip", "value": 0.16 },
+      { "score": "lift", "value": 0.23 },
+      { "score": "block", "value": 0.25 },
+      { "score": "move_speed", "value": 0.20 },
+      { "score": "footing", "value": 0.20 },
+      { "score": "crawl", "value": 0.15 },
+      { "score": "swim", "value": 0.14 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Repair makes the otherwise non-healing severe muscle laceration recoverable."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_supported_tendon_strain",
+    "name": {
+      "str": "supported tendon strain",
+      "str_pl": "supported tendon strains"
+    },
+    "description": "The strained tendon has been supported and protected from excessive loading. It remains painful during movement, but reduced tension allows the damaged fibers to recover.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 1, 4 ],
+    "healing_time": [ "7 days", "21 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.05 },
+      { "score": "grip", "value": 0.06 },
+      { "score": "lift", "value": 0.07 },
+      { "score": "block", "value": 0.07 },
+      { "score": "move_speed", "value": 0.06 },
+      { "score": "footing", "value": 0.07 },
+      { "score": "crawl", "value": 0.04 },
+      { "score": "swim", "value": 0.04 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_immobilized_partial_tendon_tear",
+    "name": {
+      "str": "immobilized partial tendon tear",
+      "str_pl": "immobilized partial tendon tears"
+    },
+    "description": "The partially torn tendon has been immobilized to prevent further separation of its fibers. The limb remains substantially weakened, but the protected tendon can begin a slow recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab", "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 7 ],
+    "healing_time": [ "21 days", "56 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.12 },
+      { "score": "grip", "value": 0.15 },
+      { "score": "lift", "value": 0.18 },
+      { "score": "block", "value": 0.18 },
+      { "score": "move_speed", "value": 0.15 },
+      { "score": "footing", "value": 0.18 },
+      { "score": "crawl", "value": 0.10 },
+      { "score": "swim", "value": 0.09 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_repaired_tendon_rupture",
+    "name": {
+      "str": "repaired tendon rupture",
+      "str_pl": "repaired tendon ruptures"
+    },
+    "description": "The ruptured tendon has been repaired and immobilized. Mechanical continuity has been restored, but the repaired tendon remains extremely weak and must recover before normal loading is possible.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab", "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 4, 8 ],
+    "healing_time": [ "42 days", "105 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.20 },
+      { "score": "grip", "value": 0.26 },
+      { "score": "lift", "value": 0.32 },
+      { "score": "block", "value": 0.30 },
+      { "score": "move_speed", "value": 0.26 },
+      { "score": "footing", "value": 0.32 },
+      { "score": "crawl", "value": 0.18 },
+      { "score": "swim", "value": 0.16 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Tendon repair converts the otherwise non-healing rupture into a prolonged recovery state."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_repaired_severed_tendon",
+    "name": {
+      "str": "repaired severed tendon",
+      "str_pl": "repaired severed tendons"
+    },
+    "description": "The completely severed tendon has been reconnected and immobilized. The repair is fragile and the limb remains profoundly impaired while the tendon slowly regains structural integrity.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "cut", "stab", "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 9 ],
+    "healing_time": [ "60 days", "140 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.28 },
+      { "score": "grip", "value": 0.36 },
+      { "score": "lift", "value": 0.42 },
+      { "score": "block", "value": 0.40 },
+      { "score": "move_speed", "value": 0.35 },
+      { "score": "footing", "value": 0.42 },
+      { "score": "crawl", "value": 0.24 },
+      { "score": "swim", "value": 0.21 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Complete tendon severance remains a major functional injury even after successful repair."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_supported_ligament_sprain",
+    "name": {
+      "str": "supported ligament sprain",
+      "str_pl": "supported ligament sprains"
+    },
+    "description": "The sprained joint has been supported to limit painful movement and further stretching of the injured ligament. Swelling and instability remain but should improve with recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 1, 4 ],
+    "healing_time": [ "5 days", "18 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.04 },
+      { "score": "grip", "value": 0.04 },
+      { "score": "block", "value": 0.07 },
+      { "score": "move_speed", "value": 0.07 },
+      { "score": "footing", "value": 0.08 },
+      { "score": "crawl", "value": 0.05 },
+      { "score": "swim", "value": 0.04 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_immobilized_partial_ligament_tear",
+    "name": {
+      "str": "immobilized partial ligament tear",
+      "str_pl": "immobilized partial ligament tears"
+    },
+    "description": "The partially torn ligament has been immobilized and the joint supported. Significant pain and instability remain, but further separation of the damaged fibers has been reduced.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 7 ],
+    "healing_time": [ "18 days", "49 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.09 },
+      { "score": "grip", "value": 0.09 },
+      { "score": "block", "value": 0.15 },
+      { "score": "move_speed", "value": 0.15 },
+      { "score": "footing", "value": 0.18 },
+      { "score": "crawl", "value": 0.10 },
+      { "score": "swim", "value": 0.08 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_repaired_ligament_rupture",
+    "name": {
+      "str": "repaired ligament rupture",
+      "str_pl": "repaired ligament ruptures"
+    },
+    "description": "The completely ruptured ligament has been repaired and the joint firmly immobilized. The joint remains weak and unstable under load, but healing can now begin.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab", "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 4, 8 ],
+    "healing_time": [ "42 days", "105 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.16 },
+      { "score": "grip", "value": 0.16 },
+      { "score": "block", "value": 0.28 },
+      { "score": "move_speed", "value": 0.27 },
+      { "score": "footing", "value": 0.32 },
+      { "score": "crawl", "value": 0.18 },
+      { "score": "swim", "value": 0.14 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Repair makes the otherwise non-healing ligament rupture recoverable."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_reduced_joint_subluxation",
+    "name": {
+      "str": "reduced joint subluxation",
+      "str_pl": "reduced joint subluxations"
+    },
+    "description": "The partially displaced joint has been returned to its normal position. Surrounding ligaments and soft tissues remain swollen and painful, leaving temporary instability during recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 2, 5 ],
+    "healing_time": [ "7 days", "21 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.06 },
+      { "score": "grip", "value": 0.06 },
+      { "score": "block", "value": 0.10 },
+      { "score": "move_speed", "value": 0.10 },
+      { "score": "footing", "value": 0.12 },
+      { "score": "crawl", "value": 0.07 },
+      { "score": "swim", "value": 0.06 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Reduction restores alignment but surrounding soft tissue still requires recovery."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_reduced_joint_dislocation",
+    "name": {
+      "str": "reduced joint dislocation",
+      "str_pl": "reduced joint dislocations"
+    },
+    "description": "The dislocated joint has been returned to its socket and stabilized. Severe stretching and damage to the surrounding capsule and ligaments remain, making the joint painful and unreliable for some time.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 7 ],
+    "healing_time": [ "14 days", "42 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.12 },
+      { "score": "grip", "value": 0.12 },
+      { "score": "block", "value": 0.20 },
+      { "score": "move_speed", "value": 0.20 },
+      { "score": "footing", "value": 0.24 },
+      { "score": "crawl", "value": 0.13 },
+      { "score": "swim", "value": 0.11 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Reduction converts the otherwise persistent dislocation into a recoverable injury."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_protected_peripheral_nerve_injury",
+    "name": {
+      "str": "protected peripheral nerve injury",
+      "str_pl": "protected peripheral nerve injuries"
+    },
+    "description": "The injured nerve and surrounding tissues have been protected from further compression and movement. Sensation and motor control remain impaired, but the nerve has a better opportunity to recover.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab", "bullet", "electric" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 2, 6 ],
+    "healing_time": [ "21 days", "70 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.10 },
+      { "score": "grip", "value": 0.11 },
+      { "score": "reaction", "value": 0.10 },
+      { "score": "lift", "value": 0.08 },
+      { "score": "block", "value": 0.10 },
+      { "score": "move_speed", "value": 0.09 },
+      { "score": "footing", "value": 0.10 },
+      { "score": "crawl", "value": 0.07 },
+      { "score": "swim", "value": 0.06 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Protection does not instantly restore nerve function."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_stabilized_severe_peripheral_nerve_injury",
+    "name": {
+      "str": "stabilized severe peripheral nerve injury",
+      "str_pl": "stabilized severe peripheral nerve injuries"
+    },
+    "description": "The severely injured nerve has been protected and the surrounding tissue stabilized. Major sensory and motor deficits remain and recovery will be slow and uncertain.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab", "bullet", "electric" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 7 ],
+    "healing_time": [ "45 days", "140 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.24 },
+      { "score": "grip", "value": 0.27 },
+      { "score": "reaction", "value": 0.25 },
+      { "score": "lift", "value": 0.19 },
+      { "score": "block", "value": 0.23 },
+      { "score": "move_speed", "value": 0.20 },
+      { "score": "footing", "value": 0.24 },
+      { "score": "crawl", "value": 0.14 },
+      { "score": "swim", "value": 0.12 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Severe nerve injury remains a long-term functional problem even after stabilization."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_repaired_nerve_severance",
+    "name": {
+      "str": "repaired nerve severance",
+      "str_pl": "repaired nerve severances"
+    },
+    "description": "The severed peripheral nerve has been reapproximated and the surrounding tissue stabilized. Major loss of sensation and motor control remains, and meaningful neurological recovery will require an extremely long period.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "cut", "stab", "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 8 ],
+    "healing_time": [ "90 days", "240 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.38 },
+      { "score": "grip", "value": 0.42 },
+      { "score": "reaction", "value": 0.40 },
+      { "score": "lift", "value": 0.30 },
+      { "score": "block", "value": 0.35 },
+      { "score": "move_speed", "value": 0.32 },
+      { "score": "footing", "value": 0.40 },
+      { "score": "crawl", "value": 0.22 },
+      { "score": "swim", "value": 0.20 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Nerve repair makes recovery possible but remains one of the longest and least functionally complete treatment paths."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_treated_soft_tissue_crush_injury",
+    "name": {
+      "str": "treated soft tissue crush injury",
+      "str_pl": "treated soft tissue crush injuries"
+    },
+    "description": "The crushed tissues have been protected, swelling managed, and further mechanical stress reduced. Significant bruising and deep tissue damage remain, but the injury can continue to recover.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 7 ],
+    "healing_time": [ "10 days", "35 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.09 },
+      { "score": "grip", "value": 0.10 },
+      { "score": "lift", "value": 0.14 },
+      { "score": "block", "value": 0.16 },
+      { "score": "move_speed", "value": 0.13 },
+      { "score": "footing", "value": 0.14 },
+      { "score": "crawl", "value": 0.09 },
+      { "score": "swim", "value": 0.08 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_debrided_severe_soft_tissue_crush_injury",
+    "name": {
+      "str": "debrided severe soft tissue crush injury",
+      "str_pl": "debrided severe soft tissue crush injuries"
+    },
+    "description": "Clearly nonviable tissue has been removed from the severe crush injury and the remaining tissue has been protected. Extensive deep trauma remains, but the body part can now begin a prolonged recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 10 ],
+    "healing_time": [ "28 days", "84 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.18 },
+      { "score": "grip", "value": 0.20 },
+      { "score": "lift", "value": 0.28 },
+      { "score": "block", "value": 0.31 },
+      { "score": "move_speed", "value": 0.26 },
+      { "score": "footing", "value": 0.28 },
+      { "score": "crawl", "value": 0.18 },
+      { "score": "swim", "value": 0.16 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Debridement converts the otherwise non-healing severe crush injury into a recoverable state."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_decompressed_compartment_syndrome",
+    "name": {
+      "str": "decompressed compartment syndrome",
+      "str_pl": "decompressed compartment syndromes"
+    },
+    "description": "The dangerously elevated pressure within the injured tissue compartment has been relieved. Muscle, nerve, and vascular tissue remain badly traumatized, but ongoing pressure-related destruction has been stopped.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 10 ],
+    "healing_time": [ "21 days", "70 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.16 },
+      { "score": "grip", "value": 0.18 },
+      { "score": "lift", "value": 0.24 },
+      { "score": "block", "value": 0.27 },
+      { "score": "move_speed", "value": 0.23 },
+      { "score": "footing", "value": 0.25 },
+      { "score": "crawl", "value": 0.16 },
+      { "score": "swim", "value": 0.14 }
+    ],
+    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Decompression stops the emergency process but does not remove any muscle or nerve injuries that developed before treatment."
+  }
+]
