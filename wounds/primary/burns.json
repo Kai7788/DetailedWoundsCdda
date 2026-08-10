@@ -32,38 +32,14 @@
     "pain": [ 3, 7 ],
     "healing_time": [ "7 days", "21 days" ],
     "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.03
-      },
-      {
-        "score": "grip",
-        "value": 0.03
-      },
-      {
-        "score": "lift",
-        "value": 0.03
-      },
-      {
-        "score": "block",
-        "value": 0.04
-      },
-      {
-        "score": "move_speed",
-        "value": 0.03
-      },
-      {
-        "score": "footing",
-        "value": 0.03
-      },
-      {
-        "score": "crawl",
-        "value": 0.02
-      },
-      {
-        "score": "swim",
-        "value": 0.02
-      }
+      { "score": "manip", "value": 0.03 },
+      { "score": "grip", "value": 0.03 },
+      { "score": "lift", "value": 0.03 },
+      { "score": "block", "value": 0.04 },
+      { "score": "move_speed", "value": 0.03 },
+      { "score": "footing", "value": 0.03 },
+      { "score": "crawl", "value": 0.02 },
+      { "score": "swim", "value": 0.02 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
@@ -84,38 +60,14 @@
     "pain": [ 6, 11 ],
     "healing_time": [ "14 days", "42 days" ],
     "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.08
-      },
-      {
-        "score": "grip",
-        "value": 0.08
-      },
-      {
-        "score": "lift",
-        "value": 0.07
-      },
-      {
-        "score": "block",
-        "value": 0.10
-      },
-      {
-        "score": "move_speed",
-        "value": 0.09
-      },
-      {
-        "score": "footing",
-        "value": 0.09
-      },
-      {
-        "score": "crawl",
-        "value": 0.06
-      },
-      {
-        "score": "swim",
-        "value": 0.05
-      }
+      { "score": "manip", "value": 0.08 },
+      { "score": "grip", "value": 0.08 },
+      { "score": "lift", "value": 0.07 },
+      { "score": "block", "value": 0.10 },
+      { "score": "move_speed", "value": 0.09 },
+      { "score": "footing", "value": 0.09 },
+      { "score": "crawl", "value": 0.06 },
+      { "score": "swim", "value": 0.05 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
@@ -135,42 +87,18 @@
     "damage_required": [ 24, 35 ],
     "pain": [ 5, 10 ],
     "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.15
-      },
-      {
-        "score": "grip",
-        "value": 0.15
-      },
-      {
-        "score": "lift",
-        "value": 0.13
-      },
-      {
-        "score": "block",
-        "value": 0.18
-      },
-      {
-        "score": "move_speed",
-        "value": 0.16
-      },
-      {
-        "score": "footing",
-        "value": 0.16
-      },
-      {
-        "score": "crawl",
-        "value": 0.11
-      },
-      {
-        "score": "swim",
-        "value": 0.10
-      }
+      { "score": "manip", "value": 0.15 },
+      { "score": "grip", "value": 0.15 },
+      { "score": "lift", "value": 0.13 },
+      { "score": "block", "value": 0.18 },
+      { "score": "move_speed", "value": 0.16 },
+      { "score": "footing", "value": 0.16 },
+      { "score": "crawl", "value": 0.11 },
+      { "score": "swim", "value": 0.10 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "No healing_time is intentional. Full-thickness burns require debridement before entering a normal healing state."
+    "//": "No natural healing. Full-thickness burns require debridement before entering a recoverable state."
   },
 
   {
@@ -186,43 +114,18 @@
     "damage_types": [ "heat" ],
     "damage_required": [ 36, 1000 ],
     "pain": [ 6, 12 ],
-    "healing_time": [ "60 days", "120 days" ],
     "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.25
-      },
-      {
-        "score": "grip",
-        "value": 0.25
-      },
-      {
-        "score": "lift",
-        "value": 0.22
-      },
-      {
-        "score": "block",
-        "value": 0.30
-      },
-      {
-        "score": "move_speed",
-        "value": 0.27
-      },
-      {
-        "score": "footing",
-        "value": 0.27
-      },
-      {
-        "score": "crawl",
-        "value": 0.18
-      },
-      {
-        "score": "swim",
-        "value": 0.16
-      }
+      { "score": "manip", "value": 0.25 },
+      { "score": "grip", "value": 0.25 },
+      { "score": "lift", "value": 0.22 },
+      { "score": "block", "value": 0.30 },
+      { "score": "move_speed", "value": 0.27 },
+      { "score": "footing", "value": 0.27 },
+      { "score": "crawl", "value": 0.18 },
+      { "score": "swim", "value": 0.16 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Healing time remains finite for now because no definitive treatment path exists yet for extensive full-thickness burns."
+    "//": "No natural healing. Extensive full-thickness burns require major debridement before entering a recoverable state."
   }
 ]

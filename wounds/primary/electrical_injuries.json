@@ -32,38 +32,14 @@
     "pain": [ 3, 6 ],
     "healing_time": [ "4 days", "14 days" ],
     "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.04
-      },
-      {
-        "score": "grip",
-        "value": 0.04
-      },
-      {
-        "score": "lift",
-        "value": 0.04
-      },
-      {
-        "score": "block",
-        "value": 0.05
-      },
-      {
-        "score": "move_speed",
-        "value": 0.04
-      },
-      {
-        "score": "footing",
-        "value": 0.04
-      },
-      {
-        "score": "crawl",
-        "value": 0.03
-      },
-      {
-        "score": "swim",
-        "value": 0.03
-      }
+      { "score": "manip", "value": 0.04 },
+      { "score": "grip", "value": 0.04 },
+      { "score": "lift", "value": 0.04 },
+      { "score": "block", "value": 0.05 },
+      { "score": "move_speed", "value": 0.04 },
+      { "score": "footing", "value": 0.04 },
+      { "score": "crawl", "value": 0.03 },
+      { "score": "swim", "value": 0.03 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
@@ -84,38 +60,14 @@
     "pain": [ 5, 10 ],
     "healing_time": [ "10 days", "35 days" ],
     "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.10
-      },
-      {
-        "score": "grip",
-        "value": 0.10
-      },
-      {
-        "score": "lift",
-        "value": 0.09
-      },
-      {
-        "score": "block",
-        "value": 0.12
-      },
-      {
-        "score": "move_speed",
-        "value": 0.10
-      },
-      {
-        "score": "footing",
-        "value": 0.10
-      },
-      {
-        "score": "crawl",
-        "value": 0.08
-      },
-      {
-        "score": "swim",
-        "value": 0.07
-      }
+      { "score": "manip", "value": 0.10 },
+      { "score": "grip", "value": 0.10 },
+      { "score": "lift", "value": 0.09 },
+      { "score": "block", "value": 0.12 },
+      { "score": "move_speed", "value": 0.10 },
+      { "score": "footing", "value": 0.10 },
+      { "score": "crawl", "value": 0.08 },
+      { "score": "swim", "value": 0.07 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
@@ -136,42 +88,18 @@
     "pain": [ 7, 13 ],
     "healing_time": [ "21 days", "70 days" ],
     "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.16
-      },
-      {
-        "score": "grip",
-        "value": 0.16
-      },
-      {
-        "score": "lift",
-        "value": 0.15
-      },
-      {
-        "score": "block",
-        "value": 0.22
-      },
-      {
-        "score": "move_speed",
-        "value": 0.18
-      },
-      {
-        "score": "footing",
-        "value": 0.18
-      },
-      {
-        "score": "crawl",
-        "value": 0.12
-      },
-      {
-        "score": "swim",
-        "value": 0.10
-      }
+      { "score": "manip", "value": 0.16 },
+      { "score": "grip", "value": 0.16 },
+      { "score": "lift", "value": 0.15 },
+      { "score": "block", "value": 0.22 },
+      { "score": "move_speed", "value": 0.18 },
+      { "score": "footing", "value": 0.18 },
+      { "score": "crawl", "value": 0.12 },
+      { "score": "swim", "value": 0.10 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Healing time remains finite because no definitive treatment path exists yet for severe electrical tissue injury."
+    "//": "Can heal extremely slowly without definitive treatment. Debridement provides a safer and faster recovery path, while separate nerve or muscle injuries remain independent."
   },
 
   {
@@ -187,43 +115,18 @@
     "damage_types": [ "electric" ],
     "damage_required": [ 32, 1000 ],
     "pain": [ 8, 15 ],
-    "healing_time": [ "45 days", "120 days" ],
     "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.28
-      },
-      {
-        "score": "grip",
-        "value": 0.28
-      },
-      {
-        "score": "lift",
-        "value": 0.24
-      },
-      {
-        "score": "block",
-        "value": 0.34
-      },
-      {
-        "score": "move_speed",
-        "value": 0.30
-      },
-      {
-        "score": "footing",
-        "value": 0.30
-      },
-      {
-        "score": "crawl",
-        "value": 0.20
-      },
-      {
-        "score": "swim",
-        "value": 0.18
-      }
+      { "score": "manip", "value": 0.28 },
+      { "score": "grip", "value": 0.28 },
+      { "score": "lift", "value": 0.24 },
+      { "score": "block", "value": 0.34 },
+      { "score": "move_speed", "value": 0.30 },
+      { "score": "footing", "value": 0.30 },
+      { "score": "crawl", "value": 0.20 },
+      { "score": "swim", "value": 0.18 }
     ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Healing time remains finite because no definitive treatment path exists yet for extensive electrical tissue destruction."
+    "//": "No natural healing. Extensive electrical tissue destruction requires major debridement before the surviving tissue can enter a recoverable state."
   }
 ]

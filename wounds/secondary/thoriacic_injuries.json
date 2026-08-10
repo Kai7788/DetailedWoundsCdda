@@ -6,7 +6,7 @@
       "str": "rib contusion",
       "str_pl": "rib contusions"
     },
-    "description": "A heavy impact has bruised the tissues surrounding the ribs and chest wall.  Deep breathing, twisting, and sudden movement cause a persistent aching pain.",
+    "description": "A heavy impact has bruised the tissues surrounding the ribs and chest wall. Deep breathing, twisting, and sudden movement cause a persistent aching pain.",
     "weight": 10,
     "limit": 2,
     "damage_types": [ "bash" ],
@@ -26,7 +26,7 @@
       "str": "cracked rib",
       "str_pl": "cracked ribs"
     },
-    "description": "One of the ribs has developed a small fracture.  Breathing deeply, coughing, twisting the torso, or absorbing another impact sends sharp pain through the chest.",
+    "description": "One of the ribs has developed a small fracture. Breathing deeply, coughing, twisting the torso, or absorbing another impact sends sharp pain through the chest.",
     "weight": 8,
     "limit": 2,
     "damage_types": [ "bash", "bullet" ],
@@ -36,7 +36,7 @@
     "whitelist_body_part_types": [ "torso" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound."
+    "//": "Secondary-only wound. Can heal naturally, while support provides a faster and safer recovery path."
   },
 
   {
@@ -46,7 +46,7 @@
       "str": "rib fracture",
       "str_pl": "rib fractures"
     },
-    "description": "A rib has fractured completely.  Movement of the chest wall produces sharp localized pain and makes forceful breathing, coughing, and strenuous movement difficult.",
+    "description": "A rib has fractured completely. Movement of the chest wall produces sharp localized pain and makes forceful breathing, coughing, and strenuous movement difficult.",
     "weight": 6,
     "limit": 1,
     "damage_types": [ "bash", "bullet" ],
@@ -56,7 +56,7 @@
     "whitelist_body_part_types": [ "torso" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound."
+    "//": "Secondary-only wound. Can heal naturally, while chest-wall support improves recovery."
   },
 
   {
@@ -66,7 +66,7 @@
       "str": "displaced rib fracture",
       "str_pl": "displaced rib fractures"
     },
-    "description": "A fractured rib has shifted out of its normal alignment.  The unstable bone causes intense pain with chest movement and threatens the tissues lying beneath it.",
+    "description": "A fractured rib has shifted out of its normal alignment. The unstable bone causes intense pain with chest movement and threatens the tissues lying beneath it.",
     "weight": 4,
     "limit": 1,
     "damage_types": [ "bash", "bullet" ],
@@ -76,7 +76,7 @@
     "whitelist_body_part_types": [ "torso" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound. Later complication logic can use this as a risk source for internal thoracic trauma."
+    "//": "Secondary-only wound. Natural healing is possible but very slow; stabilization reduces movement and further injury risk. Internal thoracic complications remain separate."
   },
 
   {
@@ -86,7 +86,7 @@
       "str": "multiple rib fractures",
       "str_pl": "multiple rib fracture injuries"
     },
-    "description": "Several ribs have fractured in the same traumatic event.  The chest wall is extremely painful and ordinary movements repeatedly disturb the injured structures.",
+    "description": "Several ribs have fractured in the same traumatic event. The chest wall is extremely painful and ordinary movements repeatedly disturb the injured structures.",
     "weight": 3,
     "limit": 1,
     "damage_types": [ "bash", "bullet" ],
@@ -96,7 +96,7 @@
     "whitelist_body_part_types": [ "torso" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound."
+    "//": "Secondary-only wound. Natural recovery is possible but prolonged; stabilization provides a safer recovery path."
   },
 
   {
@@ -106,7 +106,7 @@
       "str": "sternal fracture",
       "str_pl": "sternal fractures"
     },
-    "description": "A powerful impact has fractured the sternum at the center of the chest.  The injury causes severe pain whenever the torso flexes or the chest expands.",
+    "description": "A powerful impact has fractured the sternum at the center of the chest. The injury causes severe pain whenever the torso flexes or the chest expands.",
     "weight": 3,
     "limit": 1,
     "damage_types": [ "bash" ],
@@ -116,7 +116,7 @@
     "whitelist_body_part_types": [ "torso" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound."
+    "//": "Secondary-only wound. Stabilization improves recovery but is not mandatory for natural healing."
   },
 
   {
@@ -126,7 +126,7 @@
       "str": "severe chest wall trauma",
       "str_pl": "severe chest wall traumas"
     },
-    "description": "The chest wall has suffered extensive structural trauma.  Bone, muscle, and connective tissue are badly damaged, leaving the torso painful and unstable during movement.",
+    "description": "The chest wall has suffered extensive structural trauma. Bone, muscle, and connective tissue are badly damaged, leaving the torso painful and unstable during movement.",
     "weight": 2,
     "limit": 1,
     "damage_types": [ "bash", "bullet" ],
@@ -136,7 +136,7 @@
     "whitelist_body_part_types": [ "torso" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound. Internal organ and pulmonary consequences belong in separate secondary injuries."
+    "//": "Secondary-only wound. Natural recovery is possible but extremely slow. Internal organ, hemorrhagic, and respiratory complications remain independent injuries."
   },
 
   {
@@ -146,7 +146,7 @@
       "str": "flail chest",
       "str_pl": "flail chest injuries"
     },
-    "description": "Multiple adjacent ribs have fractured severely enough that part of the chest wall has become mechanically unstable.  Every breath and movement causes extreme pain and the damaged chest can no longer move normally.",
+    "description": "Multiple adjacent ribs have fractured severely enough that part of the chest wall has become mechanically unstable. Every breath and movement causes extreme pain and the damaged chest can no longer move normally.",
     "weight": 1,
     "limit": 1,
     "damage_types": [ "bash" ],
@@ -155,6 +155,6 @@
     "whitelist_body_part_types": [ "torso" ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound. No healing_time is intentional: untreated flail chest should not simply disappear with time."
+    "//": "Secondary-only wound. No natural healing: flail chest requires stabilization before the chest wall can enter a recoverable state."
   }
 ]
