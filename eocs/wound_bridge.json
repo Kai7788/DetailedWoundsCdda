@@ -3,282 +3,409 @@
     "type": "effect_on_condition",
     "id": "EOC_DW_BRIDGE_ON_WOUND_CREATED",
     "eoc_type": "ACTIVATION",
-    "//": "Entry point for wound creation. Expected variables: bp = affected bodypart, wound_id = newly created wound.",
+    "//": "Public wound-creation entry point. Caller provides bp and wound_id. Routes initial wound contamination/complications and structural secondary injuries.",
     "condition": {
-      "expects_vars": [ "bp", "wound_id" ]
+      "expects_vars": [
+        "bp",
+        "wound_id"
+      ]
     },
     "effect": [
       {
-        "run_eocs": "EOC_DW_BRIDGE_ROUTE_PRIMARY_WOUND",
-        "variables": {
-          "bp": { "context_val": "bp" },
-          "wound_id": { "context_val": "wound_id" }
-        }
+        "run_eocs": "EOC_DW_BRIDGE_ROUTE_INITIAL_COMPLICATION"
+      },
+      {
+        "run_eocs": "EOC_DW_STRUCTURAL_ON_WOUND_CREATED"
       }
     ]
   },
-
   {
     "type": "effect_on_condition",
-    "id": "EOC_DW_BRIDGE_ROUTE_PRIMARY_WOUND",
+    "id": "EOC_DW_BRIDGE_ROUTE_INITIAL_COMPLICATION",
     "eoc_type": "ACTIVATION",
-    "//": "Routes newly created primary wounds into their initial contamination complication rolls. Structural secondary injuries are routed separately later.",
+    "//": "Routes primary open wounds into the initial complication rolls. Generic Vanilla bleeding is not added here; the referenced complication EOCs should represent the finalized contamination-focused initial rolls.",
     "condition": {
-      "expects_vars": [ "bp", "wound_id" ]
+      "expects_vars": [
+        "bp",
+        "wound_id"
+      ]
     },
     "effect": [
       {
         "if": {
-          "compare_string": [
-            { "context_val": "wound_id" },
-            "dw_scratch",
-            "dw_shallow_cut",
-            "dw_minor_puncture",
-            "dw_puncture_wound",
-            "dw_ballistic_graze",
-            "dw_split_lip"
+          "or": [
+            {
+              "compare_string": [
+                "dw_scratch",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_shallow_cut",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_minor_puncture",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_puncture_wound",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_ballistic_graze",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_split_lip",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            }
           ]
         },
         "then": {
-          "run_eocs": "EOC_DW_ROLL_MINOR_OPEN_WOUND_COMPLICATION",
-          "variables": {
-            "bp": { "context_val": "bp" }
-          }
+          "run_eocs": "EOC_DW_ROLL_MINOR_OPEN_WOUND_COMPLICATION"
         }
       },
-
+      {
+        "if": {
+          "or": [
+            {
+              "compare_string": [
+                "dw_laceration",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_deep_laceration",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_deep_puncture",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_penetrating_wound",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_oral_laceration",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_deep_facial_laceration",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_ocular_laceration",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            }
+          ]
+        },
+        "then": {
+          "run_eocs": "EOC_DW_ROLL_DEEP_OPEN_WOUND_COMPLICATION"
+        }
+      },
+      {
+        "if": {
+          "or": [
+            {
+              "compare_string": [
+                "dw_severe_laceration",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_avulsion_wound",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_severe_penetrating_wound",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_devastating_penetrating_wound",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_open_fracture",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_penetrating_ocular_injury",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            }
+          ]
+        },
+        "then": {
+          "run_eocs": "EOC_DW_ROLL_SEVERE_OPEN_WOUND_COMPLICATION"
+        }
+      },
+      {
+        "if": {
+          "or": [
+            {
+              "compare_string": [
+                "dw_superficial_gunshot_wound",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_penetrating_gunshot_wound",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_severe_gunshot_wound",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            }
+          ]
+        },
+        "then": {
+          "run_eocs": "EOC_DW_ROLL_GUNSHOT_COMPLICATION"
+        }
+      },
       {
         "if": {
           "compare_string": [
-            { "context_val": "wound_id" },
-            "dw_laceration",
-            "dw_deep_laceration",
-            "dw_deep_puncture",
-            "dw_penetrating_wound",
-            "dw_oral_laceration",
-            "dw_deep_facial_laceration",
-            "dw_ocular_laceration"
+            "dw_devastating_ballistic_wound",
+            {
+              "context_val": "wound_id"
+            }
           ]
         },
         "then": {
-          "run_eocs": "EOC_DW_ROLL_DEEP_OPEN_WOUND_COMPLICATION",
-          "variables": {
-            "bp": { "context_val": "bp" }
-          }
+          "run_eocs": "EOC_DW_ROLL_DEVASTATING_GUNSHOT_COMPLICATION"
         }
       },
-
+      {
+        "if": {
+          "or": [
+            {
+              "compare_string": [
+                "dw_deep_partial_thickness_burn",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_full_thickness_burn",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_extensive_full_thickness_burn",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_deep_chemical_burn",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_full_thickness_chemical_burn",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_extensive_chemical_burn",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_deep_electrical_burn",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_severe_electrical_tissue_injury",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_extensive_electrical_tissue_destruction",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            }
+          ]
+        },
+        "then": {
+          "run_eocs": "EOC_DW_ROLL_MAJOR_BURN_COMPLICATION"
+        }
+      },
       {
         "if": {
           "compare_string": [
-            { "context_val": "wound_id" },
-            "dw_severe_laceration",
-            "dw_avulsion_wound",
-            "dw_severe_penetrating_wound",
-            "dw_devastating_penetrating_wound",
-            "dw_open_fracture",
-            "dw_penetrating_ocular_injury"
+            "dw_superficial_bite_wound",
+            {
+              "context_val": "wound_id"
+            }
           ]
         },
         "then": {
-          "run_eocs": "EOC_DW_ROLL_SEVERE_OPEN_WOUND_COMPLICATION",
-          "variables": {
-            "bp": { "context_val": "bp" }
-          }
+          "run_eocs": "EOC_DW_ROLL_DEEP_OPEN_WOUND_COMPLICATION"
         }
       },
-
       {
         "if": {
-          "compare_string": [
-            { "context_val": "wound_id" },
-            "dw_superficial_gunshot_wound",
-            "dw_penetrating_gunshot_wound",
-            "dw_severe_gunshot_wound"
+          "or": [
+            {
+              "compare_string": [
+                "dw_deep_bite_wound",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_tearing_bite_wound",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_crushing_bite_injury",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            },
+            {
+              "compare_string": [
+                "dw_devastating_bite_injury",
+                {
+                  "context_val": "wound_id"
+                }
+              ]
+            }
           ]
         },
         "then": {
-          "run_eocs": "EOC_DW_ROLL_GUNSHOT_COMPLICATION",
-          "variables": {
-            "bp": { "context_val": "bp" }
-          }
-        }
-      },
-
-      {
-        "if": {
-          "compare_string": [
-            { "context_val": "wound_id" },
-            "dw_devastating_ballistic_wound"
-          ]
-        },
-        "then": {
-          "run_eocs": "EOC_DW_ROLL_DEVASTATING_GUNSHOT_COMPLICATION",
-          "variables": {
-            "bp": { "context_val": "bp" }
-          }
-        }
-      },
-
-      {
-        "if": {
-          "compare_string": [
-            { "context_val": "wound_id" },
-            "dw_deep_partial_thickness_burn",
-            "dw_full_thickness_burn",
-            "dw_extensive_full_thickness_burn",
-            "dw_deep_chemical_burn",
-            "dw_full_thickness_chemical_burn",
-            "dw_extensive_chemical_burn",
-            "dw_deep_electrical_burn",
-            "dw_severe_electrical_tissue_injury",
-            "dw_extensive_electrical_tissue_destruction"
-          ]
-        },
-        "then": {
-          "run_eocs": "EOC_DW_ROLL_MAJOR_BURN_COMPLICATION",
-          "variables": {
-            "bp": { "context_val": "bp" }
-          }
+          "run_eocs": "EOC_DW_ROLL_SEVERE_OPEN_WOUND_COMPLICATION"
         }
       }
     ]
   },
-
   {
     "type": "effect_on_condition",
     "id": "EOC_DW_BRIDGE_ON_WOUND_TREATED",
     "eoc_type": "ACTIVATION",
-    "//": "Entry point for wound treatment. Expected variables: bp = affected bodypart, old_wound_id = removed wound, new_wound_id = treated wound.",
+    "//": "Public treatment-completion entry point. Caller provides bp and wound_id, where wound_id is the newly added treated wound state.",
     "condition": {
-      "expects_vars": [ "bp", "old_wound_id", "new_wound_id" ]
+      "expects_vars": [
+        "bp",
+        "wound_id"
+      ]
     },
-    "effect": [
-      {
-        "run_eocs": "EOC_DW_BRIDGE_ROUTE_TREATMENT",
-        "variables": {
-          "bp": { "context_val": "bp" },
-          "old_wound_id": { "context_val": "old_wound_id" },
-          "new_wound_id": { "context_val": "new_wound_id" }
-        }
-      }
-    ]
-  },
-
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_BRIDGE_ROUTE_TREATMENT",
-    "eoc_type": "ACTIVATION",
-    "//": "Routes treated wound states into cleanup actions. Cleaning removes microbial contamination; established infection remains a separate condition.",
-    "condition": {
-      "expects_vars": [ "bp", "old_wound_id", "new_wound_id" ]
-    },
-    "effect": [
-      {
-        "if": {
-          "compare_string": [
-            { "context_val": "new_wound_id" },
-
-            "dw_dressed_scratch",
-            "dw_dressed_shallow_cut",
-
-            "dw_cleaned_laceration",
-            "dw_cleaned_deep_laceration",
-            "dw_cleaned_severe_laceration",
-
-            "dw_cleaned_minor_puncture",
-            "dw_cleaned_puncture_wound",
-            "dw_cleaned_deep_puncture",
-            "dw_cleaned_penetrating_wound",
-
-            "dw_dressed_ballistic_graze",
-            "dw_cleaned_superficial_gunshot_wound",
-            "dw_cleaned_penetrating_gunshot_wound",
-
-            "dw_irrigated_cornea_abrasion",
-            "dw_irrigated_ocular_chemical_burn",
-
-            "dw_dressed_split_lip",
-            "dw_cleaned_oral_laceration",
-            "dw_cleaned_deep_facial_laceration",
-
-            "dw_stabilized_open_fracture"
-          ]
-        },
-        "then": {
-          "run_eocs": "EOC_DW_BRIDGE_CLEAR_CONTAMINATION",
-          "variables": {
-            "bp": { "context_val": "bp" }
-          }
-        }
-      },
-
-      {
-        "if": {
-          "compare_string": [
-            { "context_val": "new_wound_id" },
-
-            "dw_debrided_avulsion_wound",
-
-            "dw_debrided_severe_penetrating_wound",
-            "dw_debrided_devastating_penetrating_wound",
-
-            "dw_debrided_severe_gunshot_wound",
-            "dw_debrided_devastating_ballistic_wound",
-
-            "dw_debrided_full_thickness_burn",
-            "dw_debrided_extensive_full_thickness_burn",
-
-            "dw_debrided_full_thickness_chemical_burn",
-            "dw_debrided_extensive_chemical_burn",
-
-            "dw_debrided_severe_electrical_tissue_injury",
-            "dw_debrided_extensive_electrical_tissue_destruction"
-          ]
-        },
-        "then": {
-          "run_eocs": "EOC_DW_BRIDGE_DEBRIDEMENT_CLEANUP",
-          "variables": {
-            "bp": { "context_val": "bp" }
-          }
-        }
-      }
-    ]
-  },
-
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_BRIDGE_CLEAR_CONTAMINATION",
-    "eoc_type": "ACTIVATION",
-    "//": "Successful cleaning removes Detailed Wounds microbial contamination from the treated bodypart. Existing infection and necrosis are deliberately not removed.",
-    "condition": {
-      "expects_vars": [ "bp" ]
-    },
-    "effect": [
-      {
-        "u_lose_effect": "dw_wound_contamination",
-        "target_part": { "context_val": "bp" }
-      }
-    ]
-  },
-
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_BRIDGE_DEBRIDEMENT_CLEANUP",
-    "eoc_type": "ACTIVATION",
-    "//": "Debridement removes contamination and necrotic local tissue from the treated bodypart. Established infection remains and requires separate treatment.",
-    "condition": {
-      "expects_vars": [ "bp" ]
-    },
-    "effect": [
-      {
-        "u_lose_effect": "dw_wound_contamination",
-        "target_part": { "context_val": "bp" }
-      },
-      {
-        "u_lose_effect": "dw_tissue_necrosis",
-        "target_part": { "context_val": "bp" }
-      }
-    ]
+    "effect": {
+      "run_eocs": "EOC_DW_TREATMENT_ON_WOUND_TREATED"
+    }
   }
 ]

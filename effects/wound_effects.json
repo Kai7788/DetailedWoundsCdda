@@ -2,58 +2,56 @@
   {
     "type": "effect_type",
     "id": "dw_wound_contamination",
-
     "name": [
       "Light wound contamination",
       "Wound contamination",
       "Heavy wound contamination"
     ],
-
     "desc": [
-      "has a lightly contaminated wound exposed to dirt and microorganisms.  There are no clear signs of infection yet, but the wound should be cleaned.",
+      "has a lightly contaminated wound exposed to dirt and microorganisms. There are no clear signs of infection yet, but the wound should be cleaned.",
       "has a visibly contaminated wound that has remained exposed long enough for infection to become a serious concern.",
-      "has a heavily contaminated wound containing foreign material and microorganisms.  Without proper cleaning, infection is increasingly likely."
+      "has a heavily contaminated wound containing foreign material and microorganisms. Without proper cleaning, infection is increasingly likely."
     ],
-
     "part_descs": true,
     "rating": "bad",
-
     "max_intensity": 3,
     "max_effective_intensity": 3,
-
-    "show_in_info": true
+    "show_in_info": true,
+    "immune_bp_flags": [
+      "BIONIC_LIMB",
+      "NON_FLESH_LIMB"
+    ]
   },
-
   {
     "type": "effect_type",
     "id": "dw_local_wound_infection",
-
     "name": [
       "Local wound infection",
       "Severe local wound infection"
     ],
-
     "desc": [
-      "has an infected wound surrounded by inflamed, warm, swollen, and painful tissue.  The infection remains localized but is interfering with normal use of the affected area.",
-      "has a badly infected wound with extensive inflammation, swelling, and tissue damage.  Normal use of the affected body part is difficult and painful."
+      "has an infected wound surrounded by inflamed, warm, swollen, and painful tissue. The infection remains localized but is interfering with normal use of the affected area.",
+      "has a badly infected wound with extensive inflammation, swelling, and tissue damage. Normal use of the affected body part is difficult and painful."
     ],
-
     "part_descs": true,
     "rating": "bad",
-
     "max_intensity": 2,
     "max_effective_intensity": 2,
-
     "show_in_info": true,
-
+    "immune_bp_flags": [
+      "BIONIC_LIMB",
+      "NON_FLESH_LIMB"
+    ],
     "base_mods": {
-      "pain_amount": [ 2 ]
+      "pain_amount": [
+        2
+      ]
     },
-
     "scaling_mods": {
-      "pain_amount": [ 3 ]
+      "pain_amount": [
+        3
+      ]
     },
-
     "limb_score_mods": [
       {
         "limb_score": "reaction",
@@ -131,33 +129,32 @@
         "scaling": -0.15
       }
     ],
-
-    "flags": [ "EFFECT_LIMB_SCORE_MOD_LOCAL" ]
+    "flags": [
+      "EFFECT_LIMB_SCORE_MOD_LOCAL"
+    ]
   },
-
   {
     "type": "effect_type",
     "id": "dw_tissue_necrosis",
-
     "name": [
       "Necrotic tissue"
     ],
-
     "desc": [
       "contains necrotic tissue that has died and cannot recover normally until the dead tissue is properly treated."
     ],
-
     "part_descs": true,
     "rating": "bad",
-
     "max_intensity": 1,
-
     "show_in_info": true,
-
+    "immune_bp_flags": [
+      "BIONIC_LIMB",
+      "NON_FLESH_LIMB"
+    ],
     "base_mods": {
-      "pain_amount": [ 4 ]
+      "pain_amount": [
+        4
+      ]
     },
-
     "limb_score_mods": [
       {
         "limb_score": "reaction",
@@ -220,7 +217,66 @@
         "modifier": 0.6
       }
     ],
-
-    "flags": [ "EFFECT_LIMB_SCORE_MOD_LOCAL" ]
+    "flags": [
+      "EFFECT_LIMB_SCORE_MOD_LOCAL"
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "dw_respiratory_impairment",
+    "name": [
+      "Mild respiratory impairment",
+      "Respiratory impairment",
+      "Severe respiratory impairment"
+    ],
+    "desc": [
+      "Your irritated airways make sustained breathing less efficient.",
+      "Damage to your respiratory system substantially reduces your ability to recover from exertion.",
+      "Severe respiratory damage makes effective breathing extremely difficult."
+    ],
+    "rating": "bad",
+    "max_intensity": 3,
+    "max_effective_intensity": 3,
+    "show_in_info": true,
+    "limb_score_mods": [
+      {
+        "limb_score": "breathing",
+        "modifier": 0.9,
+        "scaling": -0.15
+      }
+    ],
+    "flags": [
+      "EFFECT_LIMB_SCORE_MOD"
+    ],
+    "//": "Global breathing-score modifier. Do not make this LOCAL: the vanilla human breathing score is supplied by the mouth bodypart while most Detailed Wounds respiratory injuries are anatomically stored on the torso. Keep this effect unwired until its lifetime can be synchronized with the respiratory wound."
+  },
+  {
+    "type": "effect_type",
+    "id": "dw_chest_wall_impairment",
+    "name": [
+      "Mild chest wall restriction",
+      "Chest wall restriction",
+      "Severe chest wall restriction"
+    ],
+    "desc": [
+      "Pain and instability in the chest wall mildly restrict normal breathing mechanics.",
+      "Structural chest trauma significantly restricts the expansion of your chest.",
+      "Severe chest wall instability makes normal breathing mechanics extremely inefficient."
+    ],
+    "rating": "bad",
+    "max_intensity": 3,
+    "max_effective_intensity": 3,
+    "show_in_info": true,
+    "limb_score_mods": [
+      {
+        "limb_score": "breathing",
+        "modifier": 0.95,
+        "scaling": -0.2
+      }
+    ],
+    "flags": [
+      "EFFECT_LIMB_SCORE_MOD"
+    ],
+    "//": "Global breathing-score modifier for rib/chest-wall trauma. Kept separate from respiratory impairment so pulmonary and mechanical breathing problems can stack multiplicatively. Keep unwired until effect lifetime can follow the wound lifetime."
   }
 ]
