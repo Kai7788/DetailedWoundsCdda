@@ -9,14 +9,27 @@
     "description": "A fast-moving projectile has torn across the surface of the body without penetrating deeply. Skin and superficial tissue have been stripped away along the projectile's path.",
     "weight": 20,
     "limit": 3,
-    "damage_types": [ "bullet" ],
-    "damage_required": [ 1, 8 ],
-    "pain": [ 1, 4 ],
-    "healing_time": [ "2 days", "8 days" ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "damage_types": [
+      "bullet"
+    ],
+    "damage_required": [
+      1,
+      8
+    ],
+    "pain": [
+      1,
+      4
+    ],
+    "healing_time": [
+      "2 days",
+      "8 days"
+    ],
+    "blacklist_body_part_types": [
+      "sensor",
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_superficial_gunshot_wound",
@@ -27,24 +40,61 @@
     "description": "A projectile has penetrated the outer layers of tissue, leaving a small but distinct ballistic wound. The surrounding flesh is bruised and torn by the impact.",
     "weight": 17,
     "limit": 2,
-    "damage_types": [ "bullet" ],
-    "damage_required": [ 6, 16 ],
-    "pain": [ 2, 6 ],
-    "healing_time": [ "5 days", "18 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.03 },
-      { "score": "grip", "value": 0.03 },
-      { "score": "lift", "value": 0.03 },
-      { "score": "block", "value": 0.05 },
-      { "score": "move_speed", "value": 0.04 },
-      { "score": "footing", "value": 0.04 },
-      { "score": "crawl", "value": 0.03 },
-      { "score": "swim", "value": 0.03 }
+    "damage_types": [
+      "bullet"
     ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "damage_required": [
+      6,
+      16
+    ],
+    "pain": [
+      2,
+      6
+    ],
+    "healing_time": [
+      "5 days",
+      "18 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.03
+      },
+      {
+        "score": "grip",
+        "value": 0.03
+      },
+      {
+        "score": "lift",
+        "value": 0.03
+      },
+      {
+        "score": "block",
+        "value": 0.05
+      },
+      {
+        "score": "move_speed",
+        "value": 0.04
+      },
+      {
+        "score": "footing",
+        "value": 0.04
+      },
+      {
+        "score": "crawl",
+        "value": 0.03
+      },
+      {
+        "score": "swim",
+        "value": 0.03
+      }
+    ],
+    "blacklist_body_part_types": [
+      "sensor",
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_penetrating_gunshot_wound",
@@ -55,24 +105,61 @@
     "description": "A projectile has penetrated deeply into the body, tearing through several layers of soft tissue. The visible wound conceals substantial trauma beneath the surface.",
     "weight": 13,
     "limit": 2,
-    "damage_types": [ "bullet" ],
-    "damage_required": [ 13, 28 ],
-    "pain": [ 4, 9 ],
-    "healing_time": [ "10 days", "35 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.07 },
-      { "score": "grip", "value": 0.07 },
-      { "score": "lift", "value": 0.07 },
-      { "score": "block", "value": 0.11 },
-      { "score": "move_speed", "value": 0.09 },
-      { "score": "footing", "value": 0.09 },
-      { "score": "crawl", "value": 0.06 },
-      { "score": "swim", "value": 0.05 }
+    "damage_types": [
+      "bullet"
     ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "damage_required": [
+      13,
+      28
+    ],
+    "pain": [
+      4,
+      9
+    ],
+    "healing_time": [
+      "10 days",
+      "35 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.07
+      },
+      {
+        "score": "grip",
+        "value": 0.07
+      },
+      {
+        "score": "lift",
+        "value": 0.07
+      },
+      {
+        "score": "block",
+        "value": 0.11
+      },
+      {
+        "score": "move_speed",
+        "value": 0.09
+      },
+      {
+        "score": "footing",
+        "value": 0.09
+      },
+      {
+        "score": "crawl",
+        "value": 0.06
+      },
+      {
+        "score": "swim",
+        "value": 0.05
+      }
+    ],
+    "blacklist_body_part_types": [
+      "sensor",
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_severe_gunshot_wound",
@@ -83,25 +170,62 @@
     "description": "The projectile has caused extensive ballistic trauma. Deep tissue has been torn and crushed around the wound channel, leaving a serious and highly disruptive injury.",
     "weight": 8,
     "limit": 1,
-    "damage_types": [ "bullet" ],
-    "damage_required": [ 24, 45 ],
-    "pain": [ 7, 14 ],
-    "healing_time": [ "21 days", "70 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.13 },
-      { "score": "grip", "value": 0.13 },
-      { "score": "lift", "value": 0.13 },
-      { "score": "block", "value": 0.19 },
-      { "score": "move_speed", "value": 0.16 },
-      { "score": "footing", "value": 0.16 },
-      { "score": "crawl", "value": 0.11 },
-      { "score": "swim", "value": 0.10 }
+    "damage_types": [
+      "bullet"
     ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "damage_required": [
+      24,
+      45
+    ],
+    "pain": [
+      7,
+      14
+    ],
+    "healing_time": [
+      "21 days",
+      "70 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.13
+      },
+      {
+        "score": "grip",
+        "value": 0.13
+      },
+      {
+        "score": "lift",
+        "value": 0.13
+      },
+      {
+        "score": "block",
+        "value": 0.19
+      },
+      {
+        "score": "move_speed",
+        "value": 0.16
+      },
+      {
+        "score": "footing",
+        "value": 0.16
+      },
+      {
+        "score": "crawl",
+        "value": 0.11
+      },
+      {
+        "score": "swim",
+        "value": 0.10
+      }
+    ],
+    "blacklist_body_part_types": [
+      "sensor",
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "Can heal extremely slowly without definitive treatment. Debridement provides a safer and faster recovery path."
   },
-
   {
     "type": "wound",
     "id": "dw_devastating_ballistic_wound",
@@ -112,20 +236,55 @@
     "description": "A powerful projectile has devastated the affected area. Tissue along and around the wound channel is extensively torn, crushed, and disrupted, leaving a massive traumatic injury.",
     "weight": 4,
     "limit": 1,
-    "damage_types": [ "bullet" ],
-    "damage_required": [ 40, 1000 ],
-    "pain": [ 10, 18 ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.22 },
-      { "score": "grip", "value": 0.22 },
-      { "score": "lift", "value": 0.20 },
-      { "score": "block", "value": 0.30 },
-      { "score": "move_speed", "value": 0.26 },
-      { "score": "footing", "value": 0.26 },
-      { "score": "crawl", "value": 0.17 },
-      { "score": "swim", "value": 0.15 }
+    "damage_types": [
+      "bullet"
     ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "damage_required": [
+      40,
+      1000
+    ],
+    "pain": [
+      10,
+      18
+    ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.22
+      },
+      {
+        "score": "grip",
+        "value": 0.22
+      },
+      {
+        "score": "lift",
+        "value": 0.20
+      },
+      {
+        "score": "block",
+        "value": 0.30
+      },
+      {
+        "score": "move_speed",
+        "value": 0.26
+      },
+      {
+        "score": "footing",
+        "value": 0.26
+      },
+      {
+        "score": "crawl",
+        "value": 0.17
+      },
+      {
+        "score": "swim",
+        "value": 0.15
+      }
+    ],
+    "blacklist_body_part_types": [
+      "sensor",
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "No natural healing. Massive ballistic tissue destruction requires debridement before the wound can enter a recoverable state."
   }

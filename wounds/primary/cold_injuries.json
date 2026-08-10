@@ -1,130 +1,283 @@
 [
-  {
-    "type": "wound",
-    "id": "dw_mild_cold_injury",
-    "name": {
-      "str": "mild cold injury",
-      "str_pl": "mild cold injuries"
+    {
+        "type": "wound",
+        "id": "dw_mild_cold_injury",
+        "name": {
+            "str": "mild cold injury",
+            "str_pl": "mild cold injuries"
+        },
+        "description": "Localized exposure to extreme cold has chilled and mildly damaged the tissue. The affected area feels numb, stiff, and unpleasantly sensitive as sensation begins to return.",
+        "weight": 20,
+        "limit": 3,
+        "damage_types": [
+            "cold"
+        ],
+        "damage_required": [
+            2,
+            7
+        ],
+        "pain": [
+            0,
+            2
+        ],
+        "healing_time": [
+            "12 hours",
+            "4 days"
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "blacklist_bp_with_flag": "BIONIC_LIMB"
     },
-    "description": "Localized exposure to extreme cold has chilled and mildly damaged the tissue. The affected area feels numb, stiff, and unpleasantly sensitive as sensation begins to return.",
-    "weight": 20,
-    "limit": 3,
-    "damage_types": [ "cold" ],
-    "damage_required": [ 2, 7 ],
-    "pain": [ 0, 2 ],
-    "healing_time": [ "12 hours", "4 days" ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB"
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_superficial_freezing_injury",
-    "name": {
-      "str": "superficial freezing injury",
-      "str_pl": "superficial freezing injuries"
+    {
+        "type": "wound",
+        "id": "dw_superficial_freezing_injury",
+        "name": {
+            "str": "superficial freezing injury",
+            "str_pl": "superficial freezing injuries"
+        },
+        "description": "Extreme cold has damaged the superficial tissues. The affected area is numb and stiff, with reduced coordination and increasing pain as the tissue warms.",
+        "weight": 16,
+        "limit": 2,
+        "damage_types": [
+            "cold"
+        ],
+        "damage_required": [
+            6,
+            14
+        ],
+        "pain": [
+            1,
+            4
+        ],
+        "healing_time": [
+            "3 days",
+            "10 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.05
+            },
+            {
+                "score": "grip",
+                "value": 0.05
+            },
+            {
+                "score": "footing",
+                "value": 0.05
+            },
+            {
+                "score": "move_speed",
+                "value": 0.03
+            }
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "blacklist_bp_with_flag": "BIONIC_LIMB"
     },
-    "description": "Extreme cold has damaged the superficial tissues. The affected area is numb and stiff, with reduced coordination and increasing pain as the tissue warms.",
-    "weight": 16,
-    "limit": 2,
-    "damage_types": [ "cold" ],
-    "damage_required": [ 6, 14 ],
-    "pain": [ 1, 4 ],
-    "healing_time": [ "3 days", "10 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.05 },
-      { "score": "grip", "value": 0.05 },
-      { "score": "footing", "value": 0.05 },
-      { "score": "move_speed", "value": 0.03 }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB"
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_deep_freezing_injury",
-    "name": {
-      "str": "deep freezing injury",
-      "str_pl": "deep freezing injuries"
+    {
+        "type": "wound",
+        "id": "dw_deep_freezing_injury",
+        "name": {
+            "str": "deep freezing injury",
+            "str_pl": "deep freezing injuries"
+        },
+        "description": "The cold has penetrated deeply enough to damage tissue beneath the surface. Numbness, stiffness, swelling, and impaired movement persist even after the immediate exposure has ended.",
+        "weight": 10,
+        "limit": 2,
+        "damage_types": [
+            "cold"
+        ],
+        "damage_required": [
+            12,
+            24
+        ],
+        "pain": [
+            3,
+            7
+        ],
+        "healing_time": [
+            "10 days",
+            "30 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.15
+            },
+            {
+                "score": "grip",
+                "value": 0.15
+            },
+            {
+                "score": "reaction",
+                "value": 0.10
+            },
+            {
+                "score": "block",
+                "value": 0.08
+            },
+            {
+                "score": "lift",
+                "value": 0.08
+            },
+            {
+                "score": "footing",
+                "value": 0.10
+            },
+            {
+                "score": "move_speed",
+                "value": 0.08
+            },
+            {
+                "score": "crawl",
+                "value": 0.08
+            }
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "blacklist_bp_with_flag": "BIONIC_LIMB"
     },
-    "description": "The cold has penetrated deeply enough to damage tissue beneath the surface. Numbness, stiffness, swelling, and impaired movement persist even after the immediate exposure has ended.",
-    "weight": 10,
-    "limit": 2,
-    "damage_types": [ "cold" ],
-    "damage_required": [ 12, 24 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "10 days", "30 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.15 },
-      { "score": "grip", "value": 0.15 },
-      { "score": "reaction", "value": 0.10 },
-      { "score": "block", "value": 0.08 },
-      { "score": "lift", "value": 0.08 },
-      { "score": "footing", "value": 0.10 },
-      { "score": "move_speed", "value": 0.08 },
-      { "score": "crawl", "value": 0.08 }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB"
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_severe_cold_tissue_injury",
-    "name": {
-      "str": "severe cold tissue injury",
-      "str_pl": "severe cold tissue injuries"
+    {
+        "type": "wound",
+        "id": "dw_severe_cold_tissue_injury",
+        "name": {
+            "str": "severe cold tissue injury",
+            "str_pl": "severe cold tissue injuries"
+        },
+        "description": "Prolonged or extremely intense cold has badly damaged deep tissue. The affected area is swollen, stiff, partially numb, and difficult to use normally.",
+        "weight": 6,
+        "limit": 1,
+        "damage_types": [
+            "cold"
+        ],
+        "damage_required": [
+            21,
+            38
+        ],
+        "pain": [
+            4,
+            9
+        ],
+        "healing_time": [
+            "21 days",
+            "60 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.30
+            },
+            {
+                "score": "grip",
+                "value": 0.30
+            },
+            {
+                "score": "reaction",
+                "value": 0.20
+            },
+            {
+                "score": "block",
+                "value": 0.20
+            },
+            {
+                "score": "lift",
+                "value": 0.15
+            },
+            {
+                "score": "footing",
+                "value": 0.25
+            },
+            {
+                "score": "move_speed",
+                "value": 0.20
+            },
+            {
+                "score": "crawl",
+                "value": 0.15
+            },
+            {
+                "score": "swim",
+                "value": 0.15
+            }
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Can heal very slowly without definitive treatment. Controlled rewarming provides a safer and faster recovery path, while necrosis or nerve damage remain separate complications."
     },
-    "description": "Prolonged or extremely intense cold has badly damaged deep tissue. The affected area is swollen, stiff, partially numb, and difficult to use normally.",
-    "weight": 6,
-    "limit": 1,
-    "damage_types": [ "cold" ],
-    "damage_required": [ 21, 38 ],
-    "pain": [ 4, 9 ],
-    "healing_time": [ "21 days", "60 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.30 },
-      { "score": "grip", "value": 0.30 },
-      { "score": "reaction", "value": 0.20 },
-      { "score": "block", "value": 0.20 },
-      { "score": "lift", "value": 0.15 },
-      { "score": "footing", "value": 0.25 },
-      { "score": "move_speed", "value": 0.20 },
-      { "score": "crawl", "value": 0.15 },
-      { "score": "swim", "value": 0.15 }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Can heal very slowly without definitive treatment. Controlled rewarming provides a safer and faster recovery path, while necrosis or nerve damage remain separate complications."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_extensive_cryogenic_tissue_injury",
-    "name": {
-      "str": "extensive cryogenic tissue injury",
-      "str_pl": "extensive cryogenic tissue injuries"
-    },
-    "description": "Extreme cryogenic exposure has devastated the affected tissue. Deep structures are badly damaged, sensation is greatly diminished, and normal use of the area is severely impaired.",
-    "weight": 3,
-    "limit": 1,
-    "damage_types": [ "cold" ],
-    "damage_required": [ 34, 1000 ],
-    "pain": [ 5, 10 ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.50 },
-      { "score": "grip", "value": 0.50 },
-      { "score": "reaction", "value": 0.35 },
-      { "score": "block", "value": 0.35 },
-      { "score": "lift", "value": 0.30 },
-      { "score": "footing", "value": 0.40 },
-      { "score": "move_speed", "value": 0.35 },
-      { "score": "crawl", "value": 0.25 },
-      { "score": "swim", "value": 0.25 }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "No natural healing. Extensive cryogenic tissue injury requires controlled rewarming followed by debridement of nonviable tissue before entering a recoverable state."
-  }
+    {
+        "type": "wound",
+        "id": "dw_extensive_cryogenic_tissue_injury",
+        "name": {
+            "str": "extensive cryogenic tissue injury",
+            "str_pl": "extensive cryogenic tissue injuries"
+        },
+        "description": "Extreme cryogenic exposure has devastated the affected tissue. Deep structures are badly damaged, sensation is greatly diminished, and normal use of the area is severely impaired.",
+        "weight": 3,
+        "limit": 1,
+        "damage_types": [
+            "cold"
+        ],
+        "damage_required": [
+            34,
+            1000
+        ],
+        "pain": [
+            5,
+            10
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.50
+            },
+            {
+                "score": "grip",
+                "value": 0.50
+            },
+            {
+                "score": "reaction",
+                "value": 0.35
+            },
+            {
+                "score": "block",
+                "value": 0.35
+            },
+            {
+                "score": "lift",
+                "value": 0.30
+            },
+            {
+                "score": "footing",
+                "value": 0.40
+            },
+            {
+                "score": "move_speed",
+                "value": 0.35
+            },
+            {
+                "score": "crawl",
+                "value": 0.25
+            },
+            {
+                "score": "swim",
+                "value": 0.25
+            }
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "No natural healing. Extensive cryogenic tissue injury requires controlled rewarming followed by debridement of nonviable tissue before entering a recoverable state."
+    }
 ]

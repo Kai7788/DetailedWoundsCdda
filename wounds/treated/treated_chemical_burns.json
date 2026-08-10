@@ -1,343 +1,429 @@
 [
-  {
-    "type": "wound",
-    "id": "dw_irrigated_mild_chemical_burn",
-    "name": {
-      "str": "irrigated mild chemical burn",
-      "str_pl": "irrigated mild chemical burns"
+    {
+        "type": "wound",
+        "id": "dw_irrigated_mild_chemical_burn",
+        "name": {
+            "str": "irrigated mild chemical burn",
+            "str_pl": "irrigated mild chemical burns"
+        },
+        "description": "The corrosive substance has been thoroughly flushed from the affected area. Mild chemical damage remains, but continued tissue destruction from the original contaminant has been stopped.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "acid"
+        ],
+        "damage_required": [
+            1000,
+            1000
+        ],
+        "pain": [
+            0,
+            2
+        ],
+        "healing_time": [
+            "12 hours",
+            "4 days"
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Treated-only wound. Irrigation has removed the active corrosive contaminant, but existing tissue damage remains."
     },
-    "description": "The corrosive substance has been thoroughly flushed from the affected area. Mild chemical damage remains, but continued tissue destruction from the original contaminant has been stopped.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "acid" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 0, 2 ],
-    "healing_time": [ "12 hours", "4 days" ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Treated-only wound. Irrigation has removed the active corrosive contaminant, but existing tissue damage remains."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_irrigated_moderate_chemical_burn",
-    "name": {
-      "str": "irrigated moderate chemical burn",
-      "str_pl": "irrigated moderate chemical burns"
+    {
+        "type": "wound",
+        "id": "dw_irrigated_moderate_chemical_burn",
+        "name": {
+            "str": "irrigated moderate chemical burn",
+            "str_pl": "irrigated moderate chemical burns"
+        },
+        "description": "The corrosive material has been flushed away, preventing further direct chemical injury. The remaining tissue is inflamed and painful but can now recover normally.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "acid"
+        ],
+        "damage_required": [
+            1000,
+            1000
+        ],
+        "pain": [
+            2,
+            5
+        ],
+        "healing_time": [
+            "4 days",
+            "14 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.02
+            },
+            {
+                "score": "grip",
+                "value": 0.02
+            },
+            {
+                "score": "lift",
+                "value": 0.02
+            },
+            {
+                "score": "block",
+                "value": 0.03
+            },
+            {
+                "score": "move_speed",
+                "value": 0.02
+            },
+            {
+                "score": "footing",
+                "value": 0.02
+            },
+            {
+                "score": "crawl",
+                "value": 0.01
+            },
+            {
+                "score": "swim",
+                "value": 0.01
+            }
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Treated-only wound."
     },
-    "description": "The corrosive material has been flushed away, preventing further direct chemical injury. The remaining tissue is inflamed and painful but can now recover normally.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "acid" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 2, 5 ],
-    "healing_time": [ "4 days", "14 days" ],
-    "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.02
-      },
-      {
-        "score": "grip",
-        "value": 0.02
-      },
-      {
-        "score": "lift",
-        "value": 0.02
-      },
-      {
-        "score": "block",
-        "value": 0.03
-      },
-      {
-        "score": "move_speed",
-        "value": 0.02
-      },
-      {
-        "score": "footing",
-        "value": 0.02
-      },
-      {
-        "score": "crawl",
-        "value": 0.01
-      },
-      {
-        "score": "swim",
-        "value": 0.01
-      }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Treated-only wound."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_irrigated_deep_chemical_burn",
-    "name": {
-      "str": "irrigated deep chemical burn",
-      "str_pl": "irrigated deep chemical burns"
+    {
+        "type": "wound",
+        "id": "dw_irrigated_deep_chemical_burn",
+        "name": {
+            "str": "irrigated deep chemical burn",
+            "str_pl": "irrigated deep chemical burns"
+        },
+        "description": "The chemical contaminant has been thoroughly removed, but it penetrated deeply enough to cause substantial tissue damage before irrigation. The affected area remains painful, stiff, and vulnerable throughout recovery.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "acid"
+        ],
+        "damage_required": [
+            1000,
+            1000
+        ],
+        "pain": [
+            4,
+            8
+        ],
+        "healing_time": [
+            "10 days",
+            "35 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.06
+            },
+            {
+                "score": "grip",
+                "value": 0.06
+            },
+            {
+                "score": "lift",
+                "value": 0.05
+            },
+            {
+                "score": "block",
+                "value": 0.08
+            },
+            {
+                "score": "move_speed",
+                "value": 0.07
+            },
+            {
+                "score": "footing",
+                "value": 0.07
+            },
+            {
+                "score": "crawl",
+                "value": 0.05
+            },
+            {
+                "score": "swim",
+                "value": 0.04
+            }
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Treated-only wound. The corrosive process has been stopped and the remaining deep tissue damage can heal over time."
     },
-    "description": "The chemical contaminant has been thoroughly removed, but it penetrated deeply enough to cause substantial tissue damage before irrigation. The affected area remains painful, stiff, and vulnerable throughout recovery.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "acid" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 4, 8 ],
-    "healing_time": [ "10 days", "35 days" ],
-    "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.06
-      },
-      {
-        "score": "grip",
-        "value": 0.06
-      },
-      {
-        "score": "lift",
-        "value": 0.05
-      },
-      {
-        "score": "block",
-        "value": 0.08
-      },
-      {
-        "score": "move_speed",
-        "value": 0.07
-      },
-      {
-        "score": "footing",
-        "value": 0.07
-      },
-      {
-        "score": "crawl",
-        "value": 0.05
-      },
-      {
-        "score": "swim",
-        "value": 0.04
-      }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Treated-only wound. The corrosive process has been stopped and the remaining deep tissue damage can heal over time."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_irrigated_full_thickness_chemical_burn",
-    "name": {
-      "str": "irrigated full-thickness chemical burn",
-      "str_pl": "irrigated full-thickness chemical burns"
+    {
+        "type": "wound",
+        "id": "dw_irrigated_full_thickness_chemical_burn",
+        "name": {
+            "str": "irrigated full-thickness chemical burn",
+            "str_pl": "irrigated full-thickness chemical burns"
+        },
+        "description": "The corrosive substance has been removed, but not before destroying the full thickness of the skin and damaging deeper tissue. The chemical attack is no longer progressing, but dead and nonviable tissue remains within the injury.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "acid"
+        ],
+        "damage_required": [
+            1000,
+            1000
+        ],
+        "pain": [
+            4,
+            9
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.14
+            },
+            {
+                "score": "grip",
+                "value": 0.14
+            },
+            {
+                "score": "lift",
+                "value": 0.12
+            },
+            {
+                "score": "block",
+                "value": 0.17
+            },
+            {
+                "score": "move_speed",
+                "value": 0.15
+            },
+            {
+                "score": "footing",
+                "value": 0.15
+            },
+            {
+                "score": "crawl",
+                "value": 0.10
+            },
+            {
+                "score": "swim",
+                "value": 0.09
+            }
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Treated-only intermediate wound. Irrigation stops further chemical destruction, but full-thickness tissue damage still requires debridement before normal healing can begin."
     },
-    "description": "The corrosive substance has been removed, but not before destroying the full thickness of the skin and damaging deeper tissue. The chemical attack is no longer progressing, but dead and nonviable tissue remains within the injury.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "acid" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 4, 9 ],
-    "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.14
-      },
-      {
-        "score": "grip",
-        "value": 0.14
-      },
-      {
-        "score": "lift",
-        "value": 0.12
-      },
-      {
-        "score": "block",
-        "value": 0.17
-      },
-      {
-        "score": "move_speed",
-        "value": 0.15
-      },
-      {
-        "score": "footing",
-        "value": 0.15
-      },
-      {
-        "score": "crawl",
-        "value": 0.10
-      },
-      {
-        "score": "swim",
-        "value": 0.09
-      }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Treated-only intermediate wound. Irrigation stops further chemical destruction, but full-thickness tissue damage still requires debridement before normal healing can begin."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_debrided_full_thickness_chemical_burn",
-    "name": {
-      "str": "debrided full-thickness chemical burn",
-      "str_pl": "debrided full-thickness chemical burns"
+    {
+        "type": "wound",
+        "id": "dw_debrided_full_thickness_chemical_burn",
+        "name": {
+            "str": "debrided full-thickness chemical burn",
+            "str_pl": "debrided full-thickness chemical burns"
+        },
+        "description": "The corrosive contaminant has been removed and loose nonviable tissue has been debrided from the full-thickness injury. Considerable tissue damage remains, but the wound is now able to begin a prolonged recovery.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "acid"
+        ],
+        "damage_required": [
+            1000,
+            1000
+        ],
+        "pain": [
+            3,
+            7
+        ],
+        "healing_time": [
+            "28 days",
+            "70 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.10
+            },
+            {
+                "score": "grip",
+                "value": 0.10
+            },
+            {
+                "score": "lift",
+                "value": 0.09
+            },
+            {
+                "score": "block",
+                "value": 0.13
+            },
+            {
+                "score": "move_speed",
+                "value": 0.11
+            },
+            {
+                "score": "footing",
+                "value": 0.11
+            },
+            {
+                "score": "crawl",
+                "value": 0.08
+            },
+            {
+                "score": "swim",
+                "value": 0.07
+            }
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Treated-only wound. Debridement allows the full-thickness chemical injury to enter a normal healing state."
     },
-    "description": "The corrosive contaminant has been removed and loose nonviable tissue has been debrided from the full-thickness injury. Considerable tissue damage remains, but the wound is now able to begin a prolonged recovery.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "acid" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "28 days", "70 days" ],
-    "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.10
-      },
-      {
-        "score": "grip",
-        "value": 0.10
-      },
-      {
-        "score": "lift",
-        "value": 0.09
-      },
-      {
-        "score": "block",
-        "value": 0.13
-      },
-      {
-        "score": "move_speed",
-        "value": 0.11
-      },
-      {
-        "score": "footing",
-        "value": 0.11
-      },
-      {
-        "score": "crawl",
-        "value": 0.08
-      },
-      {
-        "score": "swim",
-        "value": 0.07
-      }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Treated-only wound. Debridement allows the full-thickness chemical injury to enter a normal healing state."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_irrigated_extensive_chemical_burn",
-    "name": {
-      "str": "irrigated extensive chemical burn",
-      "str_pl": "irrigated extensive chemical burns"
+    {
+        "type": "wound",
+        "id": "dw_irrigated_extensive_chemical_burn",
+        "name": {
+            "str": "irrigated extensive chemical burn",
+            "str_pl": "irrigated extensive chemical burns"
+        },
+        "description": "The corrosive substance has finally been flushed from the extensively damaged area. Further chemical destruction has stopped, but widespread full-thickness injury and substantial amounts of nonviable tissue remain.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "acid"
+        ],
+        "damage_required": [
+            1000,
+            1000
+        ],
+        "pain": [
+            5,
+            11
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.23
+            },
+            {
+                "score": "grip",
+                "value": 0.23
+            },
+            {
+                "score": "lift",
+                "value": 0.20
+            },
+            {
+                "score": "block",
+                "value": 0.28
+            },
+            {
+                "score": "move_speed",
+                "value": 0.25
+            },
+            {
+                "score": "footing",
+                "value": 0.25
+            },
+            {
+                "score": "crawl",
+                "value": 0.17
+            },
+            {
+                "score": "swim",
+                "value": 0.15
+            }
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Treated-only intermediate wound. Irrigation stops the corrosive process, but extensive nonviable tissue prevents normal recovery until the wound is debrided."
     },
-    "description": "The corrosive substance has finally been flushed from the extensively damaged area. Further chemical destruction has stopped, but widespread full-thickness injury and substantial amounts of nonviable tissue remain.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "acid" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 5, 11 ],
-    "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.23
-      },
-      {
-        "score": "grip",
-        "value": 0.23
-      },
-      {
-        "score": "lift",
-        "value": 0.20
-      },
-      {
-        "score": "block",
-        "value": 0.28
-      },
-      {
-        "score": "move_speed",
-        "value": 0.25
-      },
-      {
-        "score": "footing",
-        "value": 0.25
-      },
-      {
-        "score": "crawl",
-        "value": 0.17
-      },
-      {
-        "score": "swim",
-        "value": 0.15
-      }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Treated-only intermediate wound. Irrigation stops the corrosive process, but extensive nonviable tissue prevents normal recovery until the wound is debrided."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_debrided_extensive_chemical_burn",
-    "name": {
-      "str": "debrided extensive chemical burn",
-      "str_pl": "debrided extensive chemical burns"
-    },
-    "description": "The corrosive contaminant has been removed and extensive dead tissue has been debrided from the injury. A large area of deep tissue remains badly damaged, but the wound can now begin a long and difficult recovery.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "acid" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 5, 9 ],
-    "healing_time": [ "45 days", "105 days" ],
-    "limb_scores": [
-      {
-        "score": "manip",
-        "value": 0.18
-      },
-      {
-        "score": "grip",
-        "value": 0.18
-      },
-      {
-        "score": "lift",
-        "value": 0.16
-      },
-      {
-        "score": "block",
-        "value": 0.22
-      },
-      {
-        "score": "move_speed",
-        "value": 0.20
-      },
-      {
-        "score": "footing",
-        "value": 0.20
-      },
-      {
-        "score": "crawl",
-        "value": 0.13
-      },
-      {
-        "score": "swim",
-        "value": 0.12
-      }
-    ],
-    "blacklist_body_part_types": [ "sensor", "mouth" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Treated-only wound. This is the recoverable state reached after both irrigation and debridement of an extensive chemical burn."
-  }
+    {
+        "type": "wound",
+        "id": "dw_debrided_extensive_chemical_burn",
+        "name": {
+            "str": "debrided extensive chemical burn",
+            "str_pl": "debrided extensive chemical burns"
+        },
+        "description": "The corrosive contaminant has been removed and extensive dead tissue has been debrided from the injury. A large area of deep tissue remains badly damaged, but the wound can now begin a long and difficult recovery.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "acid"
+        ],
+        "damage_required": [
+            1000,
+            1000
+        ],
+        "pain": [
+            5,
+            9
+        ],
+        "healing_time": [
+            "45 days",
+            "105 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.18
+            },
+            {
+                "score": "grip",
+                "value": 0.18
+            },
+            {
+                "score": "lift",
+                "value": 0.16
+            },
+            {
+                "score": "block",
+                "value": 0.22
+            },
+            {
+                "score": "move_speed",
+                "value": 0.20
+            },
+            {
+                "score": "footing",
+                "value": 0.20
+            },
+            {
+                "score": "crawl",
+                "value": 0.13
+            },
+            {
+                "score": "swim",
+                "value": 0.12
+            }
+        ],
+        "blacklist_body_part_types": [
+            "sensor",
+            "mouth"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Treated-only wound. This is the recoverable state reached after both irrigation and debridement of an extensive chemical burn."
+    }
 ]

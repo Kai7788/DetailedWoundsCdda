@@ -1,443 +1,679 @@
 [
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_NO_COMPLICATION",
-    "eoc_type": "ACTIVATION",
-    "//": "Intentional no-op used as an outcome in weighted complication rolls.",
-    "effect": {
-      "set_string_var": "none",
-      "target_var": { "context_val": "dw_complication_result" }
-    }
-  },
-
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_LIGHT_CONTAMINATION",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "if": {
-          "not": {
-            "u_has_effect": "dw_wound_contamination",
-            "bodypart": { "context_val": "bp" }
-          }
-        },
-        "then": [
-          {
-            "u_add_effect": "dw_wound_contamination",
-            "duration": "PERMANENT",
-            "intensity": 1,
-            "target_part": { "context_val": "bp" }
-          },
-          {
-            "run_eocs": "EOC_DW_MAINTAIN_LIGHT_CONTAMINATION",
-            "variables": {
-              "bp": { "context_val": "bp" }
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_NO_COMPLICATION",
+        "eoc_type": "ACTIVATION",
+        "//": "Intentional no-op used as an outcome in weighted complication rolls.",
+        "effect": {
+            "set_string_var": "none",
+            "target_var": {
+                "context_val": "dw_complication_result"
             }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_MODERATE_CONTAMINATION",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "if": {
-          "not": {
-            "u_has_effect": "dw_wound_contamination",
-            "intensity": 2,
-            "bodypart": { "context_val": "bp" }
-          }
-        },
-        "then": [
-          {
-            "u_lose_effect": "dw_wound_contamination",
-            "target_part": { "context_val": "bp" }
-          },
-          {
-            "u_add_effect": "dw_wound_contamination",
-            "duration": "PERMANENT",
-            "intensity": 2,
-            "target_part": { "context_val": "bp" }
-          },
-          {
-            "run_eocs": "EOC_DW_MAINTAIN_MODERATE_CONTAMINATION",
-            "variables": {
-              "bp": { "context_val": "bp" }
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_HEAVY_CONTAMINATION",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "if": {
-          "not": {
-            "u_has_effect": "dw_wound_contamination",
-            "intensity": 3,
-            "bodypart": { "context_val": "bp" }
-          }
-        },
-        "then": [
-          {
-            "u_lose_effect": "dw_wound_contamination",
-            "target_part": { "context_val": "bp" }
-          },
-          {
-            "u_add_effect": "dw_wound_contamination",
-            "duration": "PERMANENT",
-            "intensity": 3,
-            "target_part": { "context_val": "bp" }
-          },
-          {
-            "run_eocs": "EOC_DW_MAINTAIN_HEAVY_CONTAMINATION",
-            "variables": {
-              "bp": { "context_val": "bp" }
-            }
-          }
-        ]
-      }
-    ]
-  },
-
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_LOCAL_INFECTION",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "if": {
-          "not": {
-            "u_has_effect": "dw_local_wound_infection",
-            "bodypart": { "context_val": "bp" }
-          }
-        },
-        "then": [
-          {
-            "u_lose_effect": "dw_wound_contamination",
-            "target_part": { "context_val": "bp" }
-          },
-          {
-            "u_add_effect": "dw_local_wound_infection",
-            "duration": "PERMANENT",
-            "intensity": 1,
-            "target_part": { "context_val": "bp" }
-          },
-          {
-            "u_message": "The wound on your <context_val:bp> feels increasingly hot and painful.",
-            "type": "warning"
-          },
-          {
-            "run_eocs": "EOC_DW_MAINTAIN_LOCAL_INFECTION",
-            "variables": {
-              "bp": { "context_val": "bp" }
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_SEVERE_LOCAL_INFECTION",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "if": {
-          "not": {
-            "u_has_effect": "dw_local_wound_infection",
-            "intensity": 2,
-            "bodypart": { "context_val": "bp" }
-          }
-        },
-        "then": [
-          {
-            "u_lose_effect": "dw_wound_contamination",
-            "target_part": { "context_val": "bp" }
-          },
-          {
-            "u_lose_effect": "dw_local_wound_infection",
-            "target_part": { "context_val": "bp" }
-          },
-          {
-            "u_add_effect": "dw_local_wound_infection",
-            "duration": "PERMANENT",
-            "intensity": 2,
-            "target_part": { "context_val": "bp" }
-          },
-          {
-            "u_message": "The tissue around the wound on your <context_val:bp> is badly inflamed.",
-            "type": "bad"
-          },
-          {
-            "run_eocs": "EOC_DW_MAINTAIN_SEVERE_LOCAL_INFECTION",
-            "variables": {
-              "bp": { "context_val": "bp" }
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TISSUE_NECROSIS",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "u_add_effect": "dw_tissue_necrosis",
-        "duration": "PERMANENT",
-        "intensity": 1,
-        "target_part": { "context_val": "bp" }
-      },
-      {
-        "u_message": "Some of the damaged tissue on your <context_val:bp> has begun to die.",
-        "type": "bad"
-      }
-    ]
-  },
-
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_MINOR_INTERNAL_HEMORRHAGE",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        { "expects_vars": [ "bp" ] },
-        { "compare_string": [ "torso", { "context_val": "bp" } ] }
-      ]
+        }
     },
-    "effect": [
-      {
-        "u_add_wound": { "context_val": "bp" },
-        "wound_id": "dw_minor_internal_hemorrhage"
-      },
-      {
-        "u_message": "A deep ache develops inside your torso.",
-        "type": "warning"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        { "expects_vars": [ "bp" ] },
-        { "compare_string": [ "torso", { "context_val": "bp" } ] }
-      ]
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_LIGHT_CONTAMINATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "if": {
+                    "not": {
+                        "u_has_effect": "dw_wound_contamination",
+                        "bodypart": {
+                            "context_val": "bp"
+                        }
+                    }
+                },
+                "then": [
+                    {
+                        "u_add_effect": "dw_wound_contamination",
+                        "duration": "PERMANENT",
+                        "intensity": 1,
+                        "target_part": {
+                            "context_val": "bp"
+                        }
+                    },
+                    {
+                        "run_eocs": "EOC_DW_MAINTAIN_LIGHT_CONTAMINATION",
+                        "variables": {
+                            "bp": {
+                                "context_val": "bp"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
     },
-    "effect": [
-      {
-        "u_add_wound": { "context_val": "bp" },
-        "wound_id": "dw_significant_internal_hemorrhage"
-      },
-      {
-        "u_message": "A spreading pressure and deep pain build inside your torso.",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_MAJOR_INTERNAL_HEMORRHAGE",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        { "expects_vars": [ "bp" ] },
-        { "compare_string": [ "torso", { "context_val": "bp" } ] }
-      ]
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_MODERATE_CONTAMINATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "if": {
+                    "and": [
+                        {
+                            "not": {
+                                "u_has_effect": "dw_wound_contamination",
+                                "intensity": 2,
+                                "bodypart": {
+                                    "context_val": "bp"
+                                }
+                            }
+                        },
+                        {
+                            "not": {
+                                "u_has_effect": "dw_wound_contamination",
+                                "intensity": 3,
+                                "bodypart": {
+                                    "context_val": "bp"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "u_lose_effect": "dw_wound_contamination",
+                        "target_part": {
+                            "context_val": "bp"
+                        }
+                    },
+                    {
+                        "u_add_effect": "dw_wound_contamination",
+                        "duration": "PERMANENT",
+                        "intensity": 2,
+                        "target_part": {
+                            "context_val": "bp"
+                        }
+                    },
+                    {
+                        "run_eocs": "EOC_DW_MAINTAIN_MODERATE_CONTAMINATION",
+                        "variables": {
+                            "bp": {
+                                "context_val": "bp"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
     },
-    "effect": [
-      {
-        "u_add_wound": { "context_val": "bp" },
-        "wound_id": "dw_major_internal_hemorrhage"
-      },
-      {
-        "u_message": "Something is badly wrong inside your torso.  You feel deep pain and growing weakness.",
-        "type": "bad"
-      }
-    ]
-  },
-
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_REOPEN_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "//": "Caller must ensure the selected body part actually contains dw_sutured_laceration.",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "u_remove_wound": { "context_val": "bp" },
-        "wound_id": [ "dw_sutured_laceration" ]
-      },
-      {
-        "u_add_wound": { "context_val": "bp" },
-        "wound_id": "dw_laceration"
-      },
-      {
-        "u_add_effect": "bleed",
-        "duration": "30 minutes",
-        "intensity": 1,
-        "target_part": { "context_val": "bp" }
-      },
-      {
-        "u_message": "The sutures on your <context_val:bp> tear open.",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_REOPEN_DEEP_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "//": "Caller must ensure the selected body part actually contains dw_sutured_deep_laceration.",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "u_remove_wound": { "context_val": "bp" },
-        "wound_id": [ "dw_sutured_deep_laceration" ]
-      },
-      {
-        "u_add_wound": { "context_val": "bp" },
-        "wound_id": "dw_deep_laceration"
-      },
-      {
-        "u_add_effect": "bleed",
-        "duration": "1 hour",
-        "intensity": 3,
-        "target_part": { "context_val": "bp" }
-      },
-      {
-        "u_message": "The deep wound on your <context_val:bp> tears open again.",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_REOPEN_SEVERE_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "//": "Caller must ensure the selected body part actually contains dw_sutured_severe_laceration.",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "u_remove_wound": { "context_val": "bp" },
-        "wound_id": [ "dw_sutured_severe_laceration" ]
-      },
-      {
-        "u_add_wound": { "context_val": "bp" },
-        "wound_id": "dw_severe_laceration"
-      },
-      {
-        "u_add_effect": "bleed",
-        "duration": "2 hours",
-        "intensity": 5,
-        "target_part": { "context_val": "bp" }
-      },
-      {
-        "u_message": "The extensive wound on your <context_val:bp> splits open again.",
-        "type": "bad"
-      }
-    ]
-  },
-
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_ROLL_MINOR_OPEN_WOUND_COMPLICATION",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": {
-      "weighted_list_eocs": [
-        [ "EOC_DW_NO_COMPLICATION", 75 ],
-        [ "EOC_DW_LIGHT_CONTAMINATION", 25 ]
-      ]
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_HEAVY_CONTAMINATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "if": {
+                    "not": {
+                        "u_has_effect": "dw_wound_contamination",
+                        "intensity": 3,
+                        "bodypart": {
+                            "context_val": "bp"
+                        }
+                    }
+                },
+                "then": [
+                    {
+                        "u_lose_effect": "dw_wound_contamination",
+                        "target_part": {
+                            "context_val": "bp"
+                        }
+                    },
+                    {
+                        "u_add_effect": "dw_wound_contamination",
+                        "duration": "PERMANENT",
+                        "intensity": 3,
+                        "target_part": {
+                            "context_val": "bp"
+                        }
+                    },
+                    {
+                        "run_eocs": "EOC_DW_MAINTAIN_HEAVY_CONTAMINATION",
+                        "variables": {
+                            "bp": {
+                                "context_val": "bp"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_LOCAL_INFECTION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "if": {
+                    "not": {
+                        "u_has_effect": "dw_local_wound_infection",
+                        "bodypart": {
+                            "context_val": "bp"
+                        }
+                    }
+                },
+                "then": [
+                    {
+                        "u_lose_effect": "dw_wound_contamination",
+                        "target_part": {
+                            "context_val": "bp"
+                        }
+                    },
+                    {
+                        "u_add_effect": "dw_local_wound_infection",
+                        "duration": "PERMANENT",
+                        "intensity": 1,
+                        "target_part": {
+                            "context_val": "bp"
+                        }
+                    },
+                    {
+                        "u_message": "The wound on your <context_val:bp> feels increasingly hot and painful.",
+                        "type": "warning"
+                    },
+                    {
+                        "run_eocs": "EOC_DW_MAINTAIN_LOCAL_INFECTION",
+                        "variables": {
+                            "bp": {
+                                "context_val": "bp"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_SEVERE_LOCAL_INFECTION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "if": {
+                    "not": {
+                        "u_has_effect": "dw_local_wound_infection",
+                        "intensity": 2,
+                        "bodypart": {
+                            "context_val": "bp"
+                        }
+                    }
+                },
+                "then": [
+                    {
+                        "u_lose_effect": "dw_wound_contamination",
+                        "target_part": {
+                            "context_val": "bp"
+                        }
+                    },
+                    {
+                        "u_lose_effect": "dw_local_wound_infection",
+                        "target_part": {
+                            "context_val": "bp"
+                        }
+                    },
+                    {
+                        "u_add_effect": "dw_local_wound_infection",
+                        "duration": "PERMANENT",
+                        "intensity": 2,
+                        "target_part": {
+                            "context_val": "bp"
+                        }
+                    },
+                    {
+                        "u_message": "The tissue around the wound on your <context_val:bp> is badly inflamed.",
+                        "type": "bad"
+                    },
+                    {
+                        "run_eocs": "EOC_DW_MAINTAIN_SEVERE_LOCAL_INFECTION",
+                        "variables": {
+                            "bp": {
+                                "context_val": "bp"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TISSUE_NECROSIS",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "u_add_effect": "dw_tissue_necrosis",
+                "duration": "PERMANENT",
+                "intensity": 1,
+                "target_part": {
+                    "context_val": "bp"
+                }
+            },
+            {
+                "u_message": "Some of the damaged tissue on your <context_val:bp> has begun to die.",
+                "type": "bad"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_MINOR_INTERNAL_HEMORRHAGE",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "torso",
+                        {
+                            "context_val": "bp"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_minor_internal_hemorrhage"
+            },
+            {
+                "u_message": "A deep ache develops inside your torso.",
+                "type": "warning"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "torso",
+                        {
+                            "context_val": "bp"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_significant_internal_hemorrhage"
+            },
+            {
+                "u_message": "A spreading pressure and deep pain build inside your torso.",
+                "type": "bad"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_MAJOR_INTERNAL_HEMORRHAGE",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "torso",
+                        {
+                            "context_val": "bp"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_major_internal_hemorrhage"
+            },
+            {
+                "u_message": "Something is badly wrong inside your torso.  You feel deep pain and growing weakness.",
+                "type": "bad"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_REOPEN_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "//": "Caller must ensure the selected body part actually contains dw_sutured_laceration.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "u_remove_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": [
+                    "dw_sutured_laceration"
+                ]
+            },
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_laceration"
+            },
+            {
+                "u_add_effect": "bleed",
+                "duration": "30 minutes",
+                "intensity": 1,
+                "target_part": {
+                    "context_val": "bp"
+                }
+            },
+            {
+                "u_message": "The sutures on your <context_val:bp> tear open.",
+                "type": "bad"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_REOPEN_DEEP_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "//": "Caller must ensure the selected body part actually contains dw_sutured_deep_laceration.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "u_remove_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": [
+                    "dw_sutured_deep_laceration"
+                ]
+            },
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_deep_laceration"
+            },
+            {
+                "u_add_effect": "bleed",
+                "duration": "1 hour",
+                "intensity": 3,
+                "target_part": {
+                    "context_val": "bp"
+                }
+            },
+            {
+                "u_message": "The deep wound on your <context_val:bp> tears open again.",
+                "type": "bad"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_REOPEN_SEVERE_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "//": "Caller must ensure the selected body part actually contains dw_sutured_severe_laceration.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "u_remove_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": [
+                    "dw_sutured_severe_laceration"
+                ]
+            },
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_severe_laceration"
+            },
+            {
+                "u_add_effect": "bleed",
+                "duration": "2 hours",
+                "intensity": 5,
+                "target_part": {
+                    "context_val": "bp"
+                }
+            },
+            {
+                "u_message": "The extensive wound on your <context_val:bp> splits open again.",
+                "type": "bad"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_ROLL_MINOR_OPEN_WOUND_COMPLICATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "weighted_list_eocs": [
+                [
+                    "EOC_DW_NO_COMPLICATION",
+                    75
+                ],
+                [
+                    "EOC_DW_LIGHT_CONTAMINATION",
+                    25
+                ]
+            ]
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_ROLL_DEEP_OPEN_WOUND_COMPLICATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "weighted_list_eocs": [
+                [
+                    "EOC_DW_NO_COMPLICATION",
+                    55
+                ],
+                [
+                    "EOC_DW_LIGHT_CONTAMINATION",
+                    25
+                ],
+                [
+                    "EOC_DW_MODERATE_CONTAMINATION",
+                    20
+                ]
+            ]
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_ROLL_SEVERE_OPEN_WOUND_COMPLICATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "weighted_list_eocs": [
+                [
+                    "EOC_DW_NO_COMPLICATION",
+                    35
+                ],
+                [
+                    "EOC_DW_LIGHT_CONTAMINATION",
+                    20
+                ],
+                [
+                    "EOC_DW_MODERATE_CONTAMINATION",
+                    25
+                ],
+                [
+                    "EOC_DW_HEAVY_CONTAMINATION",
+                    20
+                ]
+            ]
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_ROLL_GUNSHOT_COMPLICATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "weighted_list_eocs": [
+                [
+                    "EOC_DW_NO_COMPLICATION",
+                    45
+                ],
+                [
+                    "EOC_DW_LIGHT_CONTAMINATION",
+                    20
+                ],
+                [
+                    "EOC_DW_MODERATE_CONTAMINATION",
+                    25
+                ],
+                [
+                    "EOC_DW_HEAVY_CONTAMINATION",
+                    10
+                ]
+            ]
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_ROLL_DEVASTATING_GUNSHOT_COMPLICATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "weighted_list_eocs": [
+                [
+                    "EOC_DW_NO_COMPLICATION",
+                    25
+                ],
+                [
+                    "EOC_DW_LIGHT_CONTAMINATION",
+                    15
+                ],
+                [
+                    "EOC_DW_MODERATE_CONTAMINATION",
+                    30
+                ],
+                [
+                    "EOC_DW_HEAVY_CONTAMINATION",
+                    30
+                ]
+            ]
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_ROLL_MAJOR_BURN_COMPLICATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "weighted_list_eocs": [
+                [
+                    "EOC_DW_NO_COMPLICATION",
+                    50
+                ],
+                [
+                    "EOC_DW_LIGHT_CONTAMINATION",
+                    25
+                ],
+                [
+                    "EOC_DW_MODERATE_CONTAMINATION",
+                    20
+                ],
+                [
+                    "EOC_DW_HEAVY_CONTAMINATION",
+                    5
+                ]
+            ]
+        }
     }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_ROLL_DEEP_OPEN_WOUND_COMPLICATION",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": {
-      "weighted_list_eocs": [
-        [ "EOC_DW_NO_COMPLICATION", 55 ],
-        [ "EOC_DW_LIGHT_CONTAMINATION", 25 ],
-        [ "EOC_DW_MODERATE_CONTAMINATION", 20 ]
-      ]
-    }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_ROLL_SEVERE_OPEN_WOUND_COMPLICATION",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": {
-      "weighted_list_eocs": [
-        [ "EOC_DW_NO_COMPLICATION", 35 ],
-        [ "EOC_DW_LIGHT_CONTAMINATION", 20 ],
-        [ "EOC_DW_MODERATE_CONTAMINATION", 25 ],
-        [ "EOC_DW_HEAVY_CONTAMINATION", 20 ]
-      ]
-    }
-  },
-
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_ROLL_GUNSHOT_COMPLICATION",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": {
-      "weighted_list_eocs": [
-        [ "EOC_DW_NO_COMPLICATION", 45 ],
-        [ "EOC_DW_LIGHT_CONTAMINATION", 20 ],
-        [ "EOC_DW_MODERATE_CONTAMINATION", 25 ],
-        [ "EOC_DW_HEAVY_CONTAMINATION", 10 ]
-      ]
-    }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_ROLL_DEVASTATING_GUNSHOT_COMPLICATION",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": {
-      "weighted_list_eocs": [
-        [ "EOC_DW_NO_COMPLICATION", 25 ],
-        [ "EOC_DW_LIGHT_CONTAMINATION", 15 ],
-        [ "EOC_DW_MODERATE_CONTAMINATION", 30 ],
-        [ "EOC_DW_HEAVY_CONTAMINATION", 30 ]
-      ]
-    }
-  },
-
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_ROLL_MAJOR_BURN_COMPLICATION",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": {
-      "weighted_list_eocs": [
-        [ "EOC_DW_NO_COMPLICATION", 50 ],
-        [ "EOC_DW_LIGHT_CONTAMINATION", 25 ],
-        [ "EOC_DW_MODERATE_CONTAMINATION", 20 ],
-        [ "EOC_DW_HEAVY_CONTAMINATION", 5 ]
-      ]
-    }
-  }
 ]

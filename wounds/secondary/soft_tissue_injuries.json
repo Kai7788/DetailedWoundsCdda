@@ -1,648 +1,1555 @@
 [
-  {
-    "type": "wound",
-    "id": "dw_muscle_contusion",
-    "name": {
-      "str": "muscle contusion",
-      "str_pl": "muscle contusions"
+    {
+        "type": "wound",
+        "id": "dw_muscle_contusion",
+        "name": {
+            "str": "muscle contusion",
+            "str_pl": "muscle contusions"
+        },
+        "description": "Blunt force has bruised muscle tissue beneath the skin.  The affected muscles are sore, stiff, and weaker than normal, particularly during strenuous movement.",
+        "weight": 8,
+        "limit": 2,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            8,
+            20
+        ],
+        "pain": [
+            2,
+            5
+        ],
+        "healing_time": [
+            "4 days",
+            "12 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.03
+            },
+            {
+                "score": "grip",
+                "value": 0.03
+            },
+            {
+                "score": "lift",
+                "value": 0.05
+            },
+            {
+                "score": "block",
+                "value": 0.08
+            },
+            {
+                "score": "move_speed",
+                "value": 0.05
+            },
+            {
+                "score": "footing",
+                "value": 0.03
+            },
+            {
+                "score": "crawl",
+                "value": 0.03
+            },
+            {
+                "score": "swim",
+                "value": 0.03
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only limb wound."
     },
-    "description": "Blunt force has bruised muscle tissue beneath the skin.  The affected muscles are sore, stiff, and weaker than normal, particularly during strenuous movement.",
-    "weight": 8,
-    "limit": 2,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 8, 20 ],
-    "pain": [ 2, 5 ],
-    "healing_time": [ "4 days", "12 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.03 },
-      { "score": "grip", "value": 0.03 },
-      { "score": "lift", "value": 0.05 },
-      { "score": "block", "value": 0.08 },
-      { "score": "move_speed", "value": 0.05 },
-      { "score": "footing", "value": 0.03 },
-      { "score": "crawl", "value": 0.03 },
-      { "score": "swim", "value": 0.03 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only limb wound."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_muscle_strain",
-    "name": {
-      "str": "muscle strain",
-      "str_pl": "muscle strains"
+    {
+        "type": "wound",
+        "id": "dw_muscle_strain",
+        "name": {
+            "str": "muscle strain",
+            "str_pl": "muscle strains"
+        },
+        "description": "Muscle fibers have been overstretched and partially damaged.  Movement remains possible, but loading the affected muscles produces pain and noticeable weakness.",
+        "weight": 7,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            10,
+            24
+        ],
+        "pain": [
+            2,
+            6
+        ],
+        "healing_time": [
+            "5 days",
+            "18 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.05
+            },
+            {
+                "score": "grip",
+                "value": 0.05
+            },
+            {
+                "score": "lift",
+                "value": 0.08
+            },
+            {
+                "score": "block",
+                "value": 0.10
+            },
+            {
+                "score": "move_speed",
+                "value": 0.08
+            },
+            {
+                "score": "footing",
+                "value": 0.05
+            },
+            {
+                "score": "crawl",
+                "value": 0.05
+            },
+            {
+                "score": "swim",
+                "value": 0.05
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only limb wound."
     },
-    "description": "Muscle fibers have been overstretched and partially damaged.  Movement remains possible, but loading the affected muscles produces pain and noticeable weakness.",
-    "weight": 7,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 10, 24 ],
-    "pain": [ 2, 6 ],
-    "healing_time": [ "5 days", "18 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.05 },
-      { "score": "grip", "value": 0.05 },
-      { "score": "lift", "value": 0.08 },
-      { "score": "block", "value": 0.10 },
-      { "score": "move_speed", "value": 0.08 },
-      { "score": "footing", "value": 0.05 },
-      { "score": "crawl", "value": 0.05 },
-      { "score": "swim", "value": 0.05 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only limb wound."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_partial_muscle_tear",
-    "name": {
-      "str": "partial muscle tear",
-      "str_pl": "partial muscle tears"
+    {
+        "type": "wound",
+        "id": "dw_partial_muscle_tear",
+        "name": {
+            "str": "partial muscle tear",
+            "str_pl": "partial muscle tears"
+        },
+        "description": "A substantial portion of the muscle fibers have torn.  The injured area is painful and weak, making forceful movement difficult.",
+        "weight": 5,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            18,
+            35
+        ],
+        "pain": [
+            5,
+            10
+        ],
+        "healing_time": [
+            "14 days",
+            "42 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.10
+            },
+            {
+                "score": "grip",
+                "value": 0.10
+            },
+            {
+                "score": "lift",
+                "value": 0.18
+            },
+            {
+                "score": "block",
+                "value": 0.20
+            },
+            {
+                "score": "move_speed",
+                "value": 0.18
+            },
+            {
+                "score": "footing",
+                "value": 0.08
+            },
+            {
+                "score": "crawl",
+                "value": 0.10
+            },
+            {
+                "score": "swim",
+                "value": 0.10
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only limb wound."
     },
-    "description": "A substantial portion of the muscle fibers have torn.  The injured area is painful and weak, making forceful movement difficult.",
-    "weight": 5,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 18, 35 ],
-    "pain": [ 5, 10 ],
-    "healing_time": [ "14 days", "42 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.10 },
-      { "score": "grip", "value": 0.10 },
-      { "score": "lift", "value": 0.18 },
-      { "score": "block", "value": 0.20 },
-      { "score": "move_speed", "value": 0.18 },
-      { "score": "footing", "value": 0.08 },
-      { "score": "crawl", "value": 0.10 },
-      { "score": "swim", "value": 0.10 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only limb wound."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_muscle_rupture",
-    "name": {
-      "str": "muscle rupture",
-      "str_pl": "muscle ruptures"
+    {
+        "type": "wound",
+        "id": "dw_muscle_rupture",
+        "name": {
+            "str": "muscle rupture",
+            "str_pl": "muscle ruptures"
+        },
+        "description": "A muscle has suffered a near-complete or complete rupture.  Normal force generation is severely impaired and attempting to use the injured limb produces intense pain.",
+        "weight": 2,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            30,
+            1000
+        ],
+        "pain": [
+            8,
+            14
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.20
+            },
+            {
+                "score": "grip",
+                "value": 0.20
+            },
+            {
+                "score": "lift",
+                "value": 0.35
+            },
+            {
+                "score": "block",
+                "value": 0.40
+            },
+            {
+                "score": "move_speed",
+                "value": 0.35
+            },
+            {
+                "score": "footing",
+                "value": 0.15
+            },
+            {
+                "score": "crawl",
+                "value": 0.18
+            },
+            {
+                "score": "swim",
+                "value": 0.18
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only. No healing_time is intentional; a complete muscle rupture requires treatment."
     },
-    "description": "A muscle has suffered a near-complete or complete rupture.  Normal force generation is severely impaired and attempting to use the injured limb produces intense pain.",
-    "weight": 2,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 30, 1000 ],
-    "pain": [ 8, 14 ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.20 },
-      { "score": "grip", "value": 0.20 },
-      { "score": "lift", "value": 0.35 },
-      { "score": "block", "value": 0.40 },
-      { "score": "move_speed", "value": 0.35 },
-      { "score": "footing", "value": 0.15 },
-      { "score": "crawl", "value": 0.18 },
-      { "score": "swim", "value": 0.18 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only. No healing_time is intentional; a complete muscle rupture requires treatment."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_muscle_laceration",
-    "name": {
-      "str": "muscle laceration",
-      "str_pl": "muscle lacerations"
+    {
+        "type": "wound",
+        "id": "dw_muscle_laceration",
+        "name": {
+            "str": "muscle laceration",
+            "str_pl": "muscle lacerations"
+        },
+        "description": "A penetrating injury has cut through muscle beneath the surface wound.  Contracting the damaged tissue is painful and noticeably reduces the strength of the affected limb.",
+        "weight": 5,
+        "limit": 1,
+        "damage_types": [
+            "cut",
+            "stab",
+            "bullet"
+        ],
+        "damage_required": [
+            12,
+            30
+        ],
+        "pain": [
+            4,
+            9
+        ],
+        "healing_time": [
+            "10 days",
+            "35 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.08
+            },
+            {
+                "score": "grip",
+                "value": 0.08
+            },
+            {
+                "score": "lift",
+                "value": 0.15
+            },
+            {
+                "score": "block",
+                "value": 0.18
+            },
+            {
+                "score": "move_speed",
+                "value": 0.15
+            },
+            {
+                "score": "footing",
+                "value": 0.06
+            },
+            {
+                "score": "crawl",
+                "value": 0.08
+            },
+            {
+                "score": "swim",
+                "value": 0.08
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only penetrating soft-tissue wound."
     },
-    "description": "A penetrating injury has cut through muscle beneath the surface wound.  Contracting the damaged tissue is painful and noticeably reduces the strength of the affected limb.",
-    "weight": 5,
-    "limit": 1,
-    "damage_types": [ "cut", "stab", "bullet" ],
-    "damage_required": [ 12, 30 ],
-    "pain": [ 4, 9 ],
-    "healing_time": [ "10 days", "35 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.08 },
-      { "score": "grip", "value": 0.08 },
-      { "score": "lift", "value": 0.15 },
-      { "score": "block", "value": 0.18 },
-      { "score": "move_speed", "value": 0.15 },
-      { "score": "footing", "value": 0.06 },
-      { "score": "crawl", "value": 0.08 },
-      { "score": "swim", "value": 0.08 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only penetrating soft-tissue wound."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_severe_muscle_laceration",
-    "name": {
-      "str": "severe muscle laceration",
-      "str_pl": "severe muscle lacerations"
+    {
+        "type": "wound",
+        "id": "dw_severe_muscle_laceration",
+        "name": {
+            "str": "severe muscle laceration",
+            "str_pl": "severe muscle lacerations"
+        },
+        "description": "A deep penetrating wound has extensively torn through muscle tissue.  The affected limb has lost a large portion of its strength and normal movement is severely compromised.",
+        "weight": 2,
+        "limit": 1,
+        "damage_types": [
+            "cut",
+            "stab",
+            "bullet"
+        ],
+        "damage_required": [
+            25,
+            1000
+        ],
+        "pain": [
+            8,
+            15
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.18
+            },
+            {
+                "score": "grip",
+                "value": 0.18
+            },
+            {
+                "score": "lift",
+                "value": 0.30
+            },
+            {
+                "score": "block",
+                "value": 0.35
+            },
+            {
+                "score": "move_speed",
+                "value": 0.30
+            },
+            {
+                "score": "footing",
+                "value": 0.12
+            },
+            {
+                "score": "crawl",
+                "value": 0.15
+            },
+            {
+                "score": "swim",
+                "value": 0.15
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only. No healing_time is intentional."
     },
-    "description": "A deep penetrating wound has extensively torn through muscle tissue.  The affected limb has lost a large portion of its strength and normal movement is severely compromised.",
-    "weight": 2,
-    "limit": 1,
-    "damage_types": [ "cut", "stab", "bullet" ],
-    "damage_required": [ 25, 1000 ],
-    "pain": [ 8, 15 ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.18 },
-      { "score": "grip", "value": 0.18 },
-      { "score": "lift", "value": 0.30 },
-      { "score": "block", "value": 0.35 },
-      { "score": "move_speed", "value": 0.30 },
-      { "score": "footing", "value": 0.12 },
-      { "score": "crawl", "value": 0.15 },
-      { "score": "swim", "value": 0.15 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only. No healing_time is intentional."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_tendon_strain",
-    "name": {
-      "str": "tendon strain",
-      "str_pl": "tendon strains"
+    {
+        "type": "wound",
+        "id": "dw_tendon_strain",
+        "name": {
+            "str": "tendon strain",
+            "str_pl": "tendon strains"
+        },
+        "description": "A tendon has been overstretched and damaged.  Movement remains possible, but transferring force through the affected limb is painful and less effective.",
+        "weight": 6,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            10,
+            24
+        ],
+        "pain": [
+            2,
+            5
+        ],
+        "healing_time": [
+            "7 days",
+            "21 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.08
+            },
+            {
+                "score": "grip",
+                "value": 0.08
+            },
+            {
+                "score": "lift",
+                "value": 0.08
+            },
+            {
+                "score": "block",
+                "value": 0.06
+            },
+            {
+                "score": "move_speed",
+                "value": 0.08
+            },
+            {
+                "score": "footing",
+                "value": 0.08
+            },
+            {
+                "score": "crawl",
+                "value": 0.04
+            },
+            {
+                "score": "swim",
+                "value": 0.04
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only limb wound."
     },
-    "description": "A tendon has been overstretched and damaged.  Movement remains possible, but transferring force through the affected limb is painful and less effective.",
-    "weight": 6,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 10, 24 ],
-    "pain": [ 2, 5 ],
-    "healing_time": [ "7 days", "21 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.08 },
-      { "score": "grip", "value": 0.08 },
-      { "score": "lift", "value": 0.08 },
-      { "score": "block", "value": 0.06 },
-      { "score": "move_speed", "value": 0.08 },
-      { "score": "footing", "value": 0.08 },
-      { "score": "crawl", "value": 0.04 },
-      { "score": "swim", "value": 0.04 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only limb wound."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_partial_tendon_tear",
-    "name": {
-      "str": "partial tendon tear",
-      "str_pl": "partial tendon tears"
+    {
+        "type": "wound",
+        "id": "dw_partial_tendon_tear",
+        "name": {
+            "str": "partial tendon tear",
+            "str_pl": "partial tendon tears"
+        },
+        "description": "A tendon has partially torn.  The damaged structure can still transmit some force, but strength and precise movement are substantially reduced.",
+        "weight": 4,
+        "limit": 1,
+        "damage_types": [
+            "bash",
+            "cut",
+            "stab",
+            "bullet"
+        ],
+        "damage_required": [
+            18,
+            36
+        ],
+        "pain": [
+            4,
+            9
+        ],
+        "healing_time": [
+            "21 days",
+            "56 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.20
+            },
+            {
+                "score": "grip",
+                "value": 0.20
+            },
+            {
+                "score": "lift",
+                "value": 0.15
+            },
+            {
+                "score": "block",
+                "value": 0.15
+            },
+            {
+                "score": "move_speed",
+                "value": 0.20
+            },
+            {
+                "score": "footing",
+                "value": 0.20
+            },
+            {
+                "score": "crawl",
+                "value": 0.08
+            },
+            {
+                "score": "swim",
+                "value": 0.08
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only limb wound."
     },
-    "description": "A tendon has partially torn.  The damaged structure can still transmit some force, but strength and precise movement are substantially reduced.",
-    "weight": 4,
-    "limit": 1,
-    "damage_types": [ "bash", "cut", "stab", "bullet" ],
-    "damage_required": [ 18, 36 ],
-    "pain": [ 4, 9 ],
-    "healing_time": [ "21 days", "56 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.20 },
-      { "score": "grip", "value": 0.20 },
-      { "score": "lift", "value": 0.15 },
-      { "score": "block", "value": 0.15 },
-      { "score": "move_speed", "value": 0.20 },
-      { "score": "footing", "value": 0.20 },
-      { "score": "crawl", "value": 0.08 },
-      { "score": "swim", "value": 0.08 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only limb wound."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_tendon_rupture",
-    "name": {
-      "str": "tendon rupture",
-      "str_pl": "tendon ruptures"
+    {
+        "type": "wound",
+        "id": "dw_tendon_rupture",
+        "name": {
+            "str": "tendon rupture",
+            "str_pl": "tendon ruptures"
+        },
+        "description": "A tendon has ruptured completely.  Force can no longer be transferred normally through the affected structure, severely compromising use of the limb.",
+        "weight": 2,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            28,
+            1000
+        ],
+        "pain": [
+            7,
+            13
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.40
+            },
+            {
+                "score": "grip",
+                "value": 0.40
+            },
+            {
+                "score": "lift",
+                "value": 0.30
+            },
+            {
+                "score": "block",
+                "value": 0.30
+            },
+            {
+                "score": "move_speed",
+                "value": 0.35
+            },
+            {
+                "score": "footing",
+                "value": 0.35
+            },
+            {
+                "score": "crawl",
+                "value": 0.15
+            },
+            {
+                "score": "swim",
+                "value": 0.12
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only. Complete tendon rupture requires treatment."
     },
-    "description": "A tendon has ruptured completely.  Force can no longer be transferred normally through the affected structure, severely compromising use of the limb.",
-    "weight": 2,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 28, 1000 ],
-    "pain": [ 7, 13 ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.40 },
-      { "score": "grip", "value": 0.40 },
-      { "score": "lift", "value": 0.30 },
-      { "score": "block", "value": 0.30 },
-      { "score": "move_speed", "value": 0.35 },
-      { "score": "footing", "value": 0.35 },
-      { "score": "crawl", "value": 0.15 },
-      { "score": "swim", "value": 0.12 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only. Complete tendon rupture requires treatment."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_severed_tendon",
-    "name": {
-      "str": "severed tendon",
-      "str_pl": "severed tendons"
+    {
+        "type": "wound",
+        "id": "dw_severed_tendon",
+        "name": {
+            "str": "severed tendon",
+            "str_pl": "severed tendons"
+        },
+        "description": "A sharp or ballistic wound has completely severed a tendon.  Normal movement controlled by that tendon is largely lost.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "cut",
+            "stab",
+            "bullet"
+        ],
+        "damage_required": [
+            22,
+            1000
+        ],
+        "pain": [
+            8,
+            14
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.45
+            },
+            {
+                "score": "grip",
+                "value": 0.45
+            },
+            {
+                "score": "lift",
+                "value": 0.35
+            },
+            {
+                "score": "block",
+                "value": 0.35
+            },
+            {
+                "score": "move_speed",
+                "value": 0.40
+            },
+            {
+                "score": "footing",
+                "value": 0.40
+            },
+            {
+                "score": "crawl",
+                "value": 0.18
+            },
+            {
+                "score": "swim",
+                "value": 0.15
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only. No healing_time is intentional."
     },
-    "description": "A sharp or ballistic wound has completely severed a tendon.  Normal movement controlled by that tendon is largely lost.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "cut", "stab", "bullet" ],
-    "damage_required": [ 22, 1000 ],
-    "pain": [ 8, 14 ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.45 },
-      { "score": "grip", "value": 0.45 },
-      { "score": "lift", "value": 0.35 },
-      { "score": "block", "value": 0.35 },
-      { "score": "move_speed", "value": 0.40 },
-      { "score": "footing", "value": 0.40 },
-      { "score": "crawl", "value": 0.18 },
-      { "score": "swim", "value": 0.15 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only. No healing_time is intentional."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_ligament_sprain",
-    "name": {
-      "str": "ligament sprain",
-      "str_pl": "ligament sprains"
+    {
+        "type": "wound",
+        "id": "dw_ligament_sprain",
+        "name": {
+            "str": "ligament sprain",
+            "str_pl": "ligament sprains"
+        },
+        "description": "A joint has been forced beyond its normal range, stretching and damaging the supporting ligaments.  The area is painful and less stable under load.",
+        "weight": 6,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            8,
+            20
+        ],
+        "pain": [
+            2,
+            6
+        ],
+        "healing_time": [
+            "7 days",
+            "21 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.05
+            },
+            {
+                "score": "grip",
+                "value": 0.05
+            },
+            {
+                "score": "block",
+                "value": 0.08
+            },
+            {
+                "score": "move_speed",
+                "value": 0.10
+            },
+            {
+                "score": "footing",
+                "value": 0.12
+            },
+            {
+                "score": "crawl",
+                "value": 0.05
+            },
+            {
+                "score": "swim",
+                "value": 0.04
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only joint-support injury."
     },
-    "description": "A joint has been forced beyond its normal range, stretching and damaging the supporting ligaments.  The area is painful and less stable under load.",
-    "weight": 6,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 8, 20 ],
-    "pain": [ 2, 6 ],
-    "healing_time": [ "7 days", "21 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.05 },
-      { "score": "grip", "value": 0.05 },
-      { "score": "block", "value": 0.08 },
-      { "score": "move_speed", "value": 0.10 },
-      { "score": "footing", "value": 0.12 },
-      { "score": "crawl", "value": 0.05 },
-      { "score": "swim", "value": 0.04 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only joint-support injury."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_partial_ligament_tear",
-    "name": {
-      "str": "partial ligament tear",
-      "str_pl": "partial ligament tears"
+    {
+        "type": "wound",
+        "id": "dw_partial_ligament_tear",
+        "name": {
+            "str": "partial ligament tear",
+            "str_pl": "partial ligament tears"
+        },
+        "description": "One or more supporting ligaments have partially torn.  The joint remains usable but is painful, weak, and mechanically unstable.",
+        "weight": 4,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            16,
+            32
+        ],
+        "pain": [
+            4,
+            9
+        ],
+        "healing_time": [
+            "21 days",
+            "56 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.12
+            },
+            {
+                "score": "grip",
+                "value": 0.12
+            },
+            {
+                "score": "block",
+                "value": 0.20
+            },
+            {
+                "score": "move_speed",
+                "value": 0.20
+            },
+            {
+                "score": "footing",
+                "value": 0.25
+            },
+            {
+                "score": "crawl",
+                "value": 0.10
+            },
+            {
+                "score": "swim",
+                "value": 0.08
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only joint-support injury."
     },
-    "description": "One or more supporting ligaments have partially torn.  The joint remains usable but is painful, weak, and mechanically unstable.",
-    "weight": 4,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 16, 32 ],
-    "pain": [ 4, 9 ],
-    "healing_time": [ "21 days", "56 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.12 },
-      { "score": "grip", "value": 0.12 },
-      { "score": "block", "value": 0.20 },
-      { "score": "move_speed", "value": 0.20 },
-      { "score": "footing", "value": 0.25 },
-      { "score": "crawl", "value": 0.10 },
-      { "score": "swim", "value": 0.08 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only joint-support injury."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_ligament_rupture",
-    "name": {
-      "str": "ligament rupture",
-      "str_pl": "ligament ruptures"
+    {
+        "type": "wound",
+        "id": "dw_ligament_rupture",
+        "name": {
+            "str": "ligament rupture",
+            "str_pl": "ligament ruptures"
+        },
+        "description": "A major supporting ligament has ruptured completely.  The affected joint is severely unstable and normal loading or movement is extremely difficult.",
+        "weight": 2,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            28,
+            1000
+        ],
+        "pain": [
+            7,
+            13
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.25
+            },
+            {
+                "score": "grip",
+                "value": 0.20
+            },
+            {
+                "score": "block",
+                "value": 0.40
+            },
+            {
+                "score": "move_speed",
+                "value": 0.35
+            },
+            {
+                "score": "footing",
+                "value": 0.40
+            },
+            {
+                "score": "crawl",
+                "value": 0.18
+            },
+            {
+                "score": "swim",
+                "value": 0.15
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only. No healing_time is intentional."
     },
-    "description": "A major supporting ligament has ruptured completely.  The affected joint is severely unstable and normal loading or movement is extremely difficult.",
-    "weight": 2,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 28, 1000 ],
-    "pain": [ 7, 13 ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.25 },
-      { "score": "grip", "value": 0.20 },
-      { "score": "block", "value": 0.40 },
-      { "score": "move_speed", "value": 0.35 },
-      { "score": "footing", "value": 0.40 },
-      { "score": "crawl", "value": 0.18 },
-      { "score": "swim", "value": 0.15 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only. No healing_time is intentional."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_joint_subluxation",
-    "name": {
-      "str": "joint subluxation",
-      "str_pl": "joint subluxations"
+    {
+        "type": "wound",
+        "id": "dw_joint_subluxation",
+        "name": {
+            "str": "joint subluxation",
+            "str_pl": "joint subluxations"
+        },
+        "description": "A joint has been partially forced out of its normal alignment.  Movement is painful, unstable, and significantly restricted.",
+        "weight": 3,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            18,
+            34
+        ],
+        "pain": [
+            5,
+            10
+        ],
+        "healing_time": [
+            "14 days",
+            "42 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.18
+            },
+            {
+                "score": "grip",
+                "value": 0.15
+            },
+            {
+                "score": "lift",
+                "value": 0.15
+            },
+            {
+                "score": "block",
+                "value": 0.25
+            },
+            {
+                "score": "move_speed",
+                "value": 0.25
+            },
+            {
+                "score": "footing",
+                "value": 0.30
+            },
+            {
+                "score": "crawl",
+                "value": 0.12
+            },
+            {
+                "score": "swim",
+                "value": 0.10
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only joint injury."
     },
-    "description": "A joint has been partially forced out of its normal alignment.  Movement is painful, unstable, and significantly restricted.",
-    "weight": 3,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 18, 34 ],
-    "pain": [ 5, 10 ],
-    "healing_time": [ "14 days", "42 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.18 },
-      { "score": "grip", "value": 0.15 },
-      { "score": "lift", "value": 0.15 },
-      { "score": "block", "value": 0.25 },
-      { "score": "move_speed", "value": 0.25 },
-      { "score": "footing", "value": 0.30 },
-      { "score": "crawl", "value": 0.12 },
-      { "score": "swim", "value": 0.10 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only joint injury."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_joint_dislocation",
-    "name": {
-      "str": "joint dislocation",
-      "str_pl": "joint dislocations"
+    {
+        "type": "wound",
+        "id": "dw_joint_dislocation",
+        "name": {
+            "str": "joint dislocation",
+            "str_pl": "joint dislocations"
+        },
+        "description": "A joint has been forced completely out of its normal position.  The limb is mechanically compromised and attempting normal movement causes severe pain.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            28,
+            1000
+        ],
+        "pain": [
+            8,
+            15
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.35
+            },
+            {
+                "score": "grip",
+                "value": 0.30
+            },
+            {
+                "score": "lift",
+                "value": 0.30
+            },
+            {
+                "score": "block",
+                "value": 0.50
+            },
+            {
+                "score": "move_speed",
+                "value": 0.40
+            },
+            {
+                "score": "footing",
+                "value": 0.45
+            },
+            {
+                "score": "crawl",
+                "value": 0.20
+            },
+            {
+                "score": "swim",
+                "value": 0.18
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only. No healing_time is intentional because the joint must be reduced."
     },
-    "description": "A joint has been forced completely out of its normal position.  The limb is mechanically compromised and attempting normal movement causes severe pain.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 28, 1000 ],
-    "pain": [ 8, 15 ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.35 },
-      { "score": "grip", "value": 0.30 },
-      { "score": "lift", "value": 0.30 },
-      { "score": "block", "value": 0.50 },
-      { "score": "move_speed", "value": 0.40 },
-      { "score": "footing", "value": 0.45 },
-      { "score": "crawl", "value": 0.20 },
-      { "score": "swim", "value": 0.18 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only. No healing_time is intentional because the joint must be reduced."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_nerve_contusion",
-    "name": {
-      "str": "nerve contusion",
-      "str_pl": "nerve contusions"
+    {
+        "type": "wound",
+        "id": "dw_nerve_contusion",
+        "name": {
+            "str": "nerve contusion",
+            "str_pl": "nerve contusions"
+        },
+        "description": "Trauma has bruised a peripheral nerve.  The affected limb periodically feels numb, weak, or tingling, and precise control is mildly impaired.",
+        "weight": 5,
+        "limit": 1,
+        "damage_types": [
+            "bash",
+            "electric"
+        ],
+        "damage_required": [
+            10,
+            24
+        ],
+        "pain": [
+            3,
+            7
+        ],
+        "healing_time": [
+            "7 days",
+            "21 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.08
+            },
+            {
+                "score": "grip",
+                "value": 0.08
+            },
+            {
+                "score": "lift",
+                "value": 0.05
+            },
+            {
+                "score": "block",
+                "value": 0.08
+            },
+            {
+                "score": "move_speed",
+                "value": 0.08
+            },
+            {
+                "score": "footing",
+                "value": 0.08
+            },
+            {
+                "score": "crawl",
+                "value": 0.05
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only peripheral nerve injury."
     },
-    "description": "Trauma has bruised a peripheral nerve.  The affected limb periodically feels numb, weak, or tingling, and precise control is mildly impaired.",
-    "weight": 5,
-    "limit": 1,
-    "damage_types": [ "bash", "electric" ],
-    "damage_required": [ 10, 24 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "7 days", "21 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.08 },
-      { "score": "grip", "value": 0.08 },
-      { "score": "lift", "value": 0.05 },
-      { "score": "block", "value": 0.08 },
-      { "score": "move_speed", "value": 0.08 },
-      { "score": "footing", "value": 0.08 },
-      { "score": "crawl", "value": 0.05 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only peripheral nerve injury."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_peripheral_nerve_injury",
-    "name": {
-      "str": "peripheral nerve injury",
-      "str_pl": "peripheral nerve injuries"
+    {
+        "type": "wound",
+        "id": "dw_peripheral_nerve_injury",
+        "name": {
+            "str": "peripheral nerve injury",
+            "str_pl": "peripheral nerve injuries"
+        },
+        "description": "A peripheral nerve has suffered significant trauma.  Sensation and motor control in the affected limb are unreliable, reducing strength and coordination.",
+        "weight": 3,
+        "limit": 1,
+        "damage_types": [
+            "bash",
+            "cut",
+            "stab",
+            "bullet",
+            "electric"
+        ],
+        "damage_required": [
+            18,
+            38
+        ],
+        "pain": [
+            5,
+            10
+        ],
+        "healing_time": [
+            "21 days",
+            "70 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.20
+            },
+            {
+                "score": "grip",
+                "value": 0.20
+            },
+            {
+                "score": "lift",
+                "value": 0.15
+            },
+            {
+                "score": "block",
+                "value": 0.20
+            },
+            {
+                "score": "move_speed",
+                "value": 0.20
+            },
+            {
+                "score": "footing",
+                "value": 0.20
+            },
+            {
+                "score": "crawl",
+                "value": 0.10
+            },
+            {
+                "score": "swim",
+                "value": 0.08
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only peripheral nerve injury."
     },
-    "description": "A peripheral nerve has suffered significant trauma.  Sensation and motor control in the affected limb are unreliable, reducing strength and coordination.",
-    "weight": 3,
-    "limit": 1,
-    "damage_types": [ "bash", "cut", "stab", "bullet", "electric" ],
-    "damage_required": [ 18, 38 ],
-    "pain": [ 5, 10 ],
-    "healing_time": [ "21 days", "70 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.20 },
-      { "score": "grip", "value": 0.20 },
-      { "score": "lift", "value": 0.15 },
-      { "score": "block", "value": 0.20 },
-      { "score": "move_speed", "value": 0.20 },
-      { "score": "footing", "value": 0.20 },
-      { "score": "crawl", "value": 0.10 },
-      { "score": "swim", "value": 0.08 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only peripheral nerve injury."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_severe_peripheral_nerve_injury",
-    "name": {
-      "str": "severe peripheral nerve injury",
-      "str_pl": "severe peripheral nerve injuries"
+    {
+        "type": "wound",
+        "id": "dw_severe_peripheral_nerve_injury",
+        "name": {
+            "str": "severe peripheral nerve injury",
+            "str_pl": "severe peripheral nerve injuries"
+        },
+        "description": "Major damage to a peripheral nerve has caused pronounced weakness, numbness, and loss of fine motor control in the affected limb.",
+        "weight": 2,
+        "limit": 1,
+        "damage_types": [
+            "bash",
+            "cut",
+            "stab",
+            "bullet",
+            "electric"
+        ],
+        "damage_required": [
+            30,
+            60
+        ],
+        "pain": [
+            7,
+            13
+        ],
+        "healing_time": [
+            "60 days",
+            "180 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.35
+            },
+            {
+                "score": "grip",
+                "value": 0.35
+            },
+            {
+                "score": "lift",
+                "value": 0.25
+            },
+            {
+                "score": "block",
+                "value": 0.35
+            },
+            {
+                "score": "move_speed",
+                "value": 0.35
+            },
+            {
+                "score": "footing",
+                "value": 0.35
+            },
+            {
+                "score": "crawl",
+                "value": 0.18
+            },
+            {
+                "score": "swim",
+                "value": 0.15
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only. Severe nerve recovery is intentionally very slow."
     },
-    "description": "Major damage to a peripheral nerve has caused pronounced weakness, numbness, and loss of fine motor control in the affected limb.",
-    "weight": 2,
-    "limit": 1,
-    "damage_types": [ "bash", "cut", "stab", "bullet", "electric" ],
-    "damage_required": [ 30, 60 ],
-    "pain": [ 7, 13 ],
-    "healing_time": [ "60 days", "180 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.35 },
-      { "score": "grip", "value": 0.35 },
-      { "score": "lift", "value": 0.25 },
-      { "score": "block", "value": 0.35 },
-      { "score": "move_speed", "value": 0.35 },
-      { "score": "footing", "value": 0.35 },
-      { "score": "crawl", "value": 0.18 },
-      { "score": "swim", "value": 0.15 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only. Severe nerve recovery is intentionally very slow."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_nerve_severance",
-    "name": {
-      "str": "severed peripheral nerve",
-      "str_pl": "severed peripheral nerves"
+    {
+        "type": "wound",
+        "id": "dw_nerve_severance",
+        "name": {
+            "str": "severed peripheral nerve",
+            "str_pl": "severed peripheral nerves"
+        },
+        "description": "A major peripheral nerve has been completely severed.  Sensation and voluntary control supplied through the damaged nerve are profoundly impaired.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "cut",
+            "stab",
+            "bullet"
+        ],
+        "damage_required": [
+            25,
+            1000
+        ],
+        "pain": [
+            8,
+            14
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.45
+            },
+            {
+                "score": "grip",
+                "value": 0.45
+            },
+            {
+                "score": "lift",
+                "value": 0.35
+            },
+            {
+                "score": "block",
+                "value": 0.45
+            },
+            {
+                "score": "move_speed",
+                "value": 0.45
+            },
+            {
+                "score": "footing",
+                "value": 0.45
+            },
+            {
+                "score": "crawl",
+                "value": 0.22
+            },
+            {
+                "score": "swim",
+                "value": 0.18
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only. Complete nerve severance does not heal automatically."
     },
-    "description": "A major peripheral nerve has been completely severed.  Sensation and voluntary control supplied through the damaged nerve are profoundly impaired.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "cut", "stab", "bullet" ],
-    "damage_required": [ 25, 1000 ],
-    "pain": [ 8, 14 ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.45 },
-      { "score": "grip", "value": 0.45 },
-      { "score": "lift", "value": 0.35 },
-      { "score": "block", "value": 0.45 },
-      { "score": "move_speed", "value": 0.45 },
-      { "score": "footing", "value": 0.45 },
-      { "score": "crawl", "value": 0.22 },
-      { "score": "swim", "value": 0.18 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only. Complete nerve severance does not heal automatically."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_soft_tissue_crush_injury",
-    "name": {
-      "str": "soft-tissue crush injury",
-      "str_pl": "soft-tissue crush injuries"
+    {
+        "type": "wound",
+        "id": "dw_soft_tissue_crush_injury",
+        "name": {
+            "str": "soft-tissue crush injury",
+            "str_pl": "soft-tissue crush injuries"
+        },
+        "description": "Heavy compressive force has crushed muscle, connective tissue, and small blood vessels throughout the affected limb.  Swelling and deep tissue damage make normal use painful and difficult.",
+        "weight": 3,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            30,
+            60
+        ],
+        "pain": [
+            7,
+            13
+        ],
+        "healing_time": [
+            "21 days",
+            "60 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.20
+            },
+            {
+                "score": "grip",
+                "value": 0.20
+            },
+            {
+                "score": "lift",
+                "value": 0.25
+            },
+            {
+                "score": "block",
+                "value": 0.30
+            },
+            {
+                "score": "move_speed",
+                "value": 0.25
+            },
+            {
+                "score": "footing",
+                "value": 0.25
+            },
+            {
+                "score": "crawl",
+                "value": 0.15
+            },
+            {
+                "score": "swim",
+                "value": 0.12
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only severe blunt soft-tissue injury."
     },
-    "description": "Heavy compressive force has crushed muscle, connective tissue, and small blood vessels throughout the affected limb.  Swelling and deep tissue damage make normal use painful and difficult.",
-    "weight": 3,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 30, 60 ],
-    "pain": [ 7, 13 ],
-    "healing_time": [ "21 days", "60 days" ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.20 },
-      { "score": "grip", "value": 0.20 },
-      { "score": "lift", "value": 0.25 },
-      { "score": "block", "value": 0.30 },
-      { "score": "move_speed", "value": 0.25 },
-      { "score": "footing", "value": 0.25 },
-      { "score": "crawl", "value": 0.15 },
-      { "score": "swim", "value": 0.12 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only severe blunt soft-tissue injury."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_severe_soft_tissue_crush_injury",
-    "name": {
-      "str": "severe soft-tissue crush injury",
-      "str_pl": "severe soft-tissue crush injuries"
+    {
+        "type": "wound",
+        "id": "dw_severe_soft_tissue_crush_injury",
+        "name": {
+            "str": "severe soft-tissue crush injury",
+            "str_pl": "severe soft-tissue crush injuries"
+        },
+        "description": "Extreme compressive trauma has devastated the soft tissues of the affected limb.  Muscle, connective tissue, nerves, and blood vessels may all be badly damaged.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            50,
+            1000
+        ],
+        "pain": [
+            10,
+            18
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.35
+            },
+            {
+                "score": "grip",
+                "value": 0.35
+            },
+            {
+                "score": "lift",
+                "value": 0.40
+            },
+            {
+                "score": "block",
+                "value": 0.50
+            },
+            {
+                "score": "move_speed",
+                "value": 0.40
+            },
+            {
+                "score": "footing",
+                "value": 0.40
+            },
+            {
+                "score": "crawl",
+                "value": 0.22
+            },
+            {
+                "score": "swim",
+                "value": 0.18
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only. No healing_time is intentional."
     },
-    "description": "Extreme compressive trauma has devastated the soft tissues of the affected limb.  Muscle, connective tissue, nerves, and blood vessels may all be badly damaged.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 50, 1000 ],
-    "pain": [ 10, 18 ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.35 },
-      { "score": "grip", "value": 0.35 },
-      { "score": "lift", "value": 0.40 },
-      { "score": "block", "value": 0.50 },
-      { "score": "move_speed", "value": 0.40 },
-      { "score": "footing", "value": 0.40 },
-      { "score": "crawl", "value": 0.22 },
-      { "score": "swim", "value": 0.18 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only. No healing_time is intentional."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_compartment_syndrome",
-    "name": {
-      "str": "compartment syndrome",
-      "str_pl": "compartment syndrome injuries"
-    },
-    "description": "Severe swelling inside a confined muscle compartment is compressing blood vessels and nerves.  The affected limb is intensely painful, tense, weak, and progressively threatened by loss of circulation.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "bash", "heat" ],
-    "damage_required": [ 35, 1000 ],
-    "pain": [ 12, 20 ],
-    "limb_scores": [
-      { "score": "manip", "value": 0.40 },
-      { "score": "grip", "value": 0.40 },
-      { "score": "lift", "value": 0.40 },
-      { "score": "block", "value": 0.50 },
-      { "score": "move_speed", "value": 0.45 },
-      { "score": "footing", "value": 0.45 },
-      { "score": "crawl", "value": 0.25 },
-      { "score": "swim", "value": 0.20 }
-    ],
-    "blacklist_body_part_types": [ "head", "torso", "sensor", "mouth", "wing", "tail", "other" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary complication of severe crush injury, fracture, or extensive burn. No healing_time is intentional."
-  }
+    {
+        "type": "wound",
+        "id": "dw_compartment_syndrome",
+        "name": {
+            "str": "compartment syndrome",
+            "str_pl": "compartment syndrome injuries"
+        },
+        "description": "Severe swelling inside a confined muscle compartment is compressing blood vessels and nerves.  The affected limb is intensely painful, tense, weak, and progressively threatened by loss of circulation.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "bash",
+            "heat"
+        ],
+        "damage_required": [
+            35,
+            1000
+        ],
+        "pain": [
+            12,
+            20
+        ],
+        "limb_scores": [
+            {
+                "score": "manip",
+                "value": 0.40
+            },
+            {
+                "score": "grip",
+                "value": 0.40
+            },
+            {
+                "score": "lift",
+                "value": 0.40
+            },
+            {
+                "score": "block",
+                "value": 0.50
+            },
+            {
+                "score": "move_speed",
+                "value": 0.45
+            },
+            {
+                "score": "footing",
+                "value": 0.45
+            },
+            {
+                "score": "crawl",
+                "value": 0.25
+            },
+            {
+                "score": "swim",
+                "value": 0.20
+            }
+        ],
+        "blacklist_body_part_types": [
+            "head",
+            "torso",
+            "sensor",
+            "mouth",
+            "wing",
+            "tail",
+            "other"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary complication of severe crush injury, fracture, or extensive burn. No healing_time is intentional."
+    }
 ]

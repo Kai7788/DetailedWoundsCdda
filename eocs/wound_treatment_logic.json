@@ -1,1103 +1,1103 @@
 [
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_ON_WOUND_TREATED",
-    "eoc_type": "ACTIVATION",
-    "//": "Post-treatment entry point. Caller must provide bp and the newly added treated wound_id.",
-    "condition": {
-      "expects_vars": [
-        "bp",
-        "wound_id"
-      ]
-    },
-    "effect": [
-      {
-        "run_eocs": "EOC_DW_TREATMENT_ROUTE_CLEANUP"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_ROUTE_DEBRIDEMENT"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_SUTURED_LACERATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_SUTURED_DEEP_LACERATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_SUTURED_SEVERE_LACERATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_SUTURED_DEEP_FACIAL_LACERATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_LACERATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_DEEP_LACERATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_SEVERE_LACERATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_DEEP_FACIAL_LACERATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_LACERATION_CONTAMINATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_DEEP_LACERATION_CONTAMINATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SEVERE_LACERATION_CONTAMINATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_DEEP_FACIAL_CONTAMINATION"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_ROUTE_CLEANUP",
-    "eoc_type": "ACTIVATION",
-    "//": "Only routes treatments that actually clean, disinfect, or irrigate with clean water. Generic chemical-burn irrigation is intentionally excluded.",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_ON_WOUND_TREATED",
+        "eoc_type": "ACTIVATION",
+        "//": "Post-treatment entry point. Caller must provide bp and the newly added treated wound_id.",
+        "condition": {
+            "expects_vars": [
+                "bp",
+                "wound_id"
+            ]
         },
-        {
-          "or": [
+        "effect": [
             {
-              "compare_string": [
-                "dw_dressed_scratch",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_ROUTE_CLEANUP"
             },
             {
-              "compare_string": [
-                "dw_dressed_shallow_cut",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_ROUTE_DEBRIDEMENT"
             },
             {
-              "compare_string": [
-                "dw_cleaned_laceration",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_SUTURED_LACERATION"
             },
             {
-              "compare_string": [
-                "dw_cleaned_deep_laceration",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_SUTURED_DEEP_LACERATION"
             },
             {
-              "compare_string": [
-                "dw_cleaned_severe_laceration",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_SUTURED_SEVERE_LACERATION"
             },
             {
-              "compare_string": [
-                "dw_cleaned_minor_puncture",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_SUTURED_DEEP_FACIAL_LACERATION"
             },
             {
-              "compare_string": [
-                "dw_cleaned_puncture_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_LACERATION"
             },
             {
-              "compare_string": [
-                "dw_cleaned_deep_puncture",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_DEEP_LACERATION"
             },
             {
-              "compare_string": [
-                "dw_cleaned_penetrating_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_SEVERE_LACERATION"
             },
             {
-              "compare_string": [
-                "dw_dressed_ballistic_graze",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_DEEP_FACIAL_LACERATION"
             },
             {
-              "compare_string": [
-                "dw_cleaned_superficial_gunshot_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_LACERATION_CONTAMINATION"
             },
             {
-              "compare_string": [
-                "dw_cleaned_penetrating_gunshot_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_DEEP_LACERATION_CONTAMINATION"
             },
             {
-              "compare_string": [
-                "dw_stabilized_open_fracture",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SEVERE_LACERATION_CONTAMINATION"
             },
             {
-              "compare_string": [
-                "dw_irrigated_cornea_abrasion",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_irrigated_ocular_chemical_burn",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_dressed_split_lip",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_cleaned_oral_laceration",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_cleaned_deep_facial_laceration",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_cleaned_superficial_bite_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_cleaned_deep_bite_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_cleaned_crushing_bite_injury",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
+                "run_eocs": "EOC_DW_TREATMENT_CHECK_IMPROVISED_DEEP_FACIAL_CONTAMINATION"
             }
-          ]
-        }
-      ]
-    },
-    "effect": {
-      "run_eocs": "EOC_DW_TREATMENT_CLEAR_CONTAMINATION"
-    }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_ROUTE_DEBRIDEMENT",
-    "eoc_type": "ACTIVATION",
-    "//": "Debridement removes local contamination and already-necrotic tissue, but does not cure an established local infection.",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
-        },
-        {
-          "or": [
-            {
-              "compare_string": [
-                "dw_debrided_avulsion_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_severe_penetrating_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_devastating_penetrating_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_severe_gunshot_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_devastating_ballistic_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_full_thickness_burn",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_extensive_full_thickness_burn",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_full_thickness_chemical_burn",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_extensive_chemical_burn",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_severe_electrical_tissue_injury",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_extensive_electrical_tissue_destruction",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_extensive_cold_injury",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_severe_soft_tissue_crush_injury",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_tearing_bite_wound",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            },
-            {
-              "compare_string": [
-                "dw_debrided_devastating_bite_injury",
-                {
-                  "context_val": "wound_id"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "effect": [
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CLEAR_CONTAMINATION"
-      },
-      {
-        "run_eocs": "EOC_DW_TREATMENT_CLEAR_NECROSIS"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CLEAR_CONTAMINATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp"
-          ]
-        },
-        {
-          "u_has_effect": "dw_wound_contamination",
-          "bodypart": {
-            "context_val": "bp"
-          }
-        }
-      ]
-    },
-    "effect": {
-      "u_remove_effect": "dw_wound_contamination",
-      "target_part": {
-        "context_val": "bp"
-      }
-    }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CLEAR_NECROSIS",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp"
-          ]
-        },
-        {
-          "u_has_effect": "dw_tissue_necrosis",
-          "bodypart": {
-            "context_val": "bp"
-          }
-        }
-      ]
-    },
-    "effect": {
-      "u_remove_effect": "dw_tissue_necrosis",
-      "target_part": {
-        "context_val": "bp"
-      }
-    }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_LOCAL_INFECTION",
-    "eoc_type": "ACTIVATION",
-    "//": "Reusable infection-treatment entry point. It is not called by ordinary wound cleaning. A future medicine/use-action or bridge should call it for the selected bp.",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp"
-          ]
-        },
-        {
-          "u_has_effect": "dw_local_wound_infection",
-          "intensity": 2,
-          "bodypart": {
-            "context_val": "bp"
-          }
-        }
-      ]
-    },
-    "effect": {
-      "run_eocs": "EOC_DW_TREATMENT_DOWNGRADE_LOCAL_INFECTION"
-    },
-    "false_effect": {
-      "run_eocs": "EOC_DW_TREATMENT_CLEAR_LOCAL_INFECTION"
-    }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_DOWNGRADE_LOCAL_INFECTION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp"
-          ]
-        },
-        {
-          "u_has_effect": "dw_local_wound_infection",
-          "intensity": 2,
-          "bodypart": {
-            "context_val": "bp"
-          }
-        }
-      ]
-    },
-    "effect": [
-      {
-        "u_remove_effect": "dw_local_wound_infection",
-        "target_part": {
-          "context_val": "bp"
-        }
-      },
-      {
-        "u_add_effect": "dw_local_wound_infection",
-        "duration": "PERMANENT",
-        "intensity": 1,
-        "target_part": {
-          "context_val": "bp"
-        }
-      },
-      {
-        "u_message": "The severe local infection on your <context_val:bp> is beginning to come under control.",
-        "type": "good"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CLEAR_LOCAL_INFECTION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp"
-          ]
-        },
-        {
-          "u_has_effect": "dw_local_wound_infection",
-          "intensity": 1,
-          "bodypart": {
-            "context_val": "bp"
-          }
-        }
-      ]
-    },
-    "effect": [
-      {
-        "u_remove_effect": "dw_local_wound_infection",
-        "target_part": {
-          "context_val": "bp"
-        }
-      },
-      {
-        "u_message": "The local infection on your <context_val:bp> has cleared.",
-        "type": "good"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_REOPEN_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "expects_vars": [
-        "bp"
-      ]
-    },
-    "effect": [
-      {
-        "u_remove_wound": {
-          "context_val": "bp"
-        },
-        "wound_id": [
-          "dw_sutured_laceration",
-          "dw_improvised_sutured_laceration"
         ]
-      },
-      {
-        "u_add_wound": {
-          "context_val": "bp"
-        },
-        "wound_id": "dw_laceration"
-      },
-      {
-        "u_add_effect": "bleed",
-        "duration": "30 minutes",
-        "intensity": 1,
-        "target_part": {
-          "context_val": "bp"
-        }
-      },
-      {
-        "u_message": "The closure on your <context_val:bp> fails and the laceration opens again.",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_REOPEN_DEEP_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "expects_vars": [
-        "bp"
-      ]
     },
-    "effect": [
-      {
-        "u_remove_wound": {
-          "context_val": "bp"
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_ROUTE_CLEANUP",
+        "eoc_type": "ACTIVATION",
+        "//": "Only routes treatments that actually clean, disinfect, or irrigate with clean water. Generic chemical-burn irrigation is intentionally excluded.",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "or": [
+                        {
+                            "compare_string": [
+                                "dw_dressed_scratch",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_dressed_shallow_cut",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_laceration",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_deep_laceration",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_severe_laceration",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_minor_puncture",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_puncture_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_deep_puncture",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_penetrating_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_dressed_ballistic_graze",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_superficial_gunshot_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_penetrating_gunshot_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_stabilized_open_fracture",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_irrigated_cornea_abrasion",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_irrigated_ocular_chemical_burn",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_dressed_split_lip",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_oral_laceration",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_deep_facial_laceration",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_superficial_bite_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_deep_bite_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_cleaned_crushing_bite_injury",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
-        "wound_id": [
-          "dw_sutured_deep_laceration",
-          "dw_improvised_sutured_deep_laceration"
+        "effect": {
+            "run_eocs": "EOC_DW_TREATMENT_CLEAR_CONTAMINATION"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_ROUTE_DEBRIDEMENT",
+        "eoc_type": "ACTIVATION",
+        "//": "Debridement removes local contamination and already-necrotic tissue, but does not cure an established local infection.",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "or": [
+                        {
+                            "compare_string": [
+                                "dw_debrided_avulsion_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_severe_penetrating_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_devastating_penetrating_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_severe_gunshot_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_devastating_ballistic_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_full_thickness_burn",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_extensive_full_thickness_burn",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_full_thickness_chemical_burn",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_extensive_chemical_burn",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_severe_electrical_tissue_injury",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_extensive_electrical_tissue_destruction",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_extensive_cold_injury",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_severe_soft_tissue_crush_injury",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_tearing_bite_wound",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "dw_debrided_devastating_bite_injury",
+                                {
+                                    "context_val": "wound_id"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eocs": "EOC_DW_TREATMENT_CLEAR_CONTAMINATION"
+            },
+            {
+                "run_eocs": "EOC_DW_TREATMENT_CLEAR_NECROSIS"
+            }
         ]
-      },
-      {
-        "u_add_wound": {
-          "context_val": "bp"
-        },
-        "wound_id": "dw_deep_laceration"
-      },
-      {
-        "u_add_effect": "bleed",
-        "duration": "1 hour",
-        "intensity": 3,
-        "target_part": {
-          "context_val": "bp"
-        }
-      },
-      {
-        "u_message": "The closure on the deep wound on your <context_val:bp> fails and the laceration opens again.",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_REOPEN_SEVERE_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "expects_vars": [
-        "bp"
-      ]
     },
-    "effect": [
-      {
-        "u_remove_wound": {
-          "context_val": "bp"
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CLEAR_CONTAMINATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp"
+                    ]
+                },
+                {
+                    "u_has_effect": "dw_wound_contamination",
+                    "bodypart": {
+                        "context_val": "bp"
+                    }
+                }
+            ]
         },
-        "wound_id": [
-          "dw_sutured_severe_laceration",
-          "dw_improvised_sutured_severe_laceration"
+        "effect": {
+            "u_lose_effect": "dw_wound_contamination",
+            "target_part": {
+                "context_val": "bp"
+            }
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CLEAR_NECROSIS",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp"
+                    ]
+                },
+                {
+                    "u_has_effect": "dw_tissue_necrosis",
+                    "bodypart": {
+                        "context_val": "bp"
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "u_lose_effect": "dw_tissue_necrosis",
+            "target_part": {
+                "context_val": "bp"
+            }
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_LOCAL_INFECTION",
+        "eoc_type": "ACTIVATION",
+        "//": "Reusable infection-treatment entry point. It is not called by ordinary wound cleaning. A future medicine/use-action or bridge should call it for the selected bp.",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp"
+                    ]
+                },
+                {
+                    "u_has_effect": "dw_local_wound_infection",
+                    "intensity": 2,
+                    "bodypart": {
+                        "context_val": "bp"
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_TREATMENT_DOWNGRADE_LOCAL_INFECTION"
+        },
+        "false_effect": {
+            "run_eocs": "EOC_DW_TREATMENT_CLEAR_LOCAL_INFECTION"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_DOWNGRADE_LOCAL_INFECTION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp"
+                    ]
+                },
+                {
+                    "u_has_effect": "dw_local_wound_infection",
+                    "intensity": 2,
+                    "bodypart": {
+                        "context_val": "bp"
+                    }
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_lose_effect": "dw_local_wound_infection",
+                "target_part": {
+                    "context_val": "bp"
+                }
+            },
+            {
+                "u_add_effect": "dw_local_wound_infection",
+                "duration": "PERMANENT",
+                "intensity": 1,
+                "target_part": {
+                    "context_val": "bp"
+                }
+            },
+            {
+                "u_message": "The severe local infection on your <context_val:bp> is beginning to come under control.",
+                "type": "good"
+            }
         ]
-      },
-      {
-        "u_add_wound": {
-          "context_val": "bp"
-        },
-        "wound_id": "dw_severe_laceration"
-      },
-      {
-        "u_add_effect": "bleed",
-        "duration": "2 hours",
-        "intensity": 5,
-        "target_part": {
-          "context_val": "bp"
-        }
-      },
-      {
-        "u_message": "The closure on the severe wound on your <context_val:bp> fails and the wound splits open again.",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_REOPEN_DEEP_FACIAL_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "expects_vars": [
-        "bp"
-      ]
     },
-    "effect": [
-      {
-        "u_remove_wound": {
-          "context_val": "bp"
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CLEAR_LOCAL_INFECTION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp"
+                    ]
+                },
+                {
+                    "u_has_effect": "dw_local_wound_infection",
+                    "intensity": 1,
+                    "bodypart": {
+                        "context_val": "bp"
+                    }
+                }
+            ]
         },
-        "wound_id": [
-          "dw_sutured_deep_facial_laceration",
-          "dw_improvised_sutured_deep_facial_laceration"
+        "effect": [
+            {
+                "u_lose_effect": "dw_local_wound_infection",
+                "target_part": {
+                    "context_val": "bp"
+                }
+            },
+            {
+                "u_message": "The local infection on your <context_val:bp> has cleared.",
+                "type": "good"
+            }
         ]
-      },
-      {
-        "u_add_wound": {
-          "context_val": "bp"
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_REOPEN_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
         },
-        "wound_id": "dw_deep_facial_laceration"
-      },
-      {
-        "u_add_effect": "bleed",
-        "duration": "45 minutes",
-        "intensity": 2,
-        "target_part": {
-          "context_val": "bp"
-        }
-      },
-      {
-        "u_message": "The closure on your deep facial wound fails and the laceration opens again.",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_SUTURED_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
-        },
-        {
-          "compare_string": [
-            "dw_sutured_laceration",
+        "effect": [
             {
-              "context_val": "wound_id"
-            }
-          ]
-        },
-        {
-          "x_in_y_chance": {
-            "x": 2,
-            "y": 100
-          }
-        }
-      ]
-    },
-    "effect": {
-      "run_eocs": "EOC_DW_TREATMENT_REOPEN_LACERATION"
-    },
-    "//": "Immediate closure-quality roll. Later activity-based reopening can replace this once the bridge exposes safe wound-presence checks."
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_SUTURED_DEEP_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
-        },
-        {
-          "compare_string": [
-            "dw_sutured_deep_laceration",
+                "u_remove_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": [
+                    "dw_sutured_laceration",
+                    "dw_improvised_sutured_laceration"
+                ]
+            },
             {
-              "context_val": "wound_id"
-            }
-          ]
-        },
-        {
-          "x_in_y_chance": {
-            "x": 4,
-            "y": 100
-          }
-        }
-      ]
-    },
-    "effect": {
-      "run_eocs": "EOC_DW_TREATMENT_REOPEN_DEEP_LACERATION"
-    },
-    "//": "Immediate closure-quality roll. Later activity-based reopening can replace this once the bridge exposes safe wound-presence checks."
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_SUTURED_SEVERE_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
-        },
-        {
-          "compare_string": [
-            "dw_sutured_severe_laceration",
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_laceration"
+            },
             {
-              "context_val": "wound_id"
-            }
-          ]
-        },
-        {
-          "x_in_y_chance": {
-            "x": 7,
-            "y": 100
-          }
-        }
-      ]
-    },
-    "effect": {
-      "run_eocs": "EOC_DW_TREATMENT_REOPEN_SEVERE_LACERATION"
-    },
-    "//": "Immediate closure-quality roll. Later activity-based reopening can replace this once the bridge exposes safe wound-presence checks."
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_SUTURED_DEEP_FACIAL_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
-        },
-        {
-          "compare_string": [
-            "dw_sutured_deep_facial_laceration",
+                "u_add_effect": "bleed",
+                "duration": "30 minutes",
+                "intensity": 1,
+                "target_part": {
+                    "context_val": "bp"
+                }
+            },
             {
-              "context_val": "wound_id"
+                "u_message": "The closure on your <context_val:bp> fails and the laceration opens again.",
+                "type": "bad"
             }
-          ]
-        },
-        {
-          "x_in_y_chance": {
-            "x": 4,
-            "y": 100
-          }
-        }
-      ]
+        ]
     },
-    "effect": {
-      "run_eocs": "EOC_DW_TREATMENT_REOPEN_DEEP_FACIAL_LACERATION"
-    },
-    "//": "Immediate closure-quality roll. Later activity-based reopening can replace this once the bridge exposes safe wound-presence checks."
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_REOPEN_DEEP_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
         },
-        {
-          "compare_string": [
-            "dw_improvised_sutured_laceration",
+        "effect": [
             {
-              "context_val": "wound_id"
-            }
-          ]
-        },
-        {
-          "x_in_y_chance": {
-            "x": 10,
-            "y": 100
-          }
-        }
-      ]
-    },
-    "effect": {
-      "run_eocs": "EOC_DW_TREATMENT_REOPEN_LACERATION"
-    },
-    "//": "Improvised closure has a substantially higher immediate failure risk."
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_DEEP_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
-        },
-        {
-          "compare_string": [
-            "dw_improvised_sutured_deep_laceration",
+                "u_remove_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": [
+                    "dw_sutured_deep_laceration",
+                    "dw_improvised_sutured_deep_laceration"
+                ]
+            },
             {
-              "context_val": "wound_id"
-            }
-          ]
-        },
-        {
-          "x_in_y_chance": {
-            "x": 15,
-            "y": 100
-          }
-        }
-      ]
-    },
-    "effect": {
-      "run_eocs": "EOC_DW_TREATMENT_REOPEN_DEEP_LACERATION"
-    },
-    "//": "Improvised closure has a substantially higher immediate failure risk."
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_SEVERE_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
-        },
-        {
-          "compare_string": [
-            "dw_improvised_sutured_severe_laceration",
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_deep_laceration"
+            },
             {
-              "context_val": "wound_id"
-            }
-          ]
-        },
-        {
-          "x_in_y_chance": {
-            "x": 25,
-            "y": 100
-          }
-        }
-      ]
-    },
-    "effect": {
-      "run_eocs": "EOC_DW_TREATMENT_REOPEN_SEVERE_LACERATION"
-    },
-    "//": "Improvised closure has a substantially higher immediate failure risk."
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_DEEP_FACIAL_LACERATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
-        },
-        {
-          "compare_string": [
-            "dw_improvised_sutured_deep_facial_laceration",
+                "u_add_effect": "bleed",
+                "duration": "1 hour",
+                "intensity": 3,
+                "target_part": {
+                    "context_val": "bp"
+                }
+            },
             {
-              "context_val": "wound_id"
+                "u_message": "The closure on the deep wound on your <context_val:bp> fails and the laceration opens again.",
+                "type": "bad"
             }
-          ]
-        },
-        {
-          "x_in_y_chance": {
-            "x": 18,
-            "y": 100
-          }
-        }
-      ]
+        ]
     },
-    "effect": {
-      "run_eocs": "EOC_DW_TREATMENT_REOPEN_DEEP_FACIAL_LACERATION"
-    },
-    "//": "Improvised closure has a substantially higher immediate failure risk."
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_LACERATION_CONTAMINATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_REOPEN_SEVERE_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
         },
-        {
-          "compare_string": [
-            "dw_improvised_sutured_laceration",
+        "effect": [
             {
-              "context_val": "wound_id"
-            }
-          ]
-        },
-        {
-          "x_in_y_chance": {
-            "x": 8,
-            "y": 100
-          }
-        }
-      ]
-    },
-    "effect": {
-      "run_eocs": "EOC_DW_LIGHT_CONTAMINATION"
-    },
-    "//": "Independent contamination roll caused by improvised closure materials/technique."
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_DEEP_LACERATION_CONTAMINATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
-        },
-        {
-          "compare_string": [
-            "dw_improvised_sutured_deep_laceration",
+                "u_remove_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": [
+                    "dw_sutured_severe_laceration",
+                    "dw_improvised_sutured_severe_laceration"
+                ]
+            },
             {
-              "context_val": "wound_id"
-            }
-          ]
-        },
-        {
-          "x_in_y_chance": {
-            "x": 12,
-            "y": 100
-          }
-        }
-      ]
-    },
-    "effect": {
-      "run_eocs": "EOC_DW_LIGHT_CONTAMINATION"
-    },
-    "//": "Independent contamination roll caused by improvised closure materials/technique."
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SEVERE_LACERATION_CONTAMINATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
-        },
-        {
-          "compare_string": [
-            "dw_improvised_sutured_severe_laceration",
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_severe_laceration"
+            },
             {
-              "context_val": "wound_id"
-            }
-          ]
-        },
-        {
-          "x_in_y_chance": {
-            "x": 20,
-            "y": 100
-          }
-        }
-      ]
-    },
-    "effect": {
-      "run_eocs": "EOC_DW_MODERATE_CONTAMINATION"
-    },
-    "//": "Independent contamination roll caused by improvised closure materials/technique."
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_DEEP_FACIAL_CONTAMINATION",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-      "and": [
-        {
-          "expects_vars": [
-            "bp",
-            "wound_id"
-          ]
-        },
-        {
-          "compare_string": [
-            "dw_improvised_sutured_deep_facial_laceration",
+                "u_add_effect": "bleed",
+                "duration": "2 hours",
+                "intensity": 5,
+                "target_part": {
+                    "context_val": "bp"
+                }
+            },
             {
-              "context_val": "wound_id"
+                "u_message": "The closure on the severe wound on your <context_val:bp> fails and the wound splits open again.",
+                "type": "bad"
             }
-          ]
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_REOPEN_DEEP_FACIAL_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
         },
-        {
-          "x_in_y_chance": {
-            "x": 15,
-            "y": 100
-          }
-        }
-      ]
+        "effect": [
+            {
+                "u_remove_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": [
+                    "dw_sutured_deep_facial_laceration",
+                    "dw_improvised_sutured_deep_facial_laceration"
+                ]
+            },
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_deep_facial_laceration"
+            },
+            {
+                "u_add_effect": "bleed",
+                "duration": "45 minutes",
+                "intensity": 2,
+                "target_part": {
+                    "context_val": "bp"
+                }
+            },
+            {
+                "u_message": "The closure on your deep facial wound fails and the laceration opens again.",
+                "type": "bad"
+            }
+        ]
     },
-    "effect": {
-      "run_eocs": "EOC_DW_LIGHT_CONTAMINATION"
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_SUTURED_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_sutured_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 2,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_TREATMENT_REOPEN_LACERATION"
+        },
+        "//": "Immediate closure-quality roll. Later activity-based reopening can replace this once the bridge exposes safe wound-presence checks."
     },
-    "//": "Independent contamination roll caused by improvised closure materials/technique."
-  }
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_SUTURED_DEEP_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_sutured_deep_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 4,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_TREATMENT_REOPEN_DEEP_LACERATION"
+        },
+        "//": "Immediate closure-quality roll. Later activity-based reopening can replace this once the bridge exposes safe wound-presence checks."
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_SUTURED_SEVERE_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_sutured_severe_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 7,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_TREATMENT_REOPEN_SEVERE_LACERATION"
+        },
+        "//": "Immediate closure-quality roll. Later activity-based reopening can replace this once the bridge exposes safe wound-presence checks."
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_SUTURED_DEEP_FACIAL_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_sutured_deep_facial_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 4,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_TREATMENT_REOPEN_DEEP_FACIAL_LACERATION"
+        },
+        "//": "Immediate closure-quality roll. Later activity-based reopening can replace this once the bridge exposes safe wound-presence checks."
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_improvised_sutured_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 10,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_TREATMENT_REOPEN_LACERATION"
+        },
+        "//": "Improvised closure has a substantially higher immediate failure risk."
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_DEEP_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_improvised_sutured_deep_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 15,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_TREATMENT_REOPEN_DEEP_LACERATION"
+        },
+        "//": "Improvised closure has a substantially higher immediate failure risk."
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_SEVERE_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_improvised_sutured_severe_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 25,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_TREATMENT_REOPEN_SEVERE_LACERATION"
+        },
+        "//": "Improvised closure has a substantially higher immediate failure risk."
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SUTURED_DEEP_FACIAL_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_improvised_sutured_deep_facial_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 18,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_TREATMENT_REOPEN_DEEP_FACIAL_LACERATION"
+        },
+        "//": "Improvised closure has a substantially higher immediate failure risk."
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_LACERATION_CONTAMINATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_improvised_sutured_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 8,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_LIGHT_CONTAMINATION"
+        },
+        "//": "Independent contamination roll caused by improvised closure materials/technique."
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_DEEP_LACERATION_CONTAMINATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_improvised_sutured_deep_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 12,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_LIGHT_CONTAMINATION"
+        },
+        "//": "Independent contamination roll caused by improvised closure materials/technique."
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_SEVERE_LACERATION_CONTAMINATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_improvised_sutured_severe_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 20,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_MODERATE_CONTAMINATION"
+        },
+        "//": "Independent contamination roll caused by improvised closure materials/technique."
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_TREATMENT_CHECK_IMPROVISED_DEEP_FACIAL_CONTAMINATION",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_improvised_sutured_deep_facial_laceration",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                },
+                {
+                    "x_in_y_chance": {
+                        "x": 15,
+                        "y": 100
+                    }
+                }
+            ]
+        },
+        "effect": {
+            "run_eocs": "EOC_DW_LIGHT_CONTAMINATION"
+        },
+        "//": "Independent contamination roll caused by improvised closure materials/technique."
+    }
 ]

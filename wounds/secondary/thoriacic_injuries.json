@@ -1,160 +1,259 @@
 [
-  {
-    "type": "wound",
-    "id": "dw_rib_contusion",
-    "name": {
-      "str": "rib contusion",
-      "str_pl": "rib contusions"
+    {
+        "type": "wound",
+        "id": "dw_rib_contusion",
+        "name": {
+            "str": "rib contusion",
+            "str_pl": "rib contusions"
+        },
+        "description": "A heavy impact has bruised the tissues surrounding the ribs and chest wall. Deep breathing, twisting, and sudden movement cause a persistent aching pain.",
+        "weight": 10,
+        "limit": 2,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            10,
+            22
+        ],
+        "pain": [
+            2,
+            5
+        ],
+        "healing_time": [
+            "5 days",
+            "14 days"
+        ],
+        "whitelist_body_part_types": [
+            "torso"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only wound. The contradictory BIONIC_LIMB flag filters prevent normal damage selection."
     },
-    "description": "A heavy impact has bruised the tissues surrounding the ribs and chest wall. Deep breathing, twisting, and sudden movement cause a persistent aching pain.",
-    "weight": 10,
-    "limit": 2,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 10, 22 ],
-    "pain": [ 2, 5 ],
-    "healing_time": [ "5 days", "14 days" ],
-    "whitelist_body_part_types": [ "torso" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound. The contradictory BIONIC_LIMB flag filters prevent normal damage selection."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_cracked_rib",
-    "name": {
-      "str": "cracked rib",
-      "str_pl": "cracked ribs"
+    {
+        "type": "wound",
+        "id": "dw_cracked_rib",
+        "name": {
+            "str": "cracked rib",
+            "str_pl": "cracked ribs"
+        },
+        "description": "One of the ribs has developed a small fracture. Breathing deeply, coughing, twisting the torso, or absorbing another impact sends sharp pain through the chest.",
+        "weight": 8,
+        "limit": 2,
+        "damage_types": [
+            "bash",
+            "bullet"
+        ],
+        "damage_required": [
+            16,
+            30
+        ],
+        "pain": [
+            4,
+            8
+        ],
+        "healing_time": [
+            "21 days",
+            "42 days"
+        ],
+        "whitelist_body_part_types": [
+            "torso"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only wound. Can heal naturally, while support provides a faster and safer recovery path."
     },
-    "description": "One of the ribs has developed a small fracture. Breathing deeply, coughing, twisting the torso, or absorbing another impact sends sharp pain through the chest.",
-    "weight": 8,
-    "limit": 2,
-    "damage_types": [ "bash", "bullet" ],
-    "damage_required": [ 16, 30 ],
-    "pain": [ 4, 8 ],
-    "healing_time": [ "21 days", "42 days" ],
-    "whitelist_body_part_types": [ "torso" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound. Can heal naturally, while support provides a faster and safer recovery path."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_rib_fracture",
-    "name": {
-      "str": "rib fracture",
-      "str_pl": "rib fractures"
+    {
+        "type": "wound",
+        "id": "dw_rib_fracture",
+        "name": {
+            "str": "rib fracture",
+            "str_pl": "rib fractures"
+        },
+        "description": "A rib has fractured completely. Movement of the chest wall produces sharp localized pain and makes forceful breathing, coughing, and strenuous movement difficult.",
+        "weight": 6,
+        "limit": 1,
+        "damage_types": [
+            "bash",
+            "bullet"
+        ],
+        "damage_required": [
+            24,
+            45
+        ],
+        "pain": [
+            6,
+            11
+        ],
+        "healing_time": [
+            "35 days",
+            "70 days"
+        ],
+        "whitelist_body_part_types": [
+            "torso"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only wound. Can heal naturally, while chest-wall support improves recovery."
     },
-    "description": "A rib has fractured completely. Movement of the chest wall produces sharp localized pain and makes forceful breathing, coughing, and strenuous movement difficult.",
-    "weight": 6,
-    "limit": 1,
-    "damage_types": [ "bash", "bullet" ],
-    "damage_required": [ 24, 45 ],
-    "pain": [ 6, 11 ],
-    "healing_time": [ "35 days", "70 days" ],
-    "whitelist_body_part_types": [ "torso" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound. Can heal naturally, while chest-wall support improves recovery."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_displaced_rib_fracture",
-    "name": {
-      "str": "displaced rib fracture",
-      "str_pl": "displaced rib fractures"
+    {
+        "type": "wound",
+        "id": "dw_displaced_rib_fracture",
+        "name": {
+            "str": "displaced rib fracture",
+            "str_pl": "displaced rib fractures"
+        },
+        "description": "A fractured rib has shifted out of its normal alignment. The unstable bone causes intense pain with chest movement and threatens the tissues lying beneath it.",
+        "weight": 4,
+        "limit": 1,
+        "damage_types": [
+            "bash",
+            "bullet"
+        ],
+        "damage_required": [
+            32,
+            60
+        ],
+        "pain": [
+            8,
+            14
+        ],
+        "healing_time": [
+            "49 days",
+            "98 days"
+        ],
+        "whitelist_body_part_types": [
+            "torso"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only wound. Natural healing is possible but very slow; stabilization reduces movement and further injury risk. Internal thoracic complications remain separate."
     },
-    "description": "A fractured rib has shifted out of its normal alignment. The unstable bone causes intense pain with chest movement and threatens the tissues lying beneath it.",
-    "weight": 4,
-    "limit": 1,
-    "damage_types": [ "bash", "bullet" ],
-    "damage_required": [ 32, 60 ],
-    "pain": [ 8, 14 ],
-    "healing_time": [ "49 days", "98 days" ],
-    "whitelist_body_part_types": [ "torso" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound. Natural healing is possible but very slow; stabilization reduces movement and further injury risk. Internal thoracic complications remain separate."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_multiple_rib_fractures",
-    "name": {
-      "str": "multiple rib fractures",
-      "str_pl": "multiple rib fracture injuries"
+    {
+        "type": "wound",
+        "id": "dw_multiple_rib_fractures",
+        "name": {
+            "str": "multiple rib fractures",
+            "str_pl": "multiple rib fracture injuries"
+        },
+        "description": "Several ribs have fractured in the same traumatic event. The chest wall is extremely painful and ordinary movements repeatedly disturb the injured structures.",
+        "weight": 3,
+        "limit": 1,
+        "damage_types": [
+            "bash",
+            "bullet"
+        ],
+        "damage_required": [
+            40,
+            75
+        ],
+        "pain": [
+            9,
+            16
+        ],
+        "healing_time": [
+            "56 days",
+            "112 days"
+        ],
+        "whitelist_body_part_types": [
+            "torso"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only wound. Natural recovery is possible but prolonged; stabilization provides a safer recovery path."
     },
-    "description": "Several ribs have fractured in the same traumatic event. The chest wall is extremely painful and ordinary movements repeatedly disturb the injured structures.",
-    "weight": 3,
-    "limit": 1,
-    "damage_types": [ "bash", "bullet" ],
-    "damage_required": [ 40, 75 ],
-    "pain": [ 9, 16 ],
-    "healing_time": [ "56 days", "112 days" ],
-    "whitelist_body_part_types": [ "torso" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound. Natural recovery is possible but prolonged; stabilization provides a safer recovery path."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_sternal_fracture",
-    "name": {
-      "str": "sternal fracture",
-      "str_pl": "sternal fractures"
+    {
+        "type": "wound",
+        "id": "dw_sternal_fracture",
+        "name": {
+            "str": "sternal fracture",
+            "str_pl": "sternal fractures"
+        },
+        "description": "A powerful impact has fractured the sternum at the center of the chest. The injury causes severe pain whenever the torso flexes or the chest expands.",
+        "weight": 3,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            32,
+            65
+        ],
+        "pain": [
+            7,
+            13
+        ],
+        "healing_time": [
+            "42 days",
+            "84 days"
+        ],
+        "whitelist_body_part_types": [
+            "torso"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only wound. Stabilization improves recovery but is not mandatory for natural healing."
     },
-    "description": "A powerful impact has fractured the sternum at the center of the chest. The injury causes severe pain whenever the torso flexes or the chest expands.",
-    "weight": 3,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 32, 65 ],
-    "pain": [ 7, 13 ],
-    "healing_time": [ "42 days", "84 days" ],
-    "whitelist_body_part_types": [ "torso" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound. Stabilization improves recovery but is not mandatory for natural healing."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_severe_chest_wall_trauma",
-    "name": {
-      "str": "severe chest wall trauma",
-      "str_pl": "severe chest wall traumas"
+    {
+        "type": "wound",
+        "id": "dw_severe_chest_wall_trauma",
+        "name": {
+            "str": "severe chest wall trauma",
+            "str_pl": "severe chest wall traumas"
+        },
+        "description": "The chest wall has suffered extensive structural trauma. Bone, muscle, and connective tissue are badly damaged, leaving the torso painful and unstable during movement.",
+        "weight": 2,
+        "limit": 1,
+        "damage_types": [
+            "bash",
+            "bullet"
+        ],
+        "damage_required": [
+            45,
+            90
+        ],
+        "pain": [
+            10,
+            17
+        ],
+        "healing_time": [
+            "60 days",
+            "120 days"
+        ],
+        "whitelist_body_part_types": [
+            "torso"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only wound. Natural recovery is possible but extremely slow. Internal organ, hemorrhagic, and respiratory complications remain independent injuries."
     },
-    "description": "The chest wall has suffered extensive structural trauma. Bone, muscle, and connective tissue are badly damaged, leaving the torso painful and unstable during movement.",
-    "weight": 2,
-    "limit": 1,
-    "damage_types": [ "bash", "bullet" ],
-    "damage_required": [ 45, 90 ],
-    "pain": [ 10, 17 ],
-    "healing_time": [ "60 days", "120 days" ],
-    "whitelist_body_part_types": [ "torso" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound. Natural recovery is possible but extremely slow. Internal organ, hemorrhagic, and respiratory complications remain independent injuries."
-  },
-
-  {
-    "type": "wound",
-    "id": "dw_flail_chest",
-    "name": {
-      "str": "flail chest",
-      "str_pl": "flail chest injuries"
-    },
-    "description": "Multiple adjacent ribs have fractured severely enough that part of the chest wall has become mechanically unstable. Every breath and movement causes extreme pain and the damaged chest can no longer move normally.",
-    "weight": 1,
-    "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 65, 1000 ],
-    "pain": [ 12, 20 ],
-    "whitelist_body_part_types": [ "torso" ],
-    "whitelist_bp_with_flag": "BIONIC_LIMB",
-    "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound. No natural healing: flail chest requires stabilization before the chest wall can enter a recoverable state."
-  }
+    {
+        "type": "wound",
+        "id": "dw_flail_chest",
+        "name": {
+            "str": "flail chest",
+            "str_pl": "flail chest injuries"
+        },
+        "description": "Multiple adjacent ribs have fractured severely enough that part of the chest wall has become mechanically unstable. Every breath and movement causes extreme pain and the damaged chest can no longer move normally.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "bash"
+        ],
+        "damage_required": [
+            65,
+            1000
+        ],
+        "pain": [
+            12,
+            20
+        ],
+        "whitelist_body_part_types": [
+            "torso"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Secondary-only wound. No natural healing: flail chest requires stabilization before the chest wall can enter a recoverable state."
+    }
 ]

@@ -9,11 +9,24 @@
     "description": "Smoke and hot particulates have irritated the respiratory tract. Your throat and airways feel raw, and taking a deep breath provokes coughing.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "biological" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 0, 2 ],
-    "healing_time": [ "2 hours", "1 day" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "biological"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      0,
+      2
+    ],
+    "healing_time": [
+      "2 hours",
+      "1 day"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -27,11 +40,24 @@
     "description": "Prolonged smoke exposure has inflamed the airways and lungs. Breathing feels strained and frequent coughing further irritates the damaged respiratory tissue.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "biological" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 1, 4 ],
-    "healing_time": [ "1 day", "5 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "biological"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      1,
+      4
+    ],
+    "healing_time": [
+      "1 day",
+      "5 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -45,15 +71,27 @@
     "description": "Heavy smoke exposure has seriously injured the respiratory tract. Your lungs and airways are badly inflamed, making deep breaths painful and triggering violent coughing.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "biological" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "4 days", "14 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "biological"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "4 days",
+      "14 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_upper_airway_irritation",
@@ -64,11 +102,24 @@
     "description": "An inhaled irritant has inflamed the nose, throat, and upper airways. Your throat burns and every breath threatens to trigger another coughing fit.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "biological" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 1, 3 ],
-    "healing_time": [ "1 hour", "12 hours" ],
-    "whitelist_body_part_types": [ "mouth" ],
+    "damage_types": [
+      "biological"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      1,
+      3
+    ],
+    "healing_time": [
+      "1 hour",
+      "12 hours"
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -82,11 +133,24 @@
     "description": "A concentrated chemical irritant has inflamed the respiratory tract. The airways burn, breathing is uncomfortable, and persistent coughing makes exertion difficult.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "biological" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 2, 5 ],
-    "healing_time": [ "6 hours", "2 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "biological"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      2,
+      5
+    ],
+    "healing_time": [
+      "6 hours",
+      "2 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -100,15 +164,27 @@
     "description": "A high concentration of respiratory irritants has caused extensive inflammation within the lungs and airways. Breathing is labored and even minor exertion provokes painful coughing.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "biological" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 4, 8 ],
-    "healing_time": [ "3 days", "12 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "biological"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      4,
+      8
+    ],
+    "healing_time": [
+      "3 days",
+      "12 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_toxic_inhalation_injury",
@@ -119,11 +195,24 @@
     "description": "Inhaled toxic material has damaged the respiratory tract rather than merely irritating it. The lungs feel raw and heavy, and breathing has become noticeably more difficult.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "biological" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "2 days", "10 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "biological"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "2 days",
+      "10 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -137,15 +226,27 @@
     "description": "Toxic chemicals have caused extensive damage throughout the respiratory tissue. Your chest feels heavy and breathing requires conscious effort, while deep breaths provoke intense coughing.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "biological" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 5, 10 ],
-    "healing_time": [ "7 days", "30 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "biological"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "healing_time": [
+      "7 days",
+      "30 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_fungal_airway_exposure",
@@ -156,11 +257,24 @@
     "description": "Fungal spores have entered the respiratory tract. Your throat and airways feel irritated, and an unpleasant organic taste lingers in the back of your mouth.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "biological" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 0, 2 ],
-    "healing_time": [ "3 hours", "1 day" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "biological"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      0,
+      2
+    ],
+    "healing_time": [
+      "3 hours",
+      "1 day"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -174,11 +288,24 @@
     "description": "Heavy exposure to fungal material has left the respiratory tract inflamed and irritated. Breathing deeply causes discomfort and frequent coughing.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "biological" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 1, 4 ],
-    "healing_time": [ "12 hours", "4 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "biological"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      1,
+      4
+    ],
+    "healing_time": [
+      "12 hours",
+      "4 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -192,15 +319,27 @@
     "description": "Fungal growth or contamination has progressed deeper into the respiratory system. Your lungs feel congested and irritated, and bouts of coughing come with disturbing frequency.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "biological" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 2, 6 ],
-    "healing_time": [ "3 days", "14 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "biological"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      2,
+      6
+    ],
+    "healing_time": [
+      "3 days",
+      "14 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_thermal_airway_injury",
@@ -211,11 +350,24 @@
     "description": "Superheated air and gases have burned the respiratory tract. Your throat and chest feel raw, and breathing deeply causes sharp discomfort.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "heat" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "3 days", "14 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "heat"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "3 days",
+      "14 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -229,11 +381,24 @@
     "description": "Extreme heat has badly burned the respiratory passages. Swollen and damaged airway tissue makes every breath difficult and painful.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "heat" ],
-    "damage_required": [ 1000, 1000 ],
-    "pain": [ 5, 10 ],
-    "healing_time": [ "10 days", "35 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "heat"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "healing_time": [
+      "10 days",
+      "35 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   }

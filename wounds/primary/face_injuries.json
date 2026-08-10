@@ -9,10 +9,21 @@
     "description": "A blunt impact has bruised the tissues around the eye. The area is tender and swollen, but the eye itself appears largely intact.",
     "weight": 18,
     "limit": 2,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 2, 7 ],
-    "pain": [ 1, 3 ],
-    "healing_time": [ "1 day", "5 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      2,
+      7
+    ],
+    "pain": [
+      1,
+      3
+    ],
+    "healing_time": [
+      "1 day",
+      "5 days"
+    ],
     "limb_scores": [
       {
         "score": "vision",
@@ -27,7 +38,9 @@
         "value": 0.02
       }
     ],
-    "whitelist_body_part_types": [ "sensor" ],
+    "whitelist_body_part_types": [
+      "sensor"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -40,10 +53,21 @@
     "description": "A strong blunt impact has injured the eye and surrounding tissue. Swelling, deep aching, and visual disturbance are likely.",
     "weight": 12,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 7, 16 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "5 days", "18 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      7,
+      16
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "5 days",
+      "18 days"
+    ],
     "limb_scores": [
       {
         "score": "vision",
@@ -58,7 +82,9 @@
         "value": 0.08
       }
     ],
-    "whitelist_body_part_types": [ "sensor" ],
+    "whitelist_body_part_types": [
+      "sensor"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -71,10 +97,21 @@
     "description": "The eye has suffered severe blunt trauma. The surrounding tissue is badly swollen and the internal structures of the eye may be damaged.",
     "weight": 5,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 14, 1000 ],
-    "pain": [ 6, 12 ],
-    "healing_time": [ "14 days", "60 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      14,
+      1000
+    ],
+    "pain": [
+      6,
+      12
+    ],
+    "healing_time": [
+      "14 days",
+      "60 days"
+    ],
     "limb_scores": [
       {
         "score": "vision",
@@ -89,10 +126,11 @@
         "value": 0.22
       }
     ],
-    "whitelist_body_part_types": [ "sensor" ],
+    "whitelist_body_part_types": [
+      "sensor"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_cornea_abrasion",
@@ -103,10 +141,21 @@
     "description": "The surface of the eye has been scratched. The injury is small but intensely irritating, making blinking and keeping the eye open uncomfortable.",
     "weight": 18,
     "limit": 1,
-    "damage_types": [ "cut" ],
-    "damage_required": [ 1, 5 ],
-    "pain": [ 2, 5 ],
-    "healing_time": [ "12 hours", "4 days" ],
+    "damage_types": [
+      "cut"
+    ],
+    "damage_required": [
+      1,
+      5
+    ],
+    "pain": [
+      2,
+      5
+    ],
+    "healing_time": [
+      "12 hours",
+      "4 days"
+    ],
     "limb_scores": [
       {
         "score": "vision",
@@ -121,7 +170,9 @@
         "value": 0.04
       }
     ],
-    "whitelist_body_part_types": [ "sensor" ],
+    "whitelist_body_part_types": [
+      "sensor"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -134,10 +185,21 @@
     "description": "A sharp object has cut into the tissues of the eye. The injury is painful and potentially damaging to vision.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "cut" ],
-    "damage_required": [ 5, 14 ],
-    "pain": [ 5, 10 ],
-    "healing_time": [ "7 days", "30 days" ],
+    "damage_types": [
+      "cut"
+    ],
+    "damage_required": [
+      5,
+      1000
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "healing_time": [
+      "7 days",
+      "30 days"
+    ],
     "limb_scores": [
       {
         "score": "vision",
@@ -152,7 +214,9 @@
         "value": 0.18
       }
     ],
-    "whitelist_body_part_types": [ "sensor" ],
+    "whitelist_body_part_types": [
+      "sensor"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -165,10 +229,22 @@
     "description": "A penetrating object has entered the eye and damaged delicate internal structures. The injury is extremely serious and threatens normal vision.",
     "weight": 4,
     "limit": 1,
-    "damage_types": [ "stab", "bullet" ],
-    "damage_required": [ 6, 1000 ],
-    "pain": [ 7, 14 ],
-    "healing_time": [ "21 days", "90 days" ],
+    "damage_types": [
+      "stab",
+      "bullet"
+    ],
+    "damage_required": [
+      6,
+      1000
+    ],
+    "pain": [
+      7,
+      14
+    ],
+    "healing_time": [
+      "21 days",
+      "90 days"
+    ],
     "limb_scores": [
       {
         "score": "vision",
@@ -183,11 +259,12 @@
         "value": 0.40
       }
     ],
-    "whitelist_body_part_types": [ "sensor" ],
+    "whitelist_body_part_types": [
+      "sensor"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "The penalty is intentionally severe without guaranteeing complete blindness. Later sub-bodypart support can distinguish left and right eye injuries."
   },
-
   {
     "type": "wound",
     "id": "dw_ocular_thermal_burn",
@@ -198,10 +275,21 @@
     "description": "Intense heat has burned the exposed surface of the eye and surrounding tissue. The area is painfully inflamed and highly sensitive.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "heat" ],
-    "damage_required": [ 3, 1000 ],
-    "pain": [ 4, 10 ],
-    "healing_time": [ "7 days", "45 days" ],
+    "damage_types": [
+      "heat"
+    ],
+    "damage_required": [
+      3,
+      1000
+    ],
+    "pain": [
+      4,
+      10
+    ],
+    "healing_time": [
+      "7 days",
+      "45 days"
+    ],
     "limb_scores": [
       {
         "score": "vision",
@@ -216,7 +304,9 @@
         "value": 0.18
       }
     ],
-    "whitelist_body_part_types": [ "sensor" ],
+    "whitelist_body_part_types": [
+      "sensor"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -229,9 +319,17 @@
     "description": "A corrosive substance has damaged the exposed tissues of the eye. The surface is severely irritated and continued chemical exposure may cause deeper injury.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "acid" ],
-    "damage_required": [ 2, 1000 ],
-    "pain": [ 5, 11 ],
+    "damage_types": [
+      "acid"
+    ],
+    "damage_required": [
+      2,
+      1000
+    ],
+    "pain": [
+      5,
+      11
+    ],
     "limb_scores": [
       {
         "score": "vision",
@@ -246,7 +344,9 @@
         "value": 0.20
       }
     ],
-    "whitelist_body_part_types": [ "sensor" ],
+    "whitelist_body_part_types": [
+      "sensor"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "No healing_time is intentional. Chemical contamination of the eye must be irrigated before the injury enters a normal healing state."
   },
@@ -260,10 +360,21 @@
     "description": "Electrical current has damaged the sensitive tissues of the eye. The visible injury may be limited, but deeper structures may have suffered significant trauma.",
     "weight": 8,
     "limit": 1,
-    "damage_types": [ "electric" ],
-    "damage_required": [ 4, 1000 ],
-    "pain": [ 4, 9 ],
-    "healing_time": [ "7 days", "45 days" ],
+    "damage_types": [
+      "electric"
+    ],
+    "damage_required": [
+      4,
+      1000
+    ],
+    "pain": [
+      4,
+      9
+    ],
+    "healing_time": [
+      "7 days",
+      "45 days"
+    ],
     "limb_scores": [
       {
         "score": "vision",
@@ -278,10 +389,11 @@
         "value": 0.22
       }
     ],
-    "whitelist_body_part_types": [ "sensor" ],
+    "whitelist_body_part_types": [
+      "sensor"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_facial_contusion",
@@ -292,10 +404,21 @@
     "description": "A blunt impact has bruised and swollen the soft tissues of the face. The injury is tender and uncomfortable when speaking or eating.",
     "weight": 18,
     "limit": 2,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 2, 9 ],
-    "pain": [ 1, 4 ],
-    "healing_time": [ "2 days", "8 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      2,
+      9
+    ],
+    "pain": [
+      1,
+      4
+    ],
+    "healing_time": [
+      "2 days",
+      "8 days"
+    ],
     "limb_scores": [
       {
         "score": "consume_solid",
@@ -310,7 +433,9 @@
         "value": 0.01
       }
     ],
-    "whitelist_body_part_types": [ "mouth" ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -323,10 +448,21 @@
     "description": "A heavy impact has badly bruised the face. Extensive swelling and deep tissue tenderness make movement of the jaw and surrounding muscles painful.",
     "weight": 10,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 8, 18 ],
-    "pain": [ 3, 8 ],
-    "healing_time": [ "5 days", "18 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      8,
+      18
+    ],
+    "pain": [
+      3,
+      8
+    ],
+    "healing_time": [
+      "5 days",
+      "18 days"
+    ],
     "limb_scores": [
       {
         "score": "consume_solid",
@@ -341,7 +477,9 @@
         "value": 0.03
       }
     ],
-    "whitelist_body_part_types": [ "mouth" ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -354,10 +492,21 @@
     "description": "A sharp impact has split the soft tissue around the mouth, leaving a painful open wound that moves whenever you speak or eat.",
     "weight": 16,
     "limit": 1,
-    "damage_types": [ "cut" ],
-    "damage_required": [ 2, 8 ],
-    "pain": [ 1, 4 ],
-    "healing_time": [ "2 days", "8 days" ],
+    "damage_types": [
+      "cut"
+    ],
+    "damage_required": [
+      2,
+      8
+    ],
+    "pain": [
+      1,
+      4
+    ],
+    "healing_time": [
+      "2 days",
+      "8 days"
+    ],
     "limb_scores": [
       {
         "score": "consume_solid",
@@ -372,7 +521,9 @@
         "value": 0.01
       }
     ],
-    "whitelist_body_part_types": [ "mouth" ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -385,10 +536,21 @@
     "description": "The soft tissues of the mouth or lower face have been deeply cut. Movement repeatedly pulls at the wound and makes eating and speaking painful.",
     "weight": 10,
     "limit": 2,
-    "damage_types": [ "cut" ],
-    "damage_required": [ 7, 18 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "5 days", "18 days" ],
+    "damage_types": [
+      "cut"
+    ],
+    "damage_required": [
+      7,
+      18
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "5 days",
+      "18 days"
+    ],
     "limb_scores": [
       {
         "score": "consume_solid",
@@ -403,7 +565,9 @@
         "value": 0.02
       }
     ],
-    "whitelist_body_part_types": [ "mouth" ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -416,10 +580,21 @@
     "description": "A deep ragged wound cuts through the soft tissues of the face. The edges gape apart and the underlying structures are visibly traumatized.",
     "weight": 6,
     "limit": 1,
-    "damage_types": [ "cut" ],
-    "damage_required": [ 15, 1000 ],
-    "pain": [ 5, 11 ],
-    "healing_time": [ "10 days", "35 days" ],
+    "damage_types": [
+      "cut"
+    ],
+    "damage_required": [
+      15,
+      1000
+    ],
+    "pain": [
+      5,
+      11
+    ],
+    "healing_time": [
+      "10 days",
+      "35 days"
+    ],
     "limb_scores": [
       {
         "score": "consume_solid",
@@ -434,10 +609,11 @@
         "value": 0.04
       }
     ],
-    "whitelist_body_part_types": [ "mouth" ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_dental_trauma",
@@ -448,10 +624,21 @@
     "description": "The impact has damaged the teeth and surrounding tissues. Biting down sends sharp pain through the injured area.",
     "weight": 6,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 8, 22 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "7 days", "30 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      8,
+      22
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "7 days",
+      "30 days"
+    ],
     "limb_scores": [
       {
         "score": "consume_solid",
@@ -462,7 +649,9 @@
         "value": 0.03
       }
     ],
-    "whitelist_body_part_types": [ "mouth" ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -475,10 +664,21 @@
     "description": "A powerful blow has injured the jaw and surrounding tissues. Opening the mouth or biting down causes considerable pain.",
     "weight": 5,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 12, 28 ],
-    "pain": [ 4, 9 ],
-    "healing_time": [ "10 days", "35 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      12,
+      28
+    ],
+    "pain": [
+      4,
+      9
+    ],
+    "healing_time": [
+      "10 days",
+      "35 days"
+    ],
     "limb_scores": [
       {
         "score": "consume_solid",
@@ -493,7 +693,9 @@
         "value": 0.04
       }
     ],
-    "whitelist_body_part_types": [ "mouth" ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -506,10 +708,21 @@
     "description": "The jawbone has fractured under the force of the impact. The area is badly swollen and movement of the jaw is extremely painful.",
     "weight": 2,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 22, 1000 ],
-    "pain": [ 8, 15 ],
-    "healing_time": [ "35 days", "84 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      22,
+      1000
+    ],
+    "pain": [
+      8,
+      15
+    ],
+    "healing_time": [
+      "35 days",
+      "84 days"
+    ],
     "limb_scores": [
       {
         "score": "consume_solid",
@@ -524,11 +737,12 @@
         "value": 0.08
       }
     ],
-    "whitelist_body_part_types": [ "mouth" ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "Healing time remains finite because no dedicated jaw stabilization treatment exists yet."
   },
-
   {
     "type": "wound",
     "id": "dw_concussion",
@@ -539,17 +753,30 @@
     "description": "A hard impact has violently shaken the head. The injury leaves a persistent ache and may interfere with normal neurological function.",
     "weight": 5,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 10, 24 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "5 days", "21 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      10,
+      24
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "5 days",
+      "21 days"
+    ],
     "limb_scores": [
       {
         "score": "reaction",
         "value": 0.12
       }
     ],
-    "whitelist_body_part_types": [ "head" ],
+    "whitelist_body_part_types": [
+      "head"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -562,17 +789,30 @@
     "description": "A violent impact has caused significant traumatic injury to the head. The damage is serious and recovery is likely to be prolonged.",
     "weight": 3,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 20, 38 ],
-    "pain": [ 5, 10 ],
-    "healing_time": [ "14 days", "45 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      20,
+      38
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "healing_time": [
+      "14 days",
+      "45 days"
+    ],
     "limb_scores": [
       {
         "score": "reaction",
         "value": 0.30
       }
     ],
-    "whitelist_body_part_types": [ "head" ],
+    "whitelist_body_part_types": [
+      "head"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -585,17 +825,30 @@
     "description": "The force of the impact has fractured the skull. The injury is severe and the surrounding tissue is badly traumatized.",
     "weight": 2,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 28, 50 ],
-    "pain": [ 7, 13 ],
-    "healing_time": [ "42 days", "90 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      28,
+      50
+    ],
+    "pain": [
+      7,
+      13
+    ],
+    "healing_time": [
+      "42 days",
+      "90 days"
+    ],
     "limb_scores": [
       {
         "score": "reaction",
         "value": 0.25
       }
     ],
-    "whitelist_body_part_types": [ "head" ],
+    "whitelist_body_part_types": [
+      "head"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
   {
@@ -608,17 +861,30 @@
     "description": "A section of fractured skull has been driven inward by a devastating impact. The injury is extremely severe and threatens the structures beneath the bone.",
     "weight": 1,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 45, 1000 ],
-    "pain": [ 9, 16 ],
-    "healing_time": [ "60 days", "120 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      45,
+      1000
+    ],
+    "pain": [
+      9,
+      16
+    ],
+    "healing_time": [
+      "60 days",
+      "120 days"
+    ],
     "limb_scores": [
       {
         "score": "reaction",
         "value": 0.45
       }
     ],
-    "whitelist_body_part_types": [ "head" ],
+    "whitelist_body_part_types": [
+      "head"
+    ],
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "Healing time remains finite because no dedicated treatment path exists yet for depressed skull fracture."
   }

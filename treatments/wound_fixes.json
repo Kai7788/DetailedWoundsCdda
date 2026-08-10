@@ -1740,7 +1740,7 @@
       ]
     ],
     "wounds_removed": [
-      "dw_superficial_cold_injury"
+      "dw_superficial_freezing_injury"
     ],
     "wounds_added": [
       "dw_rewarmed_superficial_cold_injury"
@@ -1770,7 +1770,7 @@
       ]
     ],
     "wounds_removed": [
-      "dw_deep_cold_injury"
+      "dw_deep_freezing_injury"
     ],
     "wounds_added": [
       "dw_rewarmed_deep_cold_injury"
@@ -1800,7 +1800,7 @@
       ]
     ],
     "wounds_removed": [
-      "dw_severe_cold_injury"
+      "dw_severe_cold_tissue_injury"
     ],
     "wounds_added": [
       "dw_rewarmed_severe_cold_injury"
@@ -1830,7 +1830,7 @@
       ]
     ],
     "wounds_removed": [
-      "dw_extensive_cold_injury"
+      "dw_extensive_cryogenic_tissue_injury"
     ],
     "wounds_added": [
       "dw_rewarmed_extensive_cold_injury"

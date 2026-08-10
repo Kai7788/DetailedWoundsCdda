@@ -9,11 +9,24 @@
     "description": "A powerful impact has bruised tissues deep beneath the surface of the torso. The injury produces a persistent deep ache that becomes worse with movement and pressure.",
     "weight": 8,
     "limit": 2,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 12, 24 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "5 days", "18 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      12,
+      24
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "5 days",
+      "18 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -27,11 +40,24 @@
     "description": "The force of the impact has damaged muscle, connective tissue, and other structures beneath the body wall. Little may be visible externally despite the significant injury underneath.",
     "weight": 6,
     "limit": 2,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 20, 35 ],
-    "pain": [ 5, 10 ],
-    "healing_time": [ "10 days", "30 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      20,
+      35
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "healing_time": [
+      "10 days",
+      "30 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -45,11 +71,24 @@
     "description": "A severe blunt impact has transferred enough force through the body wall to bruise internal organs. The injury causes deep, persistent pain and requires considerable time to recover.",
     "weight": 3,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 28, 45 ],
-    "pain": [ 7, 13 ],
-    "healing_time": [ "14 days", "45 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      28,
+      45
+    ],
+    "pain": [
+      7,
+      13
+    ],
+    "healing_time": [
+      "14 days",
+      "45 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -63,11 +102,24 @@
     "description": "The torso has been subjected to devastating compressive force. Deep tissues and internal structures are extensively bruised and damaged despite the limited external appearance of the injury.",
     "weight": 1,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 40, 1000 ],
-    "pain": [ 10, 18 ],
-    "healing_time": [ "30 days", "90 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      40,
+      1000
+    ],
+    "pain": [
+      10,
+      18
+    ],
+    "healing_time": [
+      "30 days",
+      "90 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -81,11 +133,24 @@
     "description": "A penetrating object has passed through the body wall and entered the deeper tissues of the torso. The true extent of the injury is difficult to judge from the external wound alone.",
     "weight": 6,
     "limit": 2,
-    "damage_types": [ "stab" ],
-    "damage_required": [ 12, 25 ],
-    "pain": [ 5, 10 ],
-    "healing_time": [ "10 days", "35 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "stab"
+    ],
+    "damage_required": [
+      12,
+      25
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "healing_time": [
+      "10 days",
+      "35 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -99,11 +164,24 @@
     "description": "A deep penetrating wound has torn through multiple layers of tissue within the torso. Important internal structures may have been damaged along the path of the weapon.",
     "weight": 3,
     "limit": 1,
-    "damage_types": [ "stab" ],
-    "damage_required": [ 22, 40 ],
-    "pain": [ 8, 14 ],
-    "healing_time": [ "21 days", "60 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "stab"
+    ],
+    "damage_required": [
+      22,
+      40
+    ],
+    "pain": [
+      8,
+      14
+    ],
+    "healing_time": [
+      "21 days",
+      "60 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -117,11 +195,24 @@
     "description": "The penetrating injury has reached and seriously damaged structures deep within the torso. The wound is severe and recovery will require prolonged rest and careful medical management.",
     "weight": 1,
     "limit": 1,
-    "damage_types": [ "stab" ],
-    "damage_required": [ 35, 1000 ],
-    "pain": [ 10, 18 ],
-    "healing_time": [ "35 days", "100 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "stab"
+    ],
+    "damage_required": [
+      35,
+      1000
+    ],
+    "pain": [
+      10,
+      18
+    ],
+    "healing_time": [
+      "35 days",
+      "100 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -135,11 +226,24 @@
     "description": "A projectile has transferred destructive energy into structures beneath the body wall. The visible gunshot wound hides substantial trauma within the torso.",
     "weight": 6,
     "limit": 2,
-    "damage_types": [ "bullet" ],
-    "damage_required": [ 15, 30 ],
-    "pain": [ 5, 10 ],
-    "healing_time": [ "14 days", "40 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "bullet"
+    ],
+    "damage_required": [
+      15,
+      30
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "healing_time": [
+      "14 days",
+      "40 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -153,11 +257,24 @@
     "description": "The projectile has caused extensive damage inside the torso. The wound channel has torn and crushed deep tissues and may have damaged internal organs along its path.",
     "weight": 3,
     "limit": 1,
-    "damage_types": [ "bullet" ],
-    "damage_required": [ 26, 45 ],
-    "pain": [ 8, 15 ],
-    "healing_time": [ "28 days", "75 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "bullet"
+    ],
+    "damage_required": [
+      26,
+      45
+    ],
+    "pain": [
+      8,
+      15
+    ],
+    "healing_time": [
+      "28 days",
+      "75 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -171,11 +288,24 @@
     "description": "A powerful projectile has caused massive disruption inside the torso. Deep tissues and internal structures have suffered extensive traumatic damage.",
     "weight": 1,
     "limit": 1,
-    "damage_types": [ "bullet" ],
-    "damage_required": [ 40, 1000 ],
-    "pain": [ 11, 19 ],
-    "healing_time": [ "45 days", "120 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "bullet"
+    ],
+    "damage_required": [
+      40,
+      1000
+    ],
+    "pain": [
+      11,
+      19
+    ],
+    "healing_time": [
+      "45 days",
+      "120 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -189,11 +319,26 @@
     "description": "Small blood vessels have been damaged beneath the surface, allowing blood to collect within the injured tissues. The bleeding appears limited but the area remains deeply tender.",
     "weight": 4,
     "limit": 1,
-    "damage_types": [ "bash", "stab", "bullet" ],
-    "damage_required": [ 18, 30 ],
-    "pain": [ 3, 7 ],
-    "healing_time": [ "5 days", "18 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "bash",
+      "stab",
+      "bullet"
+    ],
+    "damage_required": [
+      18,
+      30
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "5 days",
+      "18 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -207,11 +352,26 @@
     "description": "Blood is accumulating within the torso following substantial damage to internal blood vessels. The injury produces increasing pressure, weakness, and deep pain.",
     "weight": 2,
     "limit": 1,
-    "damage_types": [ "bash", "stab", "bullet" ],
-    "damage_required": [ 28, 45 ],
-    "pain": [ 6, 11 ],
-    "healing_time": [ "10 days", "35 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "bash",
+      "stab",
+      "bullet"
+    ],
+    "damage_required": [
+      28,
+      45
+    ],
+    "pain": [
+      6,
+      11
+    ],
+    "healing_time": [
+      "10 days",
+      "35 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -225,11 +385,26 @@
     "description": "Major blood vessels or highly vascular tissues inside the torso have been damaged. Significant internal bleeding is occurring, creating a serious and debilitating injury.",
     "weight": 1,
     "limit": 1,
-    "damage_types": [ "bash", "stab", "bullet" ],
-    "damage_required": [ 40, 1000 ],
-    "pain": [ 8, 15 ],
-    "healing_time": [ "21 days", "60 days" ],
-    "whitelist_body_part_types": [ "torso" ],
+    "damage_types": [
+      "bash",
+      "stab",
+      "bullet"
+    ],
+    "damage_required": [
+      40,
+      1000
+    ],
+    "pain": [
+      8,
+      15
+    ],
+    "healing_time": [
+      "21 days",
+      "60 days"
+    ],
+    "whitelist_body_part_types": [
+      "torso"
+    ],
     "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   }

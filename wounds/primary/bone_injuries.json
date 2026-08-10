@@ -9,10 +9,21 @@
     "description": "The impact has bruised the bone beneath the surrounding tissue. The area aches deeply and becomes particularly painful when pressure is placed on it.",
     "weight": 5,
     "limit": 2,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 10, 20 ],
-    "pain": [ 2, 5 ],
-    "healing_time": [ "7 days", "21 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      10,
+      20
+    ],
+    "pain": [
+      2,
+      5
+    ],
+    "healing_time": [
+      "7 days",
+      "21 days"
+    ],
     "limb_scores": [
       {
         "score": "manip",
@@ -58,7 +69,6 @@
     ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_hairline_fracture",
@@ -69,10 +79,21 @@
     "description": "A thin crack has formed in the bone without significantly displacing it. Movement and pressure produce a persistent, sharp ache.",
     "weight": 4,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 16, 30 ],
-    "pain": [ 4, 8 ],
-    "healing_time": [ "28 days", "56 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      16,
+      30
+    ],
+    "pain": [
+      4,
+      8
+    ],
+    "healing_time": [
+      "28 days",
+      "56 days"
+    ],
     "limb_scores": [
       {
         "score": "manip",
@@ -118,7 +139,6 @@
     ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_closed_fracture",
@@ -129,10 +149,21 @@
     "description": "The bone has broken beneath intact skin. The injured limb is extremely painful and movement risks disturbing the fractured bone further.",
     "weight": 3,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 24, 45 ],
-    "pain": [ 7, 12 ],
-    "healing_time": [ "42 days", "84 days" ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      24,
+      45
+    ],
+    "pain": [
+      7,
+      12
+    ],
+    "healing_time": [
+      "42 days",
+      "84 days"
+    ],
     "limb_scores": [
       {
         "score": "manip",
@@ -178,7 +209,6 @@
     ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
-
   {
     "type": "wound",
     "id": "dw_displaced_fracture",
@@ -189,9 +219,17 @@
     "description": "The bone has broken and the fractured sections have shifted out of their normal alignment. The limb is unstable, badly swollen, and excruciatingly painful to move.",
     "weight": 2,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 32, 60 ],
-    "pain": [ 9, 15 ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      32,
+      60
+    ],
+    "pain": [
+      9,
+      15
+    ],
     "limb_scores": [
       {
         "score": "manip",
@@ -238,7 +276,6 @@
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "No healing_time is intentional. A displaced fracture must be stabilized before it can heal normally."
   },
-
   {
     "type": "wound",
     "id": "dw_comminuted_fracture",
@@ -249,9 +286,17 @@
     "description": "The impact has shattered the bone into multiple fragments. The surrounding tissue is badly traumatized and the limb has lost much of its structural stability.",
     "weight": 1,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 45, 1000 ],
-    "pain": [ 10, 18 ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      45,
+      1000
+    ],
+    "pain": [
+      10,
+      18
+    ],
     "limb_scores": [
       {
         "score": "manip",
@@ -298,7 +343,6 @@
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "No healing_time is intentional. A comminuted fracture requires stabilization before entering a normal healing state."
   },
-
   {
     "type": "wound",
     "id": "dw_open_fracture",
@@ -309,9 +353,17 @@
     "description": "The fractured bone has torn through the surrounding tissue, leaving the injury exposed. The wound is severely traumatic and highly vulnerable to blood loss and contamination.",
     "weight": 1,
     "limit": 1,
-    "damage_types": [ "bash" ],
-    "damage_required": [ 55, 1000 ],
-    "pain": [ 12, 20 ],
+    "damage_types": [
+      "bash"
+    ],
+    "damage_required": [
+      55,
+      1000
+    ],
+    "pain": [
+      12,
+      20
+    ],
     "limb_scores": [
       {
         "score": "manip",
