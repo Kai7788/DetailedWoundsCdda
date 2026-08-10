@@ -10,9 +10,9 @@
     ],
 
     "desc": [
-      "The wound has been exposed to dirt and microorganisms.  There are no clear signs of infection yet, but it should be cleaned.",
-      "The wound is visibly contaminated and has remained exposed long enough for infection to become a serious concern.",
-      "The wound is heavily contaminated with foreign material and microorganisms.  Without proper cleaning, infection is increasingly likely."
+      "has a lightly contaminated wound exposed to dirt and microorganisms.  There are no clear signs of infection yet, but the wound should be cleaned.",
+      "has a visibly contaminated wound that has remained exposed long enough for infection to become a serious concern.",
+      "has a heavily contaminated wound containing foreign material and microorganisms.  Without proper cleaning, infection is increasingly likely."
     ],
 
     "part_descs": true,
@@ -34,8 +34,8 @@
     ],
 
     "desc": [
-      "The tissue surrounding the wound is inflamed, warm, swollen, and painful.  The infection remains localized but is interfering with normal use of the affected area.",
-      "The wound is badly infected.  Extensive inflammation, swelling, and damaged tissue make use of the affected body part difficult and painful."
+      "has an infected wound surrounded by inflamed, warm, swollen, and painful tissue.  The infection remains localized but is interfering with normal use of the affected area.",
+      "has a badly infected wound with extensive inflammation, swelling, and tissue damage.  Normal use of the affected body part is difficult and painful."
     ],
 
     "part_descs": true,
@@ -132,7 +132,7 @@
       }
     ],
 
-    "flags": [ "EFFECT_LIMB_SCORE_MOD" ]
+    "flags": [ "EFFECT_LIMB_SCORE_MOD_LOCAL" ]
   },
 
   {
@@ -144,7 +144,7 @@
     ],
 
     "desc": [
-      "Part of the injured tissue has died.  The affected area is badly damaged and cannot recover normally until the dead tissue is properly treated."
+      "contains necrotic tissue that has died and cannot recover normally until the dead tissue is properly treated."
     ],
 
     "part_descs": true,
@@ -221,6 +221,6 @@
       }
     ],
 
-    "flags": [ "EFFECT_LIMB_SCORE_MOD" ]
+    "flags": [ "EFFECT_LIMB_SCORE_MOD_LOCAL" ]
   }
 ]
