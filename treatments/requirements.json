@@ -2,12 +2,13 @@
   {
     "id": "dw_clean_wound",
     "type": "requirement",
-    "//": "Basic mechanical cleaning of an open wound.",
+    "//": "Basic mechanical cleaning of an open wound using clean water and absorbent material.",
     "components": [
       [ [ "water_clean", 2 ] ],
       [ [ "cotton_ball", 2 ], [ "cotton_patchwork", 1 ] ]
     ]
   },
+
   {
     "id": "dw_disinfect_wound",
     "type": "requirement",
@@ -21,65 +22,87 @@
       ]
     ]
   },
+
   {
     "id": "dw_irrigate_wound",
     "type": "requirement",
-    "//": "Thorough irrigation of a dirty or contaminated wound.",
+    "//": "Thorough irrigation of a dirty or contaminated wound using clean water.",
     "components": [
       [ [ "water_clean", 6 ] ]
     ]
   },
+
   {
     "id": "dw_irrigate_chemical_burn",
     "type": "requirement",
-    "//": "Heavy irrigation used to remove corrosive material from tissue.",
+    "//": "Large-volume irrigation used to remove corrosive material from tissue. Water cleanliness is secondary to rapidly removing the corrosive agent.",
     "components": [
       [ [ "any_water", 12, "LIST" ] ]
     ]
   },
+
   {
     "id": "dw_basic_wound_dressing",
     "type": "requirement",
-    "//": "A simple improvised covering for a cleaned wound.",
+    "//": "A simple absorbent covering for a minor or cleaned wound.",
     "components": [
       [ [ "cotton_patchwork", 2 ], [ "cotton_ball", 6 ] ]
     ]
   },
+
   {
     "id": "dw_heavy_wound_dressing",
     "type": "requirement",
-    "//": "A large amount of absorbent material used for serious open wounds.",
+    "//": "A large amount of absorbent material used to protect a serious open wound.",
     "components": [
       [ [ "cotton_patchwork", 4 ], [ "cotton_ball", 12 ] ]
     ]
   },
+
   {
     "id": "dw_pressure_dressing",
     "type": "requirement",
-    "//": "Material for applying sustained pressure to a heavily bleeding wound.",
+    "//": "Absorbent material and binding material for applying sustained pressure to a heavily bleeding wound.",
     "components": [
       [ [ "cotton_patchwork", 4 ] ],
       [ [ "cordage_short", 1, "LIST" ] ]
     ]
   },
+
   {
     "id": "dw_suture_wound",
     "type": "requirement",
-    "//": "Needle-like sewing capability and suitable thread for closing a deep wound.",
+    "//": "Proper closure of a laceration using a curved needle and ordinary clean thread.",
     "qualities": [
       {
-        "id": "SEW",
+        "id": "SEW_CURVED",
         "level": 1
       }
     ],
     "components": [
-      [ [ "filament", 1, "LIST" ] ]
+      [ [ "thread", 10 ] ]
     ]
   },
+
   {
     "id": "dw_heavy_suture_wound",
     "type": "requirement",
-    "//": "Additional suture material for a large or severe laceration.",
+    "//": "Proper closure of a large or severe laceration using a curved needle and additional thread.",
+    "qualities": [
+      {
+        "id": "SEW_CURVED",
+        "level": 1
+      }
+    ],
+    "components": [
+      [ [ "thread", 20 ] ]
+    ]
+  },
+
+  {
+    "id": "dw_improvised_suture_wound",
+    "type": "requirement",
+    "//": "Improvised wound closure using an ordinary sewing tool and whatever suitable filament is available. This should carry a greater complication risk than proper suturing.",
     "qualities": [
       {
         "id": "SEW",
@@ -87,46 +110,66 @@
       }
     ],
     "components": [
-      [ [ "filament", 2, "LIST" ] ]
+      [ [ "filament", 10, "LIST" ] ]
     ]
   },
+
+  {
+    "id": "dw_improvised_heavy_suture_wound",
+    "type": "requirement",
+    "//": "Improvised closure of a large wound using an ordinary sewing tool and a substantial amount of available filament.",
+    "qualities": [
+      {
+        "id": "SEW",
+        "level": 1
+      }
+    ],
+    "components": [
+      [ [ "filament", 20, "LIST" ] ]
+    ]
+  },
+
   {
     "id": "dw_burn_dressing",
     "type": "requirement",
-    "//": "Clean material for protecting a burn after initial treatment.",
+    "//": "Clean absorbent material for protecting a treated burn.",
     "components": [
       [ [ "cotton_patchwork", 3 ] ]
     ]
   },
+
   {
     "id": "dw_severe_burn_dressing",
     "type": "requirement",
-    "//": "A larger amount of clean covering material for extensive burns.",
+    "//": "A larger amount of clean covering material for protecting an extensive burn.",
     "components": [
       [ [ "cotton_patchwork", 6 ] ]
     ]
   },
+
   {
     "id": "dw_eye_irrigation",
     "type": "requirement",
-    "//": "Clean water for flushing contaminants or chemicals from the eyes.",
+    "//": "Clean water for thoroughly flushing contaminants or corrosive chemicals from the eyes.",
     "components": [
       [ [ "water_clean", 4 ] ]
     ]
   },
+
   {
     "id": "dw_improvised_splint",
     "type": "requirement",
-    "//": "Rigid material and cordage for immobilizing a fractured limb.",
+    "//": "Rigid material and binding material for immobilizing an injured or fractured limb.",
     "components": [
       [ [ "stick", 2 ] ],
       [ [ "cordage_short", 2, "LIST" ] ]
     ]
   },
+
   {
     "id": "dw_minor_debridement",
     "type": "requirement",
-    "//": "Basic cutting capability and disinfectant for removing loose dead or damaged tissue.",
+    "//": "Basic cutting capability and antiseptic for removing loose dead, contaminated, or badly damaged tissue.",
     "qualities": [
       {
         "id": "CUT",
@@ -141,10 +184,11 @@
       ]
     ]
   },
+
   {
     "id": "dw_major_debridement",
     "type": "requirement",
-    "//": "Sharper cutting equipment and more antiseptic for treating extensive necrotic or badly damaged tissue.",
+    "//": "A sufficiently sharp cutting tool and additional antiseptic for removing extensive necrotic or severely damaged tissue.",
     "qualities": [
       {
         "id": "CUT",
