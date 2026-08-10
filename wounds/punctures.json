@@ -1,0 +1,104 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_minor_puncture",
+    "name": {
+      "str": "minor puncture wound",
+      "str_pl": "minor puncture wounds"
+    },
+    "description": "A narrow object has pierced the skin, leaving a small puncture wound. The opening is minor, but the depth of the injury is difficult to judge from the surface.",
+    "weight": 20,
+    "limit": 4,
+    "damage_types": [ "stab" ],
+    "damage_required": [ 1, 5 ],
+    "pain": [ 0, 2 ],
+    "healing_time": [ "12 hours", "4 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_puncture_wound",
+    "name": {
+      "str": "puncture wound",
+      "str_pl": "puncture wounds"
+    },
+    "description": "A sharp object has pierced through the skin and entered the tissue beneath. The external opening is relatively small compared to the depth of the wound.",
+    "weight": 17,
+    "limit": 3,
+    "damage_types": [ "stab" ],
+    "damage_required": [ 4, 11 ],
+    "pain": [ 1, 4 ],
+    "healing_time": [ "2 days", "8 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_deep_puncture",
+    "name": {
+      "str": "deep puncture wound",
+      "str_pl": "deep puncture wounds"
+    },
+    "description": "The penetrating object has reached deeply into the affected body part. Significant tissue has been damaged beneath the small surface opening.",
+    "weight": 13,
+    "limit": 3,
+    "damage_types": [ "stab" ],
+    "damage_required": [ 9, 20 ],
+    "pain": [ 3, 7 ],
+    "healing_time": [ "5 days", "18 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_penetrating_wound",
+    "name": {
+      "str": "penetrating wound",
+      "str_pl": "penetrating wounds"
+    },
+    "description": "A sharp weapon has penetrated deeply through multiple layers of tissue. The narrow wound channel conceals extensive damage beneath the surface.",
+    "weight": 9,
+    "limit": 2,
+    "damage_types": [ "stab" ],
+    "damage_required": [ 17, 30 ],
+    "pain": [ 5, 10 ],
+    "healing_time": [ "10 days", "30 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_severe_penetrating_wound",
+    "name": {
+      "str": "severe penetrating wound",
+      "str_pl": "severe penetrating wounds"
+    },
+    "description": "A powerful thrust has driven deeply through the affected area, tearing and crushing tissue along the wound channel. Important structures may have been damaged beneath the surface.",
+    "weight": 5,
+    "limit": 2,
+    "damage_types": [ "stab" ],
+    "damage_required": [ 27, 45 ],
+    "pain": [ 8, 14 ],
+    "healing_time": [ "21 days", "60 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_devastating_penetrating_wound",
+    "name": {
+      "str": "devastating penetrating wound",
+      "str_pl": "devastating penetrating wounds"
+    },
+    "description": "An exceptionally powerful penetrating strike has devastated the affected tissue. The wound channel extends deeply through the body part and leaves severe structural damage in its wake.",
+    "weight": 2,
+    "limit": 1,
+    "damage_types": [ "stab" ],
+    "damage_required": [ 40, 1000 ],
+    "pain": [ 11, 19 ],
+    "healing_time": [ "35 days", "100 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  }
+]

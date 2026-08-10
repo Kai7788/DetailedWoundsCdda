@@ -1,0 +1,753 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_scratch",
+    "name": "dress scratch",
+    "description": "Clean the superficial injury and protect it with a simple dressing.",
+    "time": "1 minute",
+    "skills": { "firstaid": 0 },
+    "requirements": [
+      [ "dw_clean_wound", 1 ],
+      [ "dw_basic_wound_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_scratch" ],
+    "wounds_added": [ "dw_dressed_scratch" ],
+    "success_msg": "You clean and dress the scratch.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_shallow_cut",
+    "name": "dress shallow cut",
+    "description": "Clean the cut and cover it with a protective dressing.",
+    "time": "2 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_clean_wound", 1 ],
+      [ "dw_basic_wound_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_shallow_cut" ],
+    "wounds_added": [ "dw_dressed_shallow_cut" ],
+    "success_msg": "You clean and dress the shallow cut.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_laceration",
+    "name": "clean laceration",
+    "description": "Thoroughly irrigate and disinfect the open laceration before further treatment.",
+    "time": "4 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_irrigate_wound", 1 ],
+      [ "dw_disinfect_wound", 1 ]
+    ],
+    "wounds_removed": [ "dw_laceration" ],
+    "wounds_added": [ "dw_cleaned_laceration" ],
+    "success_msg": "You thoroughly clean and disinfect the laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_suture_laceration",
+    "name": "suture laceration",
+    "description": "Approximate the wound edges and close the cleaned laceration with sutures.",
+    "time": "6 minutes",
+    "skills": { "firstaid": 3 },
+    "requirements": [
+      [ "dw_suture_wound", 1 ]
+    ],
+    "wounds_removed": [ "dw_cleaned_laceration" ],
+    "wounds_added": [ "dw_sutured_laceration" ],
+    "success_msg": "You carefully close the laceration with sutures.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_deep_laceration",
+    "name": "clean deep laceration",
+    "description": "Thoroughly irrigate and disinfect the deep wound before attempting to close it.",
+    "time": "7 minutes",
+    "skills": { "firstaid": 2 },
+    "requirements": [
+      [ "dw_irrigate_wound", 1 ],
+      [ "dw_disinfect_wound", 1 ]
+    ],
+    "wounds_removed": [ "dw_deep_laceration" ],
+    "wounds_added": [ "dw_cleaned_deep_laceration" ],
+    "success_msg": "You thoroughly clean the deep laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_suture_deep_laceration",
+    "name": "suture deep laceration",
+    "description": "Carefully close the cleaned deep wound with sutures.  Poor technique could leave damaged tissue poorly aligned.",
+    "time": "12 minutes",
+    "skills": { "firstaid": 4 },
+    "requirements": [
+      [ "dw_suture_wound", 1 ]
+    ],
+    "wounds_removed": [ "dw_cleaned_deep_laceration" ],
+    "wounds_added": [ "dw_sutured_deep_laceration" ],
+    "success_msg": "You carefully suture the deep laceration closed.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_severe_laceration",
+    "name": "clean severe laceration",
+    "description": "Flush debris and contamination from the extensive open wound and disinfect the damaged tissue.",
+    "time": "12 minutes",
+    "skills": { "firstaid": 3 },
+    "requirements": [
+      [ "dw_irrigate_wound", 2 ],
+      [ "dw_disinfect_wound", 2 ]
+    ],
+    "wounds_removed": [ "dw_severe_laceration" ],
+    "wounds_added": [ "dw_cleaned_severe_laceration" ],
+    "success_msg": "You thoroughly clean the severe laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_suture_severe_laceration",
+    "name": "suture severe laceration",
+    "description": "Close the extensive cleaned wound with multiple sutures.",
+    "time": "20 minutes",
+    "skills": { "firstaid": 6 },
+    "requirements": [
+      [ "dw_heavy_suture_wound", 1 ],
+      [ "dw_heavy_wound_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_cleaned_severe_laceration" ],
+    "wounds_added": [ "dw_sutured_severe_laceration" ],
+    "success_msg": "You carefully close and dress the severe laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.85,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.7,
+        "is_mandatory": false
+      }
+    ]
+  },
+
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_avulsion",
+    "name": "debride avulsion wound",
+    "description": "Remove loose and badly damaged tissue from the avulsion wound before further treatment.",
+    "time": "25 minutes",
+    "skills": { "firstaid": 6 },
+    "requirements": [
+      [ "dw_major_debridement", 1 ],
+      [ "dw_irrigate_wound", 2 ]
+    ],
+    "wounds_removed": [ "dw_avulsion_wound" ],
+    "wounds_added": [ "dw_debrided_avulsion_wound" ],
+    "success_msg": "You remove badly damaged tissue and thoroughly irrigate the avulsion wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_minor_puncture",
+    "name": "clean minor puncture wound",
+    "description": "Irrigate the narrow puncture to remove debris and contamination.",
+    "time": "3 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_irrigate_wound", 1 ]
+    ],
+    "wounds_removed": [ "dw_minor_puncture" ],
+    "wounds_added": [ "dw_cleaned_minor_puncture" ],
+    "success_msg": "You thoroughly irrigate the puncture wound."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_puncture",
+    "name": "clean puncture wound",
+    "description": "Flush the puncture wound thoroughly and disinfect the surrounding tissue.",
+    "time": "5 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_irrigate_wound", 1 ],
+      [ "dw_disinfect_wound", 1 ]
+    ],
+    "wounds_removed": [ "dw_puncture_wound" ],
+    "wounds_added": [ "dw_cleaned_puncture_wound" ],
+    "success_msg": "You clean and disinfect the puncture wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_deep_puncture",
+    "name": "clean deep puncture wound",
+    "description": "Carefully irrigate the deep wound channel to remove contaminants trapped beneath the surface.",
+    "time": "8 minutes",
+    "skills": { "firstaid": 2 },
+    "requirements": [
+      [ "dw_irrigate_wound", 2 ],
+      [ "dw_disinfect_wound", 1 ]
+    ],
+    "wounds_removed": [ "dw_deep_puncture" ],
+    "wounds_added": [ "dw_cleaned_deep_puncture" ],
+    "success_msg": "You thoroughly clean the deep puncture wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_penetrating_wound",
+    "name": "clean penetrating wound",
+    "description": "Thoroughly irrigate and disinfect the penetrating wound channel.",
+    "time": "12 minutes",
+    "skills": { "firstaid": 3 },
+    "requirements": [
+      [ "dw_irrigate_wound", 2 ],
+      [ "dw_disinfect_wound", 2 ]
+    ],
+    "wounds_removed": [ "dw_penetrating_wound" ],
+    "wounds_added": [ "dw_cleaned_penetrating_wound" ],
+    "success_msg": "You clean the penetrating wound as thoroughly as possible.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_ballistic_graze",
+    "name": "dress ballistic graze",
+    "description": "Clean the abraded tissue and protect it with a dressing.",
+    "time": "3 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_clean_wound", 1 ],
+      [ "dw_basic_wound_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_ballistic_graze" ],
+    "wounds_added": [ "dw_dressed_ballistic_graze" ],
+    "success_msg": "You clean and dress the ballistic graze."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_superficial_gunshot",
+    "name": "clean superficial gunshot wound",
+    "description": "Irrigate the ballistic wound and disinfect the damaged tissue.",
+    "time": "8 minutes",
+    "skills": { "firstaid": 2 },
+    "requirements": [
+      [ "dw_irrigate_wound", 1 ],
+      [ "dw_disinfect_wound", 1 ],
+      [ "dw_basic_wound_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_superficial_gunshot_wound" ],
+    "wounds_added": [ "dw_cleaned_superficial_gunshot_wound" ],
+    "success_msg": "You clean and dress the superficial gunshot wound."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_penetrating_gunshot",
+    "name": "clean penetrating gunshot wound",
+    "description": "Thoroughly irrigate the ballistic wound channel and cover the injury with a heavy dressing.",
+    "time": "15 minutes",
+    "skills": { "firstaid": 4 },
+    "requirements": [
+      [ "dw_irrigate_wound", 2 ],
+      [ "dw_disinfect_wound", 2 ],
+      [ "dw_heavy_wound_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_penetrating_gunshot_wound" ],
+    "wounds_added": [ "dw_cleaned_penetrating_gunshot_wound" ],
+    "success_msg": "You clean and dress the penetrating gunshot wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_severe_gunshot",
+    "name": "debride severe gunshot wound",
+    "description": "Remove loose and visibly nonviable tissue, irrigate the wound channel, and apply a heavy dressing.",
+    "time": "30 minutes",
+    "skills": { "firstaid": 6 },
+    "requirements": [
+      [ "dw_major_debridement", 1 ],
+      [ "dw_irrigate_wound", 2 ],
+      [ "dw_heavy_wound_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_severe_gunshot_wound" ],
+    "wounds_added": [ "dw_debrided_severe_gunshot_wound" ],
+    "success_msg": "You debride, irrigate, and dress the severe gunshot wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_superficial_burn",
+    "name": "dress superficial burn",
+    "description": "Protect the burned tissue with a clean dressing.",
+    "time": "3 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_burn_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_superficial_burn" ],
+    "wounds_added": [ "dw_dressed_superficial_burn" ],
+    "success_msg": "You carefully dress the superficial burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_partial_thickness_burn",
+    "name": "dress partial-thickness burn",
+    "description": "Cover the damaged skin with a clean protective dressing.",
+    "time": "7 minutes",
+    "skills": { "firstaid": 2 },
+    "requirements": [
+      [ "dw_burn_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_superficial_partial_thickness_burn" ],
+    "wounds_added": [ "dw_dressed_superficial_partial_thickness_burn" ],
+    "success_msg": "You carefully dress the partial-thickness burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.7,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_deep_partial_thickness_burn",
+    "name": "dress deep partial-thickness burn",
+    "description": "Protect the deep burn with a substantial clean dressing.",
+    "time": "10 minutes",
+    "skills": { "firstaid": 3 },
+    "requirements": [
+      [ "dw_severe_burn_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_deep_partial_thickness_burn" ],
+    "wounds_added": [ "dw_dressed_deep_partial_thickness_burn" ],
+    "success_msg": "You carefully dress the deep burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.7,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_full_thickness_burn",
+    "name": "debride full-thickness burn",
+    "description": "Remove loose dead tissue and protect the severe burn with a heavy dressing.",
+    "time": "25 minutes",
+    "skills": { "firstaid": 5 },
+    "requirements": [
+      [ "dw_major_debridement", 1 ],
+      [ "dw_severe_burn_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_full_thickness_burn" ],
+    "wounds_added": [ "dw_debrided_full_thickness_burn" ],
+    "success_msg": "You debride and dress the full-thickness burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_mild_chemical_burn",
+    "name": "irrigate mild chemical burn",
+    "description": "Flush the affected tissue thoroughly to remove remaining corrosive material.",
+    "time": "5 minutes",
+    "skills": { "firstaid": 0 },
+    "requirements": [
+      [ "dw_irrigate_chemical_burn", 1 ]
+    ],
+    "wounds_removed": [ "dw_mild_chemical_burn" ],
+    "wounds_added": [ "dw_irrigated_mild_chemical_burn" ],
+    "success_msg": "You thoroughly irrigate the chemical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_moderate_chemical_burn",
+    "name": "irrigate moderate chemical burn",
+    "description": "Flush the injured tissue with a large quantity of water to remove the corrosive contaminant.",
+    "time": "8 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_irrigate_chemical_burn", 1 ]
+    ],
+    "wounds_removed": [ "dw_moderate_chemical_burn" ],
+    "wounds_added": [ "dw_irrigated_moderate_chemical_burn" ],
+    "success_msg": "You thoroughly irrigate the chemical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_deep_chemical_burn",
+    "name": "irrigate deep chemical burn",
+    "description": "Continuously flush the severely damaged tissue to remove as much corrosive material as possible.",
+    "time": "12 minutes",
+    "skills": { "firstaid": 2 },
+    "requirements": [
+      [ "dw_irrigate_chemical_burn", 2 ]
+    ],
+    "wounds_removed": [ "dw_deep_chemical_burn" ],
+    "wounds_added": [ "dw_irrigated_deep_chemical_burn" ],
+    "success_msg": "You thoroughly irrigate the deep chemical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_full_thickness_chemical_burn",
+    "name": "irrigate severe chemical burn",
+    "description": "Use a large volume of water to flush the extensively chemically damaged tissue.",
+    "time": "15 minutes",
+    "skills": { "firstaid": 3 },
+    "requirements": [
+      [ "dw_irrigate_chemical_burn", 2 ]
+    ],
+    "wounds_removed": [ "dw_full_thickness_chemical_burn" ],
+    "wounds_added": [ "dw_irrigated_full_thickness_chemical_burn" ],
+    "success_msg": "You thoroughly irrigate the severe chemical burn."
+  },
+
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_minor_electrical_burn",
+    "name": "dress minor electrical burn",
+    "description": "Protect the electrical contact burn with a clean dressing.",
+    "time": "3 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_burn_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_minor_electrical_burn" ],
+    "wounds_added": [ "dw_dressed_minor_electrical_burn" ],
+    "success_msg": "You carefully dress the electrical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_electrical_contact_burn",
+    "name": "dress electrical contact burn",
+    "description": "Clean and protect the electrical contact injury.",
+    "time": "5 minutes",
+    "skills": { "firstaid": 2 },
+    "requirements": [
+      [ "dw_burn_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_electrical_contact_burn" ],
+    "wounds_added": [ "dw_dressed_electrical_contact_burn" ],
+    "success_msg": "You carefully dress the electrical contact burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_deep_electrical_burn",
+    "name": "dress deep electrical burn",
+    "description": "Protect the visibly damaged tissue while recognizing that deeper electrical injury may remain.",
+    "time": "8 minutes",
+    "skills": { "firstaid": 3 },
+    "requirements": [
+      [ "dw_severe_burn_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_deep_electrical_burn" ],
+    "wounds_added": [ "dw_dressed_deep_electrical_burn" ],
+    "success_msg": "You dress the deep electrical burn."
+  },
+
+  {
+    "type": "wound_fix",
+    "id": "dw_splint_hairline_fracture",
+    "name": "immobilize hairline fracture",
+    "description": "Immobilize the affected limb to reduce movement across the fractured bone.",
+    "time": "8 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_improvised_splint", 1 ]
+    ],
+    "wounds_removed": [ "dw_hairline_fracture" ],
+    "wounds_added": [ "dw_splinted_hairline_fracture" ],
+    "success_msg": "You immobilize the hairline fracture.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_splint_closed_fracture",
+    "name": "splint closed fracture",
+    "description": "Immobilize the broken limb and secure it in a stable position.",
+    "time": "12 minutes",
+    "skills": { "firstaid": 2 },
+    "requirements": [
+      [ "dw_improvised_splint", 1 ]
+    ],
+    "wounds_removed": [ "dw_closed_fracture" ],
+    "wounds_added": [ "dw_splinted_closed_fracture" ],
+    "success_msg": "You carefully splint the closed fracture.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_splint_displaced_fracture",
+    "name": "stabilize displaced fracture",
+    "description": "Carefully immobilize the displaced fracture.  The bones remain improperly aligned, but further movement is reduced.",
+    "time": "18 minutes",
+    "skills": { "firstaid": 4 },
+    "requirements": [
+      [ "dw_improvised_splint", 1 ]
+    ],
+    "wounds_removed": [ "dw_displaced_fracture" ],
+    "wounds_added": [ "dw_splinted_displaced_fracture" ],
+    "success_msg": "You stabilize the displaced fracture.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_splint_comminuted_fracture",
+    "name": "stabilize comminuted fracture",
+    "description": "Immobilize the shattered bone as well as possible to prevent additional tissue damage.",
+    "time": "25 minutes",
+    "skills": { "firstaid": 5 },
+    "requirements": [
+      [ "dw_improvised_splint", 1 ]
+    ],
+    "wounds_removed": [ "dw_comminuted_fracture" ],
+    "wounds_added": [ "dw_splinted_comminuted_fracture" ],
+    "success_msg": "You stabilize the shattered bone as well as you can.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_open_fracture",
+    "name": "clean and stabilize open fracture",
+    "description": "Irrigate the exposed fracture, protect the open wound, and immobilize the limb.",
+    "time": "30 minutes",
+    "skills": { "firstaid": 6 },
+    "requirements": [
+      [ "dw_irrigate_wound", 2 ],
+      [ "dw_disinfect_wound", 2 ],
+      [ "dw_heavy_wound_dressing", 1 ],
+      [ "dw_improvised_splint", 1 ]
+    ],
+    "wounds_removed": [ "dw_open_fracture" ],
+    "wounds_added": [ "dw_stabilized_open_fracture" ],
+    "success_msg": "You clean, cover, and immobilize the open fracture.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_cornea_abrasion",
+    "name": "irrigate injured eye",
+    "description": "Gently flush the eye with clean water to remove particles that may continue irritating the damaged surface.",
+    "time": "2 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_eye_irrigation", 1 ]
+    ],
+    "wounds_removed": [ "dw_cornea_abrasion" ],
+    "wounds_added": [ "dw_irrigated_cornea_abrasion" ],
+    "success_msg": "You carefully flush the injured eye."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_ocular_chemical_burn",
+    "name": "irrigate chemical eye injury",
+    "description": "Continuously flush the chemically exposed eye with clean water.",
+    "time": "10 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_eye_irrigation", 3 ]
+    ],
+    "wounds_removed": [ "dw_ocular_chemical_burn" ],
+    "wounds_added": [ "dw_irrigated_ocular_chemical_burn" ],
+    "success_msg": "You thoroughly flush the chemically injured eye."
+  },
+
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_split_lip",
+    "name": "dress split lip",
+    "description": "Clean the facial wound and protect it as well as possible.",
+    "time": "3 minutes",
+    "skills": { "firstaid": 1 },
+    "requirements": [
+      [ "dw_clean_wound", 1 ],
+      [ "dw_basic_wound_dressing", 1 ]
+    ],
+    "wounds_removed": [ "dw_split_lip" ],
+    "wounds_added": [ "dw_dressed_split_lip" ],
+    "success_msg": "You clean and dress the split lip."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_oral_laceration",
+    "name": "clean oral laceration",
+    "description": "Thoroughly clean the lacerated facial or oral tissue before further treatment.",
+    "time": "5 minutes",
+    "skills": { "firstaid": 2 },
+    "requirements": [
+      [ "dw_clean_wound", 1 ],
+      [ "dw_disinfect_wound", 1 ]
+    ],
+    "wounds_removed": [ "dw_oral_laceration" ],
+    "wounds_added": [ "dw_cleaned_oral_laceration" ],
+    "success_msg": "You thoroughly clean the oral laceration."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_deep_facial_laceration",
+    "name": "clean deep facial laceration",
+    "description": "Irrigate and disinfect the deep facial wound before attempting closure.",
+    "time": "8 minutes",
+    "skills": { "firstaid": 3 },
+    "requirements": [
+      [ "dw_irrigate_wound", 1 ],
+      [ "dw_disinfect_wound", 1 ]
+    ],
+    "wounds_removed": [ "dw_deep_facial_laceration" ],
+    "wounds_added": [ "dw_cleaned_deep_facial_laceration" ],
+    "success_msg": "You thoroughly clean the deep facial laceration."
+  }
+]

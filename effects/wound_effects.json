@@ -1,0 +1,226 @@
+[
+  {
+    "type": "effect_type",
+    "id": "dw_wound_contamination",
+
+    "name": [
+      "Light wound contamination",
+      "Wound contamination",
+      "Heavy wound contamination"
+    ],
+
+    "desc": [
+      "The wound has been exposed to dirt and microorganisms.  There are no clear signs of infection yet, but it should be cleaned.",
+      "The wound is visibly contaminated and has remained exposed long enough for infection to become a serious concern.",
+      "The wound is heavily contaminated with foreign material and microorganisms.  Without proper cleaning, infection is increasingly likely."
+    ],
+
+    "part_descs": true,
+    "rating": "bad",
+
+    "max_intensity": 3,
+    "max_effective_intensity": 3,
+
+    "show_in_info": true
+  },
+
+  {
+    "type": "effect_type",
+    "id": "dw_local_wound_infection",
+
+    "name": [
+      "Local wound infection",
+      "Severe local wound infection"
+    ],
+
+    "desc": [
+      "The tissue surrounding the wound is inflamed, warm, swollen, and painful.  The infection remains localized but is interfering with normal use of the affected area.",
+      "The wound is badly infected.  Extensive inflammation, swelling, and damaged tissue make use of the affected body part difficult and painful."
+    ],
+
+    "part_descs": true,
+    "rating": "bad",
+
+    "max_intensity": 2,
+    "max_effective_intensity": 2,
+
+    "show_in_info": true,
+
+    "base_mods": {
+      "pain_amount": [ 2 ]
+    },
+
+    "scaling_mods": {
+      "pain_amount": [ 3 ]
+    },
+
+    "limb_score_mods": [
+      {
+        "limb_score": "reaction",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "balance",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "manip",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "lift",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "block",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "grip",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "move_speed",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "footing",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "swim",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "crawl",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "vision",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "night_vis",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "breathing",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "consume_liquid",
+        "modifier": 0.9,
+        "scaling": -0.15
+      },
+      {
+        "limb_score": "consume_solid",
+        "modifier": 0.9,
+        "scaling": -0.15
+      }
+    ],
+
+    "flags": [ "EFFECT_LIMB_SCORE_MOD" ]
+  },
+
+  {
+    "type": "effect_type",
+    "id": "dw_tissue_necrosis",
+
+    "name": [
+      "Necrotic tissue"
+    ],
+
+    "desc": [
+      "Part of the injured tissue has died.  The affected area is badly damaged and cannot recover normally until the dead tissue is properly treated."
+    ],
+
+    "part_descs": true,
+    "rating": "bad",
+
+    "max_intensity": 1,
+
+    "show_in_info": true,
+
+    "base_mods": {
+      "pain_amount": [ 4 ]
+    },
+
+    "limb_score_mods": [
+      {
+        "limb_score": "reaction",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "balance",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "manip",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "lift",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "block",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "grip",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "move_speed",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "footing",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "swim",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "crawl",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "vision",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "night_vis",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "breathing",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "consume_liquid",
+        "modifier": 0.6
+      },
+      {
+        "limb_score": "consume_solid",
+        "modifier": 0.6
+      }
+    ],
+
+    "flags": [ "EFFECT_LIMB_SCORE_MOD" ]
+  }
+]

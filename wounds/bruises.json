@@ -1,0 +1,70 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_minor_bruise",
+    "name": {
+      "str": "minor bruise",
+      "str_pl": "minor bruises"
+    },
+    "description": "A small area of tissue is mildly swollen and tender. Faint discoloration is beginning to show beneath the skin.",
+    "weight": 20,
+    "limit": 4,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 2, 7 ],
+    "pain": [ 0, 1 ],
+    "healing_time": [ "12 hours", "3 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_heavy_bruise",
+    "name": {
+      "str": "heavy bruise",
+      "str_pl": "heavy bruises"
+    },
+    "description": "A dark bruise covers the injured tissue. The area is noticeably swollen and painful when pressed or moved.",
+    "weight": 15,
+    "limit": 3,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 8, 15 ],
+    "pain": [ 1, 4 ],
+    "healing_time": [ "2 days", "7 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_severe_contusion",
+    "name": {
+      "str": "severe contusion",
+      "str_pl": "severe contusions"
+    },
+    "description": "A broad area of tissue has suffered substantial blunt trauma. Deep discoloration and swelling surround the injury, and movement causes significant pain.",
+    "weight": 10,
+    "limit": 2,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 16, 25 ],
+    "pain": [ 4, 8 ],
+    "healing_time": [ "5 days", "14 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_massive_contusion",
+    "name": {
+      "str": "massive contusion",
+      "str_pl": "massive contusions"
+    },
+    "description": "The tissue has been badly damaged by a powerful blunt impact. Extensive swelling and deep discoloration cover the area, and even slight movement sends pain through the injured body part.",
+    "weight": 5,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 26, 35 ],
+    "pain": [ 7, 13 ],
+    "healing_time": [ "10 days", "28 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  }
+]

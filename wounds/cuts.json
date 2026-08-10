@@ -1,0 +1,104 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_scratch",
+    "name": {
+      "str": "scratch",
+      "str_pl": "scratches"
+    },
+    "description": "A thin superficial break runs across the skin. The injury is little more than an irritated line, but the damaged surface is exposed.",
+    "weight": 20,
+    "limit": 5,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 1, 4 ],
+    "pain": [ 0, 1 ],
+    "healing_time": [ "6 hours", "2 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_shallow_cut",
+    "name": {
+      "str": "shallow cut",
+      "str_pl": "shallow cuts"
+    },
+    "description": "The skin has been split, leaving a narrow superficial wound. The tissue beneath appears largely intact.",
+    "weight": 18,
+    "limit": 4,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 3, 9 ],
+    "pain": [ 1, 3 ],
+    "healing_time": [ "12 hours", "5 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_laceration",
+    "name": {
+      "str": "laceration",
+      "str_pl": "lacerations"
+    },
+    "description": "The skin and underlying tissue have been cut open. The wound edges separate visibly when the injured area moves.",
+    "weight": 14,
+    "limit": 3,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 7, 16 ],
+    "pain": [ 2, 5 ],
+    "healing_time": [ "3 days", "10 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_deep_laceration",
+    "name": {
+      "str": "deep laceration",
+      "str_pl": "deep lacerations"
+    },
+    "description": "The injury extends well beneath the skin into deeper soft tissue. The wound gapes noticeably and movement pulls painfully at the exposed tissue.",
+    "weight": 10,
+    "limit": 2,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 14, 26 ],
+    "pain": [ 4, 8 ],
+    "healing_time": [ "7 days", "21 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_severe_laceration",
+    "name": {
+      "str": "severe laceration",
+      "str_pl": "severe lacerations"
+    },
+    "description": "A deep, ragged wound has torn through several layers of tissue. The edges gape widely and substantial underlying tissue has been damaged.",
+    "weight": 6,
+    "limit": 2,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 23, 40 ],
+    "pain": [ 7, 13 ],
+    "healing_time": [ "14 days", "42 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_avulsion_wound",
+    "name": {
+      "str": "avulsion wound",
+      "str_pl": "avulsion wounds"
+    },
+    "description": "A violent cutting or tearing force has partially ripped tissue away from the body. The wound is broad, deep, and badly disrupted, leaving extensive exposed tissue.",
+    "weight": 2,
+    "limit": 1,
+    "damage_types": [ "cut" ],
+    "damage_required": [ 35, 1000 ],
+    "pain": [ 10, 18 ],
+    "healing_time": [ "30 days", "90 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  }
+]

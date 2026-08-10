@@ -1,0 +1,342 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_MAINTAIN_LIGHT_CONTAMINATION",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "expects_vars": [ "bp" ]
+    },
+    "effect": {
+      "run_eocs": "EOC_DW_CHECK_LIGHT_CONTAMINATION",
+      "time_in_future": [ "4 hours", "8 hours" ],
+      "variables": {
+        "bp": { "context_val": "bp" }
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_CHECK_LIGHT_CONTAMINATION",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [
+        {
+          "expects_vars": [ "bp" ]
+        },
+        {
+          "u_has_effect": "dw_wound_contamination",
+          "intensity": 1,
+          "bodypart": { "context_val": "bp" }
+        },
+        {
+          "not": {
+            "u_has_effect": "dw_wound_contamination",
+            "intensity": 2,
+            "bodypart": { "context_val": "bp" }
+          }
+        }
+      ]
+    },
+    "effect": [
+      {
+        "if": {
+          "one_in_chance": 16
+        },
+        "then": [
+          {
+            "u_lose_effect": "dw_wound_contamination",
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "run_eocs": "EOC_DW_LOCAL_INFECTION",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        ],
+        "else": {
+          "if": {
+            "one_in_chance": 5
+          },
+          "then": [
+            {
+              "u_lose_effect": "dw_wound_contamination",
+              "target_part": { "context_val": "bp" }
+            },
+            {
+              "run_eocs": "EOC_DW_MODERATE_CONTAMINATION",
+              "variables": {
+                "bp": { "context_val": "bp" }
+              }
+            }
+          ],
+          "else": {
+            "run_eocs": "EOC_DW_MAINTAIN_LIGHT_CONTAMINATION",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        }
+      }
+    ]
+  },
+
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_MAINTAIN_MODERATE_CONTAMINATION",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "expects_vars": [ "bp" ]
+    },
+    "effect": {
+      "run_eocs": "EOC_DW_CHECK_MODERATE_CONTAMINATION",
+      "time_in_future": [ "3 hours", "6 hours" ],
+      "variables": {
+        "bp": { "context_val": "bp" }
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_CHECK_MODERATE_CONTAMINATION",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [
+        {
+          "expects_vars": [ "bp" ]
+        },
+        {
+          "u_has_effect": "dw_wound_contamination",
+          "intensity": 2,
+          "bodypart": { "context_val": "bp" }
+        },
+        {
+          "not": {
+            "u_has_effect": "dw_wound_contamination",
+            "intensity": 3,
+            "bodypart": { "context_val": "bp" }
+          }
+        }
+      ]
+    },
+    "effect": [
+      {
+        "if": {
+          "one_in_chance": 8
+        },
+        "then": [
+          {
+            "u_lose_effect": "dw_wound_contamination",
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "run_eocs": "EOC_DW_LOCAL_INFECTION",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        ],
+        "else": {
+          "if": {
+            "one_in_chance": 4
+          },
+          "then": [
+            {
+              "u_lose_effect": "dw_wound_contamination",
+              "target_part": { "context_val": "bp" }
+            },
+            {
+              "run_eocs": "EOC_DW_HEAVY_CONTAMINATION",
+              "variables": {
+                "bp": { "context_val": "bp" }
+              }
+            }
+          ],
+          "else": {
+            "run_eocs": "EOC_DW_MAINTAIN_MODERATE_CONTAMINATION",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        }
+      }
+    ]
+  },
+
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_MAINTAIN_HEAVY_CONTAMINATION",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "expects_vars": [ "bp" ]
+    },
+    "effect": {
+      "run_eocs": "EOC_DW_CHECK_HEAVY_CONTAMINATION",
+      "time_in_future": [ "2 hours", "4 hours" ],
+      "variables": {
+        "bp": { "context_val": "bp" }
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_CHECK_HEAVY_CONTAMINATION",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [
+        {
+          "expects_vars": [ "bp" ]
+        },
+        {
+          "u_has_effect": "dw_wound_contamination",
+          "intensity": 3,
+          "bodypart": { "context_val": "bp" }
+        }
+      ]
+    },
+    "effect": [
+      {
+        "if": {
+          "one_in_chance": 4
+        },
+        "then": [
+          {
+            "u_lose_effect": "dw_wound_contamination",
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "run_eocs": "EOC_DW_LOCAL_INFECTION",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        ],
+        "else": {
+          "run_eocs": "EOC_DW_MAINTAIN_HEAVY_CONTAMINATION",
+          "variables": {
+            "bp": { "context_val": "bp" }
+          }
+        }
+      }
+    ]
+  },
+
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_MAINTAIN_LOCAL_INFECTION",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "expects_vars": [ "bp" ]
+    },
+    "effect": {
+      "run_eocs": "EOC_DW_CHECK_LOCAL_INFECTION",
+      "time_in_future": [ "6 hours", "12 hours" ],
+      "variables": {
+        "bp": { "context_val": "bp" }
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_CHECK_LOCAL_INFECTION",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [
+        {
+          "expects_vars": [ "bp" ]
+        },
+        {
+          "u_has_effect": "dw_local_wound_infection",
+          "intensity": 1,
+          "bodypart": { "context_val": "bp" }
+        },
+        {
+          "not": {
+            "u_has_effect": "dw_local_wound_infection",
+            "intensity": 2,
+            "bodypart": { "context_val": "bp" }
+          }
+        }
+      ]
+    },
+    "effect": [
+      {
+        "if": {
+          "one_in_chance": 6
+        },
+        "then": [
+          {
+            "u_lose_effect": "dw_local_wound_infection",
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "run_eocs": "EOC_DW_SEVERE_LOCAL_INFECTION",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        ],
+        "else": {
+          "run_eocs": "EOC_DW_MAINTAIN_LOCAL_INFECTION",
+          "variables": {
+            "bp": { "context_val": "bp" }
+          }
+        }
+      }
+    ]
+  },
+
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_MAINTAIN_SEVERE_LOCAL_INFECTION",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "expects_vars": [ "bp" ]
+    },
+    "effect": {
+      "run_eocs": "EOC_DW_CHECK_SEVERE_LOCAL_INFECTION",
+      "time_in_future": [ "8 hours", "16 hours" ],
+      "variables": {
+        "bp": { "context_val": "bp" }
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_CHECK_SEVERE_LOCAL_INFECTION",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [
+        {
+          "expects_vars": [ "bp" ]
+        },
+        {
+          "u_has_effect": "dw_local_wound_infection",
+          "intensity": 2,
+          "bodypart": { "context_val": "bp" }
+        }
+      ]
+    },
+    "effect": [
+      {
+        "if": {
+          "one_in_chance": 6
+        },
+        "then": [
+          {
+            "run_eocs": "EOC_DW_TISSUE_NECROSIS",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        ],
+        "else": {
+          "run_eocs": "EOC_DW_MAINTAIN_SEVERE_LOCAL_INFECTION",
+          "variables": {
+            "bp": { "context_val": "bp" }
+          }
+        }
+      }
+    ]
+  }
+]

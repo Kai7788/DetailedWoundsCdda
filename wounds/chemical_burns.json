@@ -1,0 +1,87 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_mild_chemical_burn",
+    "name": {
+      "str": "mild chemical burn",
+      "str_pl": "mild chemical burns"
+    },
+    "description": "A corrosive substance has irritated and damaged the surface of the skin. The area is reddened, tender, and painfully inflamed.",
+    "weight": 20,
+    "limit": 4,
+    "damage_types": [ "acid" ],
+    "damage_required": [ 2, 6 ],
+    "pain": [ 1, 3 ],
+    "healing_time": [ "1 day", "5 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_moderate_chemical_burn",
+    "name": {
+      "str": "moderate chemical burn",
+      "str_pl": "moderate chemical burns"
+    },
+    "description": "The corrosive substance has damaged several layers of skin. The injured tissue is swollen, intensely irritated, and beginning to blister or peel.",
+    "weight": 15,
+    "limit": 3,
+    "damage_types": [ "acid" ],
+    "damage_required": [ 7, 13 ],
+    "pain": [ 3, 7 ],
+    "healing_time": [ "5 days", "18 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_deep_chemical_burn",
+    "name": {
+      "str": "deep chemical burn",
+      "str_pl": "deep chemical burns"
+    },
+    "description": "Corrosive chemicals have penetrated deeply into the skin. Large areas of tissue are discolored and damaged, with raw flesh visible where the surface has been destroyed.",
+    "weight": 10,
+    "limit": 2,
+    "damage_types": [ "acid" ],
+    "damage_required": [ 14, 23 ],
+    "pain": [ 6, 11 ],
+    "healing_time": [ "14 days", "42 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_full_thickness_chemical_burn",
+    "name": {
+      "str": "full-thickness chemical burn",
+      "str_pl": "full-thickness chemical burns"
+    },
+    "description": "The chemical exposure has destroyed the full thickness of the skin and damaged tissue beneath it. Pale, darkened, or necrotic tissue occupies the center of the injury.",
+    "weight": 7,
+    "limit": 2,
+    "damage_types": [ "acid" ],
+    "damage_required": [ 24, 35 ],
+    "pain": [ 5, 10 ],
+    "healing_time": [ "30 days", "75 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_extensive_chemical_burn",
+    "name": {
+      "str": "extensive chemical burn",
+      "str_pl": "extensive chemical burns"
+    },
+    "description": "A powerful corrosive exposure has devastated a large area of tissue. The skin is extensively destroyed and deep layers of flesh show widespread chemical damage and necrosis.",
+    "weight": 4,
+    "limit": 1,
+    "damage_types": [ "acid" ],
+    "damage_required": [ 36, 1000 ],
+    "pain": [ 6, 12 ],
+    "healing_time": [ "60 days", "120 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  }
+]

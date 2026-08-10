@@ -1,0 +1,87 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_ballistic_graze",
+    "name": {
+      "str": "ballistic graze",
+      "str_pl": "ballistic grazes"
+    },
+    "description": "A fast-moving projectile has torn across the surface of the body without penetrating deeply. Skin and superficial tissue have been stripped away along the projectile's path.",
+    "weight": 20,
+    "limit": 4,
+    "damage_types": [ "bullet" ],
+    "damage_required": [ 1, 8 ],
+    "pain": [ 1, 4 ],
+    "healing_time": [ "2 days", "8 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_superficial_gunshot_wound",
+    "name": {
+      "str": "superficial gunshot wound",
+      "str_pl": "superficial gunshot wounds"
+    },
+    "description": "A projectile has penetrated the outer layers of tissue, leaving a small but distinct ballistic wound. The surrounding flesh is bruised and torn by the impact.",
+    "weight": 17,
+    "limit": 3,
+    "damage_types": [ "bullet" ],
+    "damage_required": [ 6, 16 ],
+    "pain": [ 2, 6 ],
+    "healing_time": [ "5 days", "18 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_penetrating_gunshot_wound",
+    "name": {
+      "str": "penetrating gunshot wound",
+      "str_pl": "penetrating gunshot wounds"
+    },
+    "description": "A projectile has penetrated deeply into the body, tearing through several layers of soft tissue. The visible wound conceals substantial trauma beneath the surface.",
+    "weight": 13,
+    "limit": 3,
+    "damage_types": [ "bullet" ],
+    "damage_required": [ 13, 28 ],
+    "pain": [ 4, 9 ],
+    "healing_time": [ "10 days", "35 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_severe_gunshot_wound",
+    "name": {
+      "str": "severe gunshot wound",
+      "str_pl": "severe gunshot wounds"
+    },
+    "description": "The projectile has caused extensive ballistic trauma. Deep tissue has been torn and crushed around the wound channel, leaving a serious and highly disruptive injury.",
+    "weight": 8,
+    "limit": 2,
+    "damage_types": [ "bullet" ],
+    "damage_required": [ 24, 45 ],
+    "pain": [ 7, 14 ],
+    "healing_time": [ "21 days", "70 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_devastating_ballistic_wound",
+    "name": {
+      "str": "devastating ballistic wound",
+      "str_pl": "devastating ballistic wounds"
+    },
+    "description": "A powerful projectile has devastated the affected area. Tissue along and around the wound channel is extensively torn, crushed, and disrupted, leaving a massive traumatic injury.",
+    "weight": 4,
+    "limit": 1,
+    "damage_types": [ "bullet" ],
+    "damage_required": [ 40, 1000 ],
+    "pain": [ 10, 18 ],
+    "healing_time": [ "45 days", "120 days" ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  }
+]

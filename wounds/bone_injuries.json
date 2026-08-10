@@ -1,0 +1,152 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_bone_contusion",
+    "name": {
+      "str": "bone contusion",
+      "str_pl": "bone contusions"
+    },
+    "description": "The impact has bruised the bone beneath the surrounding tissue. The area aches deeply and becomes particularly painful when pressure is placed on it.",
+    "weight": 5,
+    "limit": 2,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 10, 20 ],
+    "pain": [ 2, 5 ],
+    "healing_time": [ "7 days", "21 days" ],
+    "blacklist_body_part_types": [
+      "head",
+      "torso",
+      "sensor",
+      "mouth",
+      "wing",
+      "tail",
+      "other"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_hairline_fracture",
+    "name": {
+      "str": "hairline fracture",
+      "str_pl": "hairline fractures"
+    },
+    "description": "A thin crack has formed in the bone without significantly displacing it. Movement and pressure produce a persistent, sharp ache.",
+    "weight": 4,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 16, 30 ],
+    "pain": [ 4, 8 ],
+    "healing_time": [ "28 days", "56 days" ],
+    "blacklist_body_part_types": [
+      "head",
+      "torso",
+      "sensor",
+      "mouth",
+      "wing",
+      "tail",
+      "other"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_closed_fracture",
+    "name": {
+      "str": "closed fracture",
+      "str_pl": "closed fractures"
+    },
+    "description": "The bone has broken beneath intact skin. The injured limb is extremely painful and movement risks disturbing the fractured bone further.",
+    "weight": 3,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 24, 45 ],
+    "pain": [ 7, 12 ],
+    "healing_time": [ "42 days", "84 days" ],
+    "blacklist_body_part_types": [
+      "head",
+      "torso",
+      "sensor",
+      "mouth",
+      "wing",
+      "tail",
+      "other"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_displaced_fracture",
+    "name": {
+      "str": "displaced fracture",
+      "str_pl": "displaced fractures"
+    },
+    "description": "The bone has broken and the fractured sections have shifted out of their normal alignment. The limb is unstable, badly swollen, and excruciatingly painful to move.",
+    "weight": 2,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 32, 60 ],
+    "pain": [ 9, 15 ],
+    "healing_time": [ "56 days", "112 days" ],
+    "blacklist_body_part_types": [
+      "head",
+      "torso",
+      "sensor",
+      "mouth",
+      "wing",
+      "tail",
+      "other"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_comminuted_fracture",
+    "name": {
+      "str": "comminuted fracture",
+      "str_pl": "comminuted fractures"
+    },
+    "description": "The impact has shattered the bone into multiple fragments. The surrounding tissue is badly traumatized and the limb has lost much of its structural stability.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 45, 1000 ],
+    "pain": [ 10, 18 ],
+    "healing_time": [ "84 days", "168 days" ],
+    "blacklist_body_part_types": [
+      "head",
+      "torso",
+      "sensor",
+      "mouth",
+      "wing",
+      "tail",
+      "other"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_open_fracture",
+    "name": {
+      "str": "open fracture",
+      "str_pl": "open fractures"
+    },
+    "description": "The fractured bone has torn through the surrounding tissue, leaving the injury exposed. The wound is severely traumatic and highly vulnerable to blood loss and contamination.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash" ],
+    "damage_required": [ 55, 1000 ],
+    "pain": [ 12, 20 ],
+    "healing_time": [ "112 days", "224 days" ],
+    "blacklist_body_part_types": [
+      "head",
+      "torso",
+      "sensor",
+      "mouth",
+      "wing",
+      "tail",
+      "other"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  }
+]
