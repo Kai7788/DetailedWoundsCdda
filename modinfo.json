@@ -1,0 +1,12 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "detailed_wounds",
+    "name": "Detailed Wounds",
+    "authors": [ "Kai Maier" ],
+    "description": "Adds a more detailed wound system with bruises, cuts, punctures, burns and other physical injuries.",
+    "category": "rebalance",
+    "dependencies": [ "dda" ],
+    "version": "0.1"
+  }
+]
