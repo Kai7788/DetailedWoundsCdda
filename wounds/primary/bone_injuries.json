@@ -13,6 +13,40 @@
     "damage_required": [ 10, 20 ],
     "pain": [ 2, 5 ],
     "healing_time": [ "7 days", "21 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.05
+      },
+      {
+        "score": "grip",
+        "value": 0.05
+      },
+      {
+        "score": "lift",
+        "value": 0.08
+      },
+      {
+        "score": "block",
+        "value": 0.08
+      },
+      {
+        "score": "move_speed",
+        "value": 0.08
+      },
+      {
+        "score": "footing",
+        "value": 0.08
+      },
+      {
+        "score": "crawl",
+        "value": 0.05
+      },
+      {
+        "score": "swim",
+        "value": 0.05
+      }
+    ],
     "blacklist_body_part_types": [
       "head",
       "torso",
@@ -24,6 +58,7 @@
     ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
+
   {
     "type": "wound",
     "id": "dw_hairline_fracture",
@@ -38,6 +73,40 @@
     "damage_required": [ 16, 30 ],
     "pain": [ 4, 8 ],
     "healing_time": [ "28 days", "56 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.12
+      },
+      {
+        "score": "grip",
+        "value": 0.15
+      },
+      {
+        "score": "lift",
+        "value": 0.20
+      },
+      {
+        "score": "block",
+        "value": 0.22
+      },
+      {
+        "score": "move_speed",
+        "value": 0.20
+      },
+      {
+        "score": "footing",
+        "value": 0.22
+      },
+      {
+        "score": "crawl",
+        "value": 0.15
+      },
+      {
+        "score": "swim",
+        "value": 0.12
+      }
+    ],
     "blacklist_body_part_types": [
       "head",
       "torso",
@@ -49,6 +118,7 @@
     ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
+
   {
     "type": "wound",
     "id": "dw_closed_fracture",
@@ -63,6 +133,40 @@
     "damage_required": [ 24, 45 ],
     "pain": [ 7, 12 ],
     "healing_time": [ "42 days", "84 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.30
+      },
+      {
+        "score": "grip",
+        "value": 0.35
+      },
+      {
+        "score": "lift",
+        "value": 0.50
+      },
+      {
+        "score": "block",
+        "value": 0.55
+      },
+      {
+        "score": "move_speed",
+        "value": 0.50
+      },
+      {
+        "score": "footing",
+        "value": 0.55
+      },
+      {
+        "score": "crawl",
+        "value": 0.35
+      },
+      {
+        "score": "swim",
+        "value": 0.30
+      }
+    ],
     "blacklist_body_part_types": [
       "head",
       "torso",
@@ -74,6 +178,7 @@
     ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
+
   {
     "type": "wound",
     "id": "dw_displaced_fracture",
@@ -87,7 +192,40 @@
     "damage_types": [ "bash" ],
     "damage_required": [ 32, 60 ],
     "pain": [ 9, 15 ],
-    "healing_time": [ "56 days", "112 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.50
+      },
+      {
+        "score": "grip",
+        "value": 0.60
+      },
+      {
+        "score": "lift",
+        "value": 0.70
+      },
+      {
+        "score": "block",
+        "value": 0.75
+      },
+      {
+        "score": "move_speed",
+        "value": 0.70
+      },
+      {
+        "score": "footing",
+        "value": 0.75
+      },
+      {
+        "score": "crawl",
+        "value": 0.55
+      },
+      {
+        "score": "swim",
+        "value": 0.45
+      }
+    ],
     "blacklist_body_part_types": [
       "head",
       "torso",
@@ -97,8 +235,10 @@
       "tail",
       "other"
     ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB"
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "No healing_time is intentional. A displaced fracture must be stabilized before it can heal normally."
   },
+
   {
     "type": "wound",
     "id": "dw_comminuted_fracture",
@@ -112,7 +252,40 @@
     "damage_types": [ "bash" ],
     "damage_required": [ 45, 1000 ],
     "pain": [ 10, 18 ],
-    "healing_time": [ "84 days", "168 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.65
+      },
+      {
+        "score": "grip",
+        "value": 0.75
+      },
+      {
+        "score": "lift",
+        "value": 0.85
+      },
+      {
+        "score": "block",
+        "value": 0.90
+      },
+      {
+        "score": "move_speed",
+        "value": 0.85
+      },
+      {
+        "score": "footing",
+        "value": 0.90
+      },
+      {
+        "score": "crawl",
+        "value": 0.70
+      },
+      {
+        "score": "swim",
+        "value": 0.60
+      }
+    ],
     "blacklist_body_part_types": [
       "head",
       "torso",
@@ -122,8 +295,10 @@
       "tail",
       "other"
     ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB"
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "No healing_time is intentional. A comminuted fracture requires stabilization before entering a normal healing state."
   },
+
   {
     "type": "wound",
     "id": "dw_open_fracture",
@@ -137,7 +312,40 @@
     "damage_types": [ "bash" ],
     "damage_required": [ 55, 1000 ],
     "pain": [ 12, 20 ],
-    "healing_time": [ "112 days", "224 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.70
+      },
+      {
+        "score": "grip",
+        "value": 0.80
+      },
+      {
+        "score": "lift",
+        "value": 0.90
+      },
+      {
+        "score": "block",
+        "value": 0.95
+      },
+      {
+        "score": "move_speed",
+        "value": 0.90
+      },
+      {
+        "score": "footing",
+        "value": 0.95
+      },
+      {
+        "score": "crawl",
+        "value": 0.75
+      },
+      {
+        "score": "swim",
+        "value": 0.65
+      }
+    ],
     "blacklist_body_part_types": [
       "head",
       "torso",
@@ -147,6 +355,7 @@
       "tail",
       "other"
     ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB"
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "No healing_time is intentional. An open fracture must be cleaned and stabilized before it can heal normally."
   }
 ]

@@ -8,7 +8,7 @@
     },
     "description": "A small area of tissue is mildly swollen and tender. Faint discoloration is beginning to show beneath the skin.",
     "weight": 20,
-    "limit": 4,
+    "limit": 3,
     "damage_types": [ "bash" ],
     "damage_required": [ 2, 7 ],
     "pain": [ 0, 1 ],
@@ -16,6 +16,7 @@
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
+
   {
     "type": "wound",
     "id": "dw_heavy_bruise",
@@ -25,14 +26,49 @@
     },
     "description": "A dark bruise covers the injured tissue. The area is noticeably swollen and painful when pressed or moved.",
     "weight": 15,
-    "limit": 3,
+    "limit": 2,
     "damage_types": [ "bash" ],
     "damage_required": [ 8, 15 ],
     "pain": [ 1, 4 ],
     "healing_time": [ "2 days", "7 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.03
+      },
+      {
+        "score": "grip",
+        "value": 0.03
+      },
+      {
+        "score": "lift",
+        "value": 0.05
+      },
+      {
+        "score": "block",
+        "value": 0.05
+      },
+      {
+        "score": "move_speed",
+        "value": 0.04
+      },
+      {
+        "score": "footing",
+        "value": 0.04
+      },
+      {
+        "score": "crawl",
+        "value": 0.03
+      },
+      {
+        "score": "swim",
+        "value": 0.03
+      }
+    ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
+
   {
     "type": "wound",
     "id": "dw_severe_contusion",
@@ -42,14 +78,49 @@
     },
     "description": "A broad area of tissue has suffered substantial blunt trauma. Deep discoloration and swelling surround the injury, and movement causes significant pain.",
     "weight": 10,
-    "limit": 2,
+    "limit": 1,
     "damage_types": [ "bash" ],
     "damage_required": [ 16, 25 ],
     "pain": [ 4, 8 ],
     "healing_time": [ "5 days", "14 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.08
+      },
+      {
+        "score": "grip",
+        "value": 0.08
+      },
+      {
+        "score": "lift",
+        "value": 0.12
+      },
+      {
+        "score": "block",
+        "value": 0.12
+      },
+      {
+        "score": "move_speed",
+        "value": 0.10
+      },
+      {
+        "score": "footing",
+        "value": 0.10
+      },
+      {
+        "score": "crawl",
+        "value": 0.08
+      },
+      {
+        "score": "swim",
+        "value": 0.08
+      }
+    ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
+
   {
     "type": "wound",
     "id": "dw_massive_contusion",
@@ -61,9 +132,43 @@
     "weight": 5,
     "limit": 1,
     "damage_types": [ "bash" ],
-    "damage_required": [ 26, 35 ],
+    "damage_required": [ 26, 1000 ],
     "pain": [ 7, 13 ],
     "healing_time": [ "10 days", "28 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.15
+      },
+      {
+        "score": "grip",
+        "value": 0.15
+      },
+      {
+        "score": "lift",
+        "value": 0.20
+      },
+      {
+        "score": "block",
+        "value": 0.22
+      },
+      {
+        "score": "move_speed",
+        "value": 0.18
+      },
+      {
+        "score": "footing",
+        "value": 0.18
+      },
+      {
+        "score": "crawl",
+        "value": 0.15
+      },
+      {
+        "score": "swim",
+        "value": 0.12
+      }
+    ],
     "blacklist_body_part_types": [ "sensor", "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   }

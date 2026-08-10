@@ -89,10 +89,6 @@
         "value": 0.08
       },
       {
-        "score": "balance",
-        "value": 0.08
-      },
-      {
         "score": "footing",
         "value": 0.10
       },
@@ -143,10 +139,6 @@
       {
         "score": "lift",
         "value": 0.15
-      },
-      {
-        "score": "balance",
-        "value": 0.20
       },
       {
         "score": "footing",
@@ -203,10 +195,6 @@
       {
         "score": "lift",
         "value": 0.30
-      },
-      {
-        "score": "balance",
-        "value": 0.35
       },
       {
         "score": "footing",

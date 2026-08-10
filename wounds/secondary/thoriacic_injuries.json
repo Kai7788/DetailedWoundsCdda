@@ -13,16 +13,10 @@
     "damage_required": [ 10, 22 ],
     "pain": [ 2, 5 ],
     "healing_time": [ "5 days", "14 days" ],
-    "limb_scores": [
-      {
-        "score": "balance",
-        "value": 0.03
-      }
-    ],
     "whitelist_body_part_types": [ "torso" ],
-    "blacklist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound.  Contradictory torso whitelist/blacklist prevents normal damage selection."
+    "//": "Secondary-only wound. The contradictory BIONIC_LIMB flag filters prevent normal damage selection."
   },
 
   {
@@ -39,14 +33,8 @@
     "damage_required": [ 16, 30 ],
     "pain": [ 4, 8 ],
     "healing_time": [ "21 days", "42 days" ],
-    "limb_scores": [
-      {
-        "score": "balance",
-        "value": 0.05
-      }
-    ],
     "whitelist_body_part_types": [ "torso" ],
-    "blacklist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "Secondary-only wound."
   },
@@ -65,14 +53,8 @@
     "damage_required": [ 24, 45 ],
     "pain": [ 6, 11 ],
     "healing_time": [ "35 days", "70 days" ],
-    "limb_scores": [
-      {
-        "score": "balance",
-        "value": 0.08
-      }
-    ],
     "whitelist_body_part_types": [ "torso" ],
-    "blacklist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "Secondary-only wound."
   },
@@ -91,16 +73,10 @@
     "damage_required": [ 32, 60 ],
     "pain": [ 8, 14 ],
     "healing_time": [ "49 days", "98 days" ],
-    "limb_scores": [
-      {
-        "score": "balance",
-        "value": 0.12
-      }
-    ],
     "whitelist_body_part_types": [ "torso" ],
-    "blacklist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound.  Later complication logic can use this as a risk source for internal thoracic trauma."
+    "//": "Secondary-only wound. Later complication logic can use this as a risk source for internal thoracic trauma."
   },
 
   {
@@ -117,14 +93,8 @@
     "damage_required": [ 40, 75 ],
     "pain": [ 9, 16 ],
     "healing_time": [ "56 days", "112 days" ],
-    "limb_scores": [
-      {
-        "score": "balance",
-        "value": 0.16
-      }
-    ],
     "whitelist_body_part_types": [ "torso" ],
-    "blacklist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "Secondary-only wound."
   },
@@ -143,14 +113,8 @@
     "damage_required": [ 32, 65 ],
     "pain": [ 7, 13 ],
     "healing_time": [ "42 days", "84 days" ],
-    "limb_scores": [
-      {
-        "score": "balance",
-        "value": 0.10
-      }
-    ],
     "whitelist_body_part_types": [ "torso" ],
-    "blacklist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
     "//": "Secondary-only wound."
   },
@@ -169,16 +133,10 @@
     "damage_required": [ 45, 90 ],
     "pain": [ 10, 17 ],
     "healing_time": [ "60 days", "120 days" ],
-    "limb_scores": [
-      {
-        "score": "balance",
-        "value": 0.20
-      }
-    ],
     "whitelist_body_part_types": [ "torso" ],
-    "blacklist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound.  Internal organ and pulmonary consequences belong in separate secondary injuries."
+    "//": "Secondary-only wound. Internal organ and pulmonary consequences belong in separate secondary injuries."
   },
 
   {
@@ -194,15 +152,9 @@
     "damage_types": [ "bash" ],
     "damage_required": [ 65, 1000 ],
     "pain": [ 12, 20 ],
-    "limb_scores": [
-      {
-        "score": "balance",
-        "value": 0.28
-      }
-    ],
     "whitelist_body_part_types": [ "torso" ],
-    "blacklist_body_part_types": [ "torso" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
     "blacklist_bp_with_flag": "BIONIC_LIMB",
-    "//": "Secondary-only wound.  No healing_time is intentional: untreated flail chest should not simply disappear with time."
+    "//": "Secondary-only wound. No healing_time is intentional: untreated flail chest should not simply disappear with time."
   }
 ]

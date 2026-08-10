@@ -13,6 +13,20 @@
     "damage_required": [ 2, 7 ],
     "pain": [ 1, 3 ],
     "healing_time": [ "1 day", "5 days" ],
+    "limb_scores": [
+      {
+        "score": "vision",
+        "value": 0.03
+      },
+      {
+        "score": "night_vis",
+        "value": 0.03
+      },
+      {
+        "score": "reaction",
+        "value": 0.02
+      }
+    ],
     "whitelist_body_part_types": [ "sensor" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -30,6 +44,20 @@
     "damage_required": [ 7, 16 ],
     "pain": [ 3, 7 ],
     "healing_time": [ "5 days", "18 days" ],
+    "limb_scores": [
+      {
+        "score": "vision",
+        "value": 0.12
+      },
+      {
+        "score": "night_vis",
+        "value": 0.15
+      },
+      {
+        "score": "reaction",
+        "value": 0.08
+      }
+    ],
     "whitelist_body_part_types": [ "sensor" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -47,6 +75,20 @@
     "damage_required": [ 14, 1000 ],
     "pain": [ 6, 12 ],
     "healing_time": [ "14 days", "60 days" ],
+    "limb_scores": [
+      {
+        "score": "vision",
+        "value": 0.35
+      },
+      {
+        "score": "night_vis",
+        "value": 0.40
+      },
+      {
+        "score": "reaction",
+        "value": 0.22
+      }
+    ],
     "whitelist_body_part_types": [ "sensor" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -65,6 +107,20 @@
     "damage_required": [ 1, 5 ],
     "pain": [ 2, 5 ],
     "healing_time": [ "12 hours", "4 days" ],
+    "limb_scores": [
+      {
+        "score": "vision",
+        "value": 0.08
+      },
+      {
+        "score": "night_vis",
+        "value": 0.10
+      },
+      {
+        "score": "reaction",
+        "value": 0.04
+      }
+    ],
     "whitelist_body_part_types": [ "sensor" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -82,6 +138,20 @@
     "damage_required": [ 5, 14 ],
     "pain": [ 5, 10 ],
     "healing_time": [ "7 days", "30 days" ],
+    "limb_scores": [
+      {
+        "score": "vision",
+        "value": 0.28
+      },
+      {
+        "score": "night_vis",
+        "value": 0.32
+      },
+      {
+        "score": "reaction",
+        "value": 0.18
+      }
+    ],
     "whitelist_body_part_types": [ "sensor" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -99,8 +169,23 @@
     "damage_required": [ 6, 1000 ],
     "pain": [ 7, 14 ],
     "healing_time": [ "21 days", "90 days" ],
+    "limb_scores": [
+      {
+        "score": "vision",
+        "value": 0.60
+      },
+      {
+        "score": "night_vis",
+        "value": 0.65
+      },
+      {
+        "score": "reaction",
+        "value": 0.40
+      }
+    ],
     "whitelist_body_part_types": [ "sensor" ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB"
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "The penalty is intentionally severe without guaranteeing complete blindness. Later sub-bodypart support can distinguish left and right eye injuries."
   },
 
   {
@@ -117,6 +202,20 @@
     "damage_required": [ 3, 1000 ],
     "pain": [ 4, 10 ],
     "healing_time": [ "7 days", "45 days" ],
+    "limb_scores": [
+      {
+        "score": "vision",
+        "value": 0.30
+      },
+      {
+        "score": "night_vis",
+        "value": 0.35
+      },
+      {
+        "score": "reaction",
+        "value": 0.18
+      }
+    ],
     "whitelist_body_part_types": [ "sensor" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -133,9 +232,23 @@
     "damage_types": [ "acid" ],
     "damage_required": [ 2, 1000 ],
     "pain": [ 5, 11 ],
-    "healing_time": [ "7 days", "60 days" ],
+    "limb_scores": [
+      {
+        "score": "vision",
+        "value": 0.35
+      },
+      {
+        "score": "night_vis",
+        "value": 0.40
+      },
+      {
+        "score": "reaction",
+        "value": 0.20
+      }
+    ],
     "whitelist_body_part_types": [ "sensor" ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB"
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "No healing_time is intentional. Chemical contamination of the eye must be irrigated before the injury enters a normal healing state."
   },
   {
     "type": "wound",
@@ -151,6 +264,20 @@
     "damage_required": [ 4, 1000 ],
     "pain": [ 4, 9 ],
     "healing_time": [ "7 days", "45 days" ],
+    "limb_scores": [
+      {
+        "score": "vision",
+        "value": 0.30
+      },
+      {
+        "score": "night_vis",
+        "value": 0.35
+      },
+      {
+        "score": "reaction",
+        "value": 0.22
+      }
+    ],
     "whitelist_body_part_types": [ "sensor" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -164,11 +291,25 @@
     },
     "description": "A blunt impact has bruised and swollen the soft tissues of the face. The injury is tender and uncomfortable when speaking or eating.",
     "weight": 18,
-    "limit": 3,
+    "limit": 2,
     "damage_types": [ "bash" ],
     "damage_required": [ 2, 9 ],
     "pain": [ 1, 4 ],
     "healing_time": [ "2 days", "8 days" ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.03
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.02
+      },
+      {
+        "score": "manip",
+        "value": 0.01
+      }
+    ],
     "whitelist_body_part_types": [ "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -181,11 +322,25 @@
     },
     "description": "A heavy impact has badly bruised the face. Extensive swelling and deep tissue tenderness make movement of the jaw and surrounding muscles painful.",
     "weight": 10,
-    "limit": 2,
+    "limit": 1,
     "damage_types": [ "bash" ],
     "damage_required": [ 8, 18 ],
     "pain": [ 3, 8 ],
     "healing_time": [ "5 days", "18 days" ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.12
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.06
+      },
+      {
+        "score": "manip",
+        "value": 0.03
+      }
+    ],
     "whitelist_body_part_types": [ "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -198,11 +353,25 @@
     },
     "description": "A sharp impact has split the soft tissue around the mouth, leaving a painful open wound that moves whenever you speak or eat.",
     "weight": 16,
-    "limit": 2,
+    "limit": 1,
     "damage_types": [ "cut" ],
     "damage_required": [ 2, 8 ],
     "pain": [ 1, 4 ],
     "healing_time": [ "2 days", "8 days" ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.05
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.05
+      },
+      {
+        "score": "manip",
+        "value": 0.01
+      }
+    ],
     "whitelist_body_part_types": [ "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -220,6 +389,20 @@
     "damage_required": [ 7, 18 ],
     "pain": [ 3, 7 ],
     "healing_time": [ "5 days", "18 days" ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.15
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.10
+      },
+      {
+        "score": "manip",
+        "value": 0.02
+      }
+    ],
     "whitelist_body_part_types": [ "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -237,6 +420,20 @@
     "damage_required": [ 15, 1000 ],
     "pain": [ 5, 11 ],
     "healing_time": [ "10 days", "35 days" ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.22
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.15
+      },
+      {
+        "score": "manip",
+        "value": 0.04
+      }
+    ],
     "whitelist_body_part_types": [ "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -255,6 +452,16 @@
     "damage_required": [ 8, 22 ],
     "pain": [ 3, 7 ],
     "healing_time": [ "7 days", "30 days" ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.30
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.03
+      }
+    ],
     "whitelist_body_part_types": [ "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -272,6 +479,20 @@
     "damage_required": [ 12, 28 ],
     "pain": [ 4, 9 ],
     "healing_time": [ "10 days", "35 days" ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.35
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.10
+      },
+      {
+        "score": "manip",
+        "value": 0.04
+      }
+    ],
     "whitelist_body_part_types": [ "mouth" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -289,8 +510,23 @@
     "damage_required": [ 22, 1000 ],
     "pain": [ 8, 15 ],
     "healing_time": [ "35 days", "84 days" ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.75
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.30
+      },
+      {
+        "score": "manip",
+        "value": 0.08
+      }
+    ],
     "whitelist_body_part_types": [ "mouth" ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB"
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Healing time remains finite because no dedicated jaw stabilization treatment exists yet."
   },
 
   {
@@ -307,6 +543,12 @@
     "damage_required": [ 10, 24 ],
     "pain": [ 3, 7 ],
     "healing_time": [ "5 days", "21 days" ],
+    "limb_scores": [
+      {
+        "score": "reaction",
+        "value": 0.12
+      }
+    ],
     "whitelist_body_part_types": [ "head" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -324,6 +566,12 @@
     "damage_required": [ 20, 38 ],
     "pain": [ 5, 10 ],
     "healing_time": [ "14 days", "45 days" ],
+    "limb_scores": [
+      {
+        "score": "reaction",
+        "value": 0.30
+      }
+    ],
     "whitelist_body_part_types": [ "head" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -341,6 +589,12 @@
     "damage_required": [ 28, 50 ],
     "pain": [ 7, 13 ],
     "healing_time": [ "42 days", "90 days" ],
+    "limb_scores": [
+      {
+        "score": "reaction",
+        "value": 0.25
+      }
+    ],
     "whitelist_body_part_types": [ "head" ],
     "blacklist_bp_with_flag": "BIONIC_LIMB"
   },
@@ -358,7 +612,14 @@
     "damage_required": [ 45, 1000 ],
     "pain": [ 9, 16 ],
     "healing_time": [ "60 days", "120 days" ],
+    "limb_scores": [
+      {
+        "score": "reaction",
+        "value": 0.45
+      }
+    ],
     "whitelist_body_part_types": [ "head" ],
-    "blacklist_bp_with_flag": "BIONIC_LIMB"
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Healing time remains finite because no dedicated treatment path exists yet for depressed skull fracture."
   }
 ]

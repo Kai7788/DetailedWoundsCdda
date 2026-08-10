@@ -12,72 +12,31 @@
 
   {
     "type": "effect_on_condition",
-    "id": "EOC_DW_MINOR_BLEEDING",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "u_add_effect": "bleed",
-        "duration": "30 minutes",
-        "intensity": 1,
-        "target_part": { "context_val": "bp" }
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_MODERATE_BLEEDING",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "u_add_effect": "bleed",
-        "duration": "90 minutes",
-        "intensity": 3,
-        "target_part": { "context_val": "bp" }
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_SEVERE_BLEEDING",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "u_add_effect": "bleed",
-        "duration": "3 hours",
-        "intensity": 6,
-        "target_part": { "context_val": "bp" }
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_DW_CATASTROPHIC_BLEEDING",
-    "eoc_type": "ACTIVATION",
-    "condition": { "expects_vars": [ "bp" ] },
-    "effect": [
-      {
-        "u_add_effect": "bleed",
-        "duration": "4 hours",
-        "intensity": 10,
-        "target_part": { "context_val": "bp" }
-      }
-    ]
-  },
-
-  {
-    "type": "effect_on_condition",
     "id": "EOC_DW_LIGHT_CONTAMINATION",
     "eoc_type": "ACTIVATION",
     "condition": { "expects_vars": [ "bp" ] },
     "effect": [
       {
-        "u_add_effect": "dw_wound_contamination",
-        "duration": "12 hours",
-        "intensity": 1,
-        "target_part": { "context_val": "bp" }
+        "if": {
+          "not": {
+            "u_has_effect": "dw_wound_contamination",
+            "bodypart": { "context_val": "bp" }
+          }
+        },
+        "then": [
+          {
+            "u_add_effect": "dw_wound_contamination",
+            "duration": "PERMANENT",
+            "intensity": 1,
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "run_eocs": "EOC_DW_MAINTAIN_LIGHT_CONTAMINATION",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        ]
       }
     ]
   },
@@ -88,10 +47,31 @@
     "condition": { "expects_vars": [ "bp" ] },
     "effect": [
       {
-        "u_add_effect": "dw_wound_contamination",
-        "duration": "24 hours",
-        "intensity": 2,
-        "target_part": { "context_val": "bp" }
+        "if": {
+          "not": {
+            "u_has_effect": "dw_wound_contamination",
+            "intensity": 2,
+            "bodypart": { "context_val": "bp" }
+          }
+        },
+        "then": [
+          {
+            "u_lose_effect": "dw_wound_contamination",
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "u_add_effect": "dw_wound_contamination",
+            "duration": "PERMANENT",
+            "intensity": 2,
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "run_eocs": "EOC_DW_MAINTAIN_MODERATE_CONTAMINATION",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        ]
       }
     ]
   },
@@ -102,10 +82,31 @@
     "condition": { "expects_vars": [ "bp" ] },
     "effect": [
       {
-        "u_add_effect": "dw_wound_contamination",
-        "duration": "48 hours",
-        "intensity": 3,
-        "target_part": { "context_val": "bp" }
+        "if": {
+          "not": {
+            "u_has_effect": "dw_wound_contamination",
+            "intensity": 3,
+            "bodypart": { "context_val": "bp" }
+          }
+        },
+        "then": [
+          {
+            "u_lose_effect": "dw_wound_contamination",
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "u_add_effect": "dw_wound_contamination",
+            "duration": "PERMANENT",
+            "intensity": 3,
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "run_eocs": "EOC_DW_MAINTAIN_HEAVY_CONTAMINATION",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        ]
       }
     ]
   },
@@ -117,14 +118,34 @@
     "condition": { "expects_vars": [ "bp" ] },
     "effect": [
       {
-        "u_add_effect": "dw_local_wound_infection",
-        "duration": "24 hours",
-        "intensity": 1,
-        "target_part": { "context_val": "bp" }
-      },
-      {
-        "u_message": "The wound on your <context_val:bp> feels increasingly hot and painful.",
-        "type": "warning"
+        "if": {
+          "not": {
+            "u_has_effect": "dw_local_wound_infection",
+            "bodypart": { "context_val": "bp" }
+          }
+        },
+        "then": [
+          {
+            "u_lose_effect": "dw_wound_contamination",
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "u_add_effect": "dw_local_wound_infection",
+            "duration": "PERMANENT",
+            "intensity": 1,
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "u_message": "The wound on your <context_val:bp> feels increasingly hot and painful.",
+            "type": "warning"
+          },
+          {
+            "run_eocs": "EOC_DW_MAINTAIN_LOCAL_INFECTION",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        ]
       }
     ]
   },
@@ -135,14 +156,39 @@
     "condition": { "expects_vars": [ "bp" ] },
     "effect": [
       {
-        "u_add_effect": "dw_local_wound_infection",
-        "duration": "48 hours",
-        "intensity": 2,
-        "target_part": { "context_val": "bp" }
-      },
-      {
-        "u_message": "The tissue around the wound on your <context_val:bp> is badly inflamed.",
-        "type": "bad"
+        "if": {
+          "not": {
+            "u_has_effect": "dw_local_wound_infection",
+            "intensity": 2,
+            "bodypart": { "context_val": "bp" }
+          }
+        },
+        "then": [
+          {
+            "u_lose_effect": "dw_wound_contamination",
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "u_lose_effect": "dw_local_wound_infection",
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "u_add_effect": "dw_local_wound_infection",
+            "duration": "PERMANENT",
+            "intensity": 2,
+            "target_part": { "context_val": "bp" }
+          },
+          {
+            "u_message": "The tissue around the wound on your <context_val:bp> is badly inflamed.",
+            "type": "bad"
+          },
+          {
+            "run_eocs": "EOC_DW_MAINTAIN_SEVERE_LOCAL_INFECTION",
+            "variables": {
+              "bp": { "context_val": "bp" }
+            }
+          }
+        ]
       }
     ]
   },
@@ -318,10 +364,8 @@
     "condition": { "expects_vars": [ "bp" ] },
     "effect": {
       "weighted_list_eocs": [
-        [ "EOC_DW_NO_COMPLICATION", 60 ],
-        [ "EOC_DW_LIGHT_CONTAMINATION", 25 ],
-        [ "EOC_DW_MINOR_BLEEDING", 10 ],
-        [ "EOC_DW_LOCAL_INFECTION", 5 ]
+        [ "EOC_DW_NO_COMPLICATION", 75 ],
+        [ "EOC_DW_LIGHT_CONTAMINATION", 25 ]
       ]
     }
   },
@@ -332,11 +376,9 @@
     "condition": { "expects_vars": [ "bp" ] },
     "effect": {
       "weighted_list_eocs": [
-        [ "EOC_DW_NO_COMPLICATION", 40 ],
-        [ "EOC_DW_MODERATE_CONTAMINATION", 25 ],
-        [ "EOC_DW_MODERATE_BLEEDING", 20 ],
-        [ "EOC_DW_LOCAL_INFECTION", 10 ],
-        [ "EOC_DW_SEVERE_LOCAL_INFECTION", 5 ]
+        [ "EOC_DW_NO_COMPLICATION", 55 ],
+        [ "EOC_DW_LIGHT_CONTAMINATION", 25 ],
+        [ "EOC_DW_MODERATE_CONTAMINATION", 20 ]
       ]
     }
   },
@@ -347,13 +389,10 @@
     "condition": { "expects_vars": [ "bp" ] },
     "effect": {
       "weighted_list_eocs": [
-        [ "EOC_DW_NO_COMPLICATION", 25 ],
-        [ "EOC_DW_HEAVY_CONTAMINATION", 25 ],
-        [ "EOC_DW_SEVERE_BLEEDING", 20 ],
-        [ "EOC_DW_LOCAL_INFECTION", 12 ],
-        [ "EOC_DW_SEVERE_LOCAL_INFECTION", 10 ],
-        [ "EOC_DW_TISSUE_NECROSIS", 3 ],
-        [ "EOC_DW_MAJOR_INTERNAL_HEMORRHAGE", 5 ]
+        [ "EOC_DW_NO_COMPLICATION", 35 ],
+        [ "EOC_DW_LIGHT_CONTAMINATION", 20 ],
+        [ "EOC_DW_MODERATE_CONTAMINATION", 25 ],
+        [ "EOC_DW_HEAVY_CONTAMINATION", 20 ]
       ]
     }
   },
@@ -365,12 +404,10 @@
     "condition": { "expects_vars": [ "bp" ] },
     "effect": {
       "weighted_list_eocs": [
-        [ "EOC_DW_NO_COMPLICATION", 30 ],
-        [ "EOC_DW_MODERATE_BLEEDING", 25 ],
-        [ "EOC_DW_MODERATE_CONTAMINATION", 20 ],
-        [ "EOC_DW_SEVERE_BLEEDING", 10 ],
-        [ "EOC_DW_LOCAL_INFECTION", 5 ],
-        [ "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE", 10 ]
+        [ "EOC_DW_NO_COMPLICATION", 45 ],
+        [ "EOC_DW_LIGHT_CONTAMINATION", 20 ],
+        [ "EOC_DW_MODERATE_CONTAMINATION", 25 ],
+        [ "EOC_DW_HEAVY_CONTAMINATION", 10 ]
       ]
     }
   },
@@ -381,13 +418,10 @@
     "condition": { "expects_vars": [ "bp" ] },
     "effect": {
       "weighted_list_eocs": [
-        [ "EOC_DW_NO_COMPLICATION", 15 ],
-        [ "EOC_DW_SEVERE_BLEEDING", 25 ],
-        [ "EOC_DW_CATASTROPHIC_BLEEDING", 15 ],
-        [ "EOC_DW_HEAVY_CONTAMINATION", 15 ],
-        [ "EOC_DW_SEVERE_LOCAL_INFECTION", 5 ],
-        [ "EOC_DW_TISSUE_NECROSIS", 5 ],
-        [ "EOC_DW_MAJOR_INTERNAL_HEMORRHAGE", 20 ]
+        [ "EOC_DW_NO_COMPLICATION", 25 ],
+        [ "EOC_DW_LIGHT_CONTAMINATION", 15 ],
+        [ "EOC_DW_MODERATE_CONTAMINATION", 30 ],
+        [ "EOC_DW_HEAVY_CONTAMINATION", 30 ]
       ]
     }
   },
@@ -400,10 +434,9 @@
     "effect": {
       "weighted_list_eocs": [
         [ "EOC_DW_NO_COMPLICATION", 50 ],
-        [ "EOC_DW_LIGHT_CONTAMINATION", 20 ],
-        [ "EOC_DW_MODERATE_CONTAMINATION", 15 ],
-        [ "EOC_DW_LOCAL_INFECTION", 10 ],
-        [ "EOC_DW_TISSUE_NECROSIS", 5 ]
+        [ "EOC_DW_LIGHT_CONTAMINATION", 25 ],
+        [ "EOC_DW_MODERATE_CONTAMINATION", 20 ],
+        [ "EOC_DW_HEAVY_CONTAMINATION", 5 ]
       ]
     }
   }

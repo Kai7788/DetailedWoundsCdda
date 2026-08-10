@@ -3,7 +3,7 @@
     "type": "effect_on_condition",
     "id": "EOC_DW_BRIDGE_ON_WOUND_CREATED",
     "eoc_type": "ACTIVATION",
-    "//": "Primary entry point for the future engine hook. Expected variables: bp = affected bodypart, wound_id = newly created wound.",
+    "//": "Entry point for wound creation. Expected variables: bp = affected bodypart, wound_id = newly created wound.",
     "condition": {
       "expects_vars": [ "bp", "wound_id" ]
     },
@@ -22,7 +22,7 @@
     "type": "effect_on_condition",
     "id": "EOC_DW_BRIDGE_ROUTE_PRIMARY_WOUND",
     "eoc_type": "ACTIVATION",
-    "//": "Routes newly created primary wounds into the appropriate complication system.",
+    "//": "Routes newly created primary wounds into their initial contamination complication rolls. Structural secondary injuries are routed separately later.",
     "condition": {
       "expects_vars": [ "bp", "wound_id" ]
     },
@@ -149,7 +149,7 @@
     "type": "effect_on_condition",
     "id": "EOC_DW_BRIDGE_ON_WOUND_TREATED",
     "eoc_type": "ACTIVATION",
-    "//": "Primary entry point for the future wound_fix engine hook. Expected variables are the bodypart, removed wound and newly created treated wound.",
+    "//": "Entry point for wound treatment. Expected variables: bp = affected bodypart, old_wound_id = removed wound, new_wound_id = treated wound.",
     "condition": {
       "expects_vars": [ "bp", "old_wound_id", "new_wound_id" ]
     },
@@ -169,7 +169,7 @@
     "type": "effect_on_condition",
     "id": "EOC_DW_BRIDGE_ROUTE_TREATMENT",
     "eoc_type": "ACTIVATION",
-    "//": "Routes treated wound states into cleanup actions. Infection deliberately remains separate from contamination.",
+    "//": "Routes treated wound states into cleanup actions. Cleaning removes microbial contamination; established infection remains a separate condition.",
     "condition": {
       "expects_vars": [ "bp", "old_wound_id", "new_wound_id" ]
     },
@@ -196,6 +196,7 @@
             "dw_cleaned_penetrating_gunshot_wound",
 
             "dw_irrigated_cornea_abrasion",
+            "dw_irrigated_ocular_chemical_burn",
             "dw_dressed_split_lip",
             "dw_cleaned_oral_laceration",
             "dw_cleaned_deep_facial_laceration",
@@ -235,7 +236,7 @@
     "type": "effect_on_condition",
     "id": "EOC_DW_BRIDGE_CLEAR_CONTAMINATION",
     "eoc_type": "ACTIVATION",
-    "//": "Successful wound cleaning removes Detailed Wounds contamination from the treated bodypart. Existing infection is deliberately not removed.",
+    "//": "Successful cleaning removes Detailed Wounds microbial contamination from the treated bodypart. Existing infection and necrosis are deliberately not removed.",
     "condition": {
       "expects_vars": [ "bp" ]
     },
@@ -251,7 +252,7 @@
     "type": "effect_on_condition",
     "id": "EOC_DW_BRIDGE_DEBRIDEMENT_CLEANUP",
     "eoc_type": "ACTIVATION",
-    "//": "Debridement removes contamination and already necrotic local tissue. Established infection remains and requires separate treatment.",
+    "//": "Debridement removes contamination and necrotic local tissue from the treated bodypart. Established infection remains and requires separate treatment.",
     "condition": {
       "expects_vars": [ "bp" ]
     },
