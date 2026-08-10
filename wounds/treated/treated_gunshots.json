@@ -1,0 +1,121 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_dressed_ballistic_graze",
+    "name": {
+      "str": "dressed ballistic graze",
+      "str_pl": "dressed ballistic grazes"
+    },
+    "description": "The ballistic graze has been cleaned and covered with a protective dressing.  The damaged superficial tissue remains tender, but the wound is protected from further irritation and contamination while it heals.",
+    "weight": 1,
+    "limit": 3,
+    "damage_types": [ "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 0, 2 ],
+    "healing_time": [ "1 day", "5 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.02 },
+      { "score": "grip", "value": 0.02 },
+      { "score": "lift", "value": 0.02 },
+      { "score": "block", "value": 0.03 },
+      { "score": "move_speed", "value": 0.02 },
+      { "score": "footing", "value": 0.02 },
+      { "score": "crawl", "value": 0.02 },
+      { "score": "swim", "value": 0.02 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Contradictory BIONIC_LIMB filters prevent natural damage selection."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_cleaned_superficial_gunshot_wound",
+    "name": {
+      "str": "cleaned superficial gunshot wound",
+      "str_pl": "cleaned superficial gunshot wounds"
+    },
+    "description": "The superficial ballistic wound has been thoroughly irrigated, disinfected, and covered.  Bruised and torn tissue remains beneath the surface, but the wound is now protected and able to recover under cleaner conditions.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 1, 4 ],
+    "healing_time": [ "4 days", "14 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.05 },
+      { "score": "grip", "value": 0.05 },
+      { "score": "lift", "value": 0.05 },
+      { "score": "block", "value": 0.07 },
+      { "score": "move_speed", "value": 0.05 },
+      { "score": "footing", "value": 0.05 },
+      { "score": "crawl", "value": 0.04 },
+      { "score": "swim", "value": 0.04 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Cleaning and dressing reduce complications but do not undo ballistic tissue damage."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_cleaned_penetrating_gunshot_wound",
+    "name": {
+      "str": "cleaned penetrating gunshot wound",
+      "str_pl": "cleaned penetrating gunshot wounds"
+    },
+    "description": "The penetrating ballistic wound has been thoroughly irrigated, disinfected, and covered with a substantial dressing.  The wound channel remains deep and significant tissue damage persists beneath the surface.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 7 ],
+    "healing_time": [ "8 days", "28 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.10 },
+      { "score": "grip", "value": 0.10 },
+      { "score": "lift", "value": 0.10 },
+      { "score": "block", "value": 0.14 },
+      { "score": "move_speed", "value": 0.10 },
+      { "score": "footing", "value": 0.10 },
+      { "score": "crawl", "value": 0.08 },
+      { "score": "swim", "value": 0.07 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Any associated muscle, tendon, nerve, bone, vascular, or internal injury remains separate."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_debrided_severe_gunshot_wound",
+    "name": {
+      "str": "debrided severe gunshot wound",
+      "str_pl": "debrided severe gunshot wounds"
+    },
+    "description": "Loose and visibly nonviable tissue has been removed from the severe ballistic wound.  The wound channel has been thoroughly irrigated and protected with a heavy dressing, but extensive underlying tissue destruction remains.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bullet" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 10 ],
+    "healing_time": [ "18 days", "56 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.20 },
+      { "score": "grip", "value": 0.20 },
+      { "score": "lift", "value": 0.20 },
+      { "score": "block", "value": 0.28 },
+      { "score": "move_speed", "value": 0.22 },
+      { "score": "footing", "value": 0.22 },
+      { "score": "crawl", "value": 0.15 },
+      { "score": "swim", "value": 0.13 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Debridement and dressing stabilize the external ballistic injury but do not resolve secondary structural trauma."
+  }
+]

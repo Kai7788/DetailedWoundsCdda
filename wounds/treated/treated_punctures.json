@@ -1,0 +1,121 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_cleaned_minor_puncture",
+    "name": {
+      "str": "cleaned minor puncture wound",
+      "str_pl": "cleaned minor puncture wounds"
+    },
+    "description": "The small puncture has been carefully irrigated, removing loose dirt and contaminants from the narrow wound channel.  The tissue remains mildly tender but should recover quickly if kept clean.",
+    "weight": 1,
+    "limit": 3,
+    "damage_types": [ "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 0, 1 ],
+    "healing_time": [ "8 hours", "3 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.01 },
+      { "score": "grip", "value": 0.01 },
+      { "score": "lift", "value": 0.01 },
+      { "score": "block", "value": 0.02 },
+      { "score": "move_speed", "value": 0.01 },
+      { "score": "footing", "value": 0.01 },
+      { "score": "crawl", "value": 0.01 },
+      { "score": "swim", "value": 0.01 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Irrigated but not closed."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_cleaned_puncture_wound",
+    "name": {
+      "str": "cleaned puncture wound",
+      "str_pl": "cleaned puncture wounds"
+    },
+    "description": "The puncture wound has been thoroughly flushed and disinfected.  The narrow channel remains painful and damaged beneath the surface, but most accessible contamination has been removed.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 1, 3 ],
+    "healing_time": [ "1 day", "6 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.03 },
+      { "score": "grip", "value": 0.03 },
+      { "score": "lift", "value": 0.03 },
+      { "score": "block", "value": 0.04 },
+      { "score": "move_speed", "value": 0.03 },
+      { "score": "footing", "value": 0.03 },
+      { "score": "crawl", "value": 0.02 },
+      { "score": "swim", "value": 0.02 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Cleaning reduces contamination risk but does not erase tissue damage."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_cleaned_deep_puncture",
+    "name": {
+      "str": "cleaned deep puncture wound",
+      "str_pl": "cleaned deep puncture wounds"
+    },
+    "description": "The deep wound channel has been carefully irrigated and disinfected.  Significant tissue damage remains beneath the small surface opening, and movement continues to disturb the injured structures.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 2, 6 ],
+    "healing_time": [ "4 days", "14 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.07 },
+      { "score": "grip", "value": 0.07 },
+      { "score": "lift", "value": 0.07 },
+      { "score": "block", "value": 0.10 },
+      { "score": "move_speed", "value": 0.07 },
+      { "score": "footing", "value": 0.07 },
+      { "score": "crawl", "value": 0.05 },
+      { "score": "swim", "value": 0.04 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Deep punctures remain mechanically significant even after cleaning."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_cleaned_penetrating_wound",
+    "name": {
+      "str": "cleaned penetrating wound",
+      "str_pl": "cleaned penetrating wounds"
+    },
+    "description": "The penetrating wound has been irrigated and disinfected as thoroughly as possible.  The long wound channel remains seriously damaged, and deeper structures may still be injured despite the cleaner external wound.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 4, 8 ],
+    "healing_time": [ "8 days", "25 days" ],
+    "limb_scores": [
+      { "score": "manip", "value": 0.12 },
+      { "score": "grip", "value": 0.12 },
+      { "score": "lift", "value": 0.12 },
+      { "score": "block", "value": 0.16 },
+      { "score": "move_speed", "value": 0.12 },
+      { "score": "footing", "value": 0.12 },
+      { "score": "crawl", "value": 0.08 },
+      { "score": "swim", "value": 0.07 }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Secondary muscle, tendon, nerve, vascular, bone, or internal injuries remain separate."
+  }
+]

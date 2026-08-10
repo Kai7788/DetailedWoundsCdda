@@ -1,0 +1,217 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_dressed_superficial_burn",
+    "name": {
+      "str": "dressed superficial burn",
+      "str_pl": "dressed superficial burns"
+    },
+    "description": "The superficial burn has been protected with a clean dressing.  The injured skin remains tender and sensitive, but further irritation and contamination are reduced while the tissue recovers.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "heat" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 0, 2 ],
+    "healing_time": [ "12 hours", "3 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.02
+      },
+      {
+        "score": "grip",
+        "value": 0.02
+      },
+      {
+        "score": "lift",
+        "value": 0.02
+      },
+      {
+        "score": "block",
+        "value": 0.03
+      },
+      {
+        "score": "move_speed",
+        "value": 0.02
+      },
+      {
+        "score": "footing",
+        "value": 0.02
+      },
+      {
+        "score": "crawl",
+        "value": 0.02
+      },
+      {
+        "score": "swim",
+        "value": 0.02
+      }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Contradictory BIONIC_LIMB flag filters prevent natural damage selection."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_dressed_superficial_partial_thickness_burn",
+    "name": {
+      "str": "dressed superficial partial-thickness burn",
+      "str_pl": "dressed superficial partial-thickness burns"
+    },
+    "description": "The partial-thickness burn has been covered with a clean protective dressing.  Damaged skin remains painful and vulnerable, but the wound is now protected while new tissue develops beneath it.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "heat" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 2, 5 ],
+    "healing_time": [ "5 days", "16 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.05
+      },
+      {
+        "score": "grip",
+        "value": 0.05
+      },
+      {
+        "score": "lift",
+        "value": 0.05
+      },
+      {
+        "score": "block",
+        "value": 0.07
+      },
+      {
+        "score": "move_speed",
+        "value": 0.05
+      },
+      {
+        "score": "footing",
+        "value": 0.05
+      },
+      {
+        "score": "crawl",
+        "value": 0.04
+      },
+      {
+        "score": "swim",
+        "value": 0.04
+      }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_dressed_deep_partial_thickness_burn",
+    "name": {
+      "str": "dressed deep partial-thickness burn",
+      "str_pl": "dressed deep partial-thickness burns"
+    },
+    "description": "The deep burn has been carefully covered with a substantial dressing.  Significant layers of skin remain damaged, leaving the area painful, stiff, and functionally impaired throughout recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "heat" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 4, 8 ],
+    "healing_time": [ "10 days", "35 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.10
+      },
+      {
+        "score": "grip",
+        "value": 0.10
+      },
+      {
+        "score": "lift",
+        "value": 0.10
+      },
+      {
+        "score": "block",
+        "value": 0.14
+      },
+      {
+        "score": "move_speed",
+        "value": 0.10
+      },
+      {
+        "score": "footing",
+        "value": 0.10
+      },
+      {
+        "score": "crawl",
+        "value": 0.08
+      },
+      {
+        "score": "swim",
+        "value": 0.08
+      }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_debrided_full_thickness_burn",
+    "name": {
+      "str": "debrided full-thickness burn",
+      "str_pl": "debrided full-thickness burns"
+    },
+    "description": "Loose and nonviable tissue has been removed from the full-thickness burn and the remaining injury has been protected with a heavy dressing.  The wound remains extremely serious and requires a long period of recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "heat" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 4, 8 ],
+    "healing_time": [ "30 days", "75 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.20
+      },
+      {
+        "score": "grip",
+        "value": 0.20
+      },
+      {
+        "score": "lift",
+        "value": 0.18
+      },
+      {
+        "score": "block",
+        "value": 0.25
+      },
+      {
+        "score": "move_speed",
+        "value": 0.20
+      },
+      {
+        "score": "footing",
+        "value": 0.20
+      },
+      {
+        "score": "crawl",
+        "value": 0.15
+      },
+      {
+        "score": "swim",
+        "value": 0.15
+      }
+    ],
+    "blacklist_body_part_types": [ "sensor", "mouth" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Debridement removes nonviable tissue but does not make a full-thickness burn a minor injury."
+  }
+]
