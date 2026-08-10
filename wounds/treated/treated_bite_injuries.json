@@ -1,0 +1,232 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_cleaned_superficial_bite_wound",
+    "name": {
+      "str": "cleaned superficial bite wound",
+      "str_pl": "cleaned superficial bite wounds"
+    },
+    "description": "The shallow tooth wounds have been thoroughly cleaned and irrigated. The surrounding tissue remains bruised and tender, but accessible debris and contamination have been removed and the injury can recover under cleaner conditions.",
+    "weight": 1,
+    "limit": 3,
+    "damage_types": [ "bash", "cut", "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 0, 2 ],
+    "healing_time": [ "1 day", "5 days" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only secondary bite wound. Cleaning removes accessible contamination but does not treat an established infection."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_cleaned_deep_bite_wound",
+    "name": {
+      "str": "cleaned deep bite wound",
+      "str_pl": "cleaned deep bite wounds"
+    },
+    "description": "The deep tooth punctures have been carefully irrigated and disinfected. The narrow wound channels remain painful and damaged beneath the surface, but accessible contamination has been removed and healing can proceed more safely.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "bash", "cut", "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 2, 5 ],
+    "healing_time": [ "5 days", "16 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.01
+      },
+      {
+        "score": "grip",
+        "value": 0.01
+      },
+      {
+        "score": "lift",
+        "value": 0.01
+      },
+      {
+        "score": "block",
+        "value": 0.02
+      },
+      {
+        "score": "move_speed",
+        "value": 0.02
+      },
+      {
+        "score": "footing",
+        "value": 0.02
+      },
+      {
+        "score": "crawl",
+        "value": 0.01
+      },
+      {
+        "score": "swim",
+        "value": 0.01
+      }
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only secondary bite wound. Deep bite wounds are deliberately irrigated rather than sutured closed."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_debrided_tearing_bite_wound",
+    "name": {
+      "str": "debrided tearing bite wound",
+      "str_pl": "debrided tearing bite wounds"
+    },
+    "description": "Loose and clearly nonviable tissue has been removed from the ragged bite wound. The injury has been thoroughly irrigated and protected, but substantial torn tissue remains painful and mechanically impaired while it heals.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 4, 8 ],
+    "healing_time": [ "10 days", "35 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.04
+      },
+      {
+        "score": "grip",
+        "value": 0.04
+      },
+      {
+        "score": "lift",
+        "value": 0.03
+      },
+      {
+        "score": "block",
+        "value": 0.06
+      },
+      {
+        "score": "move_speed",
+        "value": 0.05
+      },
+      {
+        "score": "footing",
+        "value": 0.05
+      },
+      {
+        "score": "crawl",
+        "value": 0.03
+      },
+      {
+        "score": "swim",
+        "value": 0.03
+      }
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only secondary bite wound. Debridement removes contamination and clearly necrotic local tissue, while deeper structural injuries remain separate."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_cleaned_crushing_bite_injury",
+    "name": {
+      "str": "cleaned crushing bite injury",
+      "str_pl": "cleaned crushing bite injuries"
+    },
+    "description": "The punctures produced by the crushing bite have been thoroughly cleaned and irrigated, and the damaged area has been protected. Deep bruising and compression damage remain substantial despite treatment.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 4, 9 ],
+    "healing_time": [ "8 days", "28 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.06
+      },
+      {
+        "score": "grip",
+        "value": 0.06
+      },
+      {
+        "score": "lift",
+        "value": 0.09
+      },
+      {
+        "score": "block",
+        "value": 0.10
+      },
+      {
+        "score": "move_speed",
+        "value": 0.09
+      },
+      {
+        "score": "footing",
+        "value": 0.09
+      },
+      {
+        "score": "crawl",
+        "value": 0.06
+      },
+      {
+        "score": "swim",
+        "value": 0.05
+      }
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only secondary bite wound. Cleaning addresses the open tooth wounds but does not remove the underlying crush trauma or separate structural injuries."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_debrided_devastating_bite_injury",
+    "name": {
+      "str": "debrided devastating bite injury",
+      "str_pl": "debrided devastating bite injuries"
+    },
+    "description": "Extensive shredded and nonviable tissue has been removed from the devastating bite injury. The remaining wound has been aggressively irrigated and protected, but major tissue loss, deep trauma, and severe functional impairment remain.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 6, 12 ],
+    "healing_time": [ "28 days", "84 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.11
+      },
+      {
+        "score": "grip",
+        "value": 0.11
+      },
+      {
+        "score": "lift",
+        "value": 0.14
+      },
+      {
+        "score": "block",
+        "value": 0.19
+      },
+      {
+        "score": "move_speed",
+        "value": 0.16
+      },
+      {
+        "score": "footing",
+        "value": 0.16
+      },
+      {
+        "score": "crawl",
+        "value": 0.10
+      },
+      {
+        "score": "swim",
+        "value": 0.09
+      }
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only secondary bite wound. Major debridement converts the otherwise non-healing devastating bite injury into a recoverable state. Muscle, tendon, nerve, bone, vascular, and other structural injuries remain independent."
+  }
+]

@@ -1,0 +1,231 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_superficial_bite_wound",
+    "name": {
+      "str": "superficial bite wound",
+      "str_pl": "superficial bite wounds"
+    },
+    "description": "Teeth have broken the skin and left several shallow punctures and abrasions. The surrounding tissue is bruised and tender, but the damage appears largely superficial.",
+    "weight": 1,
+    "limit": 3,
+    "damage_types": [ "bash", "cut", "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 1, 3 ],
+    "healing_time": [ "2 days", "7 days" ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Secondary-only wound. The contradictory BIONIC_LIMB filters prevent automatic damage selection. Bite contamination and infection are handled separately by EOCs."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_deep_bite_wound",
+    "name": {
+      "str": "deep bite wound",
+      "str_pl": "deep bite wounds"
+    },
+    "description": "The bite has driven teeth deeply into the tissue, leaving several narrow but substantial puncture channels surrounded by bruised and damaged flesh.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [ "bash", "cut", "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 3, 7 ],
+    "healing_time": [ "7 days", "21 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.02
+      },
+      {
+        "score": "grip",
+        "value": 0.02
+      },
+      {
+        "score": "lift",
+        "value": 0.02
+      },
+      {
+        "score": "block",
+        "value": 0.03
+      },
+      {
+        "score": "move_speed",
+        "value": 0.03
+      },
+      {
+        "score": "footing",
+        "value": 0.03
+      },
+      {
+        "score": "crawl",
+        "value": 0.02
+      },
+      {
+        "score": "swim",
+        "value": 0.02
+      }
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Secondary-only wound. Deep bite channels carry a greater contamination risk, which is handled separately by the complication EOCs."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_tearing_bite_wound",
+    "name": {
+      "str": "tearing bite wound",
+      "str_pl": "tearing bite wounds"
+    },
+    "description": "The attacker bit down and pulled away, tearing open the tissue around the tooth wounds. Ragged edges and exposed deeper tissue make the injury considerably more severe than a simple puncturing bite.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 10 ],
+    "healing_time": [ "14 days", "42 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.06
+      },
+      {
+        "score": "grip",
+        "value": 0.06
+      },
+      {
+        "score": "lift",
+        "value": 0.05
+      },
+      {
+        "score": "block",
+        "value": 0.09
+      },
+      {
+        "score": "move_speed",
+        "value": 0.07
+      },
+      {
+        "score": "footing",
+        "value": 0.07
+      },
+      {
+        "score": "crawl",
+        "value": 0.05
+      },
+      {
+        "score": "swim",
+        "value": 0.04
+      }
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Secondary-only wound. The ragged open tissue should use a severe bite-specific contamination roll when bite routing is implemented."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_crushing_bite_injury",
+    "name": {
+      "str": "crushing bite injury",
+      "str_pl": "crushing bite injuries"
+    },
+    "description": "Powerful jaws have compressed the tissue between the teeth, producing deep bruising and structural trauma around the puncture sites. The injury is swollen, painful, and significantly impaired.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 5, 11 ],
+    "healing_time": [ "10 days", "35 days" ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.08
+      },
+      {
+        "score": "grip",
+        "value": 0.08
+      },
+      {
+        "score": "lift",
+        "value": 0.12
+      },
+      {
+        "score": "block",
+        "value": 0.14
+      },
+      {
+        "score": "move_speed",
+        "value": 0.12
+      },
+      {
+        "score": "footing",
+        "value": 0.12
+      },
+      {
+        "score": "crawl",
+        "value": 0.08
+      },
+      {
+        "score": "swim",
+        "value": 0.07
+      }
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Secondary-only wound. Additional muscle, tendon, nerve, bone, or crush injuries may coexist as separate secondary wounds."
+  },
+
+  {
+    "type": "wound",
+    "id": "dw_devastating_bite_injury",
+    "name": {
+      "str": "devastating bite injury",
+      "str_pl": "devastating bite injuries"
+    },
+    "description": "The bite has catastrophically mangled the affected tissue. Deep punctures, crushing force, and tearing have produced a large irregular wound with extensive tissue destruction.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [ "bash", "cut", "stab" ],
+    "damage_required": [ 1000, 1000 ],
+    "pain": [ 8, 15 ],
+    "limb_scores": [
+      {
+        "score": "manip",
+        "value": 0.15
+      },
+      {
+        "score": "grip",
+        "value": 0.15
+      },
+      {
+        "score": "lift",
+        "value": 0.18
+      },
+      {
+        "score": "block",
+        "value": 0.24
+      },
+      {
+        "score": "move_speed",
+        "value": 0.20
+      },
+      {
+        "score": "footing",
+        "value": 0.20
+      },
+      {
+        "score": "crawl",
+        "value": 0.13
+      },
+      {
+        "score": "swim",
+        "value": 0.11
+      }
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Secondary-only wound. No healing_time is intentional. Extensive bite-related tissue destruction requires debridement before entering a recoverable state."
+  }
+]

@@ -142,6 +142,40 @@
   },
   {
     "type": "wound_fix",
+    "id": "dw_improvise_suture_laceration",
+    "name": "improvise suture laceration",
+    "description": "Close the cleaned laceration with improvised sewing equipment and protect the closure with a simple dressing.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_improvised_suture_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_laceration"
+    ],
+    "wounds_added": [
+      "dw_improvised_sutured_laceration"
+    ],
+    "success_msg": "You close and dress the laceration with improvised sutures.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
     "id": "dw_clean_deep_laceration",
     "name": "clean deep laceration",
     "description": "Thoroughly irrigate and disinfect the deep wound before attempting to close it.",
@@ -215,6 +249,40 @@
   },
   {
     "type": "wound_fix",
+    "id": "dw_improvise_suture_deep_laceration",
+    "name": "improvise suture deep laceration",
+    "description": "Close the cleaned deep laceration with improvised sewing equipment and protect the less secure closure with a dressing.",
+    "time": "15 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_improvised_suture_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_deep_laceration"
+    ],
+    "wounds_added": [
+      "dw_improvised_sutured_deep_laceration"
+    ],
+    "success_msg": "You close and dress the deep laceration with improvised sutures.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
     "id": "dw_clean_severe_laceration",
     "name": "clean severe laceration",
     "description": "Flush debris and contamination from the extensive open wound and disinfect the damaged tissue.",
@@ -282,6 +350,45 @@
       {
         "proficiency": "prof_wound_care_expert",
         "time_save": 0.7,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_improvise_suture_severe_laceration",
+    "name": "improvise suture severe laceration",
+    "description": "Attempt to close the extensive cleaned wound with improvised sutures and protect it with a heavy dressing.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_improvised_heavy_suture_wound",
+        1
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_severe_laceration"
+    ],
+    "wounds_added": [
+      "dw_improvised_sutured_severe_laceration"
+    ],
+    "success_msg": "You close and dress the severe laceration with improvised sutures.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
         "is_mandatory": false
       }
     ]
@@ -451,6 +558,82 @@
   },
   {
     "type": "wound_fix",
+    "id": "dw_debride_severe_penetrating_wound",
+    "name": "debride severe penetrating wound",
+    "description": "Remove loose and nonviable tissue from the severe penetrating wound, irrigate the deep channel, and protect it with a heavy dressing.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_penetrating_wound"
+    ],
+    "wounds_added": [
+      "dw_debrided_severe_penetrating_wound"
+    ],
+    "success_msg": "You debride, irrigate, and dress the severe penetrating wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_devastating_penetrating_wound",
+    "name": "debride devastating penetrating wound",
+    "description": "Aggressively remove destroyed and nonviable tissue, thoroughly irrigate the devastating wound channel, and apply substantial protection.",
+    "time": "40 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_irrigate_wound",
+        3
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_devastating_penetrating_wound"
+    ],
+    "wounds_added": [
+      "dw_debrided_devastating_penetrating_wound"
+    ],
+    "success_msg": "You debride, irrigate, and heavily dress the devastating penetrating wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
     "id": "dw_dress_ballistic_graze",
     "name": "dress ballistic graze",
     "description": "Clean the abraded tissue and protect it with a dressing.",
@@ -590,6 +773,44 @@
   },
   {
     "type": "wound_fix",
+    "id": "dw_debride_devastating_ballistic_wound",
+    "name": "debride devastating ballistic wound",
+    "description": "Remove extensive shredded and nonviable tissue from the devastating ballistic injury, irrigate the wound channel repeatedly, and apply heavy protection.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_irrigate_wound",
+        3
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_devastating_ballistic_wound"
+    ],
+    "wounds_added": [
+      "dw_debrided_devastating_ballistic_wound"
+    ],
+    "success_msg": "You aggressively debride, irrigate, and dress the devastating ballistic wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
     "id": "dw_dress_superficial_burn",
     "name": "dress superficial burn",
     "description": "Protect the burned tissue with a clean dressing.",
@@ -719,6 +940,45 @@
   },
   {
     "type": "wound_fix",
+    "id": "dw_debride_extensive_full_thickness_burn",
+    "name": "debride extensive full-thickness burn",
+    "description": "Remove extensive loose and nonviable burned tissue and protect the large exposed area with substantial clean dressings.",
+    "time": "40 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_severe_burn_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_extensive_full_thickness_burn"
+    ],
+    "wounds_added": [
+      "dw_debrided_extensive_full_thickness_burn"
+    ],
+    "success_msg": "You debride and heavily dress the extensive full-thickness burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
     "id": "dw_irrigate_mild_chemical_burn",
     "name": "irrigate mild chemical burn",
     "description": "Flush the affected tissue thoroughly to remove remaining corrosive material.",
@@ -815,6 +1075,118 @@
   },
   {
     "type": "wound_fix",
+    "id": "dw_debride_irrigated_full_thickness_chemical_burn",
+    "name": "debride irrigated full-thickness chemical burn",
+    "description": "After corrosive material has been flushed away, remove loose nonviable tissue and protect the remaining full-thickness chemical burn.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_severe_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_irrigated_full_thickness_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_debrided_full_thickness_chemical_burn"
+    ],
+    "success_msg": "You debride and dress the irrigated full-thickness chemical burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_extensive_chemical_burn",
+    "name": "irrigate extensive chemical burn",
+    "description": "Use a very large volume of water to stop continuing chemical exposure across the extensive injury, then protect the damaged tissue.",
+    "time": "20 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_irrigate_chemical_burn",
+        3
+      ],
+      [
+        "dw_severe_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_extensive_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_irrigated_extensive_chemical_burn"
+    ],
+    "success_msg": "You thoroughly irrigate and protect the extensive chemical burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_irrigated_extensive_chemical_burn",
+    "name": "debride irrigated extensive chemical burn",
+    "description": "After the chemical exposure has been stopped, remove extensive nonviable tissue and protect the large remaining wound.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_severe_burn_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_irrigated_extensive_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_debrided_extensive_chemical_burn"
+    ],
+    "success_msg": "You debride and heavily dress the extensive chemical burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
     "id": "dw_dress_minor_electrical_burn",
     "name": "dress minor electrical burn",
     "description": "Protect the electrical contact burn with a clean dressing.",
@@ -881,6 +1253,84 @@
       "dw_dressed_deep_electrical_burn"
     ],
     "success_msg": "You dress the deep electrical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_severe_electrical_injury",
+    "name": "debride severe electrical tissue injury",
+    "description": "Remove clearly nonviable tissue from the severe electrical injury and protect the remaining deep tissue damage with a substantial dressing.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_severe_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_electrical_tissue_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_severe_electrical_tissue_injury"
+    ],
+    "success_msg": "You debride and dress the severe electrical tissue injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_extensive_electrical_injury",
+    "name": "debride extensive electrical tissue destruction",
+    "description": "Remove extensive dead and badly damaged tissue from the electrical injury and heavily protect the remaining wound.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_severe_burn_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_extensive_electrical_tissue_destruction"
+    ],
+    "wounds_added": [
+      "dw_debrided_extensive_electrical_tissue_destruction"
+    ],
+    "success_msg": "You extensively debride and dress the electrical tissue destruction.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
   },
   {
     "type": "wound_fix",
@@ -1170,5 +1620,1303 @@
       "dw_cleaned_deep_facial_laceration"
     ],
     "success_msg": "You thoroughly clean the deep facial laceration."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_suture_deep_facial_laceration",
+    "name": "suture deep facial laceration",
+    "description": "Carefully close the cleaned deep facial wound with proper sutures and protect the closure.",
+    "time": "15 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_suture_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_deep_facial_laceration"
+    ],
+    "wounds_added": [
+      "dw_sutured_deep_facial_laceration"
+    ],
+    "success_msg": "You carefully suture and protect the deep facial laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_improvise_suture_deep_facial_laceration",
+    "name": "improvise suture deep facial laceration",
+    "description": "Close the cleaned deep facial wound with improvised sutures and protect the less reliable closure.",
+    "time": "20 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_improvised_suture_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_deep_facial_laceration"
+    ],
+    "wounds_added": [
+      "dw_improvised_sutured_deep_facial_laceration"
+    ],
+    "success_msg": "You close and protect the deep facial laceration with improvised sutures.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_mild_cold_injury",
+    "name": "rewarm mild cold injury",
+    "description": "Gradually rewarm the mild cold-damaged tissue using controlled warmth and protect it from further exposure.",
+    "time": "5 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_mild_cold_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_mild_cold_injury"
+    ],
+    "success_msg": "You carefully rewarm the mild cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_superficial_cold_injury",
+    "name": "rewarm superficial cold injury",
+    "description": "Gradually rewarm the superficial cold-damaged tissue using controlled warmth and protect it from further exposure.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_superficial_cold_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_superficial_cold_injury"
+    ],
+    "success_msg": "You carefully rewarm the superficial cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_deep_cold_injury",
+    "name": "rewarm deep cold injury",
+    "description": "Gradually rewarm the deep cold-damaged tissue using controlled warmth and protect it from further exposure.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_cold_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_deep_cold_injury"
+    ],
+    "success_msg": "You carefully rewarm the deep cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_severe_cold_injury",
+    "name": "rewarm severe cold injury",
+    "description": "Gradually rewarm the severe cold-damaged tissue using controlled warmth and protect it from further exposure.",
+    "time": "18 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_cold_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_severe_cold_injury"
+    ],
+    "success_msg": "You carefully rewarm the severe cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_extensive_cold_injury",
+    "name": "rewarm extensive cold injury",
+    "description": "Gradually rewarm the extensive cold-damaged tissue using controlled warmth and protect it from further exposure.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_extensive_cold_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_extensive_cold_injury"
+    ],
+    "success_msg": "You carefully rewarm the extensive cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_rewarmed_extensive_cold_injury",
+    "name": "debride rewarmed extensive cold injury",
+    "description": "Remove clearly nonviable tissue after rewarming the extensive cold injury and protect the surviving tissue.",
+    "time": "35 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_rewarmed_extensive_cold_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_extensive_cold_injury"
+    ],
+    "success_msg": "You debride and protect the rewarmed extensive cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_support_muscle_strain",
+    "name": "support muscle strain",
+    "description": "Pad and support the strained muscle to reduce further mechanical stress during recovery.",
+    "time": "5 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_muscle_strain"
+    ],
+    "wounds_added": [
+      "dw_supported_muscle_strain"
+    ],
+    "success_msg": "You support the strained muscle.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_support_partial_muscle_tear",
+    "name": "support partial muscle tear",
+    "description": "Support and restrict the partially torn muscle to reduce further separation of damaged fibers.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_partial_muscle_tear"
+    ],
+    "wounds_added": [
+      "dw_supported_partial_muscle_tear"
+    ],
+    "success_msg": "You support the partially torn muscle.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_muscle_rupture",
+    "name": "repair muscle rupture",
+    "description": "Approximate and repair the completely ruptured muscle, then support the injured region for recovery.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_muscle_repair",
+        1
+      ],
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_muscle_rupture"
+    ],
+    "wounds_added": [
+      "dw_repaired_muscle_rupture"
+    ],
+    "success_msg": "You repair and support the ruptured muscle.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_muscle_laceration",
+    "name": "repair muscle laceration",
+    "description": "Approximate and repair the divided muscle fibers and support the injured tissue.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_muscle_repair",
+        1
+      ],
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_muscle_laceration"
+    ],
+    "wounds_added": [
+      "dw_repaired_muscle_laceration"
+    ],
+    "success_msg": "You repair and support the muscle laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_severe_muscle_laceration",
+    "name": "repair severe muscle laceration",
+    "description": "Repair the extensively divided muscle tissue and provide substantial support during the prolonged recovery.",
+    "time": "50 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_muscle_repair",
+        2
+      ],
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_muscle_laceration"
+    ],
+    "wounds_added": [
+      "dw_repaired_severe_muscle_laceration"
+    ],
+    "success_msg": "You repair and support the severe muscle laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_support_tendon_strain",
+    "name": "support tendon strain",
+    "description": "Support the strained tendon and reduce loading across the injured fibers.",
+    "time": "6 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_tendon_strain"
+    ],
+    "wounds_added": [
+      "dw_supported_tendon_strain"
+    ],
+    "success_msg": "You support the strained tendon.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_immobilize_partial_tendon_tear",
+    "name": "immobilize partial tendon tear",
+    "description": "Immobilize the partially torn tendon to prevent further separation while it heals.",
+    "time": "10 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_partial_tendon_tear"
+    ],
+    "wounds_added": [
+      "dw_immobilized_partial_tendon_tear"
+    ],
+    "success_msg": "You immobilize the partial tendon tear.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_tendon_rupture",
+    "name": "repair tendon rupture",
+    "description": "Repair the ruptured tendon and rigidly immobilize the region to protect the fragile repair.",
+    "time": "60 minutes",
+    "skills": {
+      "firstaid": 8
+    },
+    "requirements": [
+      [
+        "dw_tendon_repair",
+        1
+      ],
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_tendon_rupture"
+    ],
+    "wounds_added": [
+      "dw_repaired_tendon_rupture"
+    ],
+    "success_msg": "You repair and immobilize the ruptured tendon.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_severed_tendon",
+    "name": "repair severed tendon",
+    "description": "Attempt to reconnect the completely severed tendon and immobilize the fragile repair.",
+    "time": "90 minutes",
+    "skills": {
+      "firstaid": 9
+    },
+    "requirements": [
+      [
+        "dw_major_tendon_repair",
+        1
+      ],
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severed_tendon"
+    ],
+    "wounds_added": [
+      "dw_repaired_severed_tendon"
+    ],
+    "success_msg": "You reconnect and immobilize the severed tendon.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_support_ligament_sprain",
+    "name": "support ligament sprain",
+    "description": "Support the sprained joint to limit painful motion and further stretching of the injured ligament.",
+    "time": "6 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_ligament_sprain"
+    ],
+    "wounds_added": [
+      "dw_supported_ligament_sprain"
+    ],
+    "success_msg": "You support the sprained ligament.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_immobilize_partial_ligament_tear",
+    "name": "immobilize partial ligament tear",
+    "description": "Immobilize the partially torn ligament and stabilize the affected joint.",
+    "time": "10 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_partial_ligament_tear"
+    ],
+    "wounds_added": [
+      "dw_immobilized_partial_ligament_tear"
+    ],
+    "success_msg": "You immobilize the partial ligament tear.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_ligament_rupture",
+    "name": "repair ligament rupture",
+    "description": "Repair the completely ruptured ligament and firmly immobilize the affected joint.",
+    "time": "60 minutes",
+    "skills": {
+      "firstaid": 8
+    },
+    "requirements": [
+      [
+        "dw_ligament_repair",
+        1
+      ],
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_ligament_rupture"
+    ],
+    "wounds_added": [
+      "dw_repaired_ligament_rupture"
+    ],
+    "success_msg": "You repair and immobilize the ruptured ligament.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_reduce_joint_subluxation",
+    "name": "reduce joint subluxation",
+    "description": "Carefully return the partially displaced joint to its normal position and stabilize it for recovery.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_joint_subluxation"
+    ],
+    "wounds_added": [
+      "dw_reduced_joint_subluxation"
+    ],
+    "success_msg": "You reduce and stabilize the subluxated joint.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_reduce_joint_dislocation",
+    "name": "reduce joint dislocation",
+    "description": "Carefully return the dislocated joint to its socket and immobilize the injured joint.",
+    "time": "20 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_joint_dislocation"
+    ],
+    "wounds_added": [
+      "dw_reduced_joint_dislocation"
+    ],
+    "success_msg": "You reduce and immobilize the dislocated joint.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_protect_peripheral_nerve_injury",
+    "name": "protect peripheral nerve injury",
+    "description": "Protect and support the injured region to reduce further compression and movement around the damaged nerve.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_peripheral_nerve_injury"
+    ],
+    "wounds_added": [
+      "dw_protected_peripheral_nerve_injury"
+    ],
+    "success_msg": "You protect the injured peripheral nerve.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_severe_peripheral_nerve_injury",
+    "name": "stabilize severe peripheral nerve injury",
+    "description": "Carefully stabilize and protect the region surrounding the severely injured nerve.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_peripheral_nerve_injury"
+    ],
+    "wounds_added": [
+      "dw_stabilized_severe_peripheral_nerve_injury"
+    ],
+    "success_msg": "You stabilize the severe peripheral nerve injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_nerve_severance",
+    "name": "repair nerve severance",
+    "description": "Attempt to reapproximate the completely severed peripheral nerve and stabilize the surrounding tissue.",
+    "time": "120 minutes",
+    "skills": {
+      "firstaid": 10
+    },
+    "requirements": [
+      [
+        "dw_nerve_repair",
+        1
+      ],
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_nerve_severance"
+    ],
+    "wounds_added": [
+      "dw_repaired_nerve_severance"
+    ],
+    "success_msg": "You repair and stabilize the severed peripheral nerve.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_treat_soft_tissue_crush_injury",
+    "name": "treat soft tissue crush injury",
+    "description": "Protect and support the crushed tissue while reducing further mechanical stress.",
+    "time": "10 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_soft_tissue_crush_injury"
+    ],
+    "wounds_added": [
+      "dw_treated_soft_tissue_crush_injury"
+    ],
+    "success_msg": "You protect and support the soft tissue crush injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_severe_soft_tissue_crush_injury",
+    "name": "debride severe soft tissue crush injury",
+    "description": "Remove clearly nonviable crushed tissue and protect the remaining deeply traumatized region.",
+    "time": "35 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_soft_tissue_crush_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_severe_soft_tissue_crush_injury"
+    ],
+    "success_msg": "You debride and protect the severe soft tissue crush injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_decompress_compartment_syndrome",
+    "name": "decompress compartment syndrome",
+    "description": "Open the dangerously pressurized tissue compartment, relieve the pressure, and protect the resulting surgical wound.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 8
+    },
+    "requirements": [
+      [
+        "dw_compartment_decompression",
+        1
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_compartment_syndrome"
+    ],
+    "wounds_added": [
+      "dw_decompressed_compartment_syndrome"
+    ],
+    "success_msg": "You decompress the affected tissue compartment and protect the wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_support_cracked_rib",
+    "name": "support cracked rib",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cracked_rib"
+    ],
+    "wounds_added": [
+      "dw_supported_cracked_rib"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_support_rib_fracture",
+    "name": "support rib fracture",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_rib_fracture"
+    ],
+    "wounds_added": [
+      "dw_supported_rib_fracture"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_displaced_rib_fracture",
+    "name": "stabilize displaced rib fracture",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "18 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_displaced_rib_fracture"
+    ],
+    "wounds_added": [
+      "dw_stabilized_displaced_rib_fracture"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_multiple_rib_fractures",
+    "name": "stabilize multiple rib fractures",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_multiple_rib_fractures"
+    ],
+    "wounds_added": [
+      "dw_stabilized_multiple_rib_fractures"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_sternal_fracture",
+    "name": "stabilize sternal fracture",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "20 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_sternal_fracture"
+    ],
+    "wounds_added": [
+      "dw_stabilized_sternal_fracture"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_severe_chest_wall_trauma",
+    "name": "stabilize severe chest wall trauma",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_chest_wall_trauma"
+    ],
+    "wounds_added": [
+      "dw_stabilized_severe_chest_wall_trauma"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_flail_chest",
+    "name": "stabilize flail chest",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "40 minutes",
+    "skills": {
+      "firstaid": 8
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_flail_chest"
+    ],
+    "wounds_added": [
+      "dw_stabilized_flail_chest"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_superficial_bite_wound",
+    "name": "clean superficial bite wound",
+    "description": "Thoroughly irrigate and disinfect the shallow tooth wounds and protect them with a simple dressing.",
+    "time": "6 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        1
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_superficial_bite_wound"
+    ],
+    "wounds_added": [
+      "dw_cleaned_superficial_bite_wound"
+    ],
+    "success_msg": "You clean, disinfect, and dress the superficial bite wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_deep_bite_wound",
+    "name": "clean deep bite wound",
+    "description": "Thoroughly irrigate and disinfect the deep tooth punctures, leaving the wound channels unclosed and protected.",
+    "time": "10 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_bite_wound"
+    ],
+    "wounds_added": [
+      "dw_cleaned_deep_bite_wound"
+    ],
+    "success_msg": "You thoroughly clean and protect the deep bite wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_tearing_bite_wound",
+    "name": "debride tearing bite wound",
+    "description": "Remove loose and nonviable tissue from the ragged bite injury, irrigate it thoroughly, and apply a heavy dressing.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_tearing_bite_wound"
+    ],
+    "wounds_added": [
+      "dw_debrided_tearing_bite_wound"
+    ],
+    "success_msg": "You debride, irrigate, and dress the tearing bite wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_crushing_bite_injury",
+    "name": "clean crushing bite injury",
+    "description": "Thoroughly irrigate and disinfect the tooth wounds while protecting the deeply bruised and compressed tissue.",
+    "time": "15 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_disinfect_wound",
+        2
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_crushing_bite_injury"
+    ],
+    "wounds_added": [
+      "dw_cleaned_crushing_bite_injury"
+    ],
+    "success_msg": "You clean and protect the crushing bite injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_devastating_bite_injury",
+    "name": "debride devastating bite injury",
+    "description": "Remove extensive shredded and nonviable tissue, repeatedly irrigate the mangled bite wound, and apply substantial protection.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_irrigate_wound",
+        3
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_devastating_bite_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_devastating_bite_injury"
+    ],
+    "success_msg": "You extensively debride, irrigate, and dress the devastating bite injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
   }
 ]
