@@ -3,10 +3,9 @@
     "type": "wound",
     "id": "dw_minor_electrical_burn",
     "name": {
-      "str": "minor electrical burn",
-      "str_pl": "minor electrical burns"
+      "str": "minor electrical burn"
     },
-    "description": "Electrical current has scorched a small area of skin. The tissue is reddened and tender around the point of contact.",
+    "description": "Electrical current has scorched a small area of skin.  The tissue is reddened and tender around the point of contact.",
     "weight": 20,
     "limit": 3,
     "damage_types": [
@@ -34,10 +33,9 @@
     "type": "wound",
     "id": "dw_electrical_contact_burn",
     "name": {
-      "str": "electrical contact burn",
-      "str_pl": "electrical contact burns"
+      "str": "electrical contact burn"
     },
-    "description": "Electrical current has burned through the skin at the point of contact. The injured area is painful and discolored, with damaged tissue extending beneath the surface.",
+    "description": "Electrical current has burned through the skin at the point of contact.  The injured area is painful and discolored, with damaged tissue extending beneath the surface.",
     "weight": 16,
     "limit": 2,
     "damage_types": [
@@ -99,10 +97,9 @@
     "type": "wound",
     "id": "dw_deep_electrical_burn",
     "name": {
-      "str": "deep electrical burn",
-      "str_pl": "deep electrical burns"
+      "str": "deep electrical burn"
     },
-    "description": "A powerful electrical current has penetrated beyond the skin and damaged deeper tissue. The surface injury is surrounded by swollen, painful flesh, while deeper structures have suffered substantial thermal and electrical trauma.",
+    "description": "A powerful electrical current has penetrated beyond the skin and damaged deeper tissue.  The surface injury is surrounded by swollen, painful flesh, while deeper structures have suffered substantial thermal and electrical trauma.",
     "weight": 10,
     "limit": 2,
     "damage_types": [
@@ -167,7 +164,7 @@
       "str": "severe electrical tissue injury",
       "str_pl": "severe electrical tissue injuries"
     },
-    "description": "Intense electrical current has caused extensive damage beneath the skin. Deep muscle and connective tissue are badly traumatized, with areas of burned and dying tissue surrounding the current path.",
+    "description": "Intense electrical current has caused extensive damage beneath the skin.  Deep muscle and connective tissue are badly traumatized, with areas of burned and dying tissue surrounding the current path.",
     "weight": 6,
     "limit": 1,
     "damage_types": [
@@ -233,7 +230,7 @@
       "str": "extensive electrical tissue destruction",
       "str_pl": "extensive electrical tissue injuries"
     },
-    "description": "A massive electrical discharge has devastated the affected tissue. Deep layers of flesh are burned and severely damaged, with widespread swelling, discoloration, and areas of tissue death.",
+    "description": "A massive electrical discharge has devastated the affected tissue.  Deep layers of flesh are burned and severely damaged, with widespread swelling, discoloration, and areas of tissue death.",
     "weight": 3,
     "limit": 1,
     "damage_types": [

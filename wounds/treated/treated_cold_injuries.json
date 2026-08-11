@@ -6,7 +6,7 @@
             "str": "rewarmed mild cold injury",
             "str_pl": "rewarmed mild cold injuries"
         },
-        "description": "The mildly cold-damaged tissue has been gradually rewarmed. Circulation has returned and the area remains tender and sensitive, but no significant lasting tissue damage is apparent.",
+        "description": "The mildly cold-damaged tissue has been gradually rewarmed.  Circulation has returned and the area remains tender and sensitive, but no significant lasting tissue damage is apparent.",
         "weight": 1,
         "limit": 3,
         "damage_types": [
@@ -39,7 +39,7 @@
             "str": "rewarmed superficial cold injury",
             "str_pl": "rewarmed superficial cold injuries"
         },
-        "description": "The superficially frozen tissue has been gradually rewarmed. The area remains swollen, painful, and unusually sensitive, but circulation has returned and the surviving tissue can begin to recover.",
+        "description": "The superficially frozen tissue has been gradually rewarmed.  The area remains swollen, painful, and unusually sensitive, but circulation has returned and the surviving tissue can begin to recover.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -90,7 +90,7 @@
             "str": "rewarmed deep cold injury",
             "str_pl": "rewarmed deep cold injuries"
         },
-        "description": "The deeply cold-damaged tissue has been carefully rewarmed. Circulation has partially recovered, but swelling, pain, numbness, and substantial tissue injury remain and will require a prolonged recovery.",
+        "description": "The deeply cold-damaged tissue has been carefully rewarmed.  Circulation has partially recovered, but swelling, pain, numbness, and substantial tissue injury remain and will require a prolonged recovery.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -161,7 +161,7 @@
             "str": "rewarmed severe cold injury",
             "str_pl": "rewarmed severe cold injuries"
         },
-        "description": "The severely frozen tissue has been carefully rewarmed and circulation has returned where the tissue remains viable. The body part is still badly swollen, painful, numb, and functionally impaired, and some damaged tissue may not fully recover.",
+        "description": "The severely frozen tissue has been carefully rewarmed and circulation has returned where the tissue remains viable.  The body part is still badly swollen, painful, numb, and functionally impaired, and some damaged tissue may not fully recover.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -232,7 +232,7 @@
             "str": "rewarmed extensive cold injury",
             "str_pl": "rewarmed extensive cold injuries"
         },
-        "description": "The extensively frozen body part has been rewarmed, restoring circulation to tissue that remains viable. Large areas are still deeply damaged, discolored, numb, and severely impaired, with substantial nonviable tissue remaining.",
+        "description": "The extensively frozen body part has been rewarmed, restoring circulation to tissue that remains viable.  Large areas are still deeply damaged, discolored, numb, and severely impaired, with substantial nonviable tissue remaining.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -299,7 +299,7 @@
             "str": "debrided extensive cold injury",
             "str_pl": "debrided extensive cold injuries"
         },
-        "description": "Clearly nonviable tissue has been removed from the extensively cold-damaged area after rewarming. A large amount of deep tissue remains injured and functionally compromised, but the surviving tissue can now begin a long recovery.",
+        "description": "Clearly nonviable tissue has been removed from the extensively cold-damaged area after rewarming.  A large amount of deep tissue remains injured and functionally compromised, but the surviving tissue can now begin a long recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

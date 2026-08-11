@@ -3,7 +3,7 @@
         "type": "effect_on_condition",
         "id": "EOC_DW_BRIDGE_ON_WOUND_CREATED",
         "eoc_type": "ACTIVATION",
-        "//": "Public wound-creation entry point. Caller provides bp and wound_id. Routes initial wound contamination/complications and structural secondary injuries.",
+        "//": "Dormant compatibility entry. A future caller would provide bp and wound_id, but installed CDDA does not invoke an EOC when native wound selection creates a wound.",
         "condition": {
             "expects_vars": [
                 "bp",
@@ -397,7 +397,7 @@
         "type": "effect_on_condition",
         "id": "EOC_DW_BRIDGE_ON_WOUND_TREATED",
         "eoc_type": "ACTIVATION",
-        "//": "Public treatment-completion entry point. Caller provides bp and wound_id, where wound_id is the newly added treated wound state.",
+        "//": "Dormant compatibility entry. A future caller would provide bp and the treated wound ID, but native ACT_TREAT_WOUND exposes neither a callback nor that context through an event EOC.",
         "condition": {
             "expects_vars": [
                 "bp",

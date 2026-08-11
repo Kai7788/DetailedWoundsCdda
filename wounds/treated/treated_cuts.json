@@ -6,7 +6,7 @@
             "str": "dressed scratch",
             "str_pl": "dressed scratches"
         },
-        "description": "The superficial scratch has been cleaned and covered with a simple dressing. The damaged skin remains mildly tender but is protected from further irritation and contamination.",
+        "description": "The superficial scratch has been cleaned and covered with a simple dressing.  The damaged skin remains mildly tender but is protected from further irritation and contamination.",
         "weight": 1,
         "limit": 3,
         "damage_types": [
@@ -36,10 +36,9 @@
         "type": "wound",
         "id": "dw_dressed_shallow_cut",
         "name": {
-            "str": "dressed shallow cut",
-            "str_pl": "dressed shallow cuts"
+            "str": "dressed shallow cut"
         },
-        "description": "The shallow cut has been cleaned and covered. The wound remains tender but is protected while the damaged skin closes.",
+        "description": "The shallow cut has been cleaned and covered.  The wound remains tender but is protected while the damaged skin closes.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -91,10 +90,9 @@
         "type": "wound",
         "id": "dw_cleaned_laceration",
         "name": {
-            "str": "cleaned laceration",
-            "str_pl": "cleaned lacerations"
+            "str": "cleaned laceration"
         },
-        "description": "The laceration has been thoroughly irrigated and disinfected. The wound remains open and painful, but debris and contamination have been removed in preparation for closure or natural healing.",
+        "description": "The laceration has been thoroughly irrigated and disinfected.  The wound remains open and painful, but debris and contamination have been removed in preparation for closure or natural healing.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -158,10 +156,9 @@
         "type": "wound",
         "id": "dw_sutured_laceration",
         "name": {
-            "str": "sutured laceration",
-            "str_pl": "sutured lacerations"
+            "str": "sutured laceration"
         },
-        "description": "The cleaned edges of the laceration have been brought together with proper sutures. The wound remains tender and vulnerable to strain, but the tissue is positioned for orderly healing.",
+        "description": "The cleaned edges of the laceration have been brought together with proper sutures.  The wound remains tender and vulnerable to strain, but the tissue is positioned for orderly healing.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -225,10 +222,9 @@
         "type": "wound",
         "id": "dw_improvised_sutured_laceration",
         "name": {
-            "str": "improvised sutured laceration",
-            "str_pl": "improvised sutured lacerations"
+            "str": "improvised sutured laceration"
         },
-        "description": "The cleaned laceration has been closed using improvised suturing materials. The wound edges are held together, but the closure is less reliable and more vulnerable to strain and contamination than proper suturing.",
+        "description": "The cleaned laceration has been closed using improvised suturing materials.  The wound edges are held together, but the closure is less reliable and more vulnerable to strain and contamination than proper suturing.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -292,10 +288,9 @@
         "type": "wound",
         "id": "dw_cleaned_deep_laceration",
         "name": {
-            "str": "cleaned deep laceration",
-            "str_pl": "cleaned deep lacerations"
+            "str": "cleaned deep laceration"
         },
-        "description": "The deep wound has been thoroughly irrigated and disinfected. Significant tissue remains exposed and damaged, and movement continues to pull painfully at the open wound.",
+        "description": "The deep wound has been thoroughly irrigated and disinfected.  Significant tissue remains exposed and damaged, and movement continues to pull painfully at the open wound.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -359,10 +354,9 @@
         "type": "wound",
         "id": "dw_sutured_deep_laceration",
         "name": {
-            "str": "sutured deep laceration",
-            "str_pl": "sutured deep lacerations"
+            "str": "sutured deep laceration"
         },
-        "description": "The cleaned deep laceration has been closed with proper sutures. Deep tissues remain injured and the wound must be protected from excessive strain while the layers beneath the skin recover.",
+        "description": "The cleaned deep laceration has been closed with proper sutures.  Deep tissues remain injured and the wound must be protected from excessive strain while the layers beneath the skin recover.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -426,10 +420,9 @@
         "type": "wound",
         "id": "dw_improvised_sutured_deep_laceration",
         "name": {
-            "str": "improvised sutured deep laceration",
-            "str_pl": "improvised sutured deep lacerations"
+            "str": "improvised sutured deep laceration"
         },
-        "description": "The deep wound has been closed using improvised suturing materials. The closure reduces gaping and movement of the wound edges, but it is less secure and less hygienic than proper medical suturing.",
+        "description": "The deep wound has been closed using improvised suturing materials.  The closure reduces gaping and movement of the wound edges, but it is less secure and less hygienic than proper medical suturing.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -493,10 +486,9 @@
         "type": "wound",
         "id": "dw_cleaned_severe_laceration",
         "name": {
-            "str": "cleaned severe laceration",
-            "str_pl": "cleaned severe lacerations"
+            "str": "cleaned severe laceration"
         },
-        "description": "The extensive wound has been aggressively irrigated and disinfected. Large areas of tissue remain exposed and badly damaged, making the injury painful and mechanically disruptive despite being clean.",
+        "description": "The extensive wound has been aggressively irrigated and disinfected.  Large areas of tissue remain exposed and badly damaged, making the injury painful and mechanically disruptive despite being clean.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -560,10 +552,9 @@
         "type": "wound",
         "id": "dw_sutured_severe_laceration",
         "name": {
-            "str": "sutured severe laceration",
-            "str_pl": "sutured severe lacerations"
+            "str": "sutured severe laceration"
         },
-        "description": "The extensive cleaned wound has been carefully closed with proper sutures. The damaged tissue remains weak and painful, but closure has substantially improved stability and the conditions for healing.",
+        "description": "The extensive cleaned wound has been carefully closed with proper sutures.  The damaged tissue remains weak and painful, but closure has substantially improved stability and the conditions for healing.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -627,10 +618,9 @@
         "type": "wound",
         "id": "dw_improvised_sutured_severe_laceration",
         "name": {
-            "str": "improvised sutured severe laceration",
-            "str_pl": "improvised sutured severe lacerations"
+            "str": "improvised sutured severe laceration"
         },
-        "description": "The extensive wound has been closed using improvised suturing materials. The closure reduces gaping and provides some mechanical stability, but the large wound remains vulnerable to contamination, failure, and reopening.",
+        "description": "The extensive wound has been closed using improvised suturing materials.  The closure reduces gaping and provides some mechanical stability, but the large wound remains vulnerable to contamination, failure, and reopening.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -694,10 +684,9 @@
         "type": "wound",
         "id": "dw_debrided_avulsion_wound",
         "name": {
-            "str": "debrided avulsion wound",
-            "str_pl": "debrided avulsion wounds"
+            "str": "debrided avulsion wound"
         },
-        "description": "Loose and visibly nonviable tissue has been removed from the avulsion wound and the area has been thoroughly irrigated. A substantial tissue defect remains, leaving the body part painful, exposed, and functionally impaired during a long recovery.",
+        "description": "Loose and visibly nonviable tissue has been removed from the avulsion wound and the area has been thoroughly irrigated.  A substantial tissue defect remains, leaving the body part painful, exposed, and functionally impaired during a long recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

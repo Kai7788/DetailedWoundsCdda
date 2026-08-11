@@ -3,10 +3,9 @@
         "type": "wound",
         "id": "dw_superficial_bite_wound",
         "name": {
-            "str": "superficial bite wound",
-            "str_pl": "superficial bite wounds"
+            "str": "superficial bite wound"
         },
-        "description": "Teeth have broken the skin and left several shallow punctures and abrasions. The surrounding tissue is bruised and tender, but the damage appears largely superficial.",
+        "description": "Teeth have broken the skin and left several shallow punctures and abrasions.  The surrounding tissue is bruised and tender, but the damage appears largely superficial.",
         "weight": 1,
         "limit": 3,
         "damage_types": [
@@ -34,8 +33,7 @@
         "type": "wound",
         "id": "dw_deep_bite_wound",
         "name": {
-            "str": "deep bite wound",
-            "str_pl": "deep bite wounds"
+            "str": "deep bite wound"
         },
         "description": "The bite has driven teeth deeply into the tissue, leaving several narrow but substantial puncture channels surrounded by bruised and damaged flesh.",
         "weight": 1,
@@ -99,10 +97,9 @@
         "type": "wound",
         "id": "dw_tearing_bite_wound",
         "name": {
-            "str": "tearing bite wound",
-            "str_pl": "tearing bite wounds"
+            "str": "tearing bite wound"
         },
-        "description": "The attacker bit down and pulled away, tearing open the tissue around the tooth wounds. Ragged edges and exposed deeper tissue make the injury considerably more severe than a simple puncturing bite.",
+        "description": "The attacker bit down and pulled away, tearing open the tissue around the tooth wounds.  Ragged edges and exposed deeper tissue make the injury considerably more severe than a simple puncturing bite.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -167,7 +164,7 @@
             "str": "crushing bite injury",
             "str_pl": "crushing bite injuries"
         },
-        "description": "Powerful jaws have compressed the tissue between the teeth, producing deep bruising and structural trauma around the puncture sites. The injury is swollen, painful, and significantly impaired.",
+        "description": "Powerful jaws have compressed the tissue between the teeth, producing deep bruising and structural trauma around the puncture sites.  The injury is swollen, painful, and significantly impaired.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -232,7 +229,7 @@
             "str": "devastating bite injury",
             "str_pl": "devastating bite injuries"
         },
-        "description": "The bite has catastrophically mangled the affected tissue. Deep punctures, crushing force, and tearing have produced a large irregular wound with extensive tissue destruction.",
+        "description": "The bite has catastrophically mangled the affected tissue.  Deep punctures, crushing force, and tearing have produced a large irregular wound with extensive tissue destruction.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

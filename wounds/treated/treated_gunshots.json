@@ -3,10 +3,9 @@
         "type": "wound",
         "id": "dw_dressed_ballistic_graze",
         "name": {
-            "str": "dressed ballistic graze",
-            "str_pl": "dressed ballistic grazes"
+            "str": "dressed ballistic graze"
         },
-        "description": "The ballistic graze has been cleaned and covered with a protective dressing. The damaged superficial tissue remains tender, but the wound is protected from further irritation while it heals.",
+        "description": "The ballistic graze has been cleaned and covered with a protective dressing.  The damaged superficial tissue remains tender, but the wound is protected from further irritation while it heals.",
         "weight": 1,
         "limit": 3,
         "damage_types": [
@@ -36,10 +35,9 @@
         "type": "wound",
         "id": "dw_cleaned_superficial_gunshot_wound",
         "name": {
-            "str": "cleaned superficial gunshot wound",
-            "str_pl": "cleaned superficial gunshot wounds"
+            "str": "cleaned superficial gunshot wound"
         },
-        "description": "The superficial ballistic wound has been thoroughly irrigated, disinfected, and covered. Bruised and torn tissue remains beneath the surface, but the wound is protected and able to recover under cleaner conditions.",
+        "description": "The superficial ballistic wound has been thoroughly irrigated, disinfected, and covered.  Bruised and torn tissue remains beneath the surface, but the wound is protected and able to recover under cleaner conditions.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -103,10 +101,9 @@
         "type": "wound",
         "id": "dw_cleaned_penetrating_gunshot_wound",
         "name": {
-            "str": "cleaned penetrating gunshot wound",
-            "str_pl": "cleaned penetrating gunshot wounds"
+            "str": "cleaned penetrating gunshot wound"
         },
-        "description": "The penetrating ballistic wound has been thoroughly irrigated, disinfected, and covered with a substantial dressing. The wound channel remains deep and significant tissue damage persists beneath the surface.",
+        "description": "The penetrating ballistic wound has been thoroughly irrigated, disinfected, and covered with a substantial dressing.  The wound channel remains deep and significant tissue damage persists beneath the surface.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -170,10 +167,9 @@
         "type": "wound",
         "id": "dw_debrided_severe_gunshot_wound",
         "name": {
-            "str": "debrided severe gunshot wound",
-            "str_pl": "debrided severe gunshot wounds"
+            "str": "debrided severe gunshot wound"
         },
-        "description": "Loose and visibly nonviable tissue has been removed from the severe ballistic wound. The wound channel has been thoroughly irrigated and protected with a heavy dressing, but extensive underlying tissue destruction remains.",
+        "description": "Loose and visibly nonviable tissue has been removed from the severe ballistic wound.  The wound channel has been thoroughly irrigated and protected with a heavy dressing, but extensive underlying tissue destruction remains.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -237,10 +233,9 @@
         "type": "wound",
         "id": "dw_debrided_devastating_ballistic_wound",
         "name": {
-            "str": "debrided devastating ballistic wound",
-            "str_pl": "debrided devastating ballistic wounds"
+            "str": "debrided devastating ballistic wound"
         },
-        "description": "Extensive shredded and nonviable tissue has been removed from the devastating ballistic injury. The wound has been heavily irrigated and protected, but a large destructive wound channel and major tissue defect remain.",
+        "description": "Extensive shredded and nonviable tissue has been removed from the devastating ballistic injury.  The wound has been heavily irrigated and protected, but a large destructive wound channel and major tissue defect remain.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

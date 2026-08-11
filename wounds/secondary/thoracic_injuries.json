@@ -3,12 +3,12 @@
         "type": "wound",
         "id": "dw_rib_contusion",
         "name": {
-            "str": "rib contusion",
-            "str_pl": "rib contusions"
+            "str": "rib contusion"
         },
-        "description": "A heavy impact has bruised the tissues surrounding the ribs and chest wall. Deep breathing, twisting, and sudden movement cause a persistent aching pain.",
+        "description": "A heavy impact has bruised the tissues surrounding the ribs and chest wall.  Deep breathing, twisting, and sudden movement cause a persistent aching pain.",
         "weight": 10,
         "limit": 2,
+        "wound_progression": [ { "id": "dw_cracked_rib", "chance": 20 } ],
         "damage_types": [
             "bash"
         ],
@@ -35,12 +35,12 @@
         "type": "wound",
         "id": "dw_cracked_rib",
         "name": {
-            "str": "cracked rib",
-            "str_pl": "cracked ribs"
+            "str": "cracked rib"
         },
-        "description": "One of the ribs has developed a small fracture. Breathing deeply, coughing, twisting the torso, or absorbing another impact sends sharp pain through the chest.",
+        "description": "One of the ribs has developed a small fracture.  Breathing deeply, coughing, twisting the torso, or absorbing another impact sends sharp pain through the chest.",
         "weight": 8,
         "limit": 2,
+        "wound_progression": [ { "id": "dw_rib_fracture", "chance": 15 } ],
         "damage_types": [
             "bash",
             "bullet"
@@ -68,12 +68,12 @@
         "type": "wound",
         "id": "dw_rib_fracture",
         "name": {
-            "str": "rib fracture",
-            "str_pl": "rib fractures"
+            "str": "rib fracture"
         },
-        "description": "A rib has fractured completely. Movement of the chest wall produces sharp localized pain and makes forceful breathing, coughing, and strenuous movement difficult.",
+        "description": "A rib has fractured completely.  Movement of the chest wall produces sharp localized pain and makes forceful breathing, coughing, and strenuous movement difficult.",
         "weight": 6,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_displaced_rib_fracture", "chance": 12 } ],
         "damage_types": [
             "bash",
             "bullet"
@@ -101,12 +101,12 @@
         "type": "wound",
         "id": "dw_displaced_rib_fracture",
         "name": {
-            "str": "displaced rib fracture",
-            "str_pl": "displaced rib fractures"
+            "str": "displaced rib fracture"
         },
-        "description": "A fractured rib has shifted out of its normal alignment. The unstable bone causes intense pain with chest movement and threatens the tissues lying beneath it.",
+        "description": "A fractured rib has shifted out of its normal alignment.  The unstable bone causes intense pain with chest movement and threatens the tissues lying beneath it.",
         "weight": 4,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_multiple_rib_fractures", "chance": 10 } ],
         "damage_types": [
             "bash",
             "bullet"
@@ -137,7 +137,7 @@
             "str": "multiple rib fractures",
             "str_pl": "multiple rib fracture injuries"
         },
-        "description": "Several ribs have fractured in the same traumatic event. The chest wall is extremely painful and ordinary movements repeatedly disturb the injured structures.",
+        "description": "Several ribs have fractured in the same traumatic event.  The chest wall is extremely painful and ordinary movements repeatedly disturb the injured structures.",
         "weight": 3,
         "limit": 1,
         "damage_types": [
@@ -167,10 +167,9 @@
         "type": "wound",
         "id": "dw_sternal_fracture",
         "name": {
-            "str": "sternal fracture",
-            "str_pl": "sternal fractures"
+            "str": "sternal fracture"
         },
-        "description": "A powerful impact has fractured the sternum at the center of the chest. The injury causes severe pain whenever the torso flexes or the chest expands.",
+        "description": "A powerful impact has fractured the sternum at the center of the chest.  The injury causes severe pain whenever the torso flexes or the chest expands.",
         "weight": 3,
         "limit": 1,
         "damage_types": [
@@ -199,12 +198,12 @@
         "type": "wound",
         "id": "dw_severe_chest_wall_trauma",
         "name": {
-            "str": "severe chest wall trauma",
-            "str_pl": "severe chest wall traumas"
+            "str": "severe chest wall trauma"
         },
-        "description": "The chest wall has suffered extensive structural trauma. Bone, muscle, and connective tissue are badly damaged, leaving the torso painful and unstable during movement.",
+        "description": "The chest wall has suffered extensive structural trauma.  Bone, muscle, and connective tissue are badly damaged, leaving the torso painful and unstable during movement.",
         "weight": 2,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_flail_chest", "chance": 10 } ],
         "damage_types": [
             "bash",
             "bullet"
@@ -235,7 +234,7 @@
             "str": "flail chest",
             "str_pl": "flail chest injuries"
         },
-        "description": "Multiple adjacent ribs have fractured severely enough that part of the chest wall has become mechanically unstable. Every breath and movement causes extreme pain and the damaged chest can no longer move normally.",
+        "description": "Multiple adjacent ribs have fractured severely enough that part of the chest wall has become mechanically unstable.  Every breath and movement causes extreme pain and the damaged chest can no longer move normally.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

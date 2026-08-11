@@ -1,0 +1,173 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_RIB_CONTUSION",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_rib_contusion to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_rib_contusion"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_CRACKED_RIB",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_cracked_rib to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_cracked_rib"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_RIB_FRACTURE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_rib_fracture to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_rib_fracture"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_DISPLACED_RIB_FRACTURE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_displaced_rib_fracture to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_displaced_rib_fracture"
+            },
+            {
+                "u_add_effect": "dw_chest_wall_impairment",
+                "duration": "4 hours",
+                "intensity": 1
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_MULTIPLE_RIB_FRACTURES",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_multiple_rib_fractures to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_multiple_rib_fractures"
+            },
+            {
+                "u_add_effect": "dw_chest_wall_impairment",
+                "duration": "6 hours",
+                "intensity": 2
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_STERNAL_FRACTURE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_sternal_fracture to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_sternal_fracture"
+            },
+            {
+                "u_add_effect": "dw_chest_wall_impairment",
+                "duration": "6 hours",
+                "intensity": 2
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_SEVERE_CHEST_WALL_TRAUMA",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_severe_chest_wall_trauma to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_severe_chest_wall_trauma"
+            },
+            {
+                "u_add_effect": "dw_chest_wall_impairment",
+                "duration": "8 hours",
+                "intensity": 2
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_FLAIL_CHEST",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_flail_chest to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_flail_chest"
+            },
+            {
+                "u_add_effect": "dw_chest_wall_impairment",
+                "duration": "12 hours",
+                "intensity": 3
+            }
+        ]
+    }
+]

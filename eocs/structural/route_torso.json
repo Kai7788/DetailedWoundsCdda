@@ -1,0 +1,214 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_BASH_MODERATE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 12" ] }, { "math": [ "_damage_taken <= 25" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 65 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DEEP_TORSO_CONTUSION", 15 ],
+        [ "EOC_DW_STRUCTURAL_ADD_INTERNAL_SOFT_TISSUE_TRAUMA", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_RIB_CONTUSION", 6 ],
+        [ "EOC_DW_STRUCTURAL_ADD_CRACKED_RIB", 3 ],
+        [ "EOC_DW_MINOR_INTERNAL_HEMORRHAGE", 1 ]
+      ]
+    },
+    "//": "Torso bash below 12 post-armor damage cannot create a structural complication. One weighted result prevents chest/internal/hemorrhage stacking."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_BASH_SEVERE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 26" ] }, { "math": [ "_damage_taken <= 44" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 35 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DEEP_TORSO_CONTUSION", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_INTERNAL_SOFT_TISSUE_TRAUMA", 15 ],
+        [ "EOC_DW_STRUCTURAL_ADD_INTERNAL_ORGAN_CONTUSION", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_CRUSH_TRAUMA", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_RIB_CONTUSION", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_CRACKED_RIB", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_RIB_FRACTURE", 7 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DISPLACED_RIB_FRACTURE", 2 ],
+        [ "EOC_DW_MINOR_INTERNAL_HEMORRHAGE", 2 ],
+        [ "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE", 3 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_BASH_EXTREME",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 45" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 15 ],
+        [ "EOC_DW_STRUCTURAL_ADD_INTERNAL_SOFT_TISSUE_TRAUMA", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_INTERNAL_ORGAN_CONTUSION", 15 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_CRUSH_TRAUMA", 15 ],
+        [ "EOC_DW_STRUCTURAL_ADD_CRACKED_RIB", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_RIB_FRACTURE", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DISPLACED_RIB_FRACTURE", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MULTIPLE_RIB_FRACTURES", 7 ],
+        [ "EOC_DW_STRUCTURAL_ADD_STERNAL_FRACTURE", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_CHEST_WALL_TRAUMA", 7 ],
+        [ "EOC_DW_STRUCTURAL_ADD_FLAIL_CHEST", 2 ],
+        [ "EOC_DW_MINOR_INTERNAL_HEMORRHAGE", 1 ],
+        [ "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE", 5 ],
+        [ "EOC_DW_MAJOR_INTERNAL_HEMORRHAGE", 4 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_STAB_PUNCTURE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 4" ] }, { "math": [ "_damage_taken <= 8" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 90 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DEEP_PENETRATING_TORSO_INJURY", 7 ],
+        [ "EOC_DW_MINOR_INTERNAL_HEMORRHAGE", 3 ]
+      ]
+    },
+    "//": "Very small stab hits below 4 post-armor damage cannot reach internal torso structures."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_STAB_DEEP",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 9" ] }, { "math": [ "_damage_taken <= 16" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 65 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DEEP_PENETRATING_TORSO_INJURY", 20 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PENETRATING_TORSO_INJURY", 5 ],
+        [ "EOC_DW_MINOR_INTERNAL_HEMORRHAGE", 8 ],
+        [ "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE", 2 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_STAB_PENETRATING",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 17" ] }, { "math": [ "_damage_taken <= 26" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 40 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DEEP_PENETRATING_TORSO_INJURY", 15 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PENETRATING_TORSO_INJURY", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MAJOR_PENETRATING_ORGAN_TRAUMA", 5 ],
+        [ "EOC_DW_MINOR_INTERNAL_HEMORRHAGE", 8 ],
+        [ "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE", 6 ],
+        [ "EOC_DW_MAJOR_INTERNAL_HEMORRHAGE", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_STAB_SEVERE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 27" ] }, { "math": [ "_damage_taken <= 39" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 20 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DEEP_PENETRATING_TORSO_INJURY", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PENETRATING_TORSO_INJURY", 30 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MAJOR_PENETRATING_ORGAN_TRAUMA", 20 ],
+        [ "EOC_DW_MINOR_INTERNAL_HEMORRHAGE", 5 ],
+        [ "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE", 15 ],
+        [ "EOC_DW_MAJOR_INTERNAL_HEMORRHAGE", 5 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_STAB_DEVASTATING",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 40" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PENETRATING_TORSO_INJURY", 20 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MAJOR_PENETRATING_ORGAN_TRAUMA", 35 ],
+        [ "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE", 15 ],
+        [ "EOC_DW_MAJOR_INTERNAL_HEMORRHAGE", 20 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_BULLET_SUPERFICIAL",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 6" ] }, { "math": [ "_damage_taken <= 12" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 75 ],
+        [ "EOC_DW_STRUCTURAL_ADD_BALLISTIC_INTERNAL_TRAUMA", 15 ],
+        [ "EOC_DW_MINOR_INTERNAL_HEMORRHAGE", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_RIB_CONTUSION", 5 ]
+      ]
+    },
+    "//": "Ballistic grazes below 6 post-armor damage remain superficial."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_BULLET_PENETRATING",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 13" ] }, { "math": [ "_damage_taken <= 23" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 50 ],
+        [ "EOC_DW_STRUCTURAL_ADD_BALLISTIC_INTERNAL_TRAUMA", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_BALLISTIC_INTERNAL_TRAUMA", 5 ],
+        [ "EOC_DW_MINOR_INTERNAL_HEMORRHAGE", 8 ],
+        [ "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_RIB_CONTUSION", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_CRACKED_RIB", 5 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_BULLET_SEVERE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 24" ] }, { "math": [ "_damage_taken <= 39" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_BALLISTIC_INTERNAL_TRAUMA", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_BALLISTIC_INTERNAL_TRAUMA", 30 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DEVASTATING_BALLISTIC_INTERNAL_TRAUMA", 5 ],
+        [ "EOC_DW_MINOR_INTERNAL_HEMORRHAGE", 5 ],
+        [ "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE", 10 ],
+        [ "EOC_DW_MAJOR_INTERNAL_HEMORRHAGE", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_CRACKED_RIB", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_RIB_FRACTURE", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DISPLACED_RIB_FRACTURE", 3 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_TORSO_BULLET_DEVASTATING",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 40" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_BALLISTIC_INTERNAL_TRAUMA", 15 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DEVASTATING_BALLISTIC_INTERNAL_TRAUMA", 35 ],
+        [ "EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE", 12 ],
+        [ "EOC_DW_MAJOR_INTERNAL_HEMORRHAGE", 13 ],
+        [ "EOC_DW_STRUCTURAL_ADD_RIB_FRACTURE", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DISPLACED_RIB_FRACTURE", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MULTIPLE_RIB_FRACTURES", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_CHEST_WALL_TRAUMA", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_FLAIL_CHEST", 2 ]
+      ]
+    }
+  }
+]

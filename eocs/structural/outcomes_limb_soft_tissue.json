@@ -1,0 +1,376 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_MUSCLE_CONTUSION",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_muscle_contusion to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_muscle_contusion"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_MUSCLE_STRAIN",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_muscle_strain to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_muscle_strain"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_PARTIAL_MUSCLE_TEAR",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_partial_muscle_tear to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_partial_muscle_tear"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_MUSCLE_RUPTURE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_muscle_rupture to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_muscle_rupture"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_muscle_laceration to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_muscle_laceration"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_severe_muscle_laceration to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_severe_muscle_laceration"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_TENDON_STRAIN",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_tendon_strain to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_tendon_strain"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_partial_tendon_tear to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_partial_tendon_tear"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_TENDON_RUPTURE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_tendon_rupture to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_tendon_rupture"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_severed_tendon to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_severed_tendon"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_LIGAMENT_SPRAIN",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_ligament_sprain to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_ligament_sprain"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_PARTIAL_LIGAMENT_TEAR",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_partial_ligament_tear to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_partial_ligament_tear"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_LIGAMENT_RUPTURE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_ligament_rupture to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_ligament_rupture"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_JOINT_SUBLUXATION",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_joint_subluxation to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_joint_subluxation"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_JOINT_DISLOCATION",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_joint_dislocation to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_joint_dislocation"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_NERVE_CONTUSION",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_nerve_contusion to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_nerve_contusion"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_peripheral_nerve_injury to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_peripheral_nerve_injury"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_severe_peripheral_nerve_injury to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_severe_peripheral_nerve_injury"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_nerve_severance to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_nerve_severance"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_SOFT_TISSUE_CRUSH",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_soft_tissue_crush_injury to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_soft_tissue_crush_injury"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_SEVERE_SOFT_TISSUE_CRUSH",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_severe_soft_tissue_crush_injury to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_severe_soft_tissue_crush_injury"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_COMPARTMENT_SYNDROME",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_compartment_syndrome to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_compartment_syndrome"
+        }
+    }
+]

@@ -1,0 +1,203 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_minor_puncture",
+    "name": "clean minor puncture wound",
+    "description": "Irrigate the narrow puncture to remove debris and contamination.",
+    "time": "3 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_minor_puncture"
+    ],
+    "wounds_added": [
+      "dw_cleaned_minor_puncture"
+    ],
+    "success_msg": "You thoroughly irrigate the puncture wound."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_puncture",
+    "name": "clean puncture wound",
+    "description": "Flush the puncture wound thoroughly and disinfect the surrounding tissue.",
+    "time": "5 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        1
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_puncture_wound"
+    ],
+    "wounds_added": [
+      "dw_cleaned_puncture_wound"
+    ],
+    "success_msg": "You clean and disinfect the puncture wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_deep_puncture",
+    "name": "clean deep puncture wound",
+    "description": "Carefully irrigate the deep wound channel to remove contaminants trapped beneath the surface.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_puncture"
+    ],
+    "wounds_added": [
+      "dw_cleaned_deep_puncture"
+    ],
+    "success_msg": "You thoroughly clean the deep puncture wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_penetrating_wound",
+    "name": "clean penetrating wound",
+    "description": "Thoroughly irrigate and disinfect the penetrating wound channel.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_disinfect_wound",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_penetrating_wound"
+    ],
+    "wounds_added": [
+      "dw_cleaned_penetrating_wound"
+    ],
+    "success_msg": "You clean the penetrating wound as thoroughly as possible.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_severe_penetrating_wound",
+    "name": "debride severe penetrating wound",
+    "description": "Remove loose and nonviable tissue from the severe penetrating wound, irrigate the deep channel, and protect it with a heavy dressing.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_penetrating_wound"
+    ],
+    "wounds_added": [
+      "dw_debrided_severe_penetrating_wound"
+    ],
+    "success_msg": "You debride, irrigate, and dress the severe penetrating wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_devastating_penetrating_wound",
+    "name": "debride devastating penetrating wound",
+    "description": "Aggressively remove destroyed and nonviable tissue, thoroughly irrigate the devastating wound channel, and apply substantial protection.",
+    "time": "40 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_irrigate_wound",
+        3
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_devastating_penetrating_wound"
+    ],
+    "wounds_added": [
+      "dw_debrided_devastating_penetrating_wound"
+    ],
+    "success_msg": "You debride, irrigate, and heavily dress the devastating penetrating wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

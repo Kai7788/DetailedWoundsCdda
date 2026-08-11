@@ -1,0 +1,216 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_CUT_LACERATION",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 7" ] }, { "math": [ "_damage_taken <= 13" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 75 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 18 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 3 ]
+      ]
+    },
+    "//": "Cut damage below 7 remains superficial and cannot create a structural wound."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_CUT_DEEP",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 14" ] }, { "math": [ "_damage_taken <= 22" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 50 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 30 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 5 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_CUT_SEVERE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 23" ] }, { "math": [ "_damage_taken <= 34" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 15 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 7 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 7 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE", 5 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_CUT_AVULSION",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 35" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION", 30 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON", 20 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE", 10 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_STAB_DEEP",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 9" ] }, { "math": [ "_damage_taken <= 16" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 65 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 20 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 7 ]
+      ]
+    },
+    "//": "Stab damage below 9 remains too small for a structural secondary wound."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_STAB_PENETRATING",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 17" ] }, { "math": [ "_damage_taken <= 26" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 40 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 7 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_STAB_SEVERE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 27" ] }, { "math": [ "_damage_taken <= 39" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 20 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 15 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON", 12 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 6 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE", 6 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_STAB_DEVASTATING",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 40" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION", 30 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON", 20 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE", 15 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_BULLET_SUPERFICIAL",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 6" ] }, { "math": [ "_damage_taken <= 12" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 70 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 20 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_BONE_CONTUSION", 2 ]
+      ]
+    },
+    "//": "Ballistic grazes below 6 post-armor damage do not produce structural trauma."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_BULLET_PENETRATING",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 13" ] }, { "math": [ "_damage_taken <= 23" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 40 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_BONE_CONTUSION", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_HAIRLINE_FRACTURE", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_CLOSED_FRACTURE", 2 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_BULLET_SEVERE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 24" ] }, { "math": [ "_damage_taken <= 39" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 20 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_HAIRLINE_FRACTURE", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_CLOSED_FRACTURE", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DISPLACED_FRACTURE", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_COMMINUTED_FRACTURE", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_OPEN_FRACTURE", 2 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_BULLET_DEVASTATING",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 40" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON", 15 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE", 12 ],
+        [ "EOC_DW_STRUCTURAL_ADD_CLOSED_FRACTURE", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DISPLACED_FRACTURE", 6 ],
+        [ "EOC_DW_STRUCTURAL_ADD_COMMINUTED_FRACTURE", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_OPEN_FRACTURE", 8 ]
+      ]
+    }
+  }
+]

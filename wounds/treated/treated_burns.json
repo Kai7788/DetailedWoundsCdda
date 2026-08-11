@@ -3,10 +3,9 @@
         "type": "wound",
         "id": "dw_dressed_superficial_burn",
         "name": {
-            "str": "dressed superficial burn",
-            "str_pl": "dressed superficial burns"
+            "str": "dressed superficial burn"
         },
-        "description": "The superficial burn has been protected with a clean dressing. The injured skin remains tender and sensitive, but further irritation is reduced while the tissue recovers.",
+        "description": "The superficial burn has been protected with a clean dressing.  The injured skin remains tender and sensitive, but further irritation is reduced while the tissue recovers.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -36,10 +35,9 @@
         "type": "wound",
         "id": "dw_dressed_superficial_partial_thickness_burn",
         "name": {
-            "str": "dressed superficial partial-thickness burn",
-            "str_pl": "dressed superficial partial-thickness burns"
+            "str": "dressed superficial partial-thickness burn"
         },
-        "description": "The partial-thickness burn has been covered with a clean protective dressing. Damaged skin remains painful and vulnerable, but the wound is protected while new tissue develops beneath it.",
+        "description": "The partial-thickness burn has been covered with a clean protective dressing.  Damaged skin remains painful and vulnerable, but the wound is protected while new tissue develops beneath it.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -103,10 +101,9 @@
         "type": "wound",
         "id": "dw_dressed_deep_partial_thickness_burn",
         "name": {
-            "str": "dressed deep partial-thickness burn",
-            "str_pl": "dressed deep partial-thickness burns"
+            "str": "dressed deep partial-thickness burn"
         },
-        "description": "The deep burn has been carefully covered with a substantial dressing. Significant layers of skin remain damaged, leaving the area painful and stiff, but protection reduces further mechanical irritation during recovery.",
+        "description": "The deep burn has been carefully covered with a substantial dressing.  Significant layers of skin remain damaged, leaving the area painful and stiff, but protection reduces further mechanical irritation during recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -170,10 +167,9 @@
         "type": "wound",
         "id": "dw_debrided_full_thickness_burn",
         "name": {
-            "str": "debrided full-thickness burn",
-            "str_pl": "debrided full-thickness burns"
+            "str": "debrided full-thickness burn"
         },
-        "description": "Loose and nonviable tissue has been removed from the full-thickness burn and the remaining injury has been protected with a heavy dressing. The wound remains severe, but viable tissue is now able to begin a prolonged recovery.",
+        "description": "Loose and nonviable tissue has been removed from the full-thickness burn and the remaining injury has been protected with a heavy dressing.  The wound remains severe, but viable tissue is now able to begin a prolonged recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -237,10 +233,9 @@
         "type": "wound",
         "id": "dw_debrided_extensive_full_thickness_burn",
         "name": {
-            "str": "debrided extensive full-thickness burn",
-            "str_pl": "debrided extensive full-thickness burns"
+            "str": "debrided extensive full-thickness burn"
         },
-        "description": "Extensive dead and badly damaged tissue has been removed from the catastrophic burn and the remaining wound has been heavily dressed. A large area of deep tissue remains severely damaged, but debridement has made prolonged recovery possible.",
+        "description": "Extensive dead and badly damaged tissue has been removed from the catastrophic burn and the remaining wound has been heavily dressed.  A large area of deep tissue remains severely damaged, but debridement has made prolonged recovery possible.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

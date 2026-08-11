@@ -3,10 +3,9 @@
     "type": "wound",
     "id": "dw_mild_chemical_burn",
     "name": {
-      "str": "mild chemical burn",
-      "str_pl": "mild chemical burns"
+      "str": "mild chemical burn"
     },
-    "description": "A corrosive substance has irritated and damaged the surface of the skin. The area is reddened, tender, and painfully inflamed.",
+    "description": "A corrosive substance has irritated and damaged the surface of the skin.  The area is reddened, tender, and painfully inflamed.",
     "weight": 20,
     "limit": 3,
     "damage_types": [
@@ -34,10 +33,9 @@
     "type": "wound",
     "id": "dw_moderate_chemical_burn",
     "name": {
-      "str": "moderate chemical burn",
-      "str_pl": "moderate chemical burns"
+      "str": "moderate chemical burn"
     },
-    "description": "The corrosive substance has damaged several layers of skin. The injured tissue is swollen, intensely irritated, and beginning to blister or peel.",
+    "description": "The corrosive substance has damaged several layers of skin.  The injured tissue is swollen, intensely irritated, and beginning to blister or peel.",
     "weight": 15,
     "limit": 2,
     "damage_types": [
@@ -99,10 +97,9 @@
     "type": "wound",
     "id": "dw_deep_chemical_burn",
     "name": {
-      "str": "deep chemical burn",
-      "str_pl": "deep chemical burns"
+      "str": "deep chemical burn"
     },
-    "description": "Corrosive chemicals have penetrated deeply into the skin. Large areas of tissue are discolored and damaged, with raw flesh visible where the surface has been destroyed.",
+    "description": "Corrosive chemicals have penetrated deeply into the skin.  Large areas of tissue are discolored and damaged, with raw flesh visible where the surface has been destroyed.",
     "weight": 10,
     "limit": 2,
     "damage_types": [
@@ -164,8 +161,7 @@
     "type": "wound",
     "id": "dw_full_thickness_chemical_burn",
     "name": {
-      "str": "full-thickness chemical burn",
-      "str_pl": "full-thickness chemical burns"
+      "str": "full-thickness chemical burn"
     },
     "description": "The chemical exposure has destroyed the full thickness of the skin and damaged tissue beneath it. Pale, darkened, or necrotic tissue occupies the center of the injury.",
     "weight": 7,
@@ -226,10 +222,9 @@
     "type": "wound",
     "id": "dw_extensive_chemical_burn",
     "name": {
-      "str": "extensive chemical burn",
-      "str_pl": "extensive chemical burns"
+      "str": "extensive chemical burn"
     },
-    "description": "A powerful corrosive exposure has devastated a large area of tissue. The skin is extensively destroyed and deep layers of flesh show widespread chemical damage and necrosis.",
+    "description": "A powerful corrosive exposure has devastated a large area of tissue.  The skin is extensively destroyed and deep layers of flesh show widespread chemical damage and necrosis.",
     "weight": 4,
     "limit": 1,
     "damage_types": [

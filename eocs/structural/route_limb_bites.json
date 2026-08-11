@@ -1,0 +1,423 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_LIMB_BITE_DEEP",
+        "eoc_type": "ACTIVATION",
+        "//": "Only runs once a bite-specific wound has been created by bite routing.",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_deep_bite_wound",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        85
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION",
+                        15
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        97
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR",
+                        3
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        98
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY",
+                        2
+                    ]
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_LIMB_BITE_TEARING",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_tearing_bite_wound",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        40
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION",
+                        50
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION",
+                        10
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        75
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR",
+                        15
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON",
+                        10
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        85
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY",
+                        10
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY",
+                        4
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE",
+                        1
+                    ]
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_LIMB_BITE_CRUSHING",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_crushing_bite_injury",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        40
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_MUSCLE_CONTUSION",
+                        15
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_MUSCLE_STRAIN",
+                        15
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_PARTIAL_MUSCLE_TEAR",
+                        20
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_MUSCLE_RUPTURE",
+                        10
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        75
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_LIGAMENT_SPRAIN",
+                        10
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_PARTIAL_LIGAMENT_TEAR",
+                        5
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_TENDON_STRAIN",
+                        5
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR",
+                        5
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        80
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_NERVE_CONTUSION",
+                        10
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY",
+                        8
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY",
+                        2
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        75
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_BONE_CONTUSION",
+                        10
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_HAIRLINE_FRACTURE",
+                        8
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_CLOSED_FRACTURE",
+                        5
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_DISPLACED_FRACTURE",
+                        2
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        80
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_SOFT_TISSUE_CRUSH",
+                        15
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_COMPARTMENT_SYNDROME",
+                        5
+                    ]
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_LIMB_BITE_DEVASTATING",
+        "eoc_type": "ACTIVATION",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "dw_devastating_bite_injury",
+                        {
+                            "context_val": "wound_id"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        5
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_MUSCLE_CONTUSION",
+                        5
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_PARTIAL_MUSCLE_TEAR",
+                        15
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_MUSCLE_RUPTURE",
+                        15
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION",
+                        20
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION",
+                        40
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        25
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR",
+                        20
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_TENDON_RUPTURE",
+                        20
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON",
+                        35
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        30
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_NERVE_CONTUSION",
+                        5
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY",
+                        15
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY",
+                        25
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE",
+                        25
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        35
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_BONE_CONTUSION",
+                        5
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_HAIRLINE_FRACTURE",
+                        10
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_CLOSED_FRACTURE",
+                        20
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_DISPLACED_FRACTURE",
+                        15
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_COMMINUTED_FRACTURE",
+                        10
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_OPEN_FRACTURE",
+                        5
+                    ]
+                ]
+            },
+            {
+                "weighted_list_eocs": [
+                    [
+                        "EOC_DW_STRUCTURAL_NONE",
+                        50
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_SOFT_TISSUE_CRUSH",
+                        25
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_SEVERE_SOFT_TISSUE_CRUSH",
+                        15
+                    ],
+                    [
+                        "EOC_DW_STRUCTURAL_ADD_COMPARTMENT_SYNDROME",
+                        10
+                    ]
+                ]
+            }
+        ]
+    }
+]

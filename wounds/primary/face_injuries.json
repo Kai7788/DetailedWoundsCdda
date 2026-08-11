@@ -3,10 +3,9 @@
     "type": "wound",
     "id": "dw_minor_ocular_contusion",
     "name": {
-      "str": "minor ocular contusion",
-      "str_pl": "minor ocular contusions"
+      "str": "minor ocular contusion"
     },
-    "description": "A blunt impact has bruised the tissues around the eye. The area is tender and swollen, but the eye itself appears largely intact.",
+    "description": "A blunt impact has bruised the tissues around the eye.  The area is tender and swollen, but the eye itself appears largely intact.",
     "weight": 18,
     "limit": 2,
     "damage_types": [
@@ -47,10 +46,9 @@
     "type": "wound",
     "id": "dw_blunt_ocular_trauma",
     "name": {
-      "str": "blunt ocular trauma",
-      "str_pl": "blunt ocular traumas"
+      "str": "blunt ocular trauma"
     },
-    "description": "A strong blunt impact has injured the eye and surrounding tissue. Swelling, deep aching, and visual disturbance are likely.",
+    "description": "A strong blunt impact has injured the eye and surrounding tissue.  Swelling, deep aching, and visual disturbance are likely.",
     "weight": 12,
     "limit": 1,
     "damage_types": [
@@ -91,10 +89,9 @@
     "type": "wound",
     "id": "dw_severe_ocular_trauma",
     "name": {
-      "str": "severe ocular trauma",
-      "str_pl": "severe ocular traumas"
+      "str": "severe ocular trauma"
     },
-    "description": "The eye has suffered severe blunt trauma. The surrounding tissue is badly swollen and the internal structures of the eye may be damaged.",
+    "description": "The eye has suffered severe blunt trauma.  The surrounding tissue is badly swollen and the internal structures of the eye may be damaged.",
     "weight": 5,
     "limit": 1,
     "damage_types": [
@@ -135,10 +132,9 @@
     "type": "wound",
     "id": "dw_cornea_abrasion",
     "name": {
-      "str": "corneal abrasion",
-      "str_pl": "corneal abrasions"
+      "str": "corneal abrasion"
     },
-    "description": "The surface of the eye has been scratched. The injury is small but intensely irritating, making blinking and keeping the eye open uncomfortable.",
+    "description": "The surface of the eye has been scratched.  The injury is small but intensely irritating, making blinking and keeping the eye open uncomfortable.",
     "weight": 18,
     "limit": 1,
     "damage_types": [
@@ -179,10 +175,9 @@
     "type": "wound",
     "id": "dw_ocular_laceration",
     "name": {
-      "str": "ocular laceration",
-      "str_pl": "ocular lacerations"
+      "str": "ocular laceration"
     },
-    "description": "A sharp object has cut into the tissues of the eye. The injury is painful and potentially damaging to vision.",
+    "description": "A sharp object has cut into the tissues of the eye.  The injury is painful and potentially damaging to vision.",
     "weight": 10,
     "limit": 1,
     "damage_types": [
@@ -226,7 +221,7 @@
       "str": "penetrating ocular injury",
       "str_pl": "penetrating ocular injuries"
     },
-    "description": "A penetrating object has entered the eye and damaged delicate internal structures. The injury is extremely serious and threatens normal vision.",
+    "description": "A penetrating object has entered the eye and damaged delicate internal structures.  The injury is extremely serious and threatens normal vision.",
     "weight": 4,
     "limit": 1,
     "damage_types": [
@@ -269,10 +264,9 @@
     "type": "wound",
     "id": "dw_ocular_thermal_burn",
     "name": {
-      "str": "ocular thermal burn",
-      "str_pl": "ocular thermal burns"
+      "str": "ocular thermal burn"
     },
-    "description": "Intense heat has burned the exposed surface of the eye and surrounding tissue. The area is painfully inflamed and highly sensitive.",
+    "description": "Intense heat has burned the exposed surface of the eye and surrounding tissue.  The area is painfully inflamed and highly sensitive.",
     "weight": 10,
     "limit": 1,
     "damage_types": [
@@ -313,10 +307,9 @@
     "type": "wound",
     "id": "dw_ocular_chemical_burn",
     "name": {
-      "str": "ocular chemical burn",
-      "str_pl": "ocular chemical burns"
+      "str": "ocular chemical burn"
     },
-    "description": "A corrosive substance has damaged the exposed tissues of the eye. The surface is severely irritated and continued chemical exposure may cause deeper injury.",
+    "description": "A corrosive substance has damaged the exposed tissues of the eye.  The surface is severely irritated and continued chemical exposure may cause deeper injury.",
     "weight": 10,
     "limit": 1,
     "damage_types": [
@@ -357,7 +350,7 @@
       "str": "ocular electrical injury",
       "str_pl": "ocular electrical injuries"
     },
-    "description": "Electrical current has damaged the sensitive tissues of the eye. The visible injury may be limited, but deeper structures may have suffered significant trauma.",
+    "description": "Electrical current has damaged the sensitive tissues of the eye.  The visible injury may be limited, but deeper structures may have suffered significant trauma.",
     "weight": 8,
     "limit": 1,
     "damage_types": [
@@ -396,12 +389,96 @@
   },
   {
     "type": "wound",
+    "id": "dw_ocular_freezing_injury",
+    "name": {
+      "str": "ocular freezing injury",
+      "str_pl": "ocular freezing injuries"
+    },
+    "description": "Cold exposure has injured the surface and delicate tissues of the eye.  Vision is blurred and the eye reacts slowly while the tissue warms and recovers.",
+    "weight": 14,
+    "limit": 1,
+    "damage_types": [
+      "cold"
+    ],
+    "damage_required": [
+      2,
+      20
+    ],
+    "pain": [
+      2,
+      6
+    ],
+    "healing_time": [
+      "5 days",
+      "18 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "vision",
+        "value": 0.15
+      },
+      {
+        "score": "night_vis",
+        "value": 0.18
+      },
+      {
+        "score": "reaction",
+        "value": 0.08
+      }
+    ],
+    "whitelist_body_part_types": [
+      "sensor"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_severe_ocular_freezing_injury",
+    "name": {
+      "str": "severe ocular freezing injury",
+      "str_pl": "severe ocular freezing injuries"
+    },
+    "description": "Severe freezing has damaged the ocular surface and deeper structures.  Sight is badly impaired and the frozen tissue cannot begin normal recovery until it is carefully rewarmed.",
+    "weight": 5,
+    "limit": 1,
+    "damage_types": [
+      "cold"
+    ],
+    "damage_required": [
+      16,
+      1000
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "limb_scores": [
+      {
+        "score": "vision",
+        "value": 0.45
+      },
+      {
+        "score": "night_vis",
+        "value": 0.50
+      },
+      {
+        "score": "reaction",
+        "value": 0.28
+      }
+    ],
+    "whitelist_body_part_types": [
+      "sensor"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "No healing_time is intentional. Severe frozen ocular tissue must be carefully rewarmed before normal recovery can begin."
+  },
+  {
+    "type": "wound",
     "id": "dw_facial_contusion",
     "name": {
-      "str": "facial contusion",
-      "str_pl": "facial contusions"
+      "str": "facial contusion"
     },
-    "description": "A blunt impact has bruised and swollen the soft tissues of the face. The injury is tender and uncomfortable when speaking or eating.",
+    "description": "A blunt impact has bruised and swollen the soft tissues of the face.  The injury is tender and uncomfortable when speaking or eating.",
     "weight": 18,
     "limit": 2,
     "damage_types": [
@@ -442,10 +519,9 @@
     "type": "wound",
     "id": "dw_severe_facial_contusion",
     "name": {
-      "str": "severe facial contusion",
-      "str_pl": "severe facial contusions"
+      "str": "severe facial contusion"
     },
-    "description": "A heavy impact has badly bruised the face. Extensive swelling and deep tissue tenderness make movement of the jaw and surrounding muscles painful.",
+    "description": "A heavy impact has badly bruised the face.  Extensive swelling and deep tissue tenderness make movement of the jaw and surrounding muscles painful.",
     "weight": 10,
     "limit": 1,
     "damage_types": [
@@ -486,8 +562,7 @@
     "type": "wound",
     "id": "dw_split_lip",
     "name": {
-      "str": "split lip",
-      "str_pl": "split lips"
+      "str": "split lip"
     },
     "description": "A sharp impact has split the soft tissue around the mouth, leaving a painful open wound that moves whenever you speak or eat.",
     "weight": 16,
@@ -530,10 +605,9 @@
     "type": "wound",
     "id": "dw_oral_laceration",
     "name": {
-      "str": "oral laceration",
-      "str_pl": "oral lacerations"
+      "str": "oral laceration"
     },
-    "description": "The soft tissues of the mouth or lower face have been deeply cut. Movement repeatedly pulls at the wound and makes eating and speaking painful.",
+    "description": "The soft tissues of the mouth or lower face have been deeply cut.  Movement repeatedly pulls at the wound and makes eating and speaking painful.",
     "weight": 10,
     "limit": 2,
     "damage_types": [
@@ -574,10 +648,9 @@
     "type": "wound",
     "id": "dw_deep_facial_laceration",
     "name": {
-      "str": "deep facial laceration",
-      "str_pl": "deep facial lacerations"
+      "str": "deep facial laceration"
     },
-    "description": "A deep ragged wound cuts through the soft tissues of the face. The edges gape apart and the underlying structures are visibly traumatized.",
+    "description": "A deep ragged wound cuts through the soft tissues of the face.  The edges gape apart and the underlying structures are visibly traumatized.",
     "weight": 6,
     "limit": 1,
     "damage_types": [
@@ -618,10 +691,9 @@
     "type": "wound",
     "id": "dw_dental_trauma",
     "name": {
-      "str": "dental trauma",
-      "str_pl": "dental traumas"
+      "str": "dental trauma"
     },
-    "description": "The impact has damaged the teeth and surrounding tissues. Biting down sends sharp pain through the injured area.",
+    "description": "The impact has damaged the teeth and surrounding tissues.  Biting down sends sharp pain through the injured area.",
     "weight": 6,
     "limit": 1,
     "damage_types": [
@@ -661,7 +733,7 @@
       "str": "jaw injury",
       "str_pl": "jaw injuries"
     },
-    "description": "A powerful blow has injured the jaw and surrounding tissues. Opening the mouth or biting down causes considerable pain.",
+    "description": "A powerful blow has injured the jaw and surrounding tissues.  Opening the mouth or biting down causes considerable pain.",
     "weight": 5,
     "limit": 1,
     "damage_types": [
@@ -702,10 +774,9 @@
     "type": "wound",
     "id": "dw_jaw_fracture",
     "name": {
-      "str": "jaw fracture",
-      "str_pl": "jaw fractures"
+      "str": "jaw fracture"
     },
-    "description": "The jawbone has fractured under the force of the impact. The area is badly swollen and movement of the jaw is extremely painful.",
+    "description": "The jawbone has fractured under the force of the impact.  The area is badly swollen and movement of the jaw is extremely painful.",
     "weight": 2,
     "limit": 1,
     "damage_types": [
@@ -747,10 +818,9 @@
     "type": "wound",
     "id": "dw_concussion",
     "name": {
-      "str": "concussion",
-      "str_pl": "concussions"
+      "str": "concussion"
     },
-    "description": "A hard impact has violently shaken the head. The injury leaves a persistent ache and may interfere with normal neurological function.",
+    "description": "A hard impact has violently shaken the head.  The injury leaves a persistent ache and may interfere with normal neurological function.",
     "weight": 5,
     "limit": 1,
     "damage_types": [
@@ -783,10 +853,9 @@
     "type": "wound",
     "id": "dw_severe_concussion",
     "name": {
-      "str": "severe concussion",
-      "str_pl": "severe concussions"
+      "str": "severe concussion"
     },
-    "description": "A violent impact has caused significant traumatic injury to the head. The damage is serious and recovery is likely to be prolonged.",
+    "description": "A violent impact has caused significant traumatic injury to the head.  The damage is serious and recovery is likely to be prolonged.",
     "weight": 3,
     "limit": 1,
     "damage_types": [
@@ -819,10 +888,9 @@
     "type": "wound",
     "id": "dw_skull_fracture",
     "name": {
-      "str": "skull fracture",
-      "str_pl": "skull fractures"
+      "str": "skull fracture"
     },
-    "description": "The force of the impact has fractured the skull. The injury is severe and the surrounding tissue is badly traumatized.",
+    "description": "The force of the impact has fractured the skull.  The injury is severe and the surrounding tissue is badly traumatized.",
     "weight": 2,
     "limit": 1,
     "damage_types": [
@@ -855,10 +923,9 @@
     "type": "wound",
     "id": "dw_depressed_skull_fracture",
     "name": {
-      "str": "depressed skull fracture",
-      "str_pl": "depressed skull fractures"
+      "str": "depressed skull fracture"
     },
-    "description": "A section of fractured skull has been driven inward by a devastating impact. The injury is extremely severe and threatens the structures beneath the bone.",
+    "description": "A section of fractured skull has been driven inward by a devastating impact.  The injury is extremely severe and threatens the structures beneath the bone.",
     "weight": 1,
     "limit": 1,
     "damage_types": [

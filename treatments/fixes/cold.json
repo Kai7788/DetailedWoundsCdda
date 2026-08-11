@@ -1,0 +1,186 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_mild_cold_injury",
+    "name": "rewarm mild cold injury",
+    "description": "Gradually rewarm the mild cold-damaged tissue using controlled warmth and protect it from further exposure.",
+    "time": "5 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_mild_cold_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_mild_cold_injury"
+    ],
+    "success_msg": "You carefully rewarm the mild cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_superficial_cold_injury",
+    "name": "rewarm superficial cold injury",
+    "description": "Gradually rewarm the superficial cold-damaged tissue using controlled warmth and protect it from further exposure.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_superficial_freezing_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_superficial_cold_injury"
+    ],
+    "success_msg": "You carefully rewarm the superficial cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_deep_cold_injury",
+    "name": "rewarm deep cold injury",
+    "description": "Gradually rewarm the deep cold-damaged tissue using controlled warmth and protect it from further exposure.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_freezing_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_deep_cold_injury"
+    ],
+    "success_msg": "You carefully rewarm the deep cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_severe_cold_injury",
+    "name": "rewarm severe cold injury",
+    "description": "Gradually rewarm the severe cold-damaged tissue using controlled warmth and protect it from further exposure.",
+    "time": "18 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_cold_tissue_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_severe_cold_injury"
+    ],
+    "success_msg": "You carefully rewarm the severe cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_extensive_cold_injury",
+    "name": "rewarm extensive cold injury",
+    "description": "Gradually rewarm the extensive cold-damaged tissue using controlled warmth and protect it from further exposure.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_extensive_cryogenic_tissue_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_extensive_cold_injury"
+    ],
+    "success_msg": "You carefully rewarm the extensive cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_rewarmed_extensive_cold_injury",
+    "name": "debride rewarmed extensive cold injury",
+    "description": "Remove clearly nonviable tissue after rewarming the extensive cold injury and protect the surviving tissue.",
+    "time": "35 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_rewarmed_extensive_cold_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_extensive_cold_injury"
+    ],
+    "success_msg": "You debride and protect the rewarmed extensive cold injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

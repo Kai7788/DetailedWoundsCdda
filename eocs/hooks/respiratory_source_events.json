@@ -1,0 +1,122 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_RESPIRATORY_SOURCE_EFFECT",
+    "eoc_type": "EVENT",
+    "required_event": "character_gains_effect",
+    "condition": {
+      "and": [
+        { "compare_string": [ { "context_val": "bodypart" }, "mouth" ] },
+        {
+          "compare_string": [
+            { "context_val": "effect" },
+            "smoke_lungs",
+            "teargas",
+            "poison",
+            "badpoison",
+            "fungus"
+          ]
+        }
+      ]
+    },
+    "effect": [
+      { "run_eocs": "EOC_DW_RESPIRATORY_ROUTE_SMOKE" },
+      { "run_eocs": "EOC_DW_RESPIRATORY_ROUTE_IRRITANT" },
+      { "run_eocs": "EOC_DW_RESPIRATORY_ROUTE_TOXIC" },
+      { "run_eocs": "EOC_DW_RESPIRATORY_ROUTE_FUNGAL" }
+    ],
+    "//": "The event bodypart distinguishes inhaled mouth exposure from the same broad poison/fungus effects acquired through food, attacks, or systemic infection."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_RESPIRATORY_ROUTE_SMOKE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "compare_string": [ { "context_val": "effect" }, "smoke_lungs" ] },
+    "effect": [
+      {
+        "if": { "math": [ "_intensity <= 1" ] },
+        "then": [
+          { "u_add_wound": "torso", "wound_id": "dw_mild_smoke_inhalation" },
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "2 hours", "intensity": 1 }
+        ]
+      },
+      {
+        "if": { "and": [ { "math": [ "_intensity >= 2" ] }, { "math": [ "_intensity <= 3" ] } ] },
+        "then": [
+          { "u_add_wound": "torso", "wound_id": "dw_smoke_inhalation_injury" },
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "6 hours", "intensity": 2 }
+        ]
+      },
+      {
+        "if": { "math": [ "_intensity >= 4" ] },
+        "then": [
+          { "u_add_wound": "torso", "wound_id": "dw_severe_smoke_inhalation" },
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "12 hours", "intensity": 3 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_RESPIRATORY_ROUTE_IRRITANT",
+    "eoc_type": "ACTIVATION",
+    "condition": { "compare_string": [ { "context_val": "effect" }, "teargas" ] },
+    "effect": [
+      { "u_add_wound": "mouth", "wound_id": "dw_upper_airway_irritation" },
+      { "u_add_effect": "dw_respiratory_impairment", "duration": "1 hour", "intensity": 1 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_RESPIRATORY_ROUTE_TOXIC",
+    "eoc_type": "ACTIVATION",
+    "condition": { "compare_string": [ { "context_val": "effect" }, "poison", "badpoison" ] },
+    "effect": [
+      {
+        "if": {
+          "or": [
+            { "compare_string": [ { "context_val": "effect" }, "badpoison" ] },
+            { "math": [ "_intensity >= 3" ] }
+          ]
+        },
+        "then": [
+          { "u_add_wound": "torso", "wound_id": "dw_severe_toxic_lung_injury" },
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "12 hours", "intensity": 3 }
+        ],
+        "else": [
+          { "u_add_wound": "torso", "wound_id": "dw_toxic_inhalation_injury" },
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "6 hours", "intensity": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_RESPIRATORY_ROUTE_FUNGAL",
+    "eoc_type": "ACTIVATION",
+    "condition": { "compare_string": [ { "context_val": "effect" }, "fungus" ] },
+    "effect": [
+      {
+        "if": { "math": [ "_intensity <= 1" ] },
+        "then": [
+          { "u_add_wound": "torso", "wound_id": "dw_fungal_airway_exposure" },
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "2 hours", "intensity": 1 }
+        ]
+      },
+      {
+        "if": { "math": [ "_intensity == 2" ] },
+        "then": [
+          { "u_add_wound": "torso", "wound_id": "dw_fungal_respiratory_irritation" },
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "6 hours", "intensity": 2 }
+        ]
+      },
+      {
+        "if": { "math": [ "_intensity >= 3" ] },
+        "then": [
+          { "u_add_wound": "torso", "wound_id": "dw_fungal_lung_involvement" },
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "12 hours", "intensity": 3 }
+        ]
+      }
+    ]
+  }
+]

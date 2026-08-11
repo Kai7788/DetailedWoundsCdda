@@ -6,9 +6,10 @@
       "str": "mild smoke inhalation",
       "str_pl": "mild smoke inhalation injuries"
     },
-    "description": "Smoke and hot particulates have irritated the respiratory tract. Your throat and airways feel raw, and taking a deep breath provokes coughing.",
+    "description": "Smoke and hot particulates have irritated the respiratory tract.  Your throat and airways feel raw, and taking a deep breath provokes coughing.",
     "weight": 10,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_smoke_inhalation_injury", "chance": 25 } ],
     "damage_types": [
       "biological"
     ],
@@ -37,9 +38,10 @@
       "str": "smoke inhalation injury",
       "str_pl": "smoke inhalation injuries"
     },
-    "description": "Prolonged smoke exposure has inflamed the airways and lungs. Breathing feels strained and frequent coughing further irritates the damaged respiratory tissue.",
+    "description": "Prolonged smoke exposure has inflamed the airways and lungs.  Breathing feels strained and frequent coughing further irritates the damaged respiratory tissue.",
     "weight": 10,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_severe_smoke_inhalation", "chance": 15 } ],
     "damage_types": [
       "biological"
     ],
@@ -68,7 +70,7 @@
       "str": "severe smoke inhalation injury",
       "str_pl": "severe smoke inhalation injuries"
     },
-    "description": "Heavy smoke exposure has seriously injured the respiratory tract. Your lungs and airways are badly inflamed, making deep breaths painful and triggering violent coughing.",
+    "description": "Heavy smoke exposure has seriously injured the respiratory tract.  Your lungs and airways are badly inflamed, making deep breaths painful and triggering violent coughing.",
     "weight": 10,
     "limit": 1,
     "damage_types": [
@@ -96,10 +98,9 @@
     "type": "wound",
     "id": "dw_upper_airway_irritation",
     "name": {
-      "str": "upper airway irritation",
-      "str_pl": "upper airway irritations"
+      "str": "upper airway irritation"
     },
-    "description": "An inhaled irritant has inflamed the nose, throat, and upper airways. Your throat burns and every breath threatens to trigger another coughing fit.",
+    "description": "An inhaled irritant has inflamed the nose, throat, and upper airways.  Your throat burns and every breath threatens to trigger another coughing fit.",
     "weight": 10,
     "limit": 1,
     "damage_types": [
@@ -130,9 +131,10 @@
       "str": "irritant inhalation injury",
       "str_pl": "irritant inhalation injuries"
     },
-    "description": "A concentrated chemical irritant has inflamed the respiratory tract. The airways burn, breathing is uncomfortable, and persistent coughing makes exertion difficult.",
+    "description": "A concentrated chemical irritant has inflamed the respiratory tract.  The airways burn, breathing is uncomfortable, and persistent coughing makes exertion difficult.",
     "weight": 10,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_severe_irritant_lung_injury", "chance": 12 } ],
     "damage_types": [
       "biological"
     ],
@@ -161,7 +163,7 @@
       "str": "severe irritant lung injury",
       "str_pl": "severe irritant lung injuries"
     },
-    "description": "A high concentration of respiratory irritants has caused extensive inflammation within the lungs and airways. Breathing is labored and even minor exertion provokes painful coughing.",
+    "description": "A high concentration of respiratory irritants has caused extensive inflammation within the lungs and airways.  Breathing is labored and even minor exertion provokes painful coughing.",
     "weight": 10,
     "limit": 1,
     "damage_types": [
@@ -195,6 +197,7 @@
     "description": "Inhaled toxic material has damaged the respiratory tract rather than merely irritating it. The lungs feel raw and heavy, and breathing has become noticeably more difficult.",
     "weight": 10,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_severe_toxic_lung_injury", "chance": 15 } ],
     "damage_types": [
       "biological"
     ],
@@ -223,7 +226,7 @@
       "str": "severe toxic lung injury",
       "str_pl": "severe toxic lung injuries"
     },
-    "description": "Toxic chemicals have caused extensive damage throughout the respiratory tissue. Your chest feels heavy and breathing requires conscious effort, while deep breaths provoke intense coughing.",
+    "description": "Toxic chemicals have caused extensive damage throughout the respiratory tissue.  Your chest feels heavy and breathing requires conscious effort, while deep breaths provoke intense coughing.",
     "weight": 10,
     "limit": 1,
     "damage_types": [
@@ -251,12 +254,12 @@
     "type": "wound",
     "id": "dw_fungal_airway_exposure",
     "name": {
-      "str": "fungal airway exposure",
-      "str_pl": "fungal airway exposures"
+      "str": "fungal airway exposure"
     },
-    "description": "Fungal spores have entered the respiratory tract. Your throat and airways feel irritated, and an unpleasant organic taste lingers in the back of your mouth.",
+    "description": "Fungal spores have entered the respiratory tract.  Your throat and airways feel irritated, and an unpleasant organic taste lingers in the back of your mouth.",
     "weight": 10,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_fungal_respiratory_irritation", "chance": 20 } ],
     "damage_types": [
       "biological"
     ],
@@ -282,12 +285,12 @@
     "type": "wound",
     "id": "dw_fungal_respiratory_irritation",
     "name": {
-      "str": "fungal respiratory irritation",
-      "str_pl": "fungal respiratory irritations"
+      "str": "fungal respiratory irritation"
     },
-    "description": "Heavy exposure to fungal material has left the respiratory tract inflamed and irritated. Breathing deeply causes discomfort and frequent coughing.",
+    "description": "Heavy exposure to fungal material has left the respiratory tract inflamed and irritated.  Breathing deeply causes discomfort and frequent coughing.",
     "weight": 10,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_fungal_lung_involvement", "chance": 12 } ],
     "damage_types": [
       "biological"
     ],
@@ -316,7 +319,7 @@
       "str": "fungal lung involvement",
       "str_pl": "fungal lung injuries"
     },
-    "description": "Fungal growth or contamination has progressed deeper into the respiratory system. Your lungs feel congested and irritated, and bouts of coughing come with disturbing frequency.",
+    "description": "Fungal growth or contamination has progressed deeper into the respiratory system.  Your lungs feel congested and irritated, and bouts of coughing come with disturbing frequency.",
     "weight": 10,
     "limit": 1,
     "damage_types": [
@@ -347,9 +350,10 @@
       "str": "thermal airway injury",
       "str_pl": "thermal airway injuries"
     },
-    "description": "Superheated air and gases have burned the respiratory tract. Your throat and chest feel raw, and breathing deeply causes sharp discomfort.",
+    "description": "Superheated air and gases have burned the respiratory tract.  Your throat and chest feel raw, and breathing deeply causes sharp discomfort.",
     "weight": 10,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_severe_thermal_airway_injury", "chance": 12 } ],
     "damage_types": [
       "heat"
     ],
@@ -378,7 +382,7 @@
       "str": "severe thermal airway injury",
       "str_pl": "severe thermal airway injuries"
     },
-    "description": "Extreme heat has badly burned the respiratory passages. Swollen and damaged airway tissue makes every breath difficult and painful.",
+    "description": "Extreme heat has badly burned the respiratory passages.  Swollen and damaged airway tissue makes every breath difficult and painful.",
     "weight": 10,
     "limit": 1,
     "damage_types": [

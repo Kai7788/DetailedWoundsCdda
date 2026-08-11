@@ -1,0 +1,104 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_BONE_CONTUSION",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_bone_contusion to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_bone_contusion"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_HAIRLINE_FRACTURE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_hairline_fracture to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_hairline_fracture"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_CLOSED_FRACTURE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_closed_fracture to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_closed_fracture"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_DISPLACED_FRACTURE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_displaced_fracture to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_displaced_fracture"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_COMMINUTED_FRACTURE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_comminuted_fracture to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_comminuted_fracture"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_OPEN_FRACTURE",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_open_fracture to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_open_fracture"
+        }
+    }
+]

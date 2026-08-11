@@ -3,10 +3,9 @@
         "type": "wound",
         "id": "dw_irrigated_mild_chemical_burn",
         "name": {
-            "str": "irrigated mild chemical burn",
-            "str_pl": "irrigated mild chemical burns"
+            "str": "irrigated mild chemical burn"
         },
-        "description": "The corrosive substance has been thoroughly flushed from the affected area. Mild chemical damage remains, but continued tissue destruction from the original contaminant has been stopped.",
+        "description": "The corrosive substance has been thoroughly flushed from the affected area.  Mild chemical damage remains, but continued tissue destruction from the original contaminant has been stopped.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -36,10 +35,9 @@
         "type": "wound",
         "id": "dw_irrigated_moderate_chemical_burn",
         "name": {
-            "str": "irrigated moderate chemical burn",
-            "str_pl": "irrigated moderate chemical burns"
+            "str": "irrigated moderate chemical burn"
         },
-        "description": "The corrosive material has been flushed away, preventing further direct chemical injury. The remaining tissue is inflamed and painful but can now recover normally.",
+        "description": "The corrosive material has been flushed away, preventing further direct chemical injury.  The remaining tissue is inflamed and painful but can now recover normally.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -103,10 +101,9 @@
         "type": "wound",
         "id": "dw_irrigated_deep_chemical_burn",
         "name": {
-            "str": "irrigated deep chemical burn",
-            "str_pl": "irrigated deep chemical burns"
+            "str": "irrigated deep chemical burn"
         },
-        "description": "The chemical contaminant has been thoroughly removed, but it penetrated deeply enough to cause substantial tissue damage before irrigation. The affected area remains painful, stiff, and vulnerable throughout recovery.",
+        "description": "The chemical contaminant has been thoroughly removed, but it penetrated deeply enough to cause substantial tissue damage before irrigation.  The affected area remains painful, stiff, and vulnerable throughout recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -170,10 +167,9 @@
         "type": "wound",
         "id": "dw_irrigated_full_thickness_chemical_burn",
         "name": {
-            "str": "irrigated full-thickness chemical burn",
-            "str_pl": "irrigated full-thickness chemical burns"
+            "str": "irrigated full-thickness chemical burn"
         },
-        "description": "The corrosive substance has been removed, but not before destroying the full thickness of the skin and damaging deeper tissue. The chemical attack is no longer progressing, but dead and nonviable tissue remains within the injury.",
+        "description": "The corrosive substance has been removed, but not before destroying the full thickness of the skin and damaging deeper tissue.  The chemical attack is no longer progressing, but dead and nonviable tissue remains within the injury.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -233,10 +229,9 @@
         "type": "wound",
         "id": "dw_debrided_full_thickness_chemical_burn",
         "name": {
-            "str": "debrided full-thickness chemical burn",
-            "str_pl": "debrided full-thickness chemical burns"
+            "str": "debrided full-thickness chemical burn"
         },
-        "description": "The corrosive contaminant has been removed and loose nonviable tissue has been debrided from the full-thickness injury. Considerable tissue damage remains, but the wound is now able to begin a prolonged recovery.",
+        "description": "The corrosive contaminant has been removed and loose nonviable tissue has been debrided from the full-thickness injury.  Considerable tissue damage remains, but the wound is now able to begin a prolonged recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -300,10 +295,9 @@
         "type": "wound",
         "id": "dw_irrigated_extensive_chemical_burn",
         "name": {
-            "str": "irrigated extensive chemical burn",
-            "str_pl": "irrigated extensive chemical burns"
+            "str": "irrigated extensive chemical burn"
         },
-        "description": "The corrosive substance has finally been flushed from the extensively damaged area. Further chemical destruction has stopped, but widespread full-thickness injury and substantial amounts of nonviable tissue remain.",
+        "description": "The corrosive substance has finally been flushed from the extensively damaged area.  Further chemical destruction has stopped, but widespread full-thickness injury and substantial amounts of nonviable tissue remain.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -363,10 +357,9 @@
         "type": "wound",
         "id": "dw_debrided_extensive_chemical_burn",
         "name": {
-            "str": "debrided extensive chemical burn",
-            "str_pl": "debrided extensive chemical burns"
+            "str": "debrided extensive chemical burn"
         },
-        "description": "The corrosive contaminant has been removed and extensive dead tissue has been debrided from the injury. A large area of deep tissue remains badly damaged, but the wound can now begin a long and difficult recovery.",
+        "description": "The corrosive contaminant has been removed and extensive dead tissue has been debrided from the injury.  A large area of deep tissue remains badly damaged, but the wound can now begin a long and difficult recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

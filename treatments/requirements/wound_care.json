@@ -1,0 +1,222 @@
+[
+    {
+        "id": "dw_clean_wound",
+        "type": "requirement",
+        "//": "Basic mechanical cleaning of an open wound using clean water and absorbent material.",
+        "components": [
+            [
+                [
+                    "water_clean",
+                    2
+                ]
+            ],
+            [
+                [
+                    "cotton_ball",
+                    2
+                ],
+                [
+                    "cotton_patchwork",
+                    1
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_disinfect_wound",
+        "type": "requirement",
+        "//": "Chemical disinfection of an open wound.",
+        "components": [
+            [
+                [
+                    "disinfectant",
+                    1
+                ],
+                [
+                    "disinfectant_makeshift",
+                    1
+                ],
+                [
+                    "chem_hydrogen_peroxide",
+                    1
+                ],
+                [
+                    "bfipowder",
+                    1
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_irrigate_wound",
+        "type": "requirement",
+        "//": "Thorough irrigation of a dirty or contaminated wound using clean water.",
+        "components": [
+            [
+                [
+                    "water_clean",
+                    6
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_irrigate_chemical_burn",
+        "type": "requirement",
+        "//": "Large-volume irrigation used to remove corrosive material from tissue. Water cleanliness is secondary to rapidly removing the corrosive agent.",
+        "components": [
+            [
+                [
+                    "any_water",
+                    12,
+                    "LIST"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_basic_wound_dressing",
+        "type": "requirement",
+        "//": "A simple absorbent covering for a minor or cleaned wound.",
+        "components": [
+            [
+                [
+                    "cotton_patchwork",
+                    2
+                ],
+                [
+                    "cotton_ball",
+                    6
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_heavy_wound_dressing",
+        "type": "requirement",
+        "//": "A large amount of absorbent material used to protect a serious open wound.",
+        "components": [
+            [
+                [
+                    "cotton_patchwork",
+                    4
+                ],
+                [
+                    "cotton_ball",
+                    12
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_pressure_dressing",
+        "type": "requirement",
+        "//": "Absorbent material and binding material for applying sustained pressure to a heavily bleeding wound.",
+        "components": [
+            [
+                [
+                    "cotton_patchwork",
+                    4
+                ]
+            ],
+            [
+                [
+                    "cordage_short",
+                    1,
+                    "LIST"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_suture_wound",
+        "type": "requirement",
+        "//": "Proper closure of a laceration using a curved needle and ordinary clean thread.",
+        "qualities": [
+            {
+                "id": "SEW_CURVED",
+                "level": 1
+            }
+        ],
+        "components": [
+            [
+                [
+                    "thread",
+                    10
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_heavy_suture_wound",
+        "type": "requirement",
+        "//": "Proper closure of a large or severe laceration using a curved needle and additional thread.",
+        "qualities": [
+            {
+                "id": "SEW_CURVED",
+                "level": 1
+            }
+        ],
+        "components": [
+            [
+                [
+                    "thread",
+                    20
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_improvised_suture_wound",
+        "type": "requirement",
+        "//": "Improvised wound closure using an ordinary sewing tool and whatever suitable filament is available. This should carry a greater complication risk than proper suturing.",
+        "qualities": [
+            {
+                "id": "SEW",
+                "level": 1
+            }
+        ],
+        "components": [
+            [
+                [
+                    "filament",
+                    10,
+                    "LIST"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_improvised_heavy_suture_wound",
+        "type": "requirement",
+        "//": "Improvised closure of a large wound using an ordinary sewing tool and a substantial amount of available filament.",
+        "qualities": [
+            {
+                "id": "SEW",
+                "level": 1
+            }
+        ],
+        "components": [
+            [
+                [
+                    "filament",
+                    20,
+                    "LIST"
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_eye_irrigation",
+        "type": "requirement",
+        "//": "Clean water for thoroughly flushing contaminants or corrosive chemicals from the eyes.",
+        "components": [
+            [
+                [
+                    "water_clean",
+                    4
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,179 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_ballistic_graze",
+    "name": "dress ballistic graze",
+    "description": "Clean the abraded tissue and protect it with a dressing.",
+    "time": "3 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_clean_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_ballistic_graze"
+    ],
+    "wounds_added": [
+      "dw_dressed_ballistic_graze"
+    ],
+    "success_msg": "You clean and dress the ballistic graze."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_superficial_gunshot",
+    "name": "clean superficial gunshot wound",
+    "description": "Irrigate the ballistic wound and disinfect the damaged tissue.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        1
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_superficial_gunshot_wound"
+    ],
+    "wounds_added": [
+      "dw_cleaned_superficial_gunshot_wound"
+    ],
+    "success_msg": "You clean and dress the superficial gunshot wound."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_penetrating_gunshot",
+    "name": "clean penetrating gunshot wound",
+    "description": "Thoroughly irrigate the ballistic wound channel and cover the injury with a heavy dressing.",
+    "time": "15 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_disinfect_wound",
+        2
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_penetrating_gunshot_wound"
+    ],
+    "wounds_added": [
+      "dw_cleaned_penetrating_gunshot_wound"
+    ],
+    "success_msg": "You clean and dress the penetrating gunshot wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_severe_gunshot",
+    "name": "debride severe gunshot wound",
+    "description": "Remove loose and visibly nonviable tissue, irrigate the wound channel, and apply a heavy dressing.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_gunshot_wound"
+    ],
+    "wounds_added": [
+      "dw_debrided_severe_gunshot_wound"
+    ],
+    "success_msg": "You debride, irrigate, and dress the severe gunshot wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_devastating_ballistic_wound",
+    "name": "debride devastating ballistic wound",
+    "description": "Remove extensive shredded and nonviable tissue from the devastating ballistic injury, irrigate the wound channel repeatedly, and apply heavy protection.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_irrigate_wound",
+        3
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_devastating_ballistic_wound"
+    ],
+    "wounds_added": [
+      "dw_debrided_devastating_ballistic_wound"
+    ],
+    "success_msg": "You aggressively debride, irrigate, and dress the devastating ballistic wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

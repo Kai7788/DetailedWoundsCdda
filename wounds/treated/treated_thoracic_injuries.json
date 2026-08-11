@@ -3,10 +3,9 @@
         "type": "wound",
         "id": "dw_supported_cracked_rib",
         "name": {
-            "str": "supported cracked rib",
-            "str_pl": "supported cracked ribs"
+            "str": "supported cracked rib"
         },
-        "description": "The cracked rib has been supported and unnecessary movement of the injured chest wall has been reduced. The bone remains painful, especially during deep breathing or forceful movement, but the injury is better protected while it heals.",
+        "description": "The cracked rib has been supported and unnecessary movement of the injured chest wall has been reduced.  The bone remains painful, especially during deep breathing or forceful movement, but the injury is better protected while it heals.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -36,10 +35,9 @@
         "type": "wound",
         "id": "dw_supported_rib_fracture",
         "name": {
-            "str": "supported rib fracture",
-            "str_pl": "supported rib fractures"
+            "str": "supported rib fracture"
         },
-        "description": "The fractured rib has been supported and movement of the injured chest wall has been limited as much as practical. The fracture remains painful and vulnerable to further trauma, but recovery can proceed under more stable conditions.",
+        "description": "The fractured rib has been supported and movement of the injured chest wall has been limited as much as practical.  The fracture remains painful and vulnerable to further trauma, but recovery can proceed under more stable conditions.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -68,10 +66,9 @@
         "type": "wound",
         "id": "dw_stabilized_displaced_rib_fracture",
         "name": {
-            "str": "stabilized displaced rib fracture",
-            "str_pl": "stabilized displaced rib fractures"
+            "str": "stabilized displaced rib fracture"
         },
-        "description": "The displaced rib fracture has been stabilized as well as possible to reduce further movement of the broken bone. The rib remains improperly aligned and the surrounding tissues are still significantly traumatized, but additional damage is less likely.",
+        "description": "The displaced rib fracture has been stabilized as well as possible to reduce further movement of the broken bone.  The rib remains improperly aligned and the surrounding tissues are still significantly traumatized, but additional damage is less likely.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -100,10 +97,9 @@
         "type": "wound",
         "id": "dw_stabilized_multiple_rib_fractures",
         "name": {
-            "str": "stabilized multiple rib fractures",
-            "str_pl": "stabilized multiple rib fractures"
+            "str_sp": "stabilized multiple rib fractures"
         },
-        "description": "The extensively injured chest wall has been supported to reduce movement across several fractured ribs. Breathing and torso movement remain painful, but the fractures are better protected from repeated mechanical stress.",
+        "description": "The extensively injured chest wall has been supported to reduce movement across several fractured ribs.  Breathing and torso movement remain painful, but the fractures are better protected from repeated mechanical stress.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -132,10 +128,9 @@
         "type": "wound",
         "id": "dw_stabilized_sternal_fracture",
         "name": {
-            "str": "stabilized sternal fracture",
-            "str_pl": "stabilized sternal fractures"
+            "str": "stabilized sternal fracture"
         },
-        "description": "The fractured sternum has been supported and excessive movement of the damaged chest wall has been restricted. Deep chest pain remains substantial, but the injury is more stable during recovery.",
+        "description": "The fractured sternum has been supported and excessive movement of the damaged chest wall has been restricted.  Deep chest pain remains substantial, but the injury is more stable during recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -167,7 +162,7 @@
             "str": "stabilized severe chest wall trauma",
             "str_pl": "stabilized severe chest wall injuries"
         },
-        "description": "The severely damaged chest wall has been supported and unstable areas have been protected from unnecessary movement. Extensive bruising, fractures, and deep tissue trauma remain, but the chest wall is now more mechanically stable.",
+        "description": "The severely damaged chest wall has been supported and unstable areas have been protected from unnecessary movement.  Extensive bruising, fractures, and deep tissue trauma remain, but the chest wall is now more mechanically stable.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -199,7 +194,7 @@
             "str": "stabilized flail chest",
             "str_pl": "stabilized flail chest injuries"
         },
-        "description": "The unstable section of the chest wall has been stabilized as securely as possible. Multiple fractured ribs and extensive soft tissue trauma remain, but paradoxical movement of the injured segment has been reduced enough for recovery to begin.",
+        "description": "The unstable section of the chest wall has been stabilized as securely as possible.  Multiple fractured ribs and extensive soft tissue trauma remain, but paradoxical movement of the injured segment has been reduced enough for recovery to begin.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

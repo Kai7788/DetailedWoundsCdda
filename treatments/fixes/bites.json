@@ -1,0 +1,192 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_superficial_bite_wound",
+    "name": "clean superficial bite wound",
+    "description": "Thoroughly irrigate and disinfect the shallow tooth wounds and protect them with a simple dressing.",
+    "time": "6 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        1
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_superficial_bite_wound"
+    ],
+    "wounds_added": [
+      "dw_cleaned_superficial_bite_wound"
+    ],
+    "success_msg": "You clean, disinfect, and dress the superficial bite wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_deep_bite_wound",
+    "name": "clean deep bite wound",
+    "description": "Thoroughly irrigate and disinfect the deep tooth punctures, leaving the wound channels unclosed and protected.",
+    "time": "10 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_bite_wound"
+    ],
+    "wounds_added": [
+      "dw_cleaned_deep_bite_wound"
+    ],
+    "success_msg": "You thoroughly clean and protect the deep bite wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_tearing_bite_wound",
+    "name": "debride tearing bite wound",
+    "description": "Remove loose and nonviable tissue from the ragged bite injury, irrigate it thoroughly, and apply a heavy dressing.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_tearing_bite_wound"
+    ],
+    "wounds_added": [
+      "dw_debrided_tearing_bite_wound"
+    ],
+    "success_msg": "You debride, irrigate, and dress the tearing bite wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_crushing_bite_injury",
+    "name": "clean crushing bite injury",
+    "description": "Thoroughly irrigate and disinfect the tooth wounds while protecting the deeply bruised and compressed tissue.",
+    "time": "15 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_disinfect_wound",
+        2
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_crushing_bite_injury"
+    ],
+    "wounds_added": [
+      "dw_cleaned_crushing_bite_injury"
+    ],
+    "success_msg": "You clean and protect the crushing bite injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_devastating_bite_injury",
+    "name": "debride devastating bite injury",
+    "description": "Remove extensive shredded and nonviable tissue, repeatedly irrigate the mangled bite wound, and apply substantial protection.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_irrigate_wound",
+        3
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_devastating_bite_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_devastating_bite_injury"
+    ],
+    "success_msg": "You extensively debride, irrigate, and dress the devastating bite injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

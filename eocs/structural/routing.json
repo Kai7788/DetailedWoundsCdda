@@ -1,0 +1,272 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_NONE",
+        "eoc_type": "ACTIVATION",
+        "//": "Intentional no-op used by weighted structural complication rolls.",
+        "effect": {
+            "set_string_var": "none",
+            "target_var": {
+                "context_val": "dw_structural_result"
+            }
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ROUTE_LIMB",
+        "eoc_type": "ACTIVATION",
+        "//": "Dormant compatibility router for the unavailable wound-created bridge. Production damage hooks call the damage-threshold routes directly.",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "or": [
+                        {
+                            "compare_string": [
+                                "arm_l",
+                                {
+                                    "context_val": "bp"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "arm_r",
+                                {
+                                    "context_val": "bp"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "hand_l",
+                                {
+                                    "context_val": "bp"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "hand_r",
+                                {
+                                    "context_val": "bp"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "leg_l",
+                                {
+                                    "context_val": "bp"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "leg_r",
+                                {
+                                    "context_val": "bp"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "foot_l",
+                                {
+                                    "context_val": "bp"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "foot_r",
+                                {
+                                    "context_val": "bp"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BASH_MINOR"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BASH_MODERATE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BASH_SEVERE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BASH_EXTREME"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BONE_MODERATE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BONE_SEVERE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BONE_EXTREME"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_CUT_LACERATION"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_CUT_DEEP"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_CUT_SEVERE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_CUT_AVULSION"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_STAB_DEEP"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_STAB_PENETRATING"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_STAB_SEVERE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_STAB_DEVASTATING"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BULLET_SUPERFICIAL"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BULLET_PENETRATING"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BULLET_SEVERE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BULLET_DEVASTATING"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_MINOR"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_CONTACT"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_DEEP"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_SEVERE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_EXTENSIVE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_HEAT_FULL_THICKNESS"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_HEAT_EXTENSIVE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BITE_DEEP"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BITE_TEARING"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BITE_CRUSHING"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_LIMB_BITE_DEVASTATING"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ROUTE_TORSO",
+        "eoc_type": "ACTIVATION",
+        "//": "Dormant compatibility router for the unavailable wound-created bridge. It has no damage_taken context and cannot activate production routes.",
+        "condition": {
+            "and": [
+                {
+                    "expects_vars": [
+                        "bp",
+                        "wound_id"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "torso",
+                        {
+                            "context_val": "bp"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_BASH_MODERATE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_BASH_SEVERE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_BASH_EXTREME"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_STAB_PUNCTURE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_STAB_DEEP"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_STAB_PENETRATING"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_STAB_SEVERE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_STAB_DEVASTATING"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_BULLET_SUPERFICIAL"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_BULLET_PENETRATING"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_BULLET_SEVERE"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_TORSO_BULLET_DEVASTATING"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ON_WOUND_CREATED",
+        "eoc_type": "ACTIVATION",
+        "//": "Reserved compatibility entry point for a future native wound-created callback. Current production routing starts at damage_type ondamage_eocs instead.",
+        "condition": {
+            "expects_vars": [
+                "bp",
+                "wound_id"
+            ]
+        },
+        "effect": [
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_ROUTE_LIMB"
+            },
+            {
+                "run_eocs": "EOC_DW_STRUCTURAL_ROUTE_TORSO"
+            }
+        ]
+    }
+]

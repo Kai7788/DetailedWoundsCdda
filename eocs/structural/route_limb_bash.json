@@ -1,0 +1,121 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_BASH_MINOR",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 8" ] }, { "math": [ "_damage_taken <= 15" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 80 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_CONTUSION", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_STRAIN", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_LIGAMENT_SPRAIN", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_CONTUSION", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_BONE_CONTUSION", 2 ]
+      ]
+    },
+    "//": "Low structural risk for 8-15 post-armor bash damage, matching the heavy-bruise tier. Exactly one weighted result is selected."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_BASH_MODERATE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 16" ] }, { "math": [ "_damage_taken <= 25" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 55 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_CONTUSION", 12 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_STRAIN", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_MUSCLE_TEAR", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_TENDON_STRAIN", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_LIGAMENT_SPRAIN", 6 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_LIGAMENT_TEAR", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_JOINT_SUBLUXATION", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_CONTUSION", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_BONE_CONTUSION", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_HAIRLINE_FRACTURE", 2 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_BASH_SEVERE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 26" ] }, { "math": [ "_damage_taken <= 44" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_CONTUSION", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_STRAIN", 7 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_MUSCLE_TEAR", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_RUPTURE", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_TENDON_STRAIN", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_TENDON_RUPTURE", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_LIGAMENT_SPRAIN", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_LIGAMENT_TEAR", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_LIGAMENT_RUPTURE", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_JOINT_SUBLUXATION", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_JOINT_DISLOCATION", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_CONTUSION", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_BONE_CONTUSION", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_HAIRLINE_FRACTURE", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_CLOSED_FRACTURE", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DISPLACED_FRACTURE", 2 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SOFT_TISSUE_CRUSH", 3 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_BASH_EXTREME",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 45" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_MUSCLE_TEAR", 8 ],
+        [ "EOC_DW_STRUCTURAL_ADD_MUSCLE_RUPTURE", 7 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_TENDON_TEAR", 6 ],
+        [ "EOC_DW_STRUCTURAL_ADD_TENDON_RUPTURE", 6 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PARTIAL_LIGAMENT_TEAR", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_LIGAMENT_RUPTURE", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_JOINT_SUBLUXATION", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_JOINT_DISLOCATION", 6 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 6 ],
+        [ "EOC_DW_STRUCTURAL_ADD_HAIRLINE_FRACTURE", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_CLOSED_FRACTURE", 6 ],
+        [ "EOC_DW_STRUCTURAL_ADD_DISPLACED_FRACTURE", 7 ],
+        [ "EOC_DW_STRUCTURAL_ADD_COMMINUTED_FRACTURE", 5 ],
+        [ "EOC_DW_STRUCTURAL_ADD_OPEN_FRACTURE", 4 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SOFT_TISSUE_CRUSH", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_SOFT_TISSUE_CRUSH", 3 ],
+        [ "EOC_DW_STRUCTURAL_ADD_COMPARTMENT_SYNDROME", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_BONE_MODERATE",
+    "eoc_type": "ACTIVATION",
+    "effect": { "run_eocs": "EOC_DW_STRUCTURAL_NONE" },
+    "//": "Compatibility ID retained. Bone outcomes are now part of the single moderate bash roll, preventing multi-wound spam."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_BONE_SEVERE",
+    "eoc_type": "ACTIVATION",
+    "effect": { "run_eocs": "EOC_DW_STRUCTURAL_NONE" },
+    "//": "Compatibility ID retained; production routing consolidates bone and soft-tissue outcomes."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_BONE_EXTREME",
+    "eoc_type": "ACTIVATION",
+    "effect": { "run_eocs": "EOC_DW_STRUCTURAL_NONE" },
+    "//": "Compatibility ID retained; production routing consolidates bone and soft-tissue outcomes."
+  }
+]

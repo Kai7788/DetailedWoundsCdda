@@ -1,0 +1,434 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_scratch",
+    "name": "dress scratch",
+    "description": "Clean the superficial injury and protect it with a simple dressing.",
+    "time": "1 minute",
+    "skills": {
+      "firstaid": 0
+    },
+    "requirements": [
+      [
+        "dw_clean_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_scratch"
+    ],
+    "wounds_added": [
+      "dw_dressed_scratch"
+    ],
+    "success_msg": "You clean and dress the scratch.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_shallow_cut",
+    "name": "dress shallow cut",
+    "description": "Clean the cut and cover it with a protective dressing.",
+    "time": "2 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_clean_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_shallow_cut"
+    ],
+    "wounds_added": [
+      "dw_dressed_shallow_cut"
+    ],
+    "success_msg": "You clean and dress the shallow cut.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_laceration",
+    "name": "clean laceration",
+    "description": "Thoroughly irrigate and disinfect the open laceration before further treatment.",
+    "time": "4 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        1
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_laceration"
+    ],
+    "wounds_added": [
+      "dw_cleaned_laceration"
+    ],
+    "success_msg": "You thoroughly clean and disinfect the laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_suture_laceration",
+    "name": "suture laceration",
+    "description": "Approximate the wound edges and close the cleaned laceration with proper sutures, then protect the closure with a simple dressing.",
+    "time": "6 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_suture_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_laceration"
+    ],
+    "wounds_added": [
+      "dw_sutured_laceration"
+    ],
+    "success_msg": "You carefully close and dress the laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_improvise_suture_laceration",
+    "name": "improvise suture laceration",
+    "description": "Close the cleaned laceration with improvised sewing equipment and protect the closure with a simple dressing.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_improvised_suture_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_laceration"
+    ],
+    "wounds_added": [
+      "dw_improvised_sutured_laceration"
+    ],
+    "success_msg": "You close and dress the laceration with improvised sutures.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_deep_laceration",
+    "name": "clean deep laceration",
+    "description": "Thoroughly irrigate and disinfect the deep wound before attempting to close it.",
+    "time": "7 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        1
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_laceration"
+    ],
+    "wounds_added": [
+      "dw_cleaned_deep_laceration"
+    ],
+    "success_msg": "You thoroughly clean the deep laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_suture_deep_laceration",
+    "name": "suture deep laceration",
+    "description": "Carefully close the cleaned deep wound with proper sutures, then protect the closure with a dressing.  Poor technique could leave damaged tissue poorly aligned.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_suture_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_deep_laceration"
+    ],
+    "wounds_added": [
+      "dw_sutured_deep_laceration"
+    ],
+    "success_msg": "You carefully suture and dress the deep laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_improvise_suture_deep_laceration",
+    "name": "improvise suture deep laceration",
+    "description": "Close the cleaned deep laceration with improvised sewing equipment and protect the less secure closure with a dressing.",
+    "time": "15 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_improvised_suture_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_deep_laceration"
+    ],
+    "wounds_added": [
+      "dw_improvised_sutured_deep_laceration"
+    ],
+    "success_msg": "You close and dress the deep laceration with improvised sutures.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_severe_laceration",
+    "name": "clean severe laceration",
+    "description": "Flush debris and contamination from the extensive open wound and disinfect the damaged tissue.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_disinfect_wound",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_laceration"
+    ],
+    "wounds_added": [
+      "dw_cleaned_severe_laceration"
+    ],
+    "success_msg": "You thoroughly clean the severe laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_suture_severe_laceration",
+    "name": "suture severe laceration",
+    "description": "Close the extensive cleaned wound with multiple proper sutures and protect it with a heavy dressing.",
+    "time": "20 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_heavy_suture_wound",
+        1
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_severe_laceration"
+    ],
+    "wounds_added": [
+      "dw_sutured_severe_laceration"
+    ],
+    "success_msg": "You carefully close and dress the severe laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.85,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.7,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_improvise_suture_severe_laceration",
+    "name": "improvise suture severe laceration",
+    "description": "Attempt to close the extensive cleaned wound with improvised sutures and protect it with a heavy dressing.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_improvised_heavy_suture_wound",
+        1
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_severe_laceration"
+    ],
+    "wounds_added": [
+      "dw_improvised_sutured_severe_laceration"
+    ],
+    "success_msg": "You close and dress the severe laceration with improvised sutures.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_avulsion",
+    "name": "debride avulsion wound",
+    "description": "Remove loose and badly damaged tissue from the avulsion wound, thoroughly irrigate it, and protect the exposed tissue with a heavy dressing.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_avulsion_wound"
+    ],
+    "wounds_added": [
+      "dw_debrided_avulsion_wound"
+    ],
+    "success_msg": "You remove badly damaged tissue, thoroughly irrigate the avulsion wound, and apply a heavy dressing.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

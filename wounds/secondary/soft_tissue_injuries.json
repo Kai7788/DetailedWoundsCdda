@@ -3,12 +3,12 @@
         "type": "wound",
         "id": "dw_muscle_contusion",
         "name": {
-            "str": "muscle contusion",
-            "str_pl": "muscle contusions"
+            "str": "muscle contusion"
         },
         "description": "Blunt force has bruised muscle tissue beneath the skin.  The affected muscles are sore, stiff, and weaker than normal, particularly during strenuous movement.",
         "weight": 8,
         "limit": 2,
+        "wound_progression": [ { "id": "dw_muscle_strain", "chance": 25 } ],
         "damage_types": [
             "bash"
         ],
@@ -75,12 +75,12 @@
         "type": "wound",
         "id": "dw_muscle_strain",
         "name": {
-            "str": "muscle strain",
-            "str_pl": "muscle strains"
+            "str": "muscle strain"
         },
         "description": "Muscle fibers have been overstretched and partially damaged.  Movement remains possible, but loading the affected muscles produces pain and noticeable weakness.",
         "weight": 7,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_partial_muscle_tear", "chance": 20 } ],
         "damage_types": [
             "bash"
         ],
@@ -147,12 +147,12 @@
         "type": "wound",
         "id": "dw_partial_muscle_tear",
         "name": {
-            "str": "partial muscle tear",
-            "str_pl": "partial muscle tears"
+            "str": "partial muscle tear"
         },
         "description": "A substantial portion of the muscle fibers have torn.  The injured area is painful and weak, making forceful movement difficult.",
         "weight": 5,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_muscle_rupture", "chance": 15 } ],
         "damage_types": [
             "bash"
         ],
@@ -219,8 +219,7 @@
         "type": "wound",
         "id": "dw_muscle_rupture",
         "name": {
-            "str": "muscle rupture",
-            "str_pl": "muscle ruptures"
+            "str": "muscle rupture"
         },
         "description": "A muscle has suffered a near-complete or complete rupture.  Normal force generation is severely impaired and attempting to use the injured limb produces intense pain.",
         "weight": 2,
@@ -287,12 +286,12 @@
         "type": "wound",
         "id": "dw_muscle_laceration",
         "name": {
-            "str": "muscle laceration",
-            "str_pl": "muscle lacerations"
+            "str": "muscle laceration"
         },
         "description": "A penetrating injury has cut through muscle beneath the surface wound.  Contracting the damaged tissue is painful and noticeably reduces the strength of the affected limb.",
         "weight": 5,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_severe_muscle_laceration", "chance": 20 } ],
         "damage_types": [
             "cut",
             "stab",
@@ -361,8 +360,7 @@
         "type": "wound",
         "id": "dw_severe_muscle_laceration",
         "name": {
-            "str": "severe muscle laceration",
-            "str_pl": "severe muscle lacerations"
+            "str": "severe muscle laceration"
         },
         "description": "A deep penetrating wound has extensively torn through muscle tissue.  The affected limb has lost a large portion of its strength and normal movement is severely compromised.",
         "weight": 2,
@@ -431,12 +429,12 @@
         "type": "wound",
         "id": "dw_tendon_strain",
         "name": {
-            "str": "tendon strain",
-            "str_pl": "tendon strains"
+            "str": "tendon strain"
         },
         "description": "A tendon has been overstretched and damaged.  Movement remains possible, but transferring force through the affected limb is painful and less effective.",
         "weight": 6,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_partial_tendon_tear", "chance": 20 } ],
         "damage_types": [
             "bash"
         ],
@@ -503,12 +501,12 @@
         "type": "wound",
         "id": "dw_partial_tendon_tear",
         "name": {
-            "str": "partial tendon tear",
-            "str_pl": "partial tendon tears"
+            "str": "partial tendon tear"
         },
         "description": "A tendon has partially torn.  The damaged structure can still transmit some force, but strength and precise movement are substantially reduced.",
         "weight": 4,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_tendon_rupture", "chance": 15 } ],
         "damage_types": [
             "bash",
             "cut",
@@ -578,8 +576,7 @@
         "type": "wound",
         "id": "dw_tendon_rupture",
         "name": {
-            "str": "tendon rupture",
-            "str_pl": "tendon ruptures"
+            "str": "tendon rupture"
         },
         "description": "A tendon has ruptured completely.  Force can no longer be transferred normally through the affected structure, severely compromising use of the limb.",
         "weight": 2,
@@ -646,8 +643,7 @@
         "type": "wound",
         "id": "dw_severed_tendon",
         "name": {
-            "str": "severed tendon",
-            "str_pl": "severed tendons"
+            "str": "severed tendon"
         },
         "description": "A sharp or ballistic wound has completely severed a tendon.  Normal movement controlled by that tendon is largely lost.",
         "weight": 1,
@@ -716,12 +712,12 @@
         "type": "wound",
         "id": "dw_ligament_sprain",
         "name": {
-            "str": "ligament sprain",
-            "str_pl": "ligament sprains"
+            "str": "ligament sprain"
         },
         "description": "A joint has been forced beyond its normal range, stretching and damaging the supporting ligaments.  The area is painful and less stable under load.",
         "weight": 6,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_partial_ligament_tear", "chance": 20 } ],
         "damage_types": [
             "bash"
         ],
@@ -784,12 +780,12 @@
         "type": "wound",
         "id": "dw_partial_ligament_tear",
         "name": {
-            "str": "partial ligament tear",
-            "str_pl": "partial ligament tears"
+            "str": "partial ligament tear"
         },
         "description": "One or more supporting ligaments have partially torn.  The joint remains usable but is painful, weak, and mechanically unstable.",
         "weight": 4,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_ligament_rupture", "chance": 15 } ],
         "damage_types": [
             "bash"
         ],
@@ -852,8 +848,7 @@
         "type": "wound",
         "id": "dw_ligament_rupture",
         "name": {
-            "str": "ligament rupture",
-            "str_pl": "ligament ruptures"
+            "str": "ligament rupture"
         },
         "description": "A major supporting ligament has ruptured completely.  The affected joint is severely unstable and normal loading or movement is extremely difficult.",
         "weight": 2,
@@ -916,12 +911,12 @@
         "type": "wound",
         "id": "dw_joint_subluxation",
         "name": {
-            "str": "joint subluxation",
-            "str_pl": "joint subluxations"
+            "str": "joint subluxation"
         },
         "description": "A joint has been partially forced out of its normal alignment.  Movement is painful, unstable, and significantly restricted.",
         "weight": 3,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_joint_dislocation", "chance": 20 } ],
         "damage_types": [
             "bash"
         ],
@@ -988,8 +983,7 @@
         "type": "wound",
         "id": "dw_joint_dislocation",
         "name": {
-            "str": "joint dislocation",
-            "str_pl": "joint dislocations"
+            "str": "joint dislocation"
         },
         "description": "A joint has been forced completely out of its normal position.  The limb is mechanically compromised and attempting normal movement causes severe pain.",
         "weight": 1,
@@ -1056,12 +1050,12 @@
         "type": "wound",
         "id": "dw_nerve_contusion",
         "name": {
-            "str": "nerve contusion",
-            "str_pl": "nerve contusions"
+            "str": "nerve contusion"
         },
         "description": "Trauma has bruised a peripheral nerve.  The affected limb periodically feels numb, weak, or tingling, and precise control is mildly impaired.",
         "weight": 5,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_peripheral_nerve_injury", "chance": 20 } ],
         "damage_types": [
             "bash",
             "electric"
@@ -1131,6 +1125,7 @@
         "description": "A peripheral nerve has suffered significant trauma.  Sensation and motor control in the affected limb are unreliable, reducing strength and coordination.",
         "weight": 3,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_severe_peripheral_nerve_injury", "chance": 15 } ],
         "damage_types": [
             "bash",
             "cut",
@@ -1277,8 +1272,7 @@
         "type": "wound",
         "id": "dw_nerve_severance",
         "name": {
-            "str": "severed peripheral nerve",
-            "str_pl": "severed peripheral nerves"
+            "str": "severed peripheral nerve"
         },
         "description": "A major peripheral nerve has been completely severed.  Sensation and voluntary control supplied through the damaged nerve are profoundly impaired.",
         "weight": 1,
@@ -1353,6 +1347,7 @@
         "description": "Heavy compressive force has crushed muscle, connective tissue, and small blood vessels throughout the affected limb.  Swelling and deep tissue damage make normal use painful and difficult.",
         "weight": 3,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_severe_soft_tissue_crush_injury", "chance": 15 } ],
         "damage_types": [
             "bash"
         ],
@@ -1425,6 +1420,7 @@
         "description": "Extreme compressive trauma has devastated the soft tissues of the affected limb.  Muscle, connective tissue, nerves, and blood vessels may all be badly damaged.",
         "weight": 1,
         "limit": 1,
+        "wound_progression": [ { "id": "dw_compartment_syndrome", "chance": 10 } ],
         "damage_types": [
             "bash"
         ],

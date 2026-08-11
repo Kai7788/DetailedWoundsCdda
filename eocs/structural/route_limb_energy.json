@@ -1,0 +1,80 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_MINOR",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 6" ] }, { "math": [ "_damage_taken <= 11" ] } ] },
+    "effect": { "weighted_list_eocs": [ [ "EOC_DW_STRUCTURAL_NONE", 85 ], [ "EOC_DW_STRUCTURAL_ADD_NERVE_CONTUSION", 15 ] ] },
+    "//": "Minor electrical burns below 6 post-armor damage do not create a structural nerve wound."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_CONTACT",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 12" ] }, { "math": [ "_damage_taken <= 20" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 65 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_CONTUSION", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 10 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_DEEP",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 21" ] }, { "math": [ "_damage_taken <= 31" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 45 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_CONTUSION", 20 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 10 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_SEVERE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 32" ] }, { "math": [ "_damage_taken <= 44" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 25 ],
+        [ "EOC_DW_STRUCTURAL_ADD_NERVE_CONTUSION", 10 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 35 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 30 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_EXTENSIVE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 45" ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "EOC_DW_STRUCTURAL_NONE", 15 ],
+        [ "EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY", 30 ],
+        [ "EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY", 55 ]
+      ]
+    },
+    "//": "Electrical damage never routes to nerve severance because that wound intentionally excludes electric damage."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_HEAT_FULL_THICKNESS",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 35" ] }, { "math": [ "_damage_taken <= 49" ] } ] },
+    "effect": { "weighted_list_eocs": [ [ "EOC_DW_STRUCTURAL_NONE", 92 ], [ "EOC_DW_STRUCTURAL_ADD_COMPARTMENT_SYNDROME", 8 ] ] },
+    "//": "Only very severe heat damage can produce the existing heat-compatible compartment syndrome."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_STRUCTURAL_LIMB_HEAT_EXTENSIVE",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ { "expects_vars": [ "bp", "damage_taken" ] }, { "math": [ "_damage_taken >= 50" ] } ] },
+    "effect": { "weighted_list_eocs": [ [ "EOC_DW_STRUCTURAL_NONE", 85 ], [ "EOC_DW_STRUCTURAL_ADD_COMPARTMENT_SYNDROME", 15 ] ] }
+  }
+]

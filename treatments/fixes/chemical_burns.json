@@ -1,0 +1,210 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_mild_chemical_burn",
+    "name": "irrigate mild chemical burn",
+    "description": "Flush the affected tissue thoroughly to remove remaining corrosive material.",
+    "time": "5 minutes",
+    "skills": {
+      "firstaid": 0
+    },
+    "requirements": [
+      [
+        "dw_irrigate_chemical_burn",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_mild_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_irrigated_mild_chemical_burn"
+    ],
+    "success_msg": "You thoroughly irrigate the chemical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_moderate_chemical_burn",
+    "name": "irrigate moderate chemical burn",
+    "description": "Flush the injured tissue with a large quantity of water to remove the corrosive contaminant.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_irrigate_chemical_burn",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_moderate_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_irrigated_moderate_chemical_burn"
+    ],
+    "success_msg": "You thoroughly irrigate the chemical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_deep_chemical_burn",
+    "name": "irrigate deep chemical burn",
+    "description": "Continuously flush the severely damaged tissue to remove as much corrosive material as possible.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_irrigate_chemical_burn",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_irrigated_deep_chemical_burn"
+    ],
+    "success_msg": "You thoroughly irrigate the deep chemical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_full_thickness_chemical_burn",
+    "name": "irrigate severe chemical burn",
+    "description": "Use a large volume of water to flush the extensively chemically damaged tissue, then protect the exposed area with a heavy burn dressing.",
+    "time": "15 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_irrigate_chemical_burn",
+        2
+      ],
+      [
+        "dw_severe_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_full_thickness_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_irrigated_full_thickness_chemical_burn"
+    ],
+    "success_msg": "You thoroughly irrigate and protect the severe chemical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_irrigated_full_thickness_chemical_burn",
+    "name": "debride irrigated full-thickness chemical burn",
+    "description": "After corrosive material has been flushed away, remove loose nonviable tissue and protect the remaining full-thickness chemical burn.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_severe_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_irrigated_full_thickness_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_debrided_full_thickness_chemical_burn"
+    ],
+    "success_msg": "You debride and dress the irrigated full-thickness chemical burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_extensive_chemical_burn",
+    "name": "irrigate extensive chemical burn",
+    "description": "Use a very large volume of water to stop continuing chemical exposure across the extensive injury, then protect the damaged tissue.",
+    "time": "20 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_irrigate_chemical_burn",
+        3
+      ],
+      [
+        "dw_severe_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_extensive_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_irrigated_extensive_chemical_burn"
+    ],
+    "success_msg": "You thoroughly irrigate and protect the extensive chemical burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_irrigated_extensive_chemical_burn",
+    "name": "debride irrigated extensive chemical burn",
+    "description": "After the chemical exposure has been stopped, remove extensive nonviable tissue and protect the large remaining wound.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_severe_burn_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_irrigated_extensive_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_debrided_extensive_chemical_burn"
+    ],
+    "success_msg": "You debride and heavily dress the extensive chemical burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

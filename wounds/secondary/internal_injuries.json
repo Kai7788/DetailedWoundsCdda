@@ -3,12 +3,12 @@
     "type": "wound",
     "id": "dw_deep_torso_contusion",
     "name": {
-      "str": "deep torso contusion",
-      "str_pl": "deep torso contusions"
+      "str": "deep torso contusion"
     },
-    "description": "A powerful impact has bruised tissues deep beneath the surface of the torso. The injury produces a persistent deep ache that becomes worse with movement and pressure.",
+    "description": "A powerful impact has bruised tissues deep beneath the surface of the torso.  The injury produces a persistent deep ache that becomes worse with movement and pressure.",
     "weight": 8,
     "limit": 2,
+    "wound_progression": [ { "id": "dw_internal_soft_tissue_trauma", "chance": 20 } ],
     "damage_types": [
       "bash"
     ],
@@ -34,12 +34,12 @@
     "type": "wound",
     "id": "dw_internal_soft_tissue_trauma",
     "name": {
-      "str": "internal soft-tissue trauma",
-      "str_pl": "internal soft-tissue traumas"
+      "str": "internal soft-tissue trauma"
     },
-    "description": "The force of the impact has damaged muscle, connective tissue, and other structures beneath the body wall. Little may be visible externally despite the significant injury underneath.",
+    "description": "The force of the impact has damaged muscle, connective tissue, and other structures beneath the body wall.  Little may be visible externally despite the significant injury underneath.",
     "weight": 6,
     "limit": 2,
+    "wound_progression": [ { "id": "dw_internal_organ_contusion", "chance": 15 } ],
     "damage_types": [
       "bash"
     ],
@@ -65,12 +65,12 @@
     "type": "wound",
     "id": "dw_internal_organ_contusion",
     "name": {
-      "str": "internal organ contusion",
-      "str_pl": "internal organ contusions"
+      "str": "internal organ contusion"
     },
-    "description": "A severe blunt impact has transferred enough force through the body wall to bruise internal organs. The injury causes deep, persistent pain and requires considerable time to recover.",
+    "description": "A severe blunt impact has transferred enough force through the body wall to bruise internal organs.  The injury causes deep, persistent pain and requires considerable time to recover.",
     "weight": 3,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_severe_crush_trauma", "chance": 10 } ],
     "damage_types": [
       "bash"
     ],
@@ -96,10 +96,9 @@
     "type": "wound",
     "id": "dw_severe_crush_trauma",
     "name": {
-      "str": "severe internal crush trauma",
-      "str_pl": "severe internal crush traumas"
+      "str": "severe internal crush trauma"
     },
-    "description": "The torso has been subjected to devastating compressive force. Deep tissues and internal structures are extensively bruised and damaged despite the limited external appearance of the injury.",
+    "description": "The torso has been subjected to devastating compressive force.  Deep tissues and internal structures are extensively bruised and damaged despite the limited external appearance of the injury.",
     "weight": 1,
     "limit": 1,
     "damage_types": [
@@ -130,9 +129,10 @@
       "str": "deep penetrating torso injury",
       "str_pl": "deep penetrating torso injuries"
     },
-    "description": "A penetrating object has passed through the body wall and entered the deeper tissues of the torso. The true extent of the injury is difficult to judge from the external wound alone.",
+    "description": "A penetrating object has passed through the body wall and entered the deeper tissues of the torso.  The true extent of the injury is difficult to judge from the external wound alone.",
     "weight": 6,
     "limit": 2,
+    "wound_progression": [ { "id": "dw_severe_penetrating_torso_injury", "chance": 20 } ],
     "damage_types": [
       "stab"
     ],
@@ -161,9 +161,10 @@
       "str": "severe penetrating torso injury",
       "str_pl": "severe penetrating torso injuries"
     },
-    "description": "A deep penetrating wound has torn through multiple layers of tissue within the torso. Important internal structures may have been damaged along the path of the weapon.",
+    "description": "A deep penetrating wound has torn through multiple layers of tissue within the torso.  Important internal structures may have been damaged along the path of the weapon.",
     "weight": 3,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_major_penetrating_organ_trauma", "chance": 15 } ],
     "damage_types": [
       "stab"
     ],
@@ -189,10 +190,9 @@
     "type": "wound",
     "id": "dw_major_penetrating_organ_trauma",
     "name": {
-      "str": "major penetrating organ trauma",
-      "str_pl": "major penetrating organ traumas"
+      "str": "major penetrating organ trauma"
     },
-    "description": "The penetrating injury has reached and seriously damaged structures deep within the torso. The wound is severe and recovery will require prolonged rest and careful medical management.",
+    "description": "The penetrating injury has reached and seriously damaged structures deep within the torso.  The wound is severe and recovery will require prolonged rest and careful medical management.",
     "weight": 1,
     "limit": 1,
     "damage_types": [
@@ -220,12 +220,12 @@
     "type": "wound",
     "id": "dw_ballistic_internal_trauma",
     "name": {
-      "str": "ballistic internal trauma",
-      "str_pl": "ballistic internal traumas"
+      "str": "ballistic internal trauma"
     },
-    "description": "A projectile has transferred destructive energy into structures beneath the body wall. The visible gunshot wound hides substantial trauma within the torso.",
+    "description": "A projectile has transferred destructive energy into structures beneath the body wall.  The visible gunshot wound hides substantial trauma within the torso.",
     "weight": 6,
     "limit": 2,
+    "wound_progression": [ { "id": "dw_severe_ballistic_internal_trauma", "chance": 20 } ],
     "damage_types": [
       "bullet"
     ],
@@ -251,12 +251,12 @@
     "type": "wound",
     "id": "dw_severe_ballistic_internal_trauma",
     "name": {
-      "str": "severe ballistic internal trauma",
-      "str_pl": "severe ballistic internal traumas"
+      "str": "severe ballistic internal trauma"
     },
-    "description": "The projectile has caused extensive damage inside the torso. The wound channel has torn and crushed deep tissues and may have damaged internal organs along its path.",
+    "description": "The projectile has caused extensive damage inside the torso.  The wound channel has torn and crushed deep tissues and may have damaged internal organs along its path.",
     "weight": 3,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_devastating_ballistic_internal_trauma", "chance": 15 } ],
     "damage_types": [
       "bullet"
     ],
@@ -282,10 +282,9 @@
     "type": "wound",
     "id": "dw_devastating_ballistic_internal_trauma",
     "name": {
-      "str": "devastating ballistic internal trauma",
-      "str_pl": "devastating ballistic internal traumas"
+      "str": "devastating ballistic internal trauma"
     },
-    "description": "A powerful projectile has caused massive disruption inside the torso. Deep tissues and internal structures have suffered extensive traumatic damage.",
+    "description": "A powerful projectile has caused massive disruption inside the torso.  Deep tissues and internal structures have suffered extensive traumatic damage.",
     "weight": 1,
     "limit": 1,
     "damage_types": [
@@ -313,12 +312,12 @@
     "type": "wound",
     "id": "dw_minor_internal_hemorrhage",
     "name": {
-      "str": "minor internal hemorrhage",
-      "str_pl": "minor internal hemorrhages"
+      "str": "minor internal hemorrhage"
     },
-    "description": "Small blood vessels have been damaged beneath the surface, allowing blood to collect within the injured tissues. The bleeding appears limited but the area remains deeply tender.",
+    "description": "Small blood vessels have been damaged beneath the surface, allowing blood to collect within the injured tissues.  The bleeding appears limited but the area remains deeply tender.",
     "weight": 4,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_significant_internal_hemorrhage", "chance": 15 } ],
     "damage_types": [
       "bash",
       "stab",
@@ -346,12 +345,12 @@
     "type": "wound",
     "id": "dw_significant_internal_hemorrhage",
     "name": {
-      "str": "significant internal hemorrhage",
-      "str_pl": "significant internal hemorrhages"
+      "str": "significant internal hemorrhage"
     },
-    "description": "Blood is accumulating within the torso following substantial damage to internal blood vessels. The injury produces increasing pressure, weakness, and deep pain.",
+    "description": "Blood is accumulating within the torso following substantial damage to internal blood vessels.  The injury produces increasing pressure, weakness, and deep pain.",
     "weight": 2,
     "limit": 1,
+    "wound_progression": [ { "id": "dw_major_internal_hemorrhage", "chance": 10 } ],
     "damage_types": [
       "bash",
       "stab",
@@ -379,10 +378,9 @@
     "type": "wound",
     "id": "dw_major_internal_hemorrhage",
     "name": {
-      "str": "major internal hemorrhage",
-      "str_pl": "major internal hemorrhages"
+      "str": "major internal hemorrhage"
     },
-    "description": "Major blood vessels or highly vascular tissues inside the torso have been damaged. Significant internal bleeding is occurring, creating a serious and debilitating injury.",
+    "description": "Major blood vessels or highly vascular tissues inside the torso have been damaged.  Significant internal bleeding is occurring, creating a serious and debilitating injury.",
     "weight": 1,
     "limit": 1,
     "damage_types": [

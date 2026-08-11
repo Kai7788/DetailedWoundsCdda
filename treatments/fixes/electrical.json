@@ -1,0 +1,149 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_minor_electrical_burn",
+    "name": "dress minor electrical burn",
+    "description": "Protect the electrical contact burn with a clean dressing.",
+    "time": "3 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_minor_electrical_burn"
+    ],
+    "wounds_added": [
+      "dw_dressed_minor_electrical_burn"
+    ],
+    "success_msg": "You carefully dress the electrical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_electrical_contact_burn",
+    "name": "dress electrical contact burn",
+    "description": "Protect the electrical contact injury with a clean dressing.",
+    "time": "5 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_electrical_contact_burn"
+    ],
+    "wounds_added": [
+      "dw_dressed_electrical_contact_burn"
+    ],
+    "success_msg": "You carefully dress the electrical contact burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_deep_electrical_burn",
+    "name": "dress deep electrical burn",
+    "description": "Protect the visibly damaged tissue while recognizing that deeper electrical injury may remain.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_severe_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_electrical_burn"
+    ],
+    "wounds_added": [
+      "dw_dressed_deep_electrical_burn"
+    ],
+    "success_msg": "You dress the deep electrical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_severe_electrical_injury",
+    "name": "debride severe electrical tissue injury",
+    "description": "Remove clearly nonviable tissue from the severe electrical injury and protect the remaining deep tissue damage with a substantial dressing.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_severe_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_electrical_tissue_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_severe_electrical_tissue_injury"
+    ],
+    "success_msg": "You debride and dress the severe electrical tissue injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_extensive_electrical_injury",
+    "name": "debride extensive electrical tissue destruction",
+    "description": "Remove extensive dead and badly damaged tissue from the electrical injury and heavily protect the remaining wound.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_severe_burn_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_extensive_electrical_tissue_destruction"
+    ],
+    "wounds_added": [
+      "dw_debrided_extensive_electrical_tissue_destruction"
+    ],
+    "success_msg": "You extensively debride and dress the electrical tissue destruction.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

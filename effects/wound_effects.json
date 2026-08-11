@@ -8,9 +8,9 @@
             "Heavy wound contamination"
         ],
         "desc": [
-            "has a lightly contaminated wound exposed to dirt and microorganisms. There are no clear signs of infection yet, but the wound should be cleaned.",
+            "has a lightly contaminated wound exposed to dirt and microorganisms.  There are no clear signs of infection yet, but the wound should be cleaned.",
             "has a visibly contaminated wound that has remained exposed long enough for infection to become a serious concern.",
-            "has a heavily contaminated wound containing foreign material and microorganisms. Without proper cleaning, infection is increasingly likely."
+            "has a heavily contaminated wound containing foreign material and microorganisms.  Without proper cleaning, infection is increasingly likely."
         ],
         "part_descs": true,
         "rating": "bad",
@@ -30,8 +30,8 @@
             "Severe local wound infection"
         ],
         "desc": [
-            "has an infected wound surrounded by inflamed, warm, swollen, and painful tissue. The infection remains localized but is interfering with normal use of the affected area.",
-            "has a badly infected wound with extensive inflammation, swelling, and tissue damage. Normal use of the affected body part is difficult and painful."
+            "has an infected wound surrounded by inflamed, warm, swollen, and painful tissue.  The infection remains localized but is interfering with normal use of the affected area.",
+            "has a badly infected wound with extensive inflammation, swelling, and tissue damage.  Normal use of the affected body part is difficult and painful."
         ],
         "part_descs": true,
         "rating": "bad",
@@ -248,7 +248,7 @@
         "flags": [
             "EFFECT_LIMB_SCORE_MOD"
         ],
-        "//": "Global breathing-score modifier. Do not make this LOCAL: the vanilla human breathing score is supplied by the mouth bodypart while most Detailed Wounds respiratory injuries are anatomically stored on the torso. Keep this effect unwired until its lifetime can be synchronized with the respiratory wound."
+        "//": "Global because vanilla breathing is supplied by mouth while respiratory wounds are stored on torso. Source-specific exposure EOCs apply only finite acute durations; the effect is not permanently synchronized to wound lifetime."
     },
     {
         "type": "effect_type",
@@ -277,6 +277,6 @@
         "flags": [
             "EFFECT_LIMB_SCORE_MOD"
         ],
-        "//": "Global breathing-score modifier for rib/chest-wall trauma. Kept separate from respiratory impairment so pulmonary and mechanical breathing problems can stack multiplicatively. Keep unwired until effect lifetime can follow the wound lifetime."
+        "//": "Global because vanilla breathing is supplied by mouth. Severe thoracic outcome EOCs apply finite acute durations so native treatment needs no unavailable effect-removal callback."
     }
 ]

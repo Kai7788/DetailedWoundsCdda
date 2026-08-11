@@ -3,10 +3,9 @@
         "type": "wound",
         "id": "dw_irrigated_cornea_abrasion",
         "name": {
-            "str": "irrigated corneal abrasion",
-            "str_pl": "irrigated corneal abrasions"
+            "str": "irrigated corneal abrasion"
         },
-        "description": "The injured eye has been carefully flushed, removing loose particles and contaminants from its surface. The cornea remains scratched and sensitive, causing discomfort and mildly impaired vision while it heals.",
+        "description": "The injured eye has been carefully flushed, removing loose particles and contaminants from its surface.  The cornea remains scratched and sensitive, causing discomfort and mildly impaired vision while it heals.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -49,10 +48,9 @@
         "type": "wound",
         "id": "dw_irrigated_ocular_chemical_burn",
         "name": {
-            "str": "irrigated ocular chemical burn",
-            "str_pl": "irrigated ocular chemical burns"
+            "str": "irrigated ocular chemical burn"
         },
-        "description": "The chemical contaminant has been thoroughly flushed from the eye. Continued corrosive exposure has been stopped, but the ocular surface remains inflamed and damaged, leaving vision impaired and the eye painfully sensitive.",
+        "description": "The chemical contaminant has been thoroughly flushed from the eye.  Continued corrosive exposure has been stopped, but the ocular surface remains inflamed and damaged, leaving vision impaired and the eye painfully sensitive.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -93,12 +91,103 @@
     },
     {
         "type": "wound",
+        "id": "dw_rewarmed_ocular_freezing_injury",
+        "name": {
+            "str": "rewarmed ocular freezing injury",
+            "str_pl": "rewarmed ocular freezing injuries"
+        },
+        "description": "The cold-injured eye has been carefully rewarmed.  Swelling and visual disturbance remain, but the tissue can now recover normally.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "cold"
+        ],
+        "damage_required": [
+            1000,
+            1000
+        ],
+        "pain": [
+            1,
+            4
+        ],
+        "healing_time": [
+            "3 days",
+            "14 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "vision",
+                "value": 0.08
+            },
+            {
+                "score": "night_vis",
+                "value": 0.10
+            },
+            {
+                "score": "reaction",
+                "value": 0.04
+            }
+        ],
+        "whitelist_body_part_types": [
+            "sensor"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Treated-only wound. Controlled rewarming reduces the injury and enables normal healing."
+    },
+    {
+        "type": "wound",
+        "id": "dw_rewarmed_severe_ocular_freezing_injury",
+        "name": {
+            "str": "rewarmed severe ocular freezing injury",
+            "str_pl": "rewarmed severe ocular freezing injuries"
+        },
+        "description": "The severely frozen eye has been gradually rewarmed.  Substantial pain and visual impairment remain, but the tissue is no longer frozen and can begin a prolonged recovery.",
+        "weight": 1,
+        "limit": 1,
+        "damage_types": [
+            "cold"
+        ],
+        "damage_required": [
+            1000,
+            1000
+        ],
+        "pain": [
+            3,
+            8
+        ],
+        "healing_time": [
+            "14 days",
+            "60 days"
+        ],
+        "limb_scores": [
+            {
+                "score": "vision",
+                "value": 0.28
+            },
+            {
+                "score": "night_vis",
+                "value": 0.32
+            },
+            {
+                "score": "reaction",
+                "value": 0.17
+            }
+        ],
+        "whitelist_body_part_types": [
+            "sensor"
+        ],
+        "whitelist_bp_with_flag": "BIONIC_LIMB",
+        "blacklist_bp_with_flag": "BIONIC_LIMB",
+        "//": "Treated-only wound. Controlled rewarming enables recovery but does not undo deep ocular damage."
+    },
+    {
+        "type": "wound",
         "id": "dw_dressed_split_lip",
         "name": {
-            "str": "dressed split lip",
-            "str_pl": "dressed split lips"
+            "str": "dressed split lip"
         },
-        "description": "The split lip has been cleaned and protected as well as possible. The tissue remains swollen and tender, making eating and drinking mildly uncomfortable while the wound closes.",
+        "description": "The split lip has been cleaned and protected as well as possible.  The tissue remains swollen and tender, making eating and drinking mildly uncomfortable while the wound closes.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -141,10 +230,9 @@
         "type": "wound",
         "id": "dw_cleaned_oral_laceration",
         "name": {
-            "str": "cleaned oral laceration",
-            "str_pl": "cleaned oral lacerations"
+            "str": "cleaned oral laceration"
         },
-        "description": "The lacerated tissue inside the mouth has been thoroughly cleaned. The wound remains open, swollen, and painful, making chewing and swallowing uncomfortable until the damaged tissue heals.",
+        "description": "The lacerated tissue inside the mouth has been thoroughly cleaned.  The wound remains open, swollen, and painful, making chewing and swallowing uncomfortable until the damaged tissue heals.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -187,10 +275,9 @@
         "type": "wound",
         "id": "dw_cleaned_deep_facial_laceration",
         "name": {
-            "str": "cleaned deep facial laceration",
-            "str_pl": "cleaned deep facial lacerations"
+            "str": "cleaned deep facial laceration"
         },
-        "description": "The deep facial wound has been thoroughly irrigated and disinfected. Significant tissue remains divided and exposed, leaving the area painful, swollen, and mechanically impaired despite being clean.",
+        "description": "The deep facial wound has been thoroughly irrigated and disinfected.  Significant tissue remains divided and exposed, leaving the area painful, swollen, and mechanically impaired despite being clean.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -233,10 +320,9 @@
         "type": "wound",
         "id": "dw_sutured_deep_facial_laceration",
         "name": {
-            "str": "sutured deep facial laceration",
-            "str_pl": "sutured deep facial lacerations"
+            "str": "sutured deep facial laceration"
         },
-        "description": "The cleaned deep facial wound has been carefully closed with proper sutures. The underlying tissue remains injured and painful, but the wound edges are securely approximated and better protected during healing.",
+        "description": "The cleaned deep facial wound has been carefully closed with proper sutures.  The underlying tissue remains injured and painful, but the wound edges are securely approximated and better protected during healing.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -279,10 +365,9 @@
         "type": "wound",
         "id": "dw_improvised_sutured_deep_facial_laceration",
         "name": {
-            "str": "improvised sutured deep facial laceration",
-            "str_pl": "improvised sutured deep facial lacerations"
+            "str": "improvised sutured deep facial laceration"
         },
-        "description": "The deep facial wound has been closed using improvised suturing materials. The wound edges are held together and movement is reduced, but the closure is less secure and less hygienic than proper suturing.",
+        "description": "The deep facial wound has been closed using improvised suturing materials.  The wound edges are held together and movement is reduced, but the closure is less secure and less hygienic than proper suturing.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

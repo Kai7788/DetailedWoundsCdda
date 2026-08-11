@@ -3,10 +3,9 @@
     "type": "wound",
     "id": "dw_minor_puncture",
     "name": {
-      "str": "minor puncture wound",
-      "str_pl": "minor puncture wounds"
+      "str": "minor puncture wound"
     },
-    "description": "A narrow object has pierced the skin, leaving a small puncture wound. The opening is minor, but the depth of the injury is difficult to judge from the surface.",
+    "description": "A narrow object has pierced the skin, leaving a small puncture wound.  The opening is minor, but the depth of the injury is difficult to judge from the surface.",
     "weight": 20,
     "limit": 3,
     "damage_types": [
@@ -34,10 +33,9 @@
     "type": "wound",
     "id": "dw_puncture_wound",
     "name": {
-      "str": "puncture wound",
-      "str_pl": "puncture wounds"
+      "str": "puncture wound"
     },
-    "description": "A sharp object has pierced through the skin and entered the tissue beneath. The external opening is relatively small compared to the depth of the wound.",
+    "description": "A sharp object has pierced through the skin and entered the tissue beneath.  The external opening is relatively small compared to the depth of the wound.",
     "weight": 17,
     "limit": 2,
     "damage_types": [
@@ -99,10 +97,9 @@
     "type": "wound",
     "id": "dw_deep_puncture",
     "name": {
-      "str": "deep puncture wound",
-      "str_pl": "deep puncture wounds"
+      "str": "deep puncture wound"
     },
-    "description": "The penetrating object has reached deeply into the affected body part. Significant tissue has been damaged beneath the small surface opening.",
+    "description": "The penetrating object has reached deeply into the affected body part.  Significant tissue has been damaged beneath the small surface opening.",
     "weight": 13,
     "limit": 2,
     "damage_types": [
@@ -164,10 +161,9 @@
     "type": "wound",
     "id": "dw_penetrating_wound",
     "name": {
-      "str": "penetrating wound",
-      "str_pl": "penetrating wounds"
+      "str": "penetrating wound"
     },
-    "description": "A sharp weapon has penetrated deeply through multiple layers of tissue. The narrow wound channel conceals extensive damage beneath the surface.",
+    "description": "A sharp weapon has penetrated deeply through multiple layers of tissue.  The narrow wound channel conceals extensive damage beneath the surface.",
     "weight": 9,
     "limit": 2,
     "damage_types": [
@@ -229,10 +225,9 @@
     "type": "wound",
     "id": "dw_severe_penetrating_wound",
     "name": {
-      "str": "severe penetrating wound",
-      "str_pl": "severe penetrating wounds"
+      "str": "severe penetrating wound"
     },
-    "description": "A powerful thrust has driven deeply through the affected area, tearing and crushing tissue along the wound channel. Important structures may have been damaged beneath the surface.",
+    "description": "A powerful thrust has driven deeply through the affected area, tearing and crushing tissue along the wound channel.  Important structures may have been damaged beneath the surface.",
     "weight": 5,
     "limit": 1,
     "damage_types": [
@@ -295,10 +290,9 @@
     "type": "wound",
     "id": "dw_devastating_penetrating_wound",
     "name": {
-      "str": "devastating penetrating wound",
-      "str_pl": "devastating penetrating wounds"
+      "str": "devastating penetrating wound"
     },
-    "description": "An exceptionally powerful penetrating strike has devastated the affected tissue. The wound channel extends deeply through the body part and leaves severe structural damage in its wake.",
+    "description": "An exceptionally powerful penetrating strike has devastated the affected tissue.  The wound channel extends deeply through the body part and leaves severe structural damage in its wake.",
     "weight": 2,
     "limit": 1,
     "damage_types": [

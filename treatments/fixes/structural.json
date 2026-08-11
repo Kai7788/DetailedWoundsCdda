@@ -1,0 +1,643 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_support_muscle_strain",
+    "name": "support muscle strain",
+    "description": "Pad and support the strained muscle to reduce further mechanical stress during recovery.",
+    "time": "5 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_muscle_strain"
+    ],
+    "wounds_added": [
+      "dw_supported_muscle_strain"
+    ],
+    "success_msg": "You support the strained muscle.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_support_partial_muscle_tear",
+    "name": "support partial muscle tear",
+    "description": "Support and restrict the partially torn muscle to reduce further separation of damaged fibers.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_partial_muscle_tear"
+    ],
+    "wounds_added": [
+      "dw_supported_partial_muscle_tear"
+    ],
+    "success_msg": "You support the partially torn muscle.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_muscle_rupture",
+    "name": "repair muscle rupture",
+    "description": "Approximate and repair the completely ruptured muscle, then support the injured region for recovery.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_muscle_repair",
+        1
+      ],
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_muscle_rupture"
+    ],
+    "wounds_added": [
+      "dw_repaired_muscle_rupture"
+    ],
+    "success_msg": "You repair and support the ruptured muscle.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_muscle_laceration",
+    "name": "repair muscle laceration",
+    "description": "Approximate and repair the divided muscle fibers and support the injured tissue.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_muscle_repair",
+        1
+      ],
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_muscle_laceration"
+    ],
+    "wounds_added": [
+      "dw_repaired_muscle_laceration"
+    ],
+    "success_msg": "You repair and support the muscle laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_severe_muscle_laceration",
+    "name": "repair severe muscle laceration",
+    "description": "Repair the extensively divided muscle tissue and provide substantial support during the prolonged recovery.",
+    "time": "50 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_muscle_repair",
+        2
+      ],
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_muscle_laceration"
+    ],
+    "wounds_added": [
+      "dw_repaired_severe_muscle_laceration"
+    ],
+    "success_msg": "You repair and support the severe muscle laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_support_tendon_strain",
+    "name": "support tendon strain",
+    "description": "Support the strained tendon and reduce loading across the injured fibers.",
+    "time": "6 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_tendon_strain"
+    ],
+    "wounds_added": [
+      "dw_supported_tendon_strain"
+    ],
+    "success_msg": "You support the strained tendon.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_immobilize_partial_tendon_tear",
+    "name": "immobilize partial tendon tear",
+    "description": "Immobilize the partially torn tendon to prevent further separation while it heals.",
+    "time": "10 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_partial_tendon_tear"
+    ],
+    "wounds_added": [
+      "dw_immobilized_partial_tendon_tear"
+    ],
+    "success_msg": "You immobilize the partial tendon tear.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_tendon_rupture",
+    "name": "repair tendon rupture",
+    "description": "Repair the ruptured tendon and rigidly immobilize the region to protect the fragile repair.",
+    "time": "60 minutes",
+    "skills": {
+      "firstaid": 8
+    },
+    "requirements": [
+      [
+        "dw_tendon_repair",
+        1
+      ],
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_tendon_rupture"
+    ],
+    "wounds_added": [
+      "dw_repaired_tendon_rupture"
+    ],
+    "success_msg": "You repair and immobilize the ruptured tendon.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_severed_tendon",
+    "name": "repair severed tendon",
+    "description": "Attempt to reconnect the completely severed tendon and immobilize the fragile repair.",
+    "time": "90 minutes",
+    "skills": {
+      "firstaid": 9
+    },
+    "requirements": [
+      [
+        "dw_major_tendon_repair",
+        1
+      ],
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severed_tendon"
+    ],
+    "wounds_added": [
+      "dw_repaired_severed_tendon"
+    ],
+    "success_msg": "You reconnect and immobilize the severed tendon.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_support_ligament_sprain",
+    "name": "support ligament sprain",
+    "description": "Support the sprained joint to limit painful motion and further stretching of the injured ligament.",
+    "time": "6 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_ligament_sprain"
+    ],
+    "wounds_added": [
+      "dw_supported_ligament_sprain"
+    ],
+    "success_msg": "You support the sprained ligament.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_immobilize_partial_ligament_tear",
+    "name": "immobilize partial ligament tear",
+    "description": "Immobilize the partially torn ligament and stabilize the affected joint.",
+    "time": "10 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_partial_ligament_tear"
+    ],
+    "wounds_added": [
+      "dw_immobilized_partial_ligament_tear"
+    ],
+    "success_msg": "You immobilize the partial ligament tear.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_ligament_rupture",
+    "name": "repair ligament rupture",
+    "description": "Repair the completely ruptured ligament and firmly immobilize the affected joint.",
+    "time": "60 minutes",
+    "skills": {
+      "firstaid": 8
+    },
+    "requirements": [
+      [
+        "dw_ligament_repair",
+        1
+      ],
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_ligament_rupture"
+    ],
+    "wounds_added": [
+      "dw_repaired_ligament_rupture"
+    ],
+    "success_msg": "You repair and immobilize the ruptured ligament.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_reduce_joint_subluxation",
+    "name": "reduce joint subluxation",
+    "description": "Carefully return the partially displaced joint to its normal position and stabilize it for recovery.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_joint_subluxation"
+    ],
+    "wounds_added": [
+      "dw_reduced_joint_subluxation"
+    ],
+    "success_msg": "You reduce and stabilize the subluxated joint.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_reduce_joint_dislocation",
+    "name": "reduce joint dislocation",
+    "description": "Carefully return the dislocated joint to its socket and immobilize the injured joint.",
+    "time": "20 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_joint_immobilization",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_joint_dislocation"
+    ],
+    "wounds_added": [
+      "dw_reduced_joint_dislocation"
+    ],
+    "success_msg": "You reduce and immobilize the dislocated joint.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_protect_peripheral_nerve_injury",
+    "name": "protect peripheral nerve injury",
+    "description": "Protect and support the injured region to reduce further compression and movement around the damaged nerve.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_peripheral_nerve_injury"
+    ],
+    "wounds_added": [
+      "dw_protected_peripheral_nerve_injury"
+    ],
+    "success_msg": "You protect the injured peripheral nerve.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_severe_peripheral_nerve_injury",
+    "name": "stabilize severe peripheral nerve injury",
+    "description": "Carefully stabilize and protect the region surrounding the severely injured nerve.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_peripheral_nerve_injury"
+    ],
+    "wounds_added": [
+      "dw_stabilized_severe_peripheral_nerve_injury"
+    ],
+    "success_msg": "You stabilize the severe peripheral nerve injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_repair_nerve_severance",
+    "name": "repair nerve severance",
+    "description": "Attempt to reapproximate the completely severed peripheral nerve and stabilize the surrounding tissue.",
+    "time": "120 minutes",
+    "skills": {
+      "firstaid": 10
+    },
+    "requirements": [
+      [
+        "dw_nerve_repair",
+        1
+      ],
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_nerve_severance"
+    ],
+    "wounds_added": [
+      "dw_repaired_nerve_severance"
+    ],
+    "success_msg": "You repair and stabilize the severed peripheral nerve.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_treat_soft_tissue_crush_injury",
+    "name": "treat soft tissue crush injury",
+    "description": "Protect and support the crushed tissue while reducing further mechanical stress.",
+    "time": "10 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_soft_tissue_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_soft_tissue_crush_injury"
+    ],
+    "wounds_added": [
+      "dw_treated_soft_tissue_crush_injury"
+    ],
+    "success_msg": "You protect and support the soft tissue crush injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_severe_soft_tissue_crush_injury",
+    "name": "debride severe soft tissue crush injury",
+    "description": "Remove clearly nonviable crushed tissue and protect the remaining deeply traumatized region.",
+    "time": "35 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_soft_tissue_crush_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_severe_soft_tissue_crush_injury"
+    ],
+    "success_msg": "You debride and protect the severe soft tissue crush injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_decompress_compartment_syndrome",
+    "name": "decompress compartment syndrome",
+    "description": "Open the dangerously pressurized tissue compartment, relieve the pressure, and protect the resulting surgical wound.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 8
+    },
+    "requirements": [
+      [
+        "dw_compartment_decompression",
+        1
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_compartment_syndrome"
+    ],
+    "wounds_added": [
+      "dw_decompressed_compartment_syndrome"
+    ],
+    "success_msg": "You decompress the affected tissue compartment and protect the wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,779 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_cleaned_oral_puncture_wound",
+    "name": {
+      "str": "cleaned oral puncture wound"
+    },
+    "description": "The small puncture in the mouth has been carefully flushed.  Mild tenderness remains, but loose debris and accessible contamination have been removed.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [
+      "stab"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      0,
+      2
+    ],
+    "healing_time": [
+      "12 hours",
+      "5 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.03
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.02
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Irrigation reduces contamination without closing the narrow wound channel."
+  },
+  {
+    "type": "wound",
+    "id": "dw_cleaned_deep_oral_puncture_wound",
+    "name": {
+      "str": "cleaned deep oral puncture wound"
+    },
+    "description": "The deep oral puncture has been thoroughly irrigated and disinfected.  Tissue damage and swelling remain, but the wound channel is cleaner and less disruptive while it heals.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [
+      "stab"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      2,
+      6
+    ],
+    "healing_time": [
+      "5 days",
+      "18 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.12
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.06
+      },
+      {
+        "score": "manip",
+        "value": 0.02
+      },
+      {
+        "score": "breathing",
+        "value": 0.03
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Cleaning improves the local wound while deeper structural injuries remain independent."
+  },
+  {
+    "type": "wound",
+    "id": "dw_debrided_severe_penetrating_oral_injury",
+    "name": {
+      "str": "debrided severe penetrating oral injury",
+      "str_pl": "debrided severe penetrating oral injuries"
+    },
+    "description": "Loose and nonviable tissue has been removed from the severe oral injury and the wound channel has been thoroughly irrigated.  Major swelling and functional impairment remain, but recovery can now begin.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [
+      "stab"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      5,
+      11
+    ],
+    "healing_time": [
+      "18 days",
+      "60 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.32
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.18
+      },
+      {
+        "score": "manip",
+        "value": 0.05
+      },
+      {
+        "score": "breathing",
+        "value": 0.12
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Debridement enables healing but does not resolve separate jaw, dental, vascular, or nerve trauma."
+  },
+  {
+    "type": "wound",
+    "id": "dw_cleaned_ballistic_oral_wound",
+    "name": {
+      "str": "cleaned ballistic oral wound"
+    },
+    "description": "The oral ballistic wound has been carefully irrigated and disinfected.  Bruised and torn tissue remains painful, but the wound is cleaner and less disruptive while it recovers.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [
+      "bullet"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      2,
+      5
+    ],
+    "healing_time": [
+      "3 days",
+      "12 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.10
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.05
+      },
+      {
+        "score": "manip",
+        "value": 0.02
+      },
+      {
+        "score": "breathing",
+        "value": 0.03
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Irrigation improves the local ballistic wound without creating secondary maxillofacial injuries."
+  },
+  {
+    "type": "wound",
+    "id": "dw_debrided_severe_maxillofacial_ballistic_trauma",
+    "name": {
+      "str": "debrided severe maxillofacial ballistic trauma"
+    },
+    "description": "Loose and visibly nonviable tissue has been removed from the severe maxillofacial wound and the tract has been irrigated.  Considerable swelling and tissue damage remain, but the injury is better able to recover.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [
+      "bullet"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "healing_time": [
+      "14 days",
+      "50 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.28
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.15
+      },
+      {
+        "score": "manip",
+        "value": 0.05
+      },
+      {
+        "score": "breathing",
+        "value": 0.10
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Local debridement does not automatically add or resolve secondary jaw, dental, vascular, or nerve trauma."
+  },
+  {
+    "type": "wound",
+    "id": "dw_debrided_devastating_maxillofacial_ballistic_injury",
+    "name": {
+      "str": "debrided devastating maxillofacial ballistic injury",
+      "str_pl": "debrided devastating maxillofacial ballistic injuries"
+    },
+    "description": "Extensive shredded and nonviable tissue has been removed and the devastating oral ballistic tract has been repeatedly irrigated.  A large tissue defect and major impairment remain, but the wound can now begin a prolonged recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [
+      "bullet"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      7,
+      14
+    ],
+    "healing_time": [
+      "30 days",
+      "90 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.50
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.30
+      },
+      {
+        "score": "manip",
+        "value": 0.09
+      },
+      {
+        "score": "breathing",
+        "value": 0.22
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Debridement enables healing while any secondary maxillofacial structural injuries remain separate."
+  },
+  {
+    "type": "wound",
+    "id": "dw_cooled_oral_thermal_burn",
+    "name": {
+      "str": "cooled oral thermal burn"
+    },
+    "description": "The superficial oral burn has been gently cooled with clean water.  Irritation remains, but the tissue is less painful and can recover normally.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [
+      "heat"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      1,
+      3
+    ],
+    "healing_time": [
+      "1 day",
+      "7 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.05
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.03
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Clean-water cooling reduces pain and heat retained in the oral tissue without using an exterior dressing."
+  },
+  {
+    "type": "wound",
+    "id": "dw_cooled_deep_oral_thermal_burn",
+    "name": {
+      "str": "cooled deep oral thermal burn"
+    },
+    "description": "The deep oral burn has been carefully cooled.  Swelling and damaged tissue still hinder eating and breathing, but pain and continuing heat injury have been reduced.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [
+      "heat"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "7 days",
+      "28 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.17
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.09
+      },
+      {
+        "score": "breathing",
+        "value": 0.05
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Cooling improves the deep oral burn without applying an exterior burn dressing."
+  },
+  {
+    "type": "wound",
+    "id": "dw_debrided_severe_oral_thermal_injury",
+    "name": {
+      "str": "debrided severe oral thermal injury",
+      "str_pl": "debrided severe oral thermal injuries"
+    },
+    "description": "The severe oral burn has been cooled and clearly nonviable tissue has been removed.  Major swelling and impairment remain, but the surviving tissue can begin a prolonged recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [
+      "heat"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "healing_time": [
+      "18 days",
+      "60 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.38
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.22
+      },
+      {
+        "score": "breathing",
+        "value": 0.15
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Debridement enables healing while any separate airway complication remains independent."
+  },
+  {
+    "type": "wound",
+    "id": "dw_irrigated_oral_chemical_burn",
+    "name": {
+      "str": "irrigated oral chemical burn"
+    },
+    "description": "The corrosive substance has been thoroughly flushed from the surface of the mouth.  Irritation remains, but continuing chemical exposure has stopped and the tissue can recover.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [
+      "acid"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      1,
+      3
+    ],
+    "healing_time": [
+      "1 day",
+      "7 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.06
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.03
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Large-volume irrigation removes the corrosive agent without substituting disinfection for flushing."
+  },
+  {
+    "type": "wound",
+    "id": "dw_irrigated_deep_oral_chemical_burn",
+    "name": {
+      "str": "irrigated deep oral chemical burn"
+    },
+    "description": "The corrosive material has been flushed from the deep oral injury.  Raw and swollen tissue still impairs eating and breathing, but continuing chemical damage has been stopped.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [
+      "acid"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "7 days",
+      "28 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.18
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.10
+      },
+      {
+        "score": "breathing",
+        "value": 0.06
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Irrigation stops corrosive exposure while the deep tissue injury heals."
+  },
+  {
+    "type": "wound",
+    "id": "dw_irrigated_severe_corrosive_oral_injury",
+    "name": {
+      "str": "irrigated severe corrosive oral injury",
+      "str_pl": "irrigated severe corrosive oral injuries"
+    },
+    "description": "The corrosive agent has been repeatedly flushed from the severely injured mouth.  Continuing exposure has stopped, but extensive nonviable tissue remains and must be debrided before recovery can begin.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [
+      "acid"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      5,
+      11
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.48
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.28
+      },
+      {
+        "score": "breathing",
+        "value": 0.22
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only intermediate wound. No healing_time is intentional until nonviable tissue is debrided."
+  },
+  {
+    "type": "wound",
+    "id": "dw_debrided_severe_corrosive_oral_injury",
+    "name": {
+      "str": "debrided severe corrosive oral injury",
+      "str_pl": "debrided severe corrosive oral injuries"
+    },
+    "description": "After thorough irrigation, nonviable tissue has been removed from the severe corrosive oral injury.  Significant impairment remains, but the surviving tissue can now begin to recover.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [
+      "acid"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      4,
+      9
+    ],
+    "healing_time": [
+      "18 days",
+      "60 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.36
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.20
+      },
+      {
+        "score": "breathing",
+        "value": 0.14
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Irrigation and debridement complete the reachable recovery path for severe corrosive oral injury."
+  },
+  {
+    "type": "wound",
+    "id": "dw_cooled_oral_electrical_burn",
+    "name": {
+      "str": "cooled oral electrical burn"
+    },
+    "description": "The electrical contact burn in the mouth has been gently cooled and rinsed.  Tenderness remains, but the superficial tissue is less painful and can recover normally.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [
+      "electric"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      1,
+      4
+    ],
+    "healing_time": [
+      "2 days",
+      "10 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.06
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.03
+      },
+      {
+        "score": "breathing",
+        "value": 0.02
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Cooling addresses the local burn without adding a secondary nerve injury."
+  },
+  {
+    "type": "wound",
+    "id": "dw_debrided_deep_oral_electrical_tissue_injury",
+    "name": {
+      "str": "debrided deep oral electrical tissue injury",
+      "str_pl": "debrided deep oral electrical tissue injuries"
+    },
+    "description": "Clearly nonviable electrically burned tissue has been removed and the surviving oral tissue has been cooled and rinsed.  Deep damage and swelling remain, but recovery can now begin.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [
+      "electric"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      4,
+      10
+    ],
+    "healing_time": [
+      "18 days",
+      "60 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.28
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.16
+      },
+      {
+        "score": "breathing",
+        "value": 0.12
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Debridement enables local healing while separate electrical nerve damage remains independent."
+  },
+  {
+    "type": "wound",
+    "id": "dw_rewarmed_oral_freezing_injury",
+    "name": {
+      "str": "rewarmed oral freezing injury",
+      "str_pl": "rewarmed oral freezing injuries"
+    },
+    "description": "The cold-injured mouth has been gradually rewarmed with clean warm compresses.  Mild swelling and tenderness remain, but normal recovery is underway.",
+    "weight": 1,
+    "limit": 2,
+    "damage_types": [
+      "cold"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      1,
+      3
+    ],
+    "healing_time": [
+      "2 days",
+      "12 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.07
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.04
+      },
+      {
+        "score": "breathing",
+        "value": 0.02
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Controlled rewarming uses warm compresses rather than an exterior wound dressing."
+  },
+  {
+    "type": "wound",
+    "id": "dw_rewarmed_deep_oral_freezing_injury",
+    "name": {
+      "str": "rewarmed deep oral freezing injury",
+      "str_pl": "rewarmed deep oral freezing injuries"
+    },
+    "description": "The deeply frozen oral tissue has been carefully rewarmed.  Significant swelling and functional impairment remain, but the tissue is no longer frozen and can begin a prolonged recovery.",
+    "weight": 1,
+    "limit": 1,
+    "damage_types": [
+      "cold"
+    ],
+    "damage_required": [
+      1000,
+      1000
+    ],
+    "pain": [
+      3,
+      8
+    ],
+    "healing_time": [
+      "12 days",
+      "45 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.26
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.14
+      },
+      {
+        "score": "breathing",
+        "value": 0.09
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "whitelist_bp_with_flag": "BIONIC_LIMB",
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "Treated-only wound. Controlled rewarming enables normal healing of the surviving oral tissue."
+  }
+]

@@ -1,0 +1,262 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_cornea_abrasion",
+    "name": "irrigate injured eye",
+    "description": "Gently flush the eye with clean water to remove particles that may continue irritating the damaged surface.",
+    "time": "2 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_eye_irrigation",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cornea_abrasion"
+    ],
+    "wounds_added": [
+      "dw_irrigated_cornea_abrasion"
+    ],
+    "success_msg": "You carefully flush the injured eye."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_ocular_chemical_burn",
+    "name": "irrigate chemical eye injury",
+    "description": "Continuously flush the chemically exposed eye with clean water.",
+    "time": "10 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_eye_irrigation",
+        3
+      ]
+    ],
+    "wounds_removed": [
+      "dw_ocular_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_irrigated_ocular_chemical_burn"
+    ],
+    "success_msg": "You thoroughly flush the chemically injured eye."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_ocular_freezing_injury",
+    "name": "rewarm cold-injured eye",
+    "description": "Carefully and gradually warm the cold-injured eye using clean warm compresses.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_ocular_freezing_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_ocular_freezing_injury"
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ],
+    "success_msg": "You carefully rewarm the cold-injured eye."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_severe_ocular_freezing_injury",
+    "name": "rewarm severely frozen eye",
+    "description": "Slowly rewarm the severely frozen eye while protecting its delicate tissues from further injury.",
+    "time": "18 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_ocular_freezing_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_severe_ocular_freezing_injury"
+    ],
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ],
+    "success_msg": "You gradually rewarm the severely frozen eye."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_split_lip",
+    "name": "dress split lip",
+    "description": "Clean the facial wound and protect it as well as possible.",
+    "time": "3 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_clean_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_split_lip"
+    ],
+    "wounds_added": [
+      "dw_dressed_split_lip"
+    ],
+    "success_msg": "You clean and dress the split lip."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_oral_laceration",
+    "name": "clean oral laceration",
+    "description": "Thoroughly clean the lacerated facial or oral tissue before further treatment.",
+    "time": "5 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_clean_wound",
+        1
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_oral_laceration"
+    ],
+    "wounds_added": [
+      "dw_cleaned_oral_laceration"
+    ],
+    "success_msg": "You thoroughly clean the oral laceration."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_deep_facial_laceration",
+    "name": "clean deep facial laceration",
+    "description": "Irrigate and disinfect the deep facial wound before attempting closure.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        1
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_facial_laceration"
+    ],
+    "wounds_added": [
+      "dw_cleaned_deep_facial_laceration"
+    ],
+    "success_msg": "You thoroughly clean the deep facial laceration."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_suture_deep_facial_laceration",
+    "name": "suture deep facial laceration",
+    "description": "Carefully close the cleaned deep facial wound with proper sutures and protect the closure.",
+    "time": "15 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_suture_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_deep_facial_laceration"
+    ],
+    "wounds_added": [
+      "dw_sutured_deep_facial_laceration"
+    ],
+    "success_msg": "You carefully suture and protect the deep facial laceration.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_improvise_suture_deep_facial_laceration",
+    "name": "improvise suture deep facial laceration",
+    "description": "Close the cleaned deep facial wound with improvised sutures and protect the less reliable closure.",
+    "time": "20 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_improvised_suture_wound",
+        1
+      ],
+      [
+        "dw_basic_wound_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cleaned_deep_facial_laceration"
+    ],
+    "wounds_added": [
+      "dw_improvised_sutured_deep_facial_laceration"
+    ],
+    "success_msg": "You close and protect the deep facial laceration with improvised sutures.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

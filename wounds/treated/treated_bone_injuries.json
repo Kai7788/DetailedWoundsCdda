@@ -3,10 +3,9 @@
         "type": "wound",
         "id": "dw_splinted_hairline_fracture",
         "name": {
-            "str": "splinted hairline fracture",
-            "str_pl": "splinted hairline fractures"
+            "str": "splinted hairline fracture"
         },
-        "description": "A small fracture has been immobilized with a splint. The bone remains injured and must heal over time, but movement across the fracture has been substantially reduced.",
+        "description": "A small fracture has been immobilized with a splint.  The bone remains injured and must heal over time, but movement across the fracture has been substantially reduced.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -75,10 +74,9 @@
         "type": "wound",
         "id": "dw_splinted_closed_fracture",
         "name": {
-            "str": "splinted closed fracture",
-            "str_pl": "splinted closed fractures"
+            "str": "splinted closed fracture"
         },
-        "description": "The fractured bone has been immobilized in a stable position. The limb remains painful and substantially impaired, but movement across the fracture has been reduced enough for healing to proceed more safely.",
+        "description": "The fractured bone has been immobilized in a stable position.  The limb remains painful and substantially impaired, but movement across the fracture has been reduced enough for healing to proceed more safely.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -147,10 +145,9 @@
         "type": "wound",
         "id": "dw_splinted_displaced_fracture",
         "name": {
-            "str": "stabilized displaced fracture",
-            "str_pl": "stabilized displaced fractures"
+            "str": "stabilized displaced fracture"
         },
-        "description": "The displaced fracture has been immobilized to prevent further movement and tissue damage. The bone remains imperfectly aligned, leaving the limb significantly impaired throughout its prolonged recovery.",
+        "description": "The displaced fracture has been immobilized to prevent further movement and tissue damage.  The bone remains imperfectly aligned, leaving the limb significantly impaired throughout its prolonged recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -219,10 +216,9 @@
         "type": "wound",
         "id": "dw_splinted_comminuted_fracture",
         "name": {
-            "str": "stabilized comminuted fracture",
-            "str_pl": "stabilized comminuted fractures"
+            "str": "stabilized comminuted fracture"
         },
-        "description": "The shattered bone has been immobilized as securely as possible. Multiple fragments remain damaged beneath the surface, and the limb is still severely impaired despite the stabilization.",
+        "description": "The shattered bone has been immobilized as securely as possible.  Multiple fragments remain damaged beneath the surface, and the limb is still severely impaired despite the stabilization.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -291,10 +287,9 @@
         "type": "wound",
         "id": "dw_stabilized_open_fracture",
         "name": {
-            "str": "stabilized open fracture",
-            "str_pl": "stabilized open fractures"
+            "str": "stabilized open fracture"
         },
-        "description": "The exposed fracture has been cleaned, covered, and immobilized. The bone and surrounding tissues remain severely damaged, but the injury is now protected and sufficiently stable to begin a long recovery.",
+        "description": "The exposed fracture has been cleaned, covered, and immobilized.  The bone and surrounding tissues remain severely damaged, but the injury is now protected and sufficiently stable to begin a long recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

@@ -1,0 +1,276 @@
+[
+  {
+    "type": "damage_type",
+    "id": "bash",
+    "copy-from": "bash",
+    "ondamage_eocs": [ "EOC_DW_DAMAGE_BASH_SECONDARY" ],
+    "//": "The same-ID self-copy preserves the installed vanilla damage type before appending the Detailed Wounds hook."
+  },
+  {
+    "type": "damage_type",
+    "id": "cut",
+    "copy-from": "cut",
+    "ondamage_eocs": [ "EOC_DW_DAMAGE_CUT_SECONDARY" ]
+  },
+  {
+    "type": "damage_type",
+    "id": "stab",
+    "copy-from": "stab",
+    "ondamage_eocs": [ "EOC_DW_DAMAGE_STAB_SECONDARY" ]
+  },
+  {
+    "type": "damage_type",
+    "id": "bullet",
+    "copy-from": "bullet",
+    "ondamage_eocs": [ "EOC_DW_DAMAGE_BULLET_SECONDARY" ]
+  },
+  {
+    "type": "damage_type",
+    "id": "electric",
+    "copy-from": "electric",
+    "ondamage_eocs": [ "EOC_DW_DAMAGE_ELECTRIC_SECONDARY" ]
+  },
+  {
+    "type": "damage_type",
+    "id": "heat",
+    "copy-from": "heat",
+    "ondamage_eocs": [ "EOC_DW_DAMAGE_HEAT_SECONDARY" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_DAMAGE_BASH_SECONDARY",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ "npc_is_character", { "math": [ "_damage_taken > 0" ] } ] },
+    "effect": [
+      {
+        "if": {
+          "compare_string": [
+            { "context_val": "bp" },
+            "arm_l",
+            "arm_r",
+            "hand_l",
+            "hand_r",
+            "leg_l",
+            "leg_r",
+            "foot_l",
+            "foot_r"
+          ]
+        },
+        "then": {
+          "run_eocs": [
+            "EOC_DW_STRUCTURAL_LIMB_BASH_MINOR",
+            "EOC_DW_STRUCTURAL_LIMB_BASH_MODERATE",
+            "EOC_DW_STRUCTURAL_LIMB_BASH_SEVERE",
+            "EOC_DW_STRUCTURAL_LIMB_BASH_EXTREME"
+          ],
+          "alpha_talker": "npc",
+          "beta_talker": "u"
+        }
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "bp" }, "torso" ] },
+        "then": {
+          "run_eocs": [
+            "EOC_DW_STRUCTURAL_TORSO_BASH_MODERATE",
+            "EOC_DW_STRUCTURAL_TORSO_BASH_SEVERE",
+            "EOC_DW_STRUCTURAL_TORSO_BASH_EXTREME"
+          ],
+          "alpha_talker": "npc",
+          "beta_talker": "u"
+        }
+      }
+    ],
+    "//": "ondamage_eocs uses u=source and npc=damaged target. The talker swap makes the damaged character u for the existing outcome EOCs."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_DAMAGE_CUT_SECONDARY",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [
+        "npc_is_character",
+        { "math": [ "_damage_taken > 0" ] },
+        {
+          "compare_string": [
+            { "context_val": "bp" },
+            "arm_l",
+            "arm_r",
+            "hand_l",
+            "hand_r",
+            "leg_l",
+            "leg_r",
+            "foot_l",
+            "foot_r"
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "run_eocs": [
+        "EOC_DW_STRUCTURAL_LIMB_CUT_LACERATION",
+        "EOC_DW_STRUCTURAL_LIMB_CUT_DEEP",
+        "EOC_DW_STRUCTURAL_LIMB_CUT_SEVERE",
+        "EOC_DW_STRUCTURAL_LIMB_CUT_AVULSION"
+      ],
+      "alpha_talker": "npc",
+      "beta_talker": "u"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_DAMAGE_STAB_SECONDARY",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ "npc_is_character", { "math": [ "_damage_taken > 0" ] } ] },
+    "effect": [
+      {
+        "if": {
+          "compare_string": [
+            { "context_val": "bp" },
+            "arm_l",
+            "arm_r",
+            "hand_l",
+            "hand_r",
+            "leg_l",
+            "leg_r",
+            "foot_l",
+            "foot_r"
+          ]
+        },
+        "then": {
+          "run_eocs": [
+            "EOC_DW_STRUCTURAL_LIMB_STAB_DEEP",
+            "EOC_DW_STRUCTURAL_LIMB_STAB_PENETRATING",
+            "EOC_DW_STRUCTURAL_LIMB_STAB_SEVERE",
+            "EOC_DW_STRUCTURAL_LIMB_STAB_DEVASTATING"
+          ],
+          "alpha_talker": "npc",
+          "beta_talker": "u"
+        }
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "bp" }, "torso" ] },
+        "then": {
+          "run_eocs": [
+            "EOC_DW_STRUCTURAL_TORSO_STAB_PUNCTURE",
+            "EOC_DW_STRUCTURAL_TORSO_STAB_DEEP",
+            "EOC_DW_STRUCTURAL_TORSO_STAB_PENETRATING",
+            "EOC_DW_STRUCTURAL_TORSO_STAB_SEVERE",
+            "EOC_DW_STRUCTURAL_TORSO_STAB_DEVASTATING"
+          ],
+          "alpha_talker": "npc",
+          "beta_talker": "u"
+        }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_DAMAGE_BULLET_SECONDARY",
+    "eoc_type": "ACTIVATION",
+    "condition": { "and": [ "npc_is_character", { "math": [ "_damage_taken > 0" ] } ] },
+    "effect": [
+      {
+        "if": {
+          "compare_string": [
+            { "context_val": "bp" },
+            "arm_l",
+            "arm_r",
+            "hand_l",
+            "hand_r",
+            "leg_l",
+            "leg_r",
+            "foot_l",
+            "foot_r"
+          ]
+        },
+        "then": {
+          "run_eocs": [
+            "EOC_DW_STRUCTURAL_LIMB_BULLET_SUPERFICIAL",
+            "EOC_DW_STRUCTURAL_LIMB_BULLET_PENETRATING",
+            "EOC_DW_STRUCTURAL_LIMB_BULLET_SEVERE",
+            "EOC_DW_STRUCTURAL_LIMB_BULLET_DEVASTATING"
+          ],
+          "alpha_talker": "npc",
+          "beta_talker": "u"
+        }
+      },
+      {
+        "if": { "compare_string": [ { "context_val": "bp" }, "torso" ] },
+        "then": {
+          "run_eocs": [
+            "EOC_DW_STRUCTURAL_TORSO_BULLET_SUPERFICIAL",
+            "EOC_DW_STRUCTURAL_TORSO_BULLET_PENETRATING",
+            "EOC_DW_STRUCTURAL_TORSO_BULLET_SEVERE",
+            "EOC_DW_STRUCTURAL_TORSO_BULLET_DEVASTATING"
+          ],
+          "alpha_talker": "npc",
+          "beta_talker": "u"
+        }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_DAMAGE_ELECTRIC_SECONDARY",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [
+        "npc_is_character",
+        { "math": [ "_damage_taken > 0" ] },
+        {
+          "compare_string": [
+            { "context_val": "bp" },
+            "arm_l",
+            "arm_r",
+            "hand_l",
+            "hand_r",
+            "leg_l",
+            "leg_r",
+            "foot_l",
+            "foot_r"
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "run_eocs": [
+        "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_MINOR",
+        "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_CONTACT",
+        "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_DEEP",
+        "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_SEVERE",
+        "EOC_DW_STRUCTURAL_LIMB_ELECTRIC_EXTENSIVE"
+      ],
+      "alpha_talker": "npc",
+      "beta_talker": "u"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DW_DAMAGE_HEAT_SECONDARY",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [
+        "npc_is_character",
+        { "math": [ "_damage_taken > 0" ] },
+        {
+          "compare_string": [
+            { "context_val": "bp" },
+            "arm_l",
+            "arm_r",
+            "hand_l",
+            "hand_r",
+            "leg_l",
+            "leg_r",
+            "foot_l",
+            "foot_r"
+          ]
+        }
+      ]
+    },
+    "effect": {
+      "run_eocs": [ "EOC_DW_STRUCTURAL_LIMB_HEAT_FULL_THICKNESS", "EOC_DW_STRUCTURAL_LIMB_HEAT_EXTENSIVE" ],
+      "alpha_talker": "npc",
+      "beta_talker": "u"
+    }
+  }
+]

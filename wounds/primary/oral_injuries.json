@@ -1,0 +1,687 @@
+[
+  {
+    "type": "wound",
+    "id": "dw_oral_puncture_wound",
+    "name": {
+      "str": "oral puncture wound"
+    },
+    "description": "A narrow object has pierced the lips or soft tissues of the mouth.  The small wound is painful when eating or drinking, but does not substantially interfere with breathing.",
+    "weight": 18,
+    "limit": 2,
+    "damage_types": [
+      "stab"
+    ],
+    "damage_required": [
+      1,
+      8
+    ],
+    "pain": [
+      1,
+      4
+    ],
+    "healing_time": [
+      "1 day",
+      "7 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.05
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.03
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_deep_oral_puncture_wound",
+    "name": {
+      "str": "deep oral puncture wound"
+    },
+    "description": "A penetrating object has passed deeply into the tissues of the mouth or lower face.  Swelling and hidden tissue damage make chewing, swallowing, and precise mouth movement difficult.",
+    "weight": 10,
+    "limit": 1,
+    "damage_types": [
+      "stab"
+    ],
+    "damage_required": [
+      7,
+      24
+    ],
+    "pain": [
+      4,
+      8
+    ],
+    "healing_time": [
+      "7 days",
+      "24 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.18
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.10
+      },
+      {
+        "score": "manip",
+        "value": 0.03
+      },
+      {
+        "score": "breathing",
+        "value": 0.05
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_severe_penetrating_oral_injury",
+    "name": {
+      "str": "severe penetrating oral injury",
+      "str_pl": "severe penetrating oral injuries"
+    },
+    "description": "A powerful thrust has torn deeply through the mouth and adjacent facial tissues.  The wound disrupts chewing and swallowing, hinders mouth movement, and the swelling narrows the airway.",
+    "weight": 4,
+    "limit": 1,
+    "damage_types": [
+      "stab"
+    ],
+    "damage_required": [
+      20,
+      1000
+    ],
+    "pain": [
+      8,
+      15
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.48
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.28
+      },
+      {
+        "score": "manip",
+        "value": 0.08
+      },
+      {
+        "score": "breathing",
+        "value": 0.22
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "No healing_time is intentional. Severe oral tissue destruction must be irrigated and debrided before normal recovery can begin."
+  },
+  {
+    "type": "wound",
+    "id": "dw_ballistic_oral_wound",
+    "name": {
+      "str": "ballistic oral wound"
+    },
+    "description": "A projectile has torn through the lips or superficial tissues of the mouth.  The wound is bruised and painful, making eating and drinking difficult without seriously obstructing the airway.",
+    "weight": 16,
+    "limit": 2,
+    "damage_types": [
+      "bullet"
+    ],
+    "damage_required": [
+      1,
+      12
+    ],
+    "pain": [
+      3,
+      7
+    ],
+    "healing_time": [
+      "4 days",
+      "16 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.15
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.08
+      },
+      {
+        "score": "manip",
+        "value": 0.03
+      },
+      {
+        "score": "breathing",
+        "value": 0.04
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_severe_maxillofacial_ballistic_trauma",
+    "name": {
+      "str": "severe maxillofacial ballistic trauma"
+    },
+    "description": "A projectile has caused extensive damage through the mouth and lower face.  Torn and swollen tissue sharply limits chewing and drinking and begins to interfere with the airway.",
+    "weight": 8,
+    "limit": 1,
+    "damage_types": [
+      "bullet"
+    ],
+    "damage_required": [
+      10,
+      35
+    ],
+    "pain": [
+      7,
+      13
+    ],
+    "healing_time": [
+      "18 days",
+      "60 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.40
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.22
+      },
+      {
+        "score": "manip",
+        "value": 0.07
+      },
+      {
+        "score": "breathing",
+        "value": 0.16
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_devastating_maxillofacial_ballistic_injury",
+    "name": {
+      "str": "devastating maxillofacial ballistic injury",
+      "str_pl": "devastating maxillofacial ballistic injuries"
+    },
+    "description": "A powerful projectile has devastated the mouth and lower face, leaving a large tract of shredded tissue.  Eating and drinking are profoundly impaired, mouth movement is difficult, and swelling and tissue disruption compromise breathing.",
+    "weight": 3,
+    "limit": 1,
+    "damage_types": [
+      "bullet"
+    ],
+    "damage_required": [
+      30,
+      1000
+    ],
+    "pain": [
+      10,
+      18
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.70
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.42
+      },
+      {
+        "score": "manip",
+        "value": 0.12
+      },
+      {
+        "score": "breathing",
+        "value": 0.35
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "No healing_time is intentional. Devastating oral ballistic tissue destruction requires debridement before the wound can enter a recoverable state."
+  },
+  {
+    "type": "wound",
+    "id": "dw_oral_thermal_burn",
+    "name": {
+      "str": "oral thermal burn"
+    },
+    "description": "Heat has burned the lips or surface tissues inside the mouth.  The inflamed tissue makes eating and drinking painful, but the airway remains clear.",
+    "weight": 18,
+    "limit": 2,
+    "damage_types": [
+      "heat"
+    ],
+    "damage_required": [
+      2,
+      10
+    ],
+    "pain": [
+      2,
+      5
+    ],
+    "healing_time": [
+      "2 days",
+      "10 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.08
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.05
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_deep_oral_thermal_burn",
+    "name": {
+      "str": "deep oral thermal burn"
+    },
+    "description": "Intense heat has burned deeply into oral tissue.  Swelling and blistered tissue substantially hinder eating and drinking and begin to narrow the airway.",
+    "weight": 9,
+    "limit": 1,
+    "damage_types": [
+      "heat"
+    ],
+    "damage_required": [
+      8,
+      25
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "healing_time": [
+      "10 days",
+      "35 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.25
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.14
+      },
+      {
+        "score": "breathing",
+        "value": 0.08
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_severe_oral_thermal_injury",
+    "name": {
+      "str": "severe oral thermal injury",
+      "str_pl": "severe oral thermal injuries"
+    },
+    "description": "Extreme heat has destroyed deep tissue across the mouth and upper airway.  Eating and drinking are severely impaired, and extensive swelling and damaged tissue compromise breathing.",
+    "weight": 4,
+    "limit": 1,
+    "damage_types": [
+      "heat"
+    ],
+    "damage_required": [
+      22,
+      1000
+    ],
+    "pain": [
+      7,
+      13
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.55
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.32
+      },
+      {
+        "score": "breathing",
+        "value": 0.25
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "No healing_time is intentional. Deeply destroyed oral tissue must be cooled and debrided before normal recovery can begin."
+  },
+  {
+    "type": "wound",
+    "id": "dw_oral_chemical_burn",
+    "name": {
+      "str": "oral chemical burn"
+    },
+    "description": "A corrosive substance has irritated and burned the surface of the mouth.  The inflamed tissue makes eating and drinking painful until the contaminant is flushed away and the tissue recovers.",
+    "weight": 18,
+    "limit": 2,
+    "damage_types": [
+      "acid"
+    ],
+    "damage_required": [
+      2,
+      10
+    ],
+    "pain": [
+      2,
+      5
+    ],
+    "healing_time": [
+      "2 days",
+      "10 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.10
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.06
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_deep_oral_chemical_burn",
+    "name": {
+      "str": "deep oral chemical burn"
+    },
+    "description": "Corrosive material has penetrated deeply into oral tissue.  Raw, swollen tissue makes eating and swallowing difficult and begins to interfere with the airway.",
+    "weight": 9,
+    "limit": 1,
+    "damage_types": [
+      "acid"
+    ],
+    "damage_required": [
+      8,
+      25
+    ],
+    "pain": [
+      5,
+      10
+    ],
+    "healing_time": [
+      "10 days",
+      "35 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.28
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.16
+      },
+      {
+        "score": "breathing",
+        "value": 0.10
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_severe_corrosive_oral_injury",
+    "name": {
+      "str": "severe corrosive oral injury",
+      "str_pl": "severe corrosive oral injuries"
+    },
+    "description": "A powerful corrosive exposure has destroyed deep tissue throughout the mouth.  Eating and drinking are profoundly impaired, and swelling and chemical damage threaten the airway.",
+    "weight": 4,
+    "limit": 1,
+    "damage_types": [
+      "acid"
+    ],
+    "damage_required": [
+      22,
+      1000
+    ],
+    "pain": [
+      7,
+      13
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.58
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.35
+      },
+      {
+        "score": "breathing",
+        "value": 0.28
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "No healing_time is intentional. The corrosive agent must be removed by irrigation before nonviable oral tissue can be debrided."
+  },
+  {
+    "type": "wound",
+    "id": "dw_oral_electrical_burn",
+    "name": {
+      "str": "oral electrical burn"
+    },
+    "description": "Electrical current has burned the lips or surface tissue inside the mouth.  The contact injury is painful and makes eating and drinking uncomfortable, with only mild local swelling.",
+    "weight": 16,
+    "limit": 2,
+    "damage_types": [
+      "electric"
+    ],
+    "damage_required": [
+      2,
+      18
+    ],
+    "pain": [
+      2,
+      6
+    ],
+    "healing_time": [
+      "3 days",
+      "14 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.10
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.06
+      },
+      {
+        "score": "breathing",
+        "value": 0.03
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_deep_oral_electrical_tissue_injury",
+    "name": {
+      "str": "deep oral electrical tissue injury",
+      "str_pl": "deep oral electrical tissue injuries"
+    },
+    "description": "A strong electrical current has burned deeply through the mouth.  Damaged and swollen tissue substantially limits eating and drinking and obstructs the airway, while any separate nerve injury remains independent.",
+    "weight": 5,
+    "limit": 1,
+    "damage_types": [
+      "electric"
+    ],
+    "damage_required": [
+      15,
+      1000
+    ],
+    "pain": [
+      6,
+      13
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.40
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.24
+      },
+      {
+        "score": "breathing",
+        "value": 0.20
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "No healing_time is intentional. Deep electrical tissue destruction must be debrided before the surviving oral tissue can recover."
+  },
+  {
+    "type": "wound",
+    "id": "dw_oral_freezing_injury",
+    "name": {
+      "str": "oral freezing injury",
+      "str_pl": "oral freezing injuries"
+    },
+    "description": "Cold exposure has numbed and injured the lips and surface tissues of the mouth.  Stiffness and returning sensation make eating and drinking uncomfortable without substantially obstructing breathing.",
+    "weight": 14,
+    "limit": 2,
+    "damage_types": [
+      "cold"
+    ],
+    "damage_required": [
+      2,
+      20
+    ],
+    "pain": [
+      1,
+      5
+    ],
+    "healing_time": [
+      "4 days",
+      "16 days"
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.12
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.08
+      },
+      {
+        "score": "breathing",
+        "value": 0.03
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB"
+  },
+  {
+    "type": "wound",
+    "id": "dw_deep_oral_freezing_injury",
+    "name": {
+      "str": "deep oral freezing injury",
+      "str_pl": "deep oral freezing injuries"
+    },
+    "description": "Extreme cold has frozen deeper oral tissue.  Pronounced numbness, stiffness, and swelling impede eating and drinking and begin to compromise breathing.",
+    "weight": 5,
+    "limit": 1,
+    "damage_types": [
+      "cold"
+    ],
+    "damage_required": [
+      16,
+      1000
+    ],
+    "pain": [
+      4,
+      10
+    ],
+    "limb_scores": [
+      {
+        "score": "consume_solid",
+        "value": 0.38
+      },
+      {
+        "score": "consume_liquid",
+        "value": 0.22
+      },
+      {
+        "score": "breathing",
+        "value": 0.16
+      }
+    ],
+    "whitelist_body_part_types": [
+      "mouth"
+    ],
+    "blacklist_bp_with_flag": "BIONIC_LIMB",
+    "//": "No healing_time is intentional. Deeply frozen oral tissue must be carefully rewarmed before normal recovery can begin."
+  }
+]

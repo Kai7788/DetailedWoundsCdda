@@ -3,10 +3,9 @@
         "type": "wound",
         "id": "dw_cleaned_minor_puncture",
         "name": {
-            "str": "cleaned minor puncture wound",
-            "str_pl": "cleaned minor puncture wounds"
+            "str": "cleaned minor puncture wound"
         },
-        "description": "The small puncture has been carefully irrigated, removing loose dirt and contaminants from the narrow wound channel. The tissue remains mildly tender but should recover quickly if kept clean.",
+        "description": "The small puncture has been carefully irrigated, removing loose dirt and contaminants from the narrow wound channel.  The tissue remains mildly tender but should recover quickly if kept clean.",
         "weight": 1,
         "limit": 3,
         "damage_types": [
@@ -36,10 +35,9 @@
         "type": "wound",
         "id": "dw_cleaned_puncture_wound",
         "name": {
-            "str": "cleaned puncture wound",
-            "str_pl": "cleaned puncture wounds"
+            "str": "cleaned puncture wound"
         },
-        "description": "The puncture wound has been thoroughly flushed and disinfected. The narrow channel remains painful and damaged beneath the surface, but most accessible contamination has been removed.",
+        "description": "The puncture wound has been thoroughly flushed and disinfected.  The narrow channel remains painful and damaged beneath the surface, but most accessible contamination has been removed.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -103,10 +101,9 @@
         "type": "wound",
         "id": "dw_cleaned_deep_puncture",
         "name": {
-            "str": "cleaned deep puncture wound",
-            "str_pl": "cleaned deep puncture wounds"
+            "str": "cleaned deep puncture wound"
         },
-        "description": "The deep wound channel has been carefully irrigated and disinfected. Significant tissue damage remains beneath the small surface opening, and movement can still disturb the injured tissue.",
+        "description": "The deep wound channel has been carefully irrigated and disinfected.  Significant tissue damage remains beneath the small surface opening, and movement can still disturb the injured tissue.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -170,10 +167,9 @@
         "type": "wound",
         "id": "dw_cleaned_penetrating_wound",
         "name": {
-            "str": "cleaned penetrating wound",
-            "str_pl": "cleaned penetrating wounds"
+            "str": "cleaned penetrating wound"
         },
-        "description": "The penetrating wound has been irrigated and disinfected as thoroughly as possible. The long wound channel remains seriously damaged, and deeper structures may still be injured despite the cleaner external wound.",
+        "description": "The penetrating wound has been irrigated and disinfected as thoroughly as possible.  The long wound channel remains seriously damaged, and deeper structures may still be injured despite the cleaner external wound.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -237,10 +233,9 @@
         "type": "wound",
         "id": "dw_debrided_severe_penetrating_wound",
         "name": {
-            "str": "debrided severe penetrating wound",
-            "str_pl": "debrided severe penetrating wounds"
+            "str": "debrided severe penetrating wound"
         },
-        "description": "Loose and visibly nonviable tissue has been removed from the severe penetrating wound. The wound channel has been thoroughly irrigated and protected, but extensive deep tissue damage remains.",
+        "description": "Loose and visibly nonviable tissue has been removed from the severe penetrating wound.  The wound channel has been thoroughly irrigated and protected, but extensive deep tissue damage remains.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -304,10 +299,9 @@
         "type": "wound",
         "id": "dw_debrided_devastating_penetrating_wound",
         "name": {
-            "str": "debrided devastating penetrating wound",
-            "str_pl": "debrided devastating penetrating wounds"
+            "str": "debrided devastating penetrating wound"
         },
-        "description": "Extensive destroyed and nonviable tissue has been removed from the devastating penetrating injury. The deep wound has been aggressively irrigated and protected, but a major tissue defect and severe underlying trauma remain.",
+        "description": "Extensive destroyed and nonviable tissue has been removed from the devastating penetrating injury.  The deep wound has been aggressively irrigated and protected, but a major tissue defect and severe underlying trauma remain.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

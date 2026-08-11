@@ -6,7 +6,7 @@
       "str": "scratch",
       "str_pl": "scratches"
     },
-    "description": "A thin superficial break runs across the skin. The injury is little more than an irritated line, but the damaged surface is exposed.",
+    "description": "A thin superficial break runs across the skin.  The injury is little more than an irritated line, but the damaged surface is exposed.",
     "weight": 20,
     "limit": 3,
     "damage_types": [
@@ -34,10 +34,9 @@
     "type": "wound",
     "id": "dw_shallow_cut",
     "name": {
-      "str": "shallow cut",
-      "str_pl": "shallow cuts"
+      "str": "shallow cut"
     },
-    "description": "The skin has been split, leaving a narrow superficial wound. The tissue beneath appears largely intact.",
+    "description": "The skin has been split, leaving a narrow superficial wound.  The tissue beneath appears largely intact.",
     "weight": 18,
     "limit": 2,
     "damage_types": [
@@ -87,10 +86,9 @@
     "type": "wound",
     "id": "dw_laceration",
     "name": {
-      "str": "laceration",
-      "str_pl": "lacerations"
+      "str": "laceration"
     },
-    "description": "The skin and underlying tissue have been cut open. The wound edges separate visibly when the injured area moves.",
+    "description": "The skin and underlying tissue have been cut open.  The wound edges separate visibly when the injured area moves.",
     "weight": 14,
     "limit": 2,
     "damage_types": [
@@ -152,10 +150,9 @@
     "type": "wound",
     "id": "dw_deep_laceration",
     "name": {
-      "str": "deep laceration",
-      "str_pl": "deep lacerations"
+      "str": "deep laceration"
     },
-    "description": "The injury extends well beneath the skin into deeper soft tissue. The wound gapes noticeably and movement pulls painfully at the exposed tissue.",
+    "description": "The injury extends well beneath the skin into deeper soft tissue.  The wound gapes noticeably and movement pulls painfully at the exposed tissue.",
     "weight": 10,
     "limit": 2,
     "damage_types": [
@@ -217,10 +214,9 @@
     "type": "wound",
     "id": "dw_severe_laceration",
     "name": {
-      "str": "severe laceration",
-      "str_pl": "severe lacerations"
+      "str": "severe laceration"
     },
-    "description": "A deep, ragged wound has torn through several layers of tissue. The edges gape widely and substantial underlying tissue has been damaged.",
+    "description": "A deep, ragged wound has torn through several layers of tissue.  The edges gape widely and substantial underlying tissue has been damaged.",
     "weight": 6,
     "limit": 1,
     "damage_types": [
@@ -283,10 +279,9 @@
     "type": "wound",
     "id": "dw_avulsion_wound",
     "name": {
-      "str": "avulsion wound",
-      "str_pl": "avulsion wounds"
+      "str": "avulsion wound"
     },
-    "description": "A violent cutting or tearing force has partially ripped tissue away from the body. The wound is broad, deep, and badly disrupted, leaving extensive exposed tissue.",
+    "description": "A violent cutting or tearing force has partially ripped tissue away from the body.  The wound is broad, deep, and badly disrupted, leaving extensive exposed tissue.",
     "weight": 2,
     "limit": 1,
     "damage_types": [

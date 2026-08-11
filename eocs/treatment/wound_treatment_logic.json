@@ -448,34 +448,6 @@
     },
     {
         "type": "effect_on_condition",
-        "id": "EOC_DW_TREATMENT_LOCAL_INFECTION",
-        "eoc_type": "ACTIVATION",
-        "//": "Reusable infection-treatment entry point. It is not called by ordinary wound cleaning. A future medicine/use-action or bridge should call it for the selected bp.",
-        "condition": {
-            "and": [
-                {
-                    "expects_vars": [
-                        "bp"
-                    ]
-                },
-                {
-                    "u_has_effect": "dw_local_wound_infection",
-                    "intensity": 2,
-                    "bodypart": {
-                        "context_val": "bp"
-                    }
-                }
-            ]
-        },
-        "effect": {
-            "run_eocs": "EOC_DW_TREATMENT_DOWNGRADE_LOCAL_INFECTION"
-        },
-        "false_effect": {
-            "run_eocs": "EOC_DW_TREATMENT_CLEAR_LOCAL_INFECTION"
-        }
-    },
-    {
-        "type": "effect_on_condition",
         "id": "EOC_DW_TREATMENT_DOWNGRADE_LOCAL_INFECTION",
         "eoc_type": "ACTIVATION",
         "condition": {

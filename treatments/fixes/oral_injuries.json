@@ -1,0 +1,548 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_oral_puncture_wound",
+    "name": "clean oral puncture wound",
+    "description": "Carefully flush the small puncture inside the mouth to remove loose debris and contamination.",
+    "time": "3 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_oral_puncture_wound"
+    ],
+    "wounds_added": [
+      "dw_cleaned_oral_puncture_wound"
+    ],
+    "success_msg": "You carefully irrigate the oral puncture wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_deep_oral_puncture_wound",
+    "name": "clean deep oral puncture wound",
+    "description": "Thoroughly irrigate the deep oral wound channel and disinfect the accessible damaged tissue.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_oral_puncture_wound"
+    ],
+    "wounds_added": [
+      "dw_cleaned_deep_oral_puncture_wound"
+    ],
+    "success_msg": "You thoroughly clean the deep oral puncture wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_severe_penetrating_oral_injury",
+    "name": "debride severe penetrating oral injury",
+    "description": "Remove loose and nonviable tissue from the severe oral wound and thoroughly irrigate the deep channel.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_irrigate_wound",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_penetrating_oral_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_severe_penetrating_oral_injury"
+    ],
+    "success_msg": "You debride and irrigate the severe penetrating oral injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_clean_ballistic_oral_wound",
+    "name": "clean ballistic oral wound",
+    "description": "Irrigate the oral ballistic wound and disinfect the accessible torn tissue.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        1
+      ],
+      [
+        "dw_disinfect_wound",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_ballistic_oral_wound"
+    ],
+    "wounds_added": [
+      "dw_cleaned_ballistic_oral_wound"
+    ],
+    "success_msg": "You clean and irrigate the ballistic oral wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_severe_maxillofacial_ballistic_trauma",
+    "name": "debride severe maxillofacial ballistic trauma",
+    "description": "Remove loose and visibly nonviable tissue from the severe oral ballistic wound and irrigate its tract.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_irrigate_wound",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_maxillofacial_ballistic_trauma"
+    ],
+    "wounds_added": [
+      "dw_debrided_severe_maxillofacial_ballistic_trauma"
+    ],
+    "success_msg": "You debride and irrigate the severe maxillofacial ballistic wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_devastating_maxillofacial_ballistic_injury",
+    "name": "debride devastating maxillofacial ballistic injury",
+    "description": "Aggressively remove shredded and nonviable tissue from the devastating oral ballistic wound and repeatedly irrigate the tract.",
+    "time": "45 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_irrigate_wound",
+        3
+      ]
+    ],
+    "wounds_removed": [
+      "dw_devastating_maxillofacial_ballistic_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_devastating_maxillofacial_ballistic_injury"
+    ],
+    "success_msg": "You debride and irrigate the devastating maxillofacial ballistic wound.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_cool_oral_thermal_burn",
+    "name": "cool oral thermal burn",
+    "description": "Gently rinse and cool the burned oral tissue with clean water.",
+    "time": "3 minutes",
+    "skills": {
+      "firstaid": 0
+    },
+    "requirements": [
+      [
+        "dw_oral_burn_cooling",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_oral_thermal_burn"
+    ],
+    "wounds_added": [
+      "dw_cooled_oral_thermal_burn"
+    ],
+    "success_msg": "You gently cool the oral thermal burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_cool_deep_oral_thermal_burn",
+    "name": "cool deep oral thermal burn",
+    "description": "Carefully rinse and cool the deeply burned oral tissue with clean water.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_oral_burn_cooling",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_oral_thermal_burn"
+    ],
+    "wounds_added": [
+      "dw_cooled_deep_oral_thermal_burn"
+    ],
+    "success_msg": "You carefully cool the deep oral thermal burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_severe_oral_thermal_injury",
+    "name": "debride severe oral thermal injury",
+    "description": "Cool the severe oral burn and remove clearly nonviable burned tissue without applying an exterior dressing.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_oral_burn_cooling",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_oral_thermal_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_severe_oral_thermal_injury"
+    ],
+    "success_msg": "You cool and debride the severe oral thermal injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_oral_chemical_burn",
+    "name": "irrigate oral chemical burn",
+    "description": "Immediately flush the mouth with a large quantity of water to remove the corrosive substance.",
+    "time": "5 minutes",
+    "skills": {
+      "firstaid": 0
+    },
+    "requirements": [
+      [
+        "dw_irrigate_chemical_burn",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_oral_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_irrigated_oral_chemical_burn"
+    ],
+    "success_msg": "You thoroughly irrigate the oral chemical burn."
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_deep_oral_chemical_burn",
+    "name": "irrigate deep oral chemical burn",
+    "description": "Continuously flush the deeply burned oral tissue with a large quantity of water to remove corrosive material.",
+    "time": "10 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_irrigate_chemical_burn",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_oral_chemical_burn"
+    ],
+    "wounds_added": [
+      "dw_irrigated_deep_oral_chemical_burn"
+    ],
+    "success_msg": "You thoroughly irrigate the deep oral chemical burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_irrigate_severe_corrosive_oral_injury",
+    "name": "irrigate severe corrosive oral injury",
+    "description": "Repeatedly flush the severely injured mouth with a very large volume of water before attempting debridement.",
+    "time": "15 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_irrigate_chemical_burn",
+        3
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_corrosive_oral_injury"
+    ],
+    "wounds_added": [
+      "dw_irrigated_severe_corrosive_oral_injury"
+    ],
+    "success_msg": "You repeatedly irrigate the severe corrosive oral injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_irrigated_severe_corrosive_oral_injury",
+    "name": "debride irrigated severe corrosive oral injury",
+    "description": "After the corrosive agent has been flushed away, remove clearly nonviable tissue from the severe oral injury.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_irrigated_severe_corrosive_oral_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_severe_corrosive_oral_injury"
+    ],
+    "success_msg": "You debride the irrigated severe corrosive oral injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_cool_oral_electrical_burn",
+    "name": "cool oral electrical burn",
+    "description": "Once the electrical source is no longer present, gently rinse and cool the local oral contact burn.",
+    "time": "5 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_oral_burn_cooling",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_oral_electrical_burn"
+    ],
+    "wounds_added": [
+      "dw_cooled_oral_electrical_burn"
+    ],
+    "success_msg": "You rinse and cool the oral electrical burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_deep_oral_electrical_tissue_injury",
+    "name": "debride deep oral electrical tissue injury",
+    "description": "Remove clearly nonviable electrically burned oral tissue, then cool and rinse the surviving tissue.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_oral_burn_cooling",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_oral_electrical_tissue_injury"
+    ],
+    "wounds_added": [
+      "dw_debrided_deep_oral_electrical_tissue_injury"
+    ],
+    "success_msg": "You debride and cool the deep oral electrical tissue injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_oral_freezing_injury",
+    "name": "rewarm oral freezing injury",
+    "description": "Gradually rewarm the cold-injured lips and mouth using clean warm compresses.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_oral_freezing_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_oral_freezing_injury"
+    ],
+    "success_msg": "You carefully rewarm the oral freezing injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_rewarm_deep_oral_freezing_injury",
+    "name": "rewarm deep oral freezing injury",
+    "description": "Slowly rewarm the deeply frozen oral tissue using clean warm compresses while protecting it from further cold exposure.",
+    "time": "18 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_controlled_rewarming",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_oral_freezing_injury"
+    ],
+    "wounds_added": [
+      "dw_rewarmed_deep_oral_freezing_injury"
+    ],
+    "success_msg": "You gradually rewarm the deep oral freezing injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,172 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_DEEP_TORSO_CONTUSION",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_deep_torso_contusion to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_deep_torso_contusion"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_INTERNAL_SOFT_TISSUE_TRAUMA",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_internal_soft_tissue_trauma to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_internal_soft_tissue_trauma"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_INTERNAL_ORGAN_CONTUSION",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_internal_organ_contusion to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_internal_organ_contusion"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_SEVERE_CRUSH_TRAUMA",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_severe_crush_trauma to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_severe_crush_trauma"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_DEEP_PENETRATING_TORSO_INJURY",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_deep_penetrating_torso_injury to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_deep_penetrating_torso_injury"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_SEVERE_PENETRATING_TORSO_INJURY",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_severe_penetrating_torso_injury to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_severe_penetrating_torso_injury"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_MAJOR_PENETRATING_ORGAN_TRAUMA",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_major_penetrating_organ_trauma to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_major_penetrating_organ_trauma"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_BALLISTIC_INTERNAL_TRAUMA",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_ballistic_internal_trauma to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_ballistic_internal_trauma"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_SEVERE_BALLISTIC_INTERNAL_TRAUMA",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_severe_ballistic_internal_trauma to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_severe_ballistic_internal_trauma"
+        }
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_DW_STRUCTURAL_ADD_DEVASTATING_BALLISTIC_INTERNAL_TRAUMA",
+        "eoc_type": "ACTIVATION",
+        "//": "Adds secondary wound dw_devastating_ballistic_internal_trauma to the body part supplied in bp.",
+        "condition": {
+            "expects_vars": [
+                "bp"
+            ]
+        },
+        "effect": {
+            "u_add_wound": {
+                "context_val": "bp"
+            },
+            "wound_id": "dw_devastating_ballistic_internal_trauma"
+        }
+    }
+]

@@ -3,10 +3,9 @@
     "type": "wound",
     "id": "dw_superficial_burn",
     "name": {
-      "str": "superficial burn",
-      "str_pl": "superficial burns"
+      "str": "superficial burn"
     },
-    "description": "The skin is reddened, warm, and painfully irritated. The damage appears limited to the outermost layers of tissue.",
+    "description": "The skin is reddened, warm, and painfully irritated.  The damage appears limited to the outermost layers of tissue.",
     "weight": 20,
     "limit": 3,
     "damage_types": [
@@ -34,10 +33,9 @@
     "type": "wound",
     "id": "dw_superficial_partial_thickness_burn",
     "name": {
-      "str": "superficial partial-thickness burn",
-      "str_pl": "superficial partial-thickness burns"
+      "str": "superficial partial-thickness burn"
     },
-    "description": "Heat has damaged several layers of skin. The area is intensely red and swollen, with blistering beginning to form across the injured tissue.",
+    "description": "Heat has damaged several layers of skin.  The area is intensely red and swollen, with blistering beginning to form across the injured tissue.",
     "weight": 15,
     "limit": 2,
     "damage_types": [
@@ -99,10 +97,9 @@
     "type": "wound",
     "id": "dw_deep_partial_thickness_burn",
     "name": {
-      "str": "deep partial-thickness burn",
-      "str_pl": "deep partial-thickness burns"
+      "str": "deep partial-thickness burn"
     },
-    "description": "The burn extends deeply through the skin. Blistered and damaged tissue covers the area, with patches of pale or darkened flesh visible beneath the surface.",
+    "description": "The burn extends deeply through the skin.  Blistered and damaged tissue covers the area, with patches of pale or darkened flesh visible beneath the surface.",
     "weight": 10,
     "limit": 2,
     "damage_types": [
@@ -164,10 +161,9 @@
     "type": "wound",
     "id": "dw_full_thickness_burn",
     "name": {
-      "str": "full-thickness burn",
-      "str_pl": "full-thickness burns"
+      "str": "full-thickness burn"
     },
-    "description": "The heat has destroyed the full thickness of the skin and damaged deeper tissue. The center of the injury appears pale, leathery, or blackened, surrounded by severely burned flesh.",
+    "description": "The heat has destroyed the full thickness of the skin and damaged deeper tissue.  The center of the injury appears pale, leathery, or blackened, surrounded by severely burned flesh.",
     "weight": 8,
     "limit": 1,
     "damage_types": [
@@ -226,10 +222,9 @@
     "type": "wound",
     "id": "dw_extensive_full_thickness_burn",
     "name": {
-      "str": "extensive full-thickness burn",
-      "str_pl": "extensive full-thickness burns"
+      "str": "extensive full-thickness burn"
     },
-    "description": "A large section of tissue has been catastrophically burned. The skin is destroyed and deeply damaged tissue lies exposed beneath charred and leathery areas.",
+    "description": "A large section of tissue has been catastrophically burned.  The skin is destroyed and deeply damaged tissue lies exposed beneath charred and leathery areas.",
     "weight": 5,
     "limit": 1,
     "damage_types": [

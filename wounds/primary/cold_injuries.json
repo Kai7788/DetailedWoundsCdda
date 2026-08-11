@@ -6,7 +6,7 @@
             "str": "mild cold injury",
             "str_pl": "mild cold injuries"
         },
-        "description": "Localized exposure to extreme cold has chilled and mildly damaged the tissue. The affected area feels numb, stiff, and unpleasantly sensitive as sensation begins to return.",
+        "description": "Localized exposure to extreme cold has chilled and mildly damaged the tissue.  The affected area feels numb, stiff, and unpleasantly sensitive as sensation begins to return.",
         "weight": 20,
         "limit": 3,
         "damage_types": [
@@ -37,7 +37,7 @@
             "str": "superficial freezing injury",
             "str_pl": "superficial freezing injuries"
         },
-        "description": "Extreme cold has damaged the superficial tissues. The affected area is numb and stiff, with reduced coordination and increasing pain as the tissue warms.",
+        "description": "Extreme cold has damaged the superficial tissues.  The affected area is numb and stiff, with reduced coordination and increasing pain as the tissue warms.",
         "weight": 16,
         "limit": 2,
         "damage_types": [
@@ -86,7 +86,7 @@
             "str": "deep freezing injury",
             "str_pl": "deep freezing injuries"
         },
-        "description": "The cold has penetrated deeply enough to damage tissue beneath the surface. Numbness, stiffness, swelling, and impaired movement persist even after the immediate exposure has ended.",
+        "description": "The cold has penetrated deeply enough to damage tissue beneath the surface.  Numbness, stiffness, swelling, and impaired movement persist even after the immediate exposure has ended.",
         "weight": 10,
         "limit": 2,
         "damage_types": [
@@ -151,7 +151,7 @@
             "str": "severe cold tissue injury",
             "str_pl": "severe cold tissue injuries"
         },
-        "description": "Prolonged or extremely intense cold has badly damaged deep tissue. The affected area is swollen, stiff, partially numb, and difficult to use normally.",
+        "description": "Prolonged or extremely intense cold has badly damaged deep tissue.  The affected area is swollen, stiff, partially numb, and difficult to use normally.",
         "weight": 6,
         "limit": 1,
         "damage_types": [
@@ -221,7 +221,7 @@
             "str": "extensive cryogenic tissue injury",
             "str_pl": "extensive cryogenic tissue injuries"
         },
-        "description": "Extreme cryogenic exposure has devastated the affected tissue. Deep structures are badly damaged, sensation is greatly diminished, and normal use of the area is severely impaired.",
+        "description": "Extreme cryogenic exposure has devastated the affected tissue.  Deep structures are badly damaged, sensation is greatly diminished, and normal use of the area is severely impaired.",
         "weight": 3,
         "limit": 1,
         "damage_types": [

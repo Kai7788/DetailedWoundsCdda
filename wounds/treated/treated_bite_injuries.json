@@ -3,10 +3,9 @@
         "type": "wound",
         "id": "dw_cleaned_superficial_bite_wound",
         "name": {
-            "str": "cleaned superficial bite wound",
-            "str_pl": "cleaned superficial bite wounds"
+            "str": "cleaned superficial bite wound"
         },
-        "description": "The shallow tooth wounds have been thoroughly cleaned and irrigated. The surrounding tissue remains bruised and tender, but accessible debris and contamination have been removed and the injury can recover under cleaner conditions.",
+        "description": "The shallow tooth wounds have been thoroughly cleaned and irrigated.  The surrounding tissue remains bruised and tender, but accessible debris and contamination have been removed and the injury can recover under cleaner conditions.",
         "weight": 1,
         "limit": 3,
         "damage_types": [
@@ -34,10 +33,9 @@
         "type": "wound",
         "id": "dw_cleaned_deep_bite_wound",
         "name": {
-            "str": "cleaned deep bite wound",
-            "str_pl": "cleaned deep bite wounds"
+            "str": "cleaned deep bite wound"
         },
-        "description": "The deep tooth punctures have been carefully irrigated and disinfected. The narrow wound channels remain painful and damaged beneath the surface, but accessible contamination has been removed and healing can proceed more safely.",
+        "description": "The deep tooth punctures have been carefully irrigated and disinfected.  The narrow wound channels remain painful and damaged beneath the surface, but accessible contamination has been removed and healing can proceed more safely.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -99,10 +97,9 @@
         "type": "wound",
         "id": "dw_debrided_tearing_bite_wound",
         "name": {
-            "str": "debrided tearing bite wound",
-            "str_pl": "debrided tearing bite wounds"
+            "str": "debrided tearing bite wound"
         },
-        "description": "Loose and clearly nonviable tissue has been removed from the ragged bite wound. The injury has been thoroughly irrigated and protected, but substantial torn tissue remains painful and mechanically impaired while it heals.",
+        "description": "Loose and clearly nonviable tissue has been removed from the ragged bite wound.  The injury has been thoroughly irrigated and protected, but substantial torn tissue remains painful and mechanically impaired while it heals.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -167,7 +164,7 @@
             "str": "cleaned crushing bite injury",
             "str_pl": "cleaned crushing bite injuries"
         },
-        "description": "The punctures produced by the crushing bite have been thoroughly cleaned and irrigated, and the damaged area has been protected. Deep bruising and compression damage remain substantial despite treatment.",
+        "description": "The punctures produced by the crushing bite have been thoroughly cleaned and irrigated, and the damaged area has been protected.  Deep bruising and compression damage remain substantial despite treatment.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -232,7 +229,7 @@
             "str": "debrided devastating bite injury",
             "str_pl": "debrided devastating bite injuries"
         },
-        "description": "Extensive shredded and nonviable tissue has been removed from the devastating bite injury. The remaining wound has been aggressively irrigated and protected, but major tissue loss, deep trauma, and severe functional impairment remain.",
+        "description": "Extensive shredded and nonviable tissue has been removed from the devastating bite injury.  The remaining wound has been aggressively irrigated and protected, but major tissue loss, deep trauma, and severe functional impairment remain.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

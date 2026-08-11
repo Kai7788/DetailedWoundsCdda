@@ -3,10 +3,9 @@
     "type": "wound",
     "id": "dw_minor_bruise",
     "name": {
-      "str": "minor bruise",
-      "str_pl": "minor bruises"
+      "str": "minor bruise"
     },
-    "description": "A small area of tissue is mildly swollen and tender. Faint discoloration is beginning to show beneath the skin.",
+    "description": "A small area of tissue is mildly swollen and tender.  Faint discoloration is beginning to show beneath the skin.",
     "weight": 20,
     "limit": 3,
     "damage_types": [
@@ -34,10 +33,9 @@
     "type": "wound",
     "id": "dw_heavy_bruise",
     "name": {
-      "str": "heavy bruise",
-      "str_pl": "heavy bruises"
+      "str": "heavy bruise"
     },
-    "description": "A dark bruise covers the injured tissue. The area is noticeably swollen and painful when pressed or moved.",
+    "description": "A dark bruise covers the injured tissue.  The area is noticeably swollen and painful when pressed or moved.",
     "weight": 15,
     "limit": 2,
     "damage_types": [
@@ -99,10 +97,9 @@
     "type": "wound",
     "id": "dw_severe_contusion",
     "name": {
-      "str": "severe contusion",
-      "str_pl": "severe contusions"
+      "str": "severe contusion"
     },
-    "description": "A broad area of tissue has suffered substantial blunt trauma. Deep discoloration and swelling surround the injury, and movement causes significant pain.",
+    "description": "A broad area of tissue has suffered substantial blunt trauma.  Deep discoloration and swelling surround the injury, and movement causes significant pain.",
     "weight": 10,
     "limit": 1,
     "damage_types": [
@@ -164,10 +161,9 @@
     "type": "wound",
     "id": "dw_massive_contusion",
     "name": {
-      "str": "massive contusion",
-      "str_pl": "massive contusions"
+      "str": "massive contusion"
     },
-    "description": "The tissue has been badly damaged by a powerful blunt impact. Extensive swelling and deep discoloration cover the area, and even slight movement sends pain through the injured body part.",
+    "description": "The tissue has been badly damaged by a powerful blunt impact.  Extensive swelling and deep discoloration cover the area, and even slight movement sends pain through the injured body part.",
     "weight": 5,
     "limit": 1,
     "damage_types": [

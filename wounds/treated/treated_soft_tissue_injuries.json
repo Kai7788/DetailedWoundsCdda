@@ -3,10 +3,9 @@
         "type": "wound",
         "id": "dw_supported_muscle_strain",
         "name": {
-            "str": "supported muscle strain",
-            "str_pl": "supported muscle strains"
+            "str": "supported muscle strain"
         },
-        "description": "The strained muscle has been supported and protected from excessive movement. The tissue remains sore and weakened, but reduced mechanical stress allows it to recover more reliably.",
+        "description": "The strained muscle has been supported and protected from excessive movement.  The tissue remains sore and weakened, but reduced mechanical stress allows it to recover more reliably.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -75,10 +74,9 @@
         "type": "wound",
         "id": "dw_supported_partial_muscle_tear",
         "name": {
-            "str": "supported partial muscle tear",
-            "str_pl": "supported partial muscle tears"
+            "str": "supported partial muscle tear"
         },
-        "description": "The partially torn muscle has been supported and movement through the injured tissue has been restricted. The muscle remains painful and weak, but the surviving fibers can begin to repair.",
+        "description": "The partially torn muscle has been supported and movement through the injured tissue has been restricted.  The muscle remains painful and weak, but the surviving fibers can begin to repair.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -150,10 +148,9 @@
         "type": "wound",
         "id": "dw_repaired_muscle_rupture",
         "name": {
-            "str": "repaired muscle rupture",
-            "str_pl": "repaired muscle ruptures"
+            "str": "repaired muscle rupture"
         },
-        "description": "The completely ruptured muscle has been approximated and repaired as well as possible. The muscle remains severely weakened and painful, but continuity has been restored sufficiently for a long recovery to begin.",
+        "description": "The completely ruptured muscle has been approximated and repaired as well as possible.  The muscle remains severely weakened and painful, but continuity has been restored sufficiently for a long recovery to begin.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -225,10 +222,9 @@
         "type": "wound",
         "id": "dw_repaired_muscle_laceration",
         "name": {
-            "str": "repaired muscle laceration",
-            "str_pl": "repaired muscle lacerations"
+            "str": "repaired muscle laceration"
         },
-        "description": "The divided muscle fibers have been carefully approximated and supported after the overlying wound was treated. Deep muscular damage remains, but the tissue is now positioned for more orderly healing.",
+        "description": "The divided muscle fibers have been carefully approximated and supported after the overlying wound was treated.  Deep muscular damage remains, but the tissue is now positioned for more orderly healing.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -299,10 +295,9 @@
         "type": "wound",
         "id": "dw_repaired_severe_muscle_laceration",
         "name": {
-            "str": "repaired severe muscle laceration",
-            "str_pl": "repaired severe muscle lacerations"
+            "str": "repaired severe muscle laceration"
         },
-        "description": "The extensively divided muscle has been repaired and supported. Large areas of traumatized tissue remain weak and painful, but the muscle has regained enough continuity for prolonged recovery to begin.",
+        "description": "The extensively divided muscle has been repaired and supported.  Large areas of traumatized tissue remain weak and painful, but the muscle has regained enough continuity for prolonged recovery to begin.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -373,10 +368,9 @@
         "type": "wound",
         "id": "dw_supported_tendon_strain",
         "name": {
-            "str": "supported tendon strain",
-            "str_pl": "supported tendon strains"
+            "str": "supported tendon strain"
         },
-        "description": "The strained tendon has been supported and protected from excessive loading. It remains painful during movement, but reduced tension allows the damaged fibers to recover.",
+        "description": "The strained tendon has been supported and protected from excessive loading.  It remains painful during movement, but reduced tension allows the damaged fibers to recover.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -445,10 +439,9 @@
         "type": "wound",
         "id": "dw_immobilized_partial_tendon_tear",
         "name": {
-            "str": "immobilized partial tendon tear",
-            "str_pl": "immobilized partial tendon tears"
+            "str": "immobilized partial tendon tear"
         },
-        "description": "The partially torn tendon has been immobilized to prevent further separation of its fibers. The limb remains substantially weakened, but the protected tendon can begin a slow recovery.",
+        "description": "The partially torn tendon has been immobilized to prevent further separation of its fibers.  The limb remains substantially weakened, but the protected tendon can begin a slow recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -520,10 +513,9 @@
         "type": "wound",
         "id": "dw_repaired_tendon_rupture",
         "name": {
-            "str": "repaired tendon rupture",
-            "str_pl": "repaired tendon ruptures"
+            "str": "repaired tendon rupture"
         },
-        "description": "The ruptured tendon has been repaired and immobilized. Mechanical continuity has been restored, but the repaired tendon remains extremely weak and must recover before normal loading is possible.",
+        "description": "The ruptured tendon has been repaired and immobilized.  Mechanical continuity has been restored, but the repaired tendon remains extremely weak and must recover before normal loading is possible.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -595,10 +587,9 @@
         "type": "wound",
         "id": "dw_repaired_severed_tendon",
         "name": {
-            "str": "repaired severed tendon",
-            "str_pl": "repaired severed tendons"
+            "str": "repaired severed tendon"
         },
-        "description": "The completely severed tendon has been reconnected and immobilized. The repair is fragile and the limb remains profoundly impaired while the tendon slowly regains structural integrity.",
+        "description": "The completely severed tendon has been reconnected and immobilized.  The repair is fragile and the limb remains profoundly impaired while the tendon slowly regains structural integrity.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -669,10 +660,9 @@
         "type": "wound",
         "id": "dw_supported_ligament_sprain",
         "name": {
-            "str": "supported ligament sprain",
-            "str_pl": "supported ligament sprains"
+            "str": "supported ligament sprain"
         },
-        "description": "The sprained joint has been supported to limit painful movement and further stretching of the injured ligament. Swelling and instability remain but should improve with recovery.",
+        "description": "The sprained joint has been supported to limit painful movement and further stretching of the injured ligament.  Swelling and instability remain but should improve with recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -737,10 +727,9 @@
         "type": "wound",
         "id": "dw_immobilized_partial_ligament_tear",
         "name": {
-            "str": "immobilized partial ligament tear",
-            "str_pl": "immobilized partial ligament tears"
+            "str": "immobilized partial ligament tear"
         },
-        "description": "The partially torn ligament has been immobilized and the joint supported. Significant pain and instability remain, but further separation of the damaged fibers has been reduced.",
+        "description": "The partially torn ligament has been immobilized and the joint supported.  Significant pain and instability remain, but further separation of the damaged fibers has been reduced.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -805,10 +794,9 @@
         "type": "wound",
         "id": "dw_repaired_ligament_rupture",
         "name": {
-            "str": "repaired ligament rupture",
-            "str_pl": "repaired ligament ruptures"
+            "str": "repaired ligament rupture"
         },
-        "description": "The completely ruptured ligament has been repaired and the joint firmly immobilized. The joint remains weak and unstable under load, but healing can now begin.",
+        "description": "The completely ruptured ligament has been repaired and the joint firmly immobilized.  The joint remains weak and unstable under load, but healing can now begin.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -876,10 +864,9 @@
         "type": "wound",
         "id": "dw_reduced_joint_subluxation",
         "name": {
-            "str": "reduced joint subluxation",
-            "str_pl": "reduced joint subluxations"
+            "str": "reduced joint subluxation"
         },
-        "description": "The partially displaced joint has been returned to its normal position. Surrounding ligaments and soft tissues remain swollen and painful, leaving temporary instability during recovery.",
+        "description": "The partially displaced joint has been returned to its normal position.  Surrounding ligaments and soft tissues remain swollen and painful, leaving temporary instability during recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -944,10 +931,9 @@
         "type": "wound",
         "id": "dw_reduced_joint_dislocation",
         "name": {
-            "str": "reduced joint dislocation",
-            "str_pl": "reduced joint dislocations"
+            "str": "reduced joint dislocation"
         },
-        "description": "The dislocated joint has been returned to its socket and stabilized. Severe stretching and damage to the surrounding capsule and ligaments remain, making the joint painful and unreliable for some time.",
+        "description": "The dislocated joint has been returned to its socket and stabilized.  Severe stretching and damage to the surrounding capsule and ligaments remain, making the joint painful and unreliable for some time.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -1015,7 +1001,7 @@
             "str": "protected peripheral nerve injury",
             "str_pl": "protected peripheral nerve injuries"
         },
-        "description": "The injured nerve and surrounding tissues have been protected from further compression and movement. Sensation and motor control remain impaired, but the nerve has a better opportunity to recover.",
+        "description": "The injured nerve and surrounding tissues have been protected from further compression and movement.  Sensation and motor control remain impaired, but the nerve has a better opportunity to recover.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -1095,7 +1081,7 @@
             "str": "stabilized severe peripheral nerve injury",
             "str_pl": "stabilized severe peripheral nerve injuries"
         },
-        "description": "The severely injured nerve has been protected and the surrounding tissue stabilized. Major sensory and motor deficits remain and recovery will be slow and uncertain.",
+        "description": "The severely injured nerve has been protected and the surrounding tissue stabilized.  Major sensory and motor deficits remain and recovery will be slow and uncertain.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -1172,10 +1158,9 @@
         "type": "wound",
         "id": "dw_repaired_nerve_severance",
         "name": {
-            "str": "repaired nerve severance",
-            "str_pl": "repaired nerve severances"
+            "str": "repaired nerve severance"
         },
-        "description": "The severed peripheral nerve has been reapproximated and the surrounding tissue stabilized. Major loss of sensation and motor control remains, and meaningful neurological recovery will require an extremely long period.",
+        "description": "The severed peripheral nerve has been reapproximated and the surrounding tissue stabilized.  Major loss of sensation and motor control remains, and meaningful neurological recovery will require an extremely long period.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -1253,7 +1238,7 @@
             "str": "treated soft tissue crush injury",
             "str_pl": "treated soft tissue crush injuries"
         },
-        "description": "The crushed tissues have been protected, swelling managed, and further mechanical stress reduced. Significant bruising and deep tissue damage remain, but the injury can continue to recover.",
+        "description": "The crushed tissues have been protected, swelling managed, and further mechanical stress reduced.  Significant bruising and deep tissue damage remain, but the injury can continue to recover.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -1325,7 +1310,7 @@
             "str": "debrided severe soft tissue crush injury",
             "str_pl": "debrided severe soft tissue crush injuries"
         },
-        "description": "Clearly nonviable tissue has been removed from the severe crush injury and the remaining tissue has been protected. Extensive deep trauma remains, but the body part can now begin a prolonged recovery.",
+        "description": "Clearly nonviable tissue has been removed from the severe crush injury and the remaining tissue has been protected.  Extensive deep trauma remains, but the body part can now begin a prolonged recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -1394,10 +1379,9 @@
         "type": "wound",
         "id": "dw_decompressed_compartment_syndrome",
         "name": {
-            "str": "decompressed compartment syndrome",
-            "str_pl": "decompressed compartment syndromes"
+            "str": "decompressed compartment syndrome"
         },
-        "description": "The dangerously elevated pressure within the injured tissue compartment has been relieved. Muscle, nerve, and vascular tissue remain badly traumatized, but ongoing pressure-related destruction has been stopped.",
+        "description": "The dangerously elevated pressure within the injured tissue compartment has been relieved.  Muscle, nerve, and vascular tissue remain badly traumatized, but ongoing pressure-related destruction has been stopped.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

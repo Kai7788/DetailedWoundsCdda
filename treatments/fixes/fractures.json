@@ -1,0 +1,164 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_splint_hairline_fracture",
+    "name": "immobilize hairline fracture",
+    "description": "Immobilize the affected limb to reduce movement across the fractured bone.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_improvised_splint",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_hairline_fracture"
+    ],
+    "wounds_added": [
+      "dw_splinted_hairline_fracture"
+    ],
+    "success_msg": "You immobilize the hairline fracture.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_splint_closed_fracture",
+    "name": "splint closed fracture",
+    "description": "Immobilize the broken limb and secure it in a stable position.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_improvised_splint",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_closed_fracture"
+    ],
+    "wounds_added": [
+      "dw_splinted_closed_fracture"
+    ],
+    "success_msg": "You carefully splint the closed fracture.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_splint_displaced_fracture",
+    "name": "stabilize displaced fracture",
+    "description": "Carefully immobilize the displaced fracture.  The bones remain improperly aligned, but further movement is reduced.",
+    "time": "18 minutes",
+    "skills": {
+      "firstaid": 4
+    },
+    "requirements": [
+      [
+        "dw_improvised_splint",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_displaced_fracture"
+    ],
+    "wounds_added": [
+      "dw_splinted_displaced_fracture"
+    ],
+    "success_msg": "You stabilize the displaced fracture.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_splint_comminuted_fracture",
+    "name": "stabilize comminuted fracture",
+    "description": "Immobilize the shattered bone as well as possible to prevent additional tissue damage.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_improvised_splint",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_comminuted_fracture"
+    ],
+    "wounds_added": [
+      "dw_splinted_comminuted_fracture"
+    ],
+    "success_msg": "You stabilize the shattered bone as well as you can.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_open_fracture",
+    "name": "clean and stabilize open fracture",
+    "description": "Irrigate the exposed fracture, protect the open wound, and immobilize the limb.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_irrigate_wound",
+        2
+      ],
+      [
+        "dw_disinfect_wound",
+        2
+      ],
+      [
+        "dw_heavy_wound_dressing",
+        1
+      ],
+      [
+        "dw_improvised_splint",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_open_fracture"
+    ],
+    "wounds_added": [
+      "dw_stabilized_open_fracture"
+    ],
+    "success_msg": "You clean, cover, and immobilize the open fracture.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

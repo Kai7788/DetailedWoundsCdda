@@ -1,0 +1,170 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_superficial_burn",
+    "name": "dress superficial burn",
+    "description": "Protect the burned tissue with a clean dressing.",
+    "time": "3 minutes",
+    "skills": {
+      "firstaid": 1
+    },
+    "requirements": [
+      [
+        "dw_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_superficial_burn"
+    ],
+    "wounds_added": [
+      "dw_dressed_superficial_burn"
+    ],
+    "success_msg": "You carefully dress the superficial burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_partial_thickness_burn",
+    "name": "dress partial-thickness burn",
+    "description": "Cover the damaged skin with a clean protective dressing.",
+    "time": "7 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_superficial_partial_thickness_burn"
+    ],
+    "wounds_added": [
+      "dw_dressed_superficial_partial_thickness_burn"
+    ],
+    "success_msg": "You carefully dress the partial-thickness burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.7,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_dress_deep_partial_thickness_burn",
+    "name": "dress deep partial-thickness burn",
+    "description": "Protect the deep burn with a substantial clean dressing.",
+    "time": "10 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_severe_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_deep_partial_thickness_burn"
+    ],
+    "wounds_added": [
+      "dw_dressed_deep_partial_thickness_burn"
+    ],
+    "success_msg": "You carefully dress the deep burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.7,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_full_thickness_burn",
+    "name": "debride full-thickness burn",
+    "description": "Remove loose dead tissue and protect the severe burn with a heavy dressing.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        1
+      ],
+      [
+        "dw_severe_burn_dressing",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_full_thickness_burn"
+    ],
+    "wounds_added": [
+      "dw_debrided_full_thickness_burn"
+    ],
+    "success_msg": "You debride and dress the full-thickness burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_debride_extensive_full_thickness_burn",
+    "name": "debride extensive full-thickness burn",
+    "description": "Remove extensive loose and nonviable burned tissue and protect the large exposed area with substantial clean dressings.",
+    "time": "40 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_major_debridement",
+        2
+      ],
+      [
+        "dw_severe_burn_dressing",
+        2
+      ]
+    ],
+    "wounds_removed": [
+      "dw_extensive_full_thickness_burn"
+    ],
+    "wounds_added": [
+      "dw_debrided_extensive_full_thickness_burn"
+    ],
+    "success_msg": "You debride and heavily dress the extensive full-thickness burn.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_burn_care",
+        "time_save": 0.75,
+        "is_mandatory": false
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

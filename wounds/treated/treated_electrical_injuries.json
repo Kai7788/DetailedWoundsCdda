@@ -3,10 +3,9 @@
         "type": "wound",
         "id": "dw_dressed_minor_electrical_burn",
         "name": {
-            "str": "dressed minor electrical burn",
-            "str_pl": "dressed minor electrical burns"
+            "str": "dressed minor electrical burn"
         },
-        "description": "The minor electrical burn has been protected with a clean dressing. The damaged skin remains mildly tender, but the local injury is protected while it heals.",
+        "description": "The minor electrical burn has been protected with a clean dressing.  The damaged skin remains mildly tender, but the local injury is protected while it heals.",
         "weight": 1,
         "limit": 3,
         "damage_types": [
@@ -36,10 +35,9 @@
         "type": "wound",
         "id": "dw_dressed_electrical_contact_burn",
         "name": {
-            "str": "dressed electrical contact burn",
-            "str_pl": "dressed electrical contact burns"
+            "str": "dressed electrical contact burn"
         },
-        "description": "The electrical contact burn has been protected with a clean dressing. The surface injury remains painful and stiff, although further mechanical irritation is reduced.",
+        "description": "The electrical contact burn has been protected with a clean dressing.  The surface injury remains painful and stiff, although further mechanical irritation is reduced.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -103,10 +101,9 @@
         "type": "wound",
         "id": "dw_dressed_deep_electrical_burn",
         "name": {
-            "str": "dressed deep electrical burn",
-            "str_pl": "dressed deep electrical burns"
+            "str": "dressed deep electrical burn"
         },
-        "description": "The visible electrical burn has been protected, but significant damage remains beneath the surface. Deep tissue may still be painful, weak, or numb despite the protected external wound.",
+        "description": "The visible electrical burn has been protected, but significant damage remains beneath the surface.  Deep tissue may still be painful, weak, or numb despite the protected external wound.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -173,7 +170,7 @@
             "str": "debrided severe electrical tissue injury",
             "str_pl": "debrided severe electrical tissue injuries"
         },
-        "description": "Loose and clearly nonviable tissue has been removed from the severe electrical injury and the remaining wound has been protected. Deep tissue damage remains substantial, but the local injury is now able to begin a prolonged recovery.",
+        "description": "Loose and clearly nonviable tissue has been removed from the severe electrical injury and the remaining wound has been protected.  Deep tissue damage remains substantial, but the local injury is now able to begin a prolonged recovery.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -240,7 +237,7 @@
             "str": "debrided extensive electrical tissue destruction",
             "str_pl": "debrided extensive electrical tissue injuries"
         },
-        "description": "Extensive dead and badly damaged tissue has been removed from the electrical injury and the remaining wound has been heavily protected. Severe deep tissue destruction remains, but the injury has been brought into a condition where long-term recovery can begin.",
+        "description": "Extensive dead and badly damaged tissue has been removed from the electrical injury and the remaining wound has been heavily protected.  Severe deep tissue destruction remains, but the injury has been brought into a condition where long-term recovery can begin.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

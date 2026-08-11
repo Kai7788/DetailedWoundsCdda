@@ -1,0 +1,212 @@
+[
+  {
+    "type": "wound_fix",
+    "id": "dw_support_cracked_rib",
+    "name": "support cracked rib",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "8 minutes",
+    "skills": {
+      "firstaid": 2
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_cracked_rib"
+    ],
+    "wounds_added": [
+      "dw_supported_cracked_rib"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_support_rib_fracture",
+    "name": "support rib fracture",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "12 minutes",
+    "skills": {
+      "firstaid": 3
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_rib_fracture"
+    ],
+    "wounds_added": [
+      "dw_supported_rib_fracture"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care",
+        "time_save": 0.8,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_displaced_rib_fracture",
+    "name": "stabilize displaced rib fracture",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "18 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_displaced_rib_fracture"
+    ],
+    "wounds_added": [
+      "dw_stabilized_displaced_rib_fracture"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_multiple_rib_fractures",
+    "name": "stabilize multiple rib fractures",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "25 minutes",
+    "skills": {
+      "firstaid": 6
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_multiple_rib_fractures"
+    ],
+    "wounds_added": [
+      "dw_stabilized_multiple_rib_fractures"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_sternal_fracture",
+    "name": "stabilize sternal fracture",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "20 minutes",
+    "skills": {
+      "firstaid": 5
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_sternal_fracture"
+    ],
+    "wounds_added": [
+      "dw_stabilized_sternal_fracture"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_severe_chest_wall_trauma",
+    "name": "stabilize severe chest wall trauma",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "30 minutes",
+    "skills": {
+      "firstaid": 7
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_severe_chest_wall_trauma"
+    ],
+    "wounds_added": [
+      "dw_stabilized_severe_chest_wall_trauma"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  },
+  {
+    "type": "wound_fix",
+    "id": "dw_stabilize_flail_chest",
+    "name": "stabilize flail chest",
+    "description": "Apply targeted padding and stabilization to reduce movement of the injured chest wall while avoiding unnecessary circumferential restriction.",
+    "time": "40 minutes",
+    "skills": {
+      "firstaid": 8
+    },
+    "requirements": [
+      [
+        "dw_chest_wall_support",
+        1
+      ]
+    ],
+    "wounds_removed": [
+      "dw_flail_chest"
+    ],
+    "wounds_added": [
+      "dw_stabilized_flail_chest"
+    ],
+    "success_msg": "You stabilize the chest injury.",
+    "proficiencies": [
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_save": 0.75,
+        "is_mandatory": false
+      }
+    ]
+  }
+]

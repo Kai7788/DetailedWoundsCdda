@@ -1,0 +1,66 @@
+[
+    {
+        "id": "dw_burn_dressing",
+        "type": "requirement",
+        "//": "Clean absorbent material for protecting a treated burn.",
+        "components": [
+            [
+                [
+                    "cotton_patchwork",
+                    3
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_severe_burn_dressing",
+        "type": "requirement",
+        "//": "A larger amount of clean covering material for protecting an extensive burn.",
+        "components": [
+            [
+                [
+                    "cotton_patchwork",
+                    6
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_controlled_rewarming",
+        "type": "requirement",
+        "//": "Controlled rewarming of cold-damaged tissue using clean water and a suitable heat source. The heat source must be capable of providing controlled warmth rather than direct destructive heating.",
+        "qualities": [
+            {
+                "id": "HOTPLATE",
+                "level": 1
+            }
+        ],
+        "components": [
+            [
+                [
+                    "water_clean",
+                    12
+                ]
+            ],
+            [
+                [
+                    "cotton_patchwork",
+                    2
+                ]
+            ]
+        ]
+    },
+    {
+        "id": "dw_oral_burn_cooling",
+        "type": "requirement",
+        "//": "Clean water for gently cooling or rinsing burned tissue inside the mouth without applying an exterior cotton dressing.",
+        "components": [
+            [
+                [
+                    "water_clean",
+                    4
+                ]
+            ]
+        ]
+    }
+]
