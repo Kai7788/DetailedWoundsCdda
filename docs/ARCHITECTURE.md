@@ -2,6 +2,20 @@
 
 Detailed Wounds is entirely JSON. It uses native wounds and `wound_fix` for persistent state, plus EOCs only where the installed CDDA build exposes a complete lifecycle.
 
+## Native healing boundary
+
+Each wound instance stores a randomly selected `healing_time`, current
+`healing_progress`, and pain. CDDA advances progress once per character turn,
+scales pain internally, and silently erases a completed wound. JSON cannot inspect
+that progress or observe wound creation/completion/treatment with sufficient
+context.
+
+Detailed Wounds therefore keeps the native timer authoritative and does not run a
+parallel visible-stage timer. Static limb-score penalties remain until native
+completion. The requested staged-healing architecture and its exact blockers are
+documented in [Healing system architecture](HEALING_SYSTEM.md) and
+[Healing lifecycle research](HEALING_RESEARCH.md).
+
 ## Damage paths
 
 ```text
@@ -98,5 +112,7 @@ The validator distinguishes:
 - active versus allowlisted dormant EOC roots;
 - intentional reserved requirements;
 - valid native limb scores for all anatomically possible targets.
+- one unambiguous healing category for every existing wound;
+- unchanged native healing ranges in the generated duration audit.
 
 No C++ patch, fictional `wound_fix` callback, or generic biological/bite approximation is part of the architecture.

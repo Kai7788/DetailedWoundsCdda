@@ -2,6 +2,25 @@
 
 This file distinguishes deliberate abstractions from features blocked by the audited CDDA JSON API.
 
+## Visible timed healing stages and completion messages
+
+Blocked for native wounds in installed commit `251cf6cf23a0277d5118b67bee0efc9625c6cfeb`.
+
+Native wounds serialize and internally update `healing_time`, `healing_progress`,
+and pain, but JSON cannot read a wound ID/progress pair on a bodypart. There is no
+wound-created or wound-healed event, and natural completion erases the wound
+without a message/EOC. Treatment constructs a new wound with fresh time/progress
+without exposing bodypart/source/target/fix context to JSON.
+
+Effects and scheduled EOCs cannot safely approximate this lifecycle: they cannot
+share the wound's randomly sampled duration or confirm that treatment/reinjury has
+not replaced it. A parallel timer could announce false healing or recreate an old
+wound. No visible-stage controller or completion message is enabled.
+
+Required CDDA capability: native wound-stage/final-message JSON fields, or JSON
+access to wound ID/bodypart/time/progress plus wound-created, wound-healed, and
+wound-fix-completed lifecycle context. See [the full research audit](HEALING_RESEARCH.md).
+
 ## Native wound-treatment completion callback
 
 Blocked.

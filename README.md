@@ -32,6 +32,20 @@ Production hooks extend vanilla damage types with a same-ID self-copy overlay. T
 
 Structural routing currently recognizes standard vanilla flesh arm, hand, leg, foot, and torso IDs. This safely excludes full bionic replacement limbs, but nonstandard extra limbs do not receive secondary structural wounds because the installed EOC API cannot query the `bp` context's bodypart type or flags.
 
+## Healing lifecycle status
+
+CDDA already advances a private native timer for every finite wound and gradually
+reduces wound pain. In the audited build, JSON cannot read that progress, receive a
+wound-created/healed event, or observe a completed `wound_fix` with wound/bodypart
+context. A separate effect/EOC timer would desynchronize after treatment or
+reinjury and could print a false healing message.
+
+For that reason, visible timed healing stages and exact completion messages are not
+claimed as working features, and the mod remains version 0.1. The repository now
+contains a complete 256-wound classification, unchanged-duration audit, and the
+source-backed capability analysis needed to implement the feature safely if CDDA
+later exposes the required JSON API.
+
 ## Validation
 
 Run the repository audit in strict mode:
@@ -46,6 +60,14 @@ Regenerate the coverage matrix with:
 python3 tools/validate_mod.py --strict --coverage-output docs/WOUND_MATRIX.md
 ```
 
+Regenerate the healing audits with:
+
+```bash
+python3 tools/validate_mod.py --strict \
+  --healing-matrix-output docs/HEALING_MATRIX.md \
+  --healing-duration-output docs/HEALING_DURATION_AUDIT.md
+```
+
 The validator checks JSON structure, duplicate IDs, CDDA references, wound and treatment graphs, permanently non-healing wounds, damage overlays, EOC graphs, weighted distributions, progression relationships, limb-score anatomy, reserved data, and known regressions.
 
 ## Documentation
@@ -56,6 +78,10 @@ The validator checks JSON structure, duplicate IDs, CDDA references, wound and t
 - [Damage-hook source audit](docs/SECONDARY_WOUND_HOOKS.md)
 - [EOC classification audit](docs/EOC_AUDIT.md)
 - [Known limitations](docs/KNOWN_LIMITATIONS.md)
+- [Healing system architecture](docs/HEALING_SYSTEM.md)
+- [Healing lifecycle source research](docs/HEALING_RESEARCH.md)
+- [Complete healing classification](docs/HEALING_MATRIX.md)
+- [Healing duration audit](docs/HEALING_DURATION_AUDIT.md)
 - [Changelog](CHANGELOG.md)
 
-The contamination/infection treatment lifecycle, generic physical bite identification, thermal-airway source detection, and treated-suture reopening remain explicitly limited by the installed JSON API. They are not claimed as working features.
+Visible timed healing stages/completion messages, the contamination/infection treatment lifecycle, generic physical bite identification, thermal-airway source detection, and treated-suture reopening remain explicitly limited by the installed JSON API. They are not claimed as working features.

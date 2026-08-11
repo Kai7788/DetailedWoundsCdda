@@ -39,6 +39,10 @@ Important invariants:
 - Physical bite, thermal-airway, contamination/treatment cleanup, and treated-state
   reopening are documented API limitations. Do not approximate them with generic
   damage or permanent effects.
+- Native wound progress is not JSON-readable in audited commit `251cf6c`, and there
+  are no wound-created/healed or context-rich wound-fix events. Do not add companion
+  healing timers, scheduled stage transitions, or completion messages unless a
+  newer build exposes enough lifecycle context to prevent treatment/reinjury races.
 
 After a coherent implementation change, run:
 
@@ -49,6 +53,9 @@ python3 tools/validate_mod.py --strict
 The validator automatically uses a sibling `cataclysmdda-0.J/data` directory when
 present. A different build can be selected with `--cdda-data PATH`. Use
 `--coverage-output docs/WOUND_MATRIX.md` to regenerate the coverage document.
+Use `--healing-matrix-output docs/HEALING_MATRIX.md` and
+`--healing-duration-output docs/HEALING_DURATION_AUDIT.md` to regenerate the
+healing audits.
 
 Do not mark runtime checks passed without an actual game test. Headless
 `--check-mods` confirms loading and references, not combat frequency or balance.

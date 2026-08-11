@@ -46,6 +46,17 @@ These boxes are updated only after the final commands have actually completed.
 
 The following are deliberately unmarked. They are useful for later balancing/playtesting, not a gate for this implementation pass.
 
+### Visible healing lifecycle (blocked in the audited JSON API)
+
+Do not run or mark these until CDDA exposes the lifecycle capability described in
+`HEALING_RESEARCH.md` and a safe JSON implementation exists.
+
+- [ ] A naturally healing wound visibly changes stages without changing its total recovery range.
+- [ ] A treated wound cancels/replaces the untreated lifecycle without a stale transition.
+- [ ] Reinjury cannot be downgraded later by an older healing timer.
+- [ ] The avatar receives exactly one final healing message; NPC recovery is silent.
+- [ ] Existing v0.1 saved wounds and newly treated states enter/finish recovery safely.
+
 ### Production secondary routing
 
 - [ ] Bash to a standard flesh limb can add one appropriate muscle/connective-tissue/bone/crush result at the correct post-armor tier.

@@ -61,6 +61,15 @@ UNREFERENCED_EOC_ALLOWLIST = {
 }
 INTENTIONALLY_UNTREATABLE_WOUNDS: set[str] = set()
 
+HEALING_CATEGORIES = {
+    "A": "Naturally healing primary",
+    "B": "Treatment-optional primary family",
+    "C": "Treatment-required primary family",
+    "D": "Secondary structural family",
+    "E": "Respiratory/exposure family",
+    "F": "Dormant/unreachable family",
+}
+
 TIME_UNITS = {
     "turn": 1,
     "turns": 1,
@@ -917,6 +926,235 @@ def production_reachable_wounds(records: list[Record]) -> set[str]:
     return wound_ids
 
 
+def wound_group(record: Record) -> str:
+    return next(
+        (group for group in ("primary", "secondary", "treated") if group in record.path.parts),
+        "other",
+    )
+
+
+def healing_classifications(records: list[Record]) -> dict[str, str]:
+    """Assign every existing wound to exactly one documented healing category.
+
+    Primary and secondary definitions establish the family category. Treated states
+    inherit the category of their treatment-chain source. Production-unreachable
+    secondary families, and treated states descended only from them, remain dormant.
+    """
+    wounds = {
+        record.obj["id"]: record
+        for record in records_of_type(records, "wound")
+        if isinstance(record.obj.get("id"), str)
+    }
+    fixes = records_of_type(records, "wound_fix")
+    direct_fix_sources = {
+        wound_id
+        for record in fixes
+        for wound_id in record.obj.get("wounds_removed", [])
+        if isinstance(wound_id, str)
+    }
+    reverse_treatment: dict[str, set[str]] = defaultdict(set)
+    for record in fixes:
+        sources = [value for value in record.obj.get("wounds_removed", []) if isinstance(value, str)]
+        targets = [value for value in record.obj.get("wounds_added", []) if isinstance(value, str)]
+        for target in targets:
+            reverse_treatment[target].update(sources)
+
+    production_wounds = production_reachable_wounds(records)
+    base: dict[str, str] = {}
+    for wound_id, record in wounds.items():
+        group = wound_group(record)
+        if group == "primary":
+            if "healing_time" not in record.obj:
+                base[wound_id] = "C"
+            elif wound_id in direct_fix_sources:
+                base[wound_id] = "B"
+            else:
+                base[wound_id] = "A"
+        elif group == "secondary":
+            if wound_id not in production_wounds:
+                base[wound_id] = "F"
+            elif record.path.name == "respiratory_injuries.json":
+                base[wound_id] = "E"
+            else:
+                base[wound_id] = "D"
+
+    memo: dict[str, set[str]] = {}
+
+    def source_categories(wound_id: str, visiting: set[str]) -> set[str]:
+        if wound_id in base:
+            return {base[wound_id]}
+        if wound_id in memo:
+            return memo[wound_id]
+        if wound_id in visiting:
+            return set()
+        categories = set().union(
+            *(
+                source_categories(source, visiting | {wound_id})
+                for source in reverse_treatment.get(wound_id, set())
+            )
+        )
+        memo[wound_id] = categories
+        return categories
+
+    result: dict[str, str] = {}
+    for wound_id in wounds:
+        categories = source_categories(wound_id, set())
+        if len(categories) == 1:
+            result[wound_id] = next(iter(categories))
+    return result
+
+
+def validate_healing_classifications(records: list[Record], report: Report) -> None:
+    wounds = {
+        record.obj["id"]: record
+        for record in records_of_type(records, "wound")
+        if isinstance(record.obj.get("id"), str)
+    }
+    classifications = healing_classifications(records)
+    for wound_id, record in wounds.items():
+        if wound_id not in classifications:
+            report.error(f"{record.label}: wound has no unambiguous healing category")
+        elif classifications[wound_id] not in HEALING_CATEGORIES:
+            report.error(
+                f"{record.label}: unknown healing category '{classifications[wound_id]}'"
+            )
+    for wound_id in sorted(classifications.keys() - wounds.keys()):
+        report.error(f"Healing classification references missing wound '{wound_id}'")
+
+
+def wound_reachability(record: Record, classification: str) -> str:
+    if classification == "F":
+        return "dormant"
+    if wound_group(record) == "treated":
+        return "via wound_fix"
+    if wound_group(record) == "secondary":
+        return "production EOC"
+    return "native selection"
+
+
+def healing_matrix_markdown(records: list[Record]) -> str:
+    wounds = {
+        record.obj["id"]: record
+        for record in records_of_type(records, "wound")
+        if isinstance(record.obj.get("id"), str)
+    }
+    fixes = records_of_type(records, "wound_fix")
+    direct_fix_sources = {
+        wound_id
+        for record in fixes
+        for wound_id in record.obj.get("wounds_removed", [])
+        if isinstance(wound_id, str)
+    }
+    classifications = healing_classifications(records)
+    counts = Counter(classifications.values())
+    finite = sum("healing_time" in record.obj for record in wounds.values())
+    indefinite = len(wounds) - finite
+
+    lines = [
+        "# Healing classification matrix",
+        "",
+        "Generated by `python3 tools/validate_mod.py --healing-matrix-output docs/HEALING_MATRIX.md`.",
+        "Every current wound belongs to exactly one category. This is the audited v0.1 baseline;",
+        "the installed CDDA JSON API cannot safely observe or transition native wound healing",
+        "progress, so no timed visible-stage controller is enabled.",
+        "",
+        "## Summary",
+        "",
+        "| Category | Meaning | Wounds |",
+        "|---|---|---:|",
+    ]
+    for category, description in HEALING_CATEGORIES.items():
+        lines.append(f"| {category} | {description} | {counts.get(category, 0)} |")
+    lines.extend(
+        [
+            "",
+            f"- Total wounds: {len(wounds)}",
+            f"- Native finite healing timers: {finite}",
+            f"- Treatment-gated/indefinite definitions: {indefinite}",
+            "- Timed visible healing-stage wounds: 0 (blocked by the audited JSON API)",
+            "- Healing-completion messages: 0 (no trustworthy wound-completion hook)",
+            "",
+            "## Definitions",
+            "",
+            "| Category | Wound | Layer | Reachability | Native timer | Direct fix | Visible timed stages |",
+            "|---|---|---|---|---|:---:|:---:|",
+        ]
+    )
+    for wound_id, record in sorted(
+        wounds.items(), key=lambda item: (classifications.get(item[0], "?"), item[0])
+    ):
+        category = classifications.get(wound_id, "?")
+        healing = record.obj.get("healing_time")
+        timer = (
+            f"{healing[0]} – {healing[1]}"
+            if isinstance(healing, list) and len(healing) == 2
+            else "indefinite"
+        )
+        lines.append(
+            f"| {category} | `{wound_id}` | {wound_group(record)} | "
+            f"{wound_reachability(record, category)} | {timer} | "
+            f"{'yes' if wound_id in direct_fix_sources else 'no'} | no |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Category rules",
+            "",
+            "- **A:** finite primary wound with no direct treatment; it heals on CDDA's native timer.",
+            "- **B:** finite primary family with optional treatment; treated descendants inherit B.",
+            "- **C:** primary family whose entry wound requires treatment before finite recovery; treated descendants inherit C.",
+            "- **D:** production-reachable structural secondary family, including its treated states.",
+            "- **E:** production-reachable respiratory/exposure family.",
+            "- **F:** source event is unavailable or deliberately dormant; descendants are also dormant.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def healing_duration_markdown(records: list[Record]) -> str:
+    wounds = {
+        record.obj["id"]: record
+        for record in records_of_type(records, "wound")
+        if isinstance(record.obj.get("id"), str)
+    }
+    classifications = healing_classifications(records)
+    finite = [record for record in wounds.values() if "healing_time" in record.obj]
+    indefinite = [record for record in wounds.values() if "healing_time" not in record.obj]
+    lines = [
+        "# Healing duration audit",
+        "",
+        "The safe JSON-only result leaves every native healing range unchanged. No visible timed",
+        "stage chain is enabled because this CDDA build cannot observe wound progress or validate",
+        "a delayed transition after treatment/reinjury. Accordingly, the audited result equals the",
+        "v0.1 baseline and every duration delta is zero.",
+        "",
+        "| Wound | Category | v0.1 min | v0.1 max | Audited min | Audited max | Delta min | Delta max | Stages |",
+        "|---|:---:|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    for record in sorted(finite, key=lambda value: value.obj["id"]):
+        wound_id = record.obj["id"]
+        low, high = record.obj["healing_time"]
+        lines.append(
+            f"| `{wound_id}` | {classifications[wound_id]} | {low} | {high} | "
+            f"{low} | {high} | 0% | 0% | 0 |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Treatment-gated definitions",
+            "",
+            "These definitions intentionally have no finite native timer. Their existing treatment",
+            "graphs reach a finite treated state; the strict validator checks that transitively.",
+            "",
+        ]
+    )
+    for record in sorted(indefinite, key=lambda value: value.obj["id"]):
+        lines.append(f"- `{record.obj['id']}` (category {classifications[record.obj['id']]})")
+    lines.append("")
+    return "\n".join(lines)
+
+
 def coverage_markdown(records: list[Record]) -> str:
     primary = [
         record.obj
@@ -1113,6 +1351,7 @@ def print_report(records: list[Record], base: BaseData, report: Report) -> None:
         for record in records_of_type(records, "wound")
         if isinstance(record.obj.get("wound_progression", []), list)
     )
+    healing_categories = Counter(healing_classifications(records).values())
     print(f"Parsed {len(json_paths(ROOT))} JSON files and {len(records)} objects.")
     if base.root:
         print(f"CDDA base data: {base.root}")
@@ -1131,6 +1370,13 @@ def print_report(records: list[Record], base: BaseData, report: Report) -> None:
         f"treated={wound_groups['treated']}, other={wound_groups['other']}"
     )
     print(f"  wound_progression relationships: {progression_count}")
+    print(
+        "  healing categories: "
+        + ", ".join(
+            f"{category}={healing_categories.get(category, 0)}"
+            for category in HEALING_CATEGORIES
+        )
+    )
     for heading, messages in (
         ("ERRORS", report.errors),
         ("WARNINGS", report.warnings),
@@ -1165,6 +1411,16 @@ def main() -> int:
         help="write the generated Markdown coverage matrix inside the repository",
     )
     parser.add_argument(
+        "--healing-matrix-output",
+        metavar="PATH",
+        help="write the complete wound healing-classification matrix inside the repository",
+    )
+    parser.add_argument(
+        "--healing-duration-output",
+        metavar="PATH",
+        help="write the current healing-duration preservation audit inside the repository",
+    )
+    parser.add_argument(
         "--strict",
         action="store_true",
         help="return a failure status for warnings as well as errors",
@@ -1181,6 +1437,7 @@ def main() -> int:
     validate_damage_overlays(records, report)
     validate_effect_classification(records, report)
     validate_treatment_reachability(records, report)
+    validate_healing_classifications(records, report)
     regression_checks(records, report)
     print_report(records, base, report)
     coverage = coverage_markdown(records) if args.coverage or args.coverage_output else None
@@ -1196,6 +1453,22 @@ def main() -> int:
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(coverage, encoding="utf-8")
         print(f"Coverage matrix written to {output.relative_to(ROOT)}")
+    generated_documents = (
+        (args.healing_matrix_output, healing_matrix_markdown(records), "Healing matrix"),
+        (args.healing_duration_output, healing_duration_markdown(records), "Healing duration audit"),
+    )
+    for destination, contents, label in generated_documents:
+        if not destination:
+            continue
+        output = Path(destination)
+        if not output.is_absolute():
+            output = ROOT / output
+        output = output.resolve()
+        if output != ROOT and ROOT not in output.parents:
+            parser.error(f"{label} output must remain inside the repository")
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(contents, encoding="utf-8")
+        print(f"{label} written to {output.relative_to(ROOT)}")
     return 1 if report.errors or (args.strict and report.warnings) else 0
 
 

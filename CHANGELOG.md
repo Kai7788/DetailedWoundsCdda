@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- Audited the proposed visible healing lifecycle against installed CDDA commit `251cf6cf23a0277d5118b67bee0efc9625c6cfeb`.
+- Added complete healing classification and unchanged-duration reports for all 256 existing wounds.
+- Extended strict validation so every wound must have one unambiguous healing category.
+- Documented why current JSON cannot safely synchronize timed stages or a final healing message across native generation, treatment, reinjury, and save/load.
+- Left gameplay, wound IDs, healing values, and version `0.1` unchanged rather than enabling a desynchronizing approximation.
+
 ## 0.1
 
 - Added damage-selected primary bruises, cuts, punctures, ballistic wounds, fractures, burns, electrical injuries, cold injuries, and specialized head/face/ocular/oral wounds.
