@@ -9,12 +9,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_deep_torso_contusion"
             },
-            "wound_id": "dw_deep_torso_contusion"
-        }
+            {
+                "u_message": "A deep ache spreads through your torso after the impact.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -26,12 +32,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_internal_soft_tissue_trauma"
             },
-            "wound_id": "dw_internal_soft_tissue_trauma"
-        }
+            {
+                "u_message": "Pain blooms deep inside your torso.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -43,12 +55,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_internal_organ_contusion"
             },
-            "wound_id": "dw_internal_organ_contusion"
-        }
+            {
+                "u_message": "A sickening pain flares deep in your abdomen.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -60,12 +78,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_severe_crush_trauma"
             },
-            "wound_id": "dw_severe_crush_trauma"
-        }
+            {
+                "u_message": "Crushing pain tears through your torso.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -77,12 +101,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_deep_penetrating_torso_injury"
             },
-            "wound_id": "dw_deep_penetrating_torso_injury"
-        }
+            {
+                "u_message": "A sharp, deep pain lances through your torso.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -94,12 +124,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_severe_penetrating_torso_injury"
             },
-            "wound_id": "dw_severe_penetrating_torso_injury"
-        }
+            {
+                "u_message": "The penetrating blow leaves a deep, searing pain in your torso.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -111,12 +147,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_major_penetrating_organ_trauma"
             },
-            "wound_id": "dw_major_penetrating_organ_trauma"
-        }
+            {
+                "u_message": "Something deep inside you gives under the penetrating blow.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -128,12 +170,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_ballistic_internal_trauma"
             },
-            "wound_id": "dw_ballistic_internal_trauma"
-        }
+            {
+                "u_message": "The shot leaves a deep burning pain inside your torso.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -145,12 +193,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_severe_ballistic_internal_trauma"
             },
-            "wound_id": "dw_severe_ballistic_internal_trauma"
-        }
+            {
+                "u_message": "The shot sends a wave of searing pain through your torso.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -162,11 +216,17 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_devastating_ballistic_internal_trauma"
             },
-            "wound_id": "dw_devastating_ballistic_internal_trauma"
-        }
+            {
+                "u_message": "The impact tears through your torso with overwhelming force.",
+                "type": "bad"
+            }
+        ]
     }
 ]

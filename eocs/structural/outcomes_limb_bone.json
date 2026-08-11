@@ -9,12 +9,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_bone_contusion"
             },
-            "wound_id": "dw_bone_contusion"
-        }
+            {
+                "u_message": "A deep ache settles into the struck limb.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -26,12 +32,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_hairline_fracture"
             },
-            "wound_id": "dw_hairline_fracture"
-        }
+            {
+                "u_message": "A sharp, focused pain bites deep into the struck limb.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -43,12 +55,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_closed_fracture"
             },
-            "wound_id": "dw_closed_fracture"
-        }
+            {
+                "u_message": "Something gives in the struck limb with a burst of pain.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -60,12 +78,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_displaced_fracture"
             },
-            "wound_id": "dw_displaced_fracture"
-        }
+            {
+                "u_message": "The struck limb shifts unnaturally with intense pain.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -77,12 +101,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_comminuted_fracture"
             },
-            "wound_id": "dw_comminuted_fracture"
-        }
+            {
+                "u_message": "Something shatters inside the struck limb.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -94,11 +124,17 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_open_fracture"
             },
-            "wound_id": "dw_open_fracture"
-        }
+            {
+                "u_message": "Bone and tissue give way under the impact.",
+                "type": "bad"
+            }
+        ]
     }
 ]

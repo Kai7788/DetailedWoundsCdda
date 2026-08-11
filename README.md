@@ -2,7 +2,7 @@
 
 Detailed Wounds is a JSON-only Cataclysm: Dark Days Ahead mod that adds persistent injury states and native treatment chains alongside ordinary limb HP.
 
-- Version: **0.1**
+- Version: **0.2**
 - Author: **Kai Maier**
 - Audited CDDA build: **2026-08-10-0437** (`251cf6cf23a0277d5118b67bee0efc9625c6cfeb`)
 
@@ -16,6 +16,9 @@ Detailed Wounds is a JSON-only Cataclysm: Dark Days Ahead mod that adds persiste
 - Source-specific respiratory wounds for inhaled smoke, tear gas, toxic gas, and fungal exposure.
 - Finite acute respiratory and chest-wall breathing impairment that expires without needing a missing treatment callback.
 - Native `wound_progression` when the same production-reachable structural wound is inflicted again.
+- Severity-aware, avatar-only acquisition feedback for every production structural and respiratory outcome.
+- Family-specific native treatment-completion messages for all 109 wound fixes.
+- Honest recovery milestones when finite acute respiratory or chest-wall restriction expires.
 - Wound and treated-state save persistence, as confirmed in the Phase A and Phase D runtime tests.
 
 Secondary routing deliberately selects at most one result per damage type in a hit. Low damage usually produces no structural wound; higher post-armor damage increases both the chance and severity.
@@ -32,7 +35,7 @@ Production hooks extend vanilla damage types with a same-ID self-copy overlay. T
 
 Structural routing currently recognizes standard vanilla flesh arm, hand, leg, foot, and torso IDs. This safely excludes full bionic replacement limbs, but nonstandard extra limbs do not receive secondary structural wounds because the installed EOC API cannot query the `bp` context's bodypart type or flags.
 
-## Healing lifecycle status
+## Healing and feedback
 
 CDDA already advances a private native timer for every finite wound and gradually
 reduces wound pain. In the audited build, JSON cannot read that progress, receive a
@@ -40,11 +43,17 @@ wound-created/healed event, or observe a completed `wound_fix` with wound/bodypa
 context. A separate effect/EOC timer would desynchronize after treatment or
 reinjury and could print a false healing message.
 
-For that reason, visible timed healing stages and exact completion messages are not
-claimed as working features, and the mod remains version 0.1. The repository now
-contains a complete 256-wound classification, unchanged-duration audit, and the
-source-backed capability analysis needed to implement the feature safely if CDDA
-later exposes the required JSON API.
+For that reason, visible timed healing stages and exact wound-completion messages
+are not claimed as working features. v0.2 instead adds feedback at transitions
+JSON can prove: a selected production secondary/respiratory wound, a successful
+native treatment, and expiration of a finite acute breathing restriction. The
+last message describes the restriction easing; it does not falsely claim the
+longer wound has healed.
+
+The repository contains a complete 256-wound classification, unchanged-duration
+audit, source-backed capability analysis, gameplay-feel audit, message policy, and
+generated message coverage report. Native wound timing and save compatibility
+remain unchanged from v0.1.
 
 ## Validation
 
@@ -65,7 +74,8 @@ Regenerate the healing audits with:
 ```bash
 python3 tools/validate_mod.py --strict \
   --healing-matrix-output docs/HEALING_MATRIX.md \
-  --healing-duration-output docs/HEALING_DURATION_AUDIT.md
+  --healing-duration-output docs/HEALING_DURATION_AUDIT.md \
+  --message-audit-output docs/V02_MESSAGE_AUDIT.md
 ```
 
 The validator checks JSON structure, duplicate IDs, CDDA references, wound and treatment graphs, permanently non-healing wounds, damage overlays, EOC graphs, weighted distributions, progression relationships, limb-score anatomy, reserved data, and known regressions.
@@ -82,6 +92,10 @@ The validator checks JSON structure, duplicate IDs, CDDA references, wound and t
 - [Healing lifecycle source research](docs/HEALING_RESEARCH.md)
 - [Complete healing classification](docs/HEALING_MATRIX.md)
 - [Healing duration audit](docs/HEALING_DURATION_AUDIT.md)
+- [v0.2 capability research](docs/V02_RESEARCH.md)
+- [v0.2 gameplay-feel audit](docs/V02_GAMEPLAY_AUDIT.md)
+- [Message design policy](docs/MESSAGE_DESIGN.md)
+- [Generated message coverage](docs/V02_MESSAGE_AUDIT.md)
 - [Changelog](CHANGELOG.md)
 
-Visible timed healing stages/completion messages, the contamination/infection treatment lifecycle, generic physical bite identification, thermal-airway source detection, and treated-suture reopening remain explicitly limited by the installed JSON API. They are not claimed as working features.
+Visible timed healing stages/exact completion messages, distinct native-progression success messages, the contamination/infection treatment lifecycle, generic physical bite identification, thermal-airway source detection, and treated-suture reopening remain explicitly limited by the installed JSON API. They are not claimed as working features.

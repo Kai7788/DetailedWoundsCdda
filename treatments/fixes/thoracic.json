@@ -20,7 +20,7 @@
     "wounds_added": [
       "dw_supported_cracked_rib"
     ],
-    "success_msg": "You stabilize the chest injury.",
+    "success_msg": "You bind and support the cracked rib.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care",
@@ -50,7 +50,7 @@
     "wounds_added": [
       "dw_supported_rib_fracture"
     ],
-    "success_msg": "You stabilize the chest injury.",
+    "success_msg": "You secure support around the fractured rib.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care",
@@ -80,7 +80,7 @@
     "wounds_added": [
       "dw_stabilized_displaced_rib_fracture"
     ],
-    "success_msg": "You stabilize the chest injury.",
+    "success_msg": "You stabilize the displaced rib and restrict its movement.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care_expert",
@@ -110,7 +110,7 @@
     "wounds_added": [
       "dw_stabilized_multiple_rib_fractures"
     ],
-    "success_msg": "You stabilize the chest injury.",
+    "success_msg": "You stabilize the injured ribs with firm chest support.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care_expert",
@@ -140,7 +140,7 @@
     "wounds_added": [
       "dw_stabilized_sternal_fracture"
     ],
-    "success_msg": "You stabilize the chest injury.",
+    "success_msg": "You secure support across the injured sternum.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care_expert",
@@ -170,7 +170,7 @@
     "wounds_added": [
       "dw_stabilized_severe_chest_wall_trauma"
     ],
-    "success_msg": "You stabilize the chest injury.",
+    "success_msg": "You stabilize the damaged chest wall.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care_expert",
@@ -200,7 +200,7 @@
     "wounds_added": [
       "dw_stabilized_flail_chest"
     ],
-    "success_msg": "You stabilize the chest injury.",
+    "success_msg": "You firmly stabilize the unstable section of chest wall.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care_expert",

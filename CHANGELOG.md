@@ -1,12 +1,16 @@
 # Changelog
 
-## Unreleased
+## 0.2
 
+- Added severity-aware avatar feedback to all production structural and respiratory wound outcomes.
+- Added restrained recovery messages when finite acute respiratory and chest-wall impairment actually expires.
+- Audited all 109 native treatment success messages and replaced generic chest-support text with procedure-specific feedback.
+- Added a documented anti-spam and non-clinical message policy plus generated feedback coverage auditing.
 - Audited the proposed visible healing lifecycle against installed CDDA commit `251cf6cf23a0277d5118b67bee0efc9625c6cfeb`.
 - Added complete healing classification and unchanged-duration reports for all 256 existing wounds.
-- Extended strict validation so every wound must have one unambiguous healing category.
+- Extended strict validation so every wound has one unambiguous healing category and production feedback cannot silently lose its messages.
 - Documented why current JSON cannot safely synchronize timed stages or a final healing message across native generation, treatment, reinjury, and save/load.
-- Left gameplay, wound IDs, healing values, and version `0.1` unchanged rather than enabling a desynchronizing approximation.
+- Preserved all wound IDs, healing values, routing probabilities, pain, skills, proficiencies, and limb scores rather than enabling a desynchronizing approximation.
 
 ## 0.1
 

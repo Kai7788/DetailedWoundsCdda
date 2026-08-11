@@ -37,21 +37,24 @@
         "if": { "math": [ "_intensity <= 1" ] },
         "then": [
           { "u_add_wound": "torso", "wound_id": "dw_mild_smoke_inhalation" },
-          { "u_add_effect": "dw_respiratory_impairment", "duration": "2 hours", "intensity": 1 }
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "2 hours", "intensity": 1 },
+          { "u_message": "Smoke catches in your throat and makes you cough.", "type": "warning" }
         ]
       },
       {
         "if": { "and": [ { "math": [ "_intensity >= 2" ] }, { "math": [ "_intensity <= 3" ] } ] },
         "then": [
           { "u_add_wound": "torso", "wound_id": "dw_smoke_inhalation_injury" },
-          { "u_add_effect": "dw_respiratory_impairment", "duration": "6 hours", "intensity": 2 }
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "6 hours", "intensity": 2 },
+          { "u_message": "Your airways burn, and each breath triggers a harsh cough.", "type": "bad" }
         ]
       },
       {
         "if": { "math": [ "_intensity >= 4" ] },
         "then": [
           { "u_add_wound": "torso", "wound_id": "dw_severe_smoke_inhalation" },
-          { "u_add_effect": "dw_respiratory_impairment", "duration": "12 hours", "intensity": 3 }
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "12 hours", "intensity": 3 },
+          { "u_message": "You struggle for breath as smoke sears your lungs.", "type": "bad" }
         ]
       }
     ]
@@ -63,7 +66,8 @@
     "condition": { "compare_string": [ { "context_val": "effect" }, "teargas" ] },
     "effect": [
       { "u_add_wound": "mouth", "wound_id": "dw_upper_airway_irritation" },
-      { "u_add_effect": "dw_respiratory_impairment", "duration": "1 hour", "intensity": 1 }
+      { "u_add_effect": "dw_respiratory_impairment", "duration": "1 hour", "intensity": 1 },
+      { "u_message": "Your throat burns and your eyes water as you cough.", "type": "warning" }
     ]
   },
   {
@@ -81,11 +85,13 @@
         },
         "then": [
           { "u_add_wound": "torso", "wound_id": "dw_severe_toxic_lung_injury" },
-          { "u_add_effect": "dw_respiratory_impairment", "duration": "12 hours", "intensity": 3 }
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "12 hours", "intensity": 3 },
+          { "u_message": "Your breathing turns labored as the toxic fumes take hold.", "type": "bad" }
         ],
         "else": [
           { "u_add_wound": "torso", "wound_id": "dw_toxic_inhalation_injury" },
-          { "u_add_effect": "dw_respiratory_impairment", "duration": "6 hours", "intensity": 2 }
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "6 hours", "intensity": 2 },
+          { "u_message": "A harsh chemical burn settles into your breathing.", "type": "bad" }
         ]
       }
     ]
@@ -100,21 +106,24 @@
         "if": { "math": [ "_intensity <= 1" ] },
         "then": [
           { "u_add_wound": "torso", "wound_id": "dw_fungal_airway_exposure" },
-          { "u_add_effect": "dw_respiratory_impairment", "duration": "2 hours", "intensity": 1 }
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "2 hours", "intensity": 1 },
+          { "u_message": "A strange irritation settles into your airways.", "type": "warning" }
         ]
       },
       {
         "if": { "math": [ "_intensity == 2" ] },
         "then": [
           { "u_add_wound": "torso", "wound_id": "dw_fungal_respiratory_irritation" },
-          { "u_add_effect": "dw_respiratory_impairment", "duration": "6 hours", "intensity": 2 }
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "6 hours", "intensity": 2 },
+          { "u_message": "Your chest tightens as the fungal irritation spreads.", "type": "bad" }
         ]
       },
       {
         "if": { "math": [ "_intensity >= 3" ] },
         "then": [
           { "u_add_wound": "torso", "wound_id": "dw_fungal_lung_involvement" },
-          { "u_add_effect": "dw_respiratory_impairment", "duration": "12 hours", "intensity": 3 }
+          { "u_add_effect": "dw_respiratory_impairment", "duration": "12 hours", "intensity": 3 },
+          { "u_message": "Your lungs feel heavy and raw as the fungal exposure takes hold.", "type": "bad" }
         ]
       }
     ]

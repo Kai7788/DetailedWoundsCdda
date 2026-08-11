@@ -17,6 +17,11 @@ share the wound's randomly sampled duration or confirm that treatment/reinjury h
 not replaced it. A parallel timer could announce false healing or recreate an old
 wound. No visible-stage controller or completion message is enabled.
 
+v0.2 still provides safe partial feedback: production-created secondary and
+respiratory wounds announce their acquisition, native treatments print their
+success message, and finite acute breathing restrictions announce when that effect
+actually expires. None is presented as native wound completion.
+
 Required CDDA capability: native wound-stage/final-message JSON fields, or JSON
 access to wound ID/bodypart/time/progress plus wound-created, wound-healed, and
 wound-fix-completed lifecycle context. See [the full research audit](HEALING_RESEARCH.md).
@@ -87,6 +92,8 @@ Implemented as a finite acute abstraction.
 Vanilla breathing is a mouth limb score while Detailed Wounds respiratory/thoracic wounds are stored on torso. Source EOCs apply global `dw_respiratory_impairment` for a finite severity-based duration; severe thoracic outcome EOCs similarly apply finite `dw_chest_wall_impairment`. Both expire naturally and cannot trap the player in a permanent state.
 
 These effects are not synchronized to the full wound healing duration because the missing treatment callback cannot remove them early. They represent acute breathing restriction, not the complete recovery curve.
+Their v0.2 removal messages state only that breathing/tightness has eased; the
+underlying wound may remain in the medical UI.
 
 ## Treated-wound reopening
 
@@ -95,6 +102,11 @@ Blocked for treated-only states in this build.
 Despite the broad wording in `doc/JSON/WOUNDS.md`, `bodypart::add_or_worsen_wound` in `src/bodypart.cpp` evaluates a wound type's `wound_progression` only when that same wound type is being added again. Sutured and repaired states are excluded from automatic selection by the deliberate contradictory `BIONIC_LIMB` gate, so ordinary damage never re-adds them. JSON also has no condition that queries a specific wound ID on a supplied bodypart.
 
 Production-reachable secondary wounds do use native progression when the same structural outcome is inflicted again. Adding inert progression to treated sutures was intentionally avoided.
+
+Native progression itself emits no non-debug event/message and JSON cannot tell
+whether its chance succeeded. Production outcome messages are deliberately worded
+to fit either a new structural injury or an aggravating structural event; v0.2
+does not falsely label them as confirmed reopening.
 
 Required CDDA capability: progression of existing wounds whenever their bodypart is damaged, or a bodypart-specific `has_wound` EOC condition.
 

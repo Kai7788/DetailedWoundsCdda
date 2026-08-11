@@ -1,4 +1,4 @@
-# v0.1 test plan and recorded results
+# v0.2 test plan and recorded results
 
 Only tests actually performed are marked as passed. The repository was audited against CDDA experimental build `2026-08-10-0437` (`251cf6cf23a0277d5118b67bee0efc9625c6cfeb`).
 
@@ -45,6 +45,16 @@ These boxes are updated only after the final commands have actually completed.
 ## Future runtime regression scenarios
 
 The following are deliberately unmarked. They are useful for later balancing/playtesting, not a gate for this implementation pass.
+
+### v0.2 feedback
+
+- [ ] Each production structural outcome prints exactly one severity-appropriate acquisition message for the avatar.
+- [ ] NPC structural injury does not print an avatar log message.
+- [ ] Smoke, irritant, toxic, and fungal respiratory routes print the matching source/severity message.
+- [ ] Every successful wound treatment prints its family-specific native success message.
+- [ ] Expiring `dw_respiratory_impairment` prints “Your breathing becomes easier” without claiming the wound healed.
+- [ ] Expiring `dw_chest_wall_impairment` prints the chest-easing message without claiming the wound healed.
+- [ ] A multi-damage-type attack remains readable and does not create unbounded message spam.
 
 ### Visible healing lifecycle (blocked in the audited JSON API)
 

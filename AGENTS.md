@@ -43,6 +43,12 @@ Important invariants:
   are no wound-created/healed or context-rich wound-fix events. Do not add companion
   healing timers, scheduled stage transitions, or completion messages unless a
   newer build exposes enough lifecycle context to prevent treatment/reinjury races.
+- Production wound-addition EOCs must keep one avatar-only acquisition message per
+  wound outcome. Keep it sensory/non-clinical and valid for either a new structural
+  injury or aggravation because native progression success is not observable.
+- `dw_respiratory_impairment` and `dw_chest_wall_impairment` removal messages describe
+  only expiration of the finite acute effect. They must never claim the longer wound
+  has healed.
 
 After a coherent implementation change, run:
 
@@ -55,7 +61,8 @@ present. A different build can be selected with `--cdda-data PATH`. Use
 `--coverage-output docs/WOUND_MATRIX.md` to regenerate the coverage document.
 Use `--healing-matrix-output docs/HEALING_MATRIX.md` and
 `--healing-duration-output docs/HEALING_DURATION_AUDIT.md` to regenerate the
-healing audits.
+healing audits. Use `--message-audit-output docs/V02_MESSAGE_AUDIT.md` to
+regenerate the feedback coverage report.
 
 Do not mark runtime checks passed without an actual game test. Headless
 `--check-mods` confirms loading and references, not combat frequency or balance.

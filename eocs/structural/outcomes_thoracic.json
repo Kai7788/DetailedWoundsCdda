@@ -9,12 +9,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_rib_contusion"
             },
-            "wound_id": "dw_rib_contusion"
-        }
+            {
+                "u_message": "The blow leaves your ribs deeply sore.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -26,12 +32,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_cracked_rib"
             },
-            "wound_id": "dw_cracked_rib"
-        }
+            {
+                "u_message": "A sharp pain catches in your ribs when you breathe.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -43,12 +55,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_rib_fracture"
             },
-            "wound_id": "dw_rib_fracture"
-        }
+            {
+                "u_message": "Something gives in your ribs with a stab of pain.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -71,6 +89,10 @@
                 "u_add_effect": "dw_chest_wall_impairment",
                 "duration": "4 hours",
                 "intensity": 1
+            },
+            {
+                "u_message": "An injured rib shifts painfully after the impact.",
+                "type": "bad"
             }
         ]
     },
@@ -95,6 +117,10 @@
                 "u_add_effect": "dw_chest_wall_impairment",
                 "duration": "6 hours",
                 "intensity": 2
+            },
+            {
+                "u_message": "Several points in your chest flare with sharp pain.",
+                "type": "bad"
             }
         ]
     },
@@ -119,6 +145,10 @@
                 "u_add_effect": "dw_chest_wall_impairment",
                 "duration": "6 hours",
                 "intensity": 2
+            },
+            {
+                "u_message": "Pain erupts along the center of your chest.",
+                "type": "bad"
             }
         ]
     },
@@ -143,6 +173,10 @@
                 "u_add_effect": "dw_chest_wall_impairment",
                 "duration": "8 hours",
                 "intensity": 2
+            },
+            {
+                "u_message": "Your chest feels unstable, and every breath hurts.",
+                "type": "bad"
             }
         ]
     },
@@ -167,6 +201,10 @@
                 "u_add_effect": "dw_chest_wall_impairment",
                 "duration": "12 hours",
                 "intensity": 3
+            },
+            {
+                "u_message": "Part of your chest gives way, making every breath a struggle.",
+                "type": "bad"
             }
         ]
     }

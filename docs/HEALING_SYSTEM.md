@@ -1,6 +1,6 @@
 # Healing system architecture
 
-## Intended v0.2 experience
+## Ideal complete lifecycle
 
 The target user-facing lifecycle remains:
 
@@ -52,9 +52,10 @@ native wound progress is private to C++
 ```
 
 Consequently, no gameplay lifecycle controller, stage wound, tracker effect, or
-completion message is enabled. The repository remains version 0.1 rather than
-claiming a v0.2 feature that can resurrect treated wounds, announce false healing,
-or strand old saves.
+exact wound-completion message is enabled. v0.2 adds feedback only at transitions
+JSON can prove: production injury creation, successful native treatment, and the
+end of a finite acute breathing restriction. It does not resurrect treated wounds,
+announce false healing, or strand old saves.
 
 ## Rejected designs
 
@@ -99,6 +100,10 @@ Static limb-score penalties do not decline before completion. Wounds without a
 finite timer remain until their treatment graph creates a finite state. Treatment
 constructs a new wound with a fresh duration and zero progress, exactly as in v0.1.
 Existing saves retain their serialized wound type, duration, progress, and pain.
+
+Finite `dw_respiratory_impairment` and `dw_chest_wall_impairment` effects now print
+one avatar-only message when they actually expire. This is an acute recovery
+milestone, not a claim that the longer wound has disappeared.
 
 [The duration audit](HEALING_DURATION_AUDIT.md) confirms that this safe result
 changes no healing range.

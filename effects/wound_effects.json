@@ -234,6 +234,7 @@
             "Damage to your respiratory system substantially reduces your ability to recover from exertion.",
             "Severe respiratory damage makes effective breathing extremely difficult."
         ],
+        "remove_message": "Your breathing becomes easier.",
         "rating": "bad",
         "max_intensity": 3,
         "max_effective_intensity": 3,
@@ -263,6 +264,7 @@
             "Structural chest trauma significantly restricts the expansion of your chest.",
             "Severe chest wall instability makes normal breathing mechanics extremely inefficient."
         ],
+        "remove_message": "The tightness in your injured chest begins to ease.",
         "rating": "bad",
         "max_intensity": 3,
         "max_effective_intensity": 3,

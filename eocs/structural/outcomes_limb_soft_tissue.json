@@ -9,12 +9,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_muscle_contusion"
             },
-            "wound_id": "dw_muscle_contusion"
-        }
+            {
+                "u_message": "The struck muscle begins to ache.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -26,12 +32,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_muscle_strain"
             },
-            "wound_id": "dw_muscle_strain"
-        }
+            {
+                "u_message": "The muscle pulls painfully under the impact.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -43,12 +55,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_partial_muscle_tear"
             },
-            "wound_id": "dw_partial_muscle_tear"
-        }
+            {
+                "u_message": "Something tears painfully in the struck muscle.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -60,12 +78,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_muscle_rupture"
             },
-            "wound_id": "dw_muscle_rupture"
-        }
+            {
+                "u_message": "The muscle gives violently with intense pain.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -77,12 +101,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_muscle_laceration"
             },
-            "wound_id": "dw_muscle_laceration"
-        }
+            {
+                "u_message": "The wound cuts painfully into deeper muscle.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -94,12 +124,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_severe_muscle_laceration"
             },
-            "wound_id": "dw_severe_muscle_laceration"
-        }
+            {
+                "u_message": "The wound tears through deep muscle tissue.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -111,12 +147,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_tendon_strain"
             },
-            "wound_id": "dw_tendon_strain"
-        }
+            {
+                "u_message": "A taut, pulling pain catches in the injured limb.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -128,12 +170,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_partial_tendon_tear"
             },
-            "wound_id": "dw_partial_tendon_tear"
-        }
+            {
+                "u_message": "Something fibrous tears painfully in the injured limb.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -145,12 +193,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_tendon_rupture"
             },
-            "wound_id": "dw_tendon_rupture"
-        }
+            {
+                "u_message": "Something snaps under tension in the injured limb.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -162,12 +216,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_severed_tendon"
             },
-            "wound_id": "dw_severed_tendon"
-        }
+            {
+                "u_message": "A deep cut leaves part of the limb weak and unresponsive.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -179,12 +239,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_ligament_sprain"
             },
-            "wound_id": "dw_ligament_sprain"
-        }
+            {
+                "u_message": "The joint twists painfully and begins to swell.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -196,12 +262,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_partial_ligament_tear"
             },
-            "wound_id": "dw_partial_ligament_tear"
-        }
+            {
+                "u_message": "The joint buckles as supporting tissue tears.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -213,12 +285,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_ligament_rupture"
             },
-            "wound_id": "dw_ligament_rupture"
-        }
+            {
+                "u_message": "The joint gives violently with a tearing pain.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -230,12 +308,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_joint_subluxation"
             },
-            "wound_id": "dw_joint_subluxation"
-        }
+            {
+                "u_message": "The joint slips painfully out of alignment, then catches.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -247,12 +331,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_joint_dislocation"
             },
-            "wound_id": "dw_joint_dislocation"
-        }
+            {
+                "u_message": "The joint wrenches out of place.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -264,12 +354,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_nerve_contusion"
             },
-            "wound_id": "dw_nerve_contusion"
-        }
+            {
+                "u_message": "Tingling pain flashes through the struck limb.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -281,12 +377,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_peripheral_nerve_injury"
             },
-            "wound_id": "dw_peripheral_nerve_injury"
-        }
+            {
+                "u_message": "A sharp, electric pain shoots through the injured limb.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -298,12 +400,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_severe_peripheral_nerve_injury"
             },
-            "wound_id": "dw_severe_peripheral_nerve_injury"
-        }
+            {
+                "u_message": "Burning pain and numbness race through the injured limb.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -315,12 +423,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_nerve_severance"
             },
-            "wound_id": "dw_nerve_severance"
-        }
+            {
+                "u_message": "The deep wound leaves part of the limb numb and unresponsive.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -332,12 +446,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_soft_tissue_crush_injury"
             },
-            "wound_id": "dw_soft_tissue_crush_injury"
-        }
+            {
+                "u_message": "The impact crushes and swells the soft tissue.",
+                "type": "warning"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -349,12 +469,18 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_severe_soft_tissue_crush_injury"
             },
-            "wound_id": "dw_severe_soft_tissue_crush_injury"
-        }
+            {
+                "u_message": "The limb is compressed with brutal, deep tissue pain.",
+                "type": "bad"
+            }
+        ]
     },
     {
         "type": "effect_on_condition",
@@ -366,11 +492,17 @@
                 "bp"
             ]
         },
-        "effect": {
-            "u_add_wound": {
-                "context_val": "bp"
+        "effect": [
+            {
+                "u_add_wound": {
+                    "context_val": "bp"
+                },
+                "wound_id": "dw_compartment_syndrome"
             },
-            "wound_id": "dw_compartment_syndrome"
-        }
+            {
+                "u_message": "Pressure builds painfully inside the swollen limb.",
+                "type": "bad"
+            }
+        ]
     }
 ]

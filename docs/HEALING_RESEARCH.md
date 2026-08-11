@@ -119,6 +119,9 @@ These features are not a safe wound controller in this build:
   false.
 
 `remove_message` is therefore not used as an approximate wound-healed message.
+v0.2 does use it for the two existing finite acute breathing effects, where effect
+removal itself is the exact event being described. Their messages say the acute
+restriction has eased and do not claim the associated wound has healed.
 
 ## Recurring and scheduled EOCs
 
@@ -173,10 +176,10 @@ An exact one-per-wound message requires one of:
 3. a tracker initialized/replaced by native wound creation and `wound_fix` using
    the exact wound instance duration.
 
-This commit provides none of those. `u_message` could print a message, and effect
-removal could notify the avatar silently for NPCs, but neither can be synchronized
-to the wound. No completion message is enabled because a false message is worse
-than no message.
+This commit provides none of those. `u_message` can print production injury and
+treatment feedback, and effect removal can accurately announce the end of the
+effect itself, but neither can be synchronized to native wound completion. No
+wound-healed message is enabled because a false message is worse than no message.
 
 ## Required engine capability
 

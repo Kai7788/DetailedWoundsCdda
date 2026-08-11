@@ -16,6 +16,10 @@ completion. The requested staged-healing architecture and its exact blockers are
 documented in [Healing system architecture](HEALING_SYSTEM.md) and
 [Healing lifecycle research](HEALING_RESEARCH.md).
 
+v0.2 adds feedback only at transitions the JSON layer owns or directly observes.
+The message rules and exact coverage are documented in [Message design](MESSAGE_DESIGN.md)
+and [the generated message audit](V02_MESSAGE_AUDIT.md).
+
 ## Damage paths
 
 ```text
@@ -27,6 +31,7 @@ Damage event
     ├── post-armor damage/bodypart gate
     ├── one severity route
     └── zero or one secondary structural wound
+        └── one avatar-only acquisition message
 ```
 
 Primary selection and secondary routing are independent. `ondamage_eocs` does not expose the primary wound ID, so secondary injuries derive from damage type, post-armor magnitude, anatomy, and a bounded weighted outcome.
@@ -62,7 +67,7 @@ optional later wound_fix
         │
 closed / debrided / stabilized state
         │
-      healing
+ native success_msg, then healing
 ```
 
 Some severe wounds intentionally have no `healing_time`; their treatment graph must reach a state with finite healing. `tools/validate_mod.py` verifies this transitively.
@@ -88,6 +93,10 @@ In the audited source, progression is checked only when the same wound type is a
 The `character_gains_effect` event provides source-specific respiratory entry for mouth-targeted smoke, tear gas, toxic poison, and fungus effects. The EOC adds an anatomically appropriate torso lung wound or mouth upper-airway wound plus finite global `dw_respiratory_impairment`.
 
 Severe thoracic structural outcome EOCs add finite global `dw_chest_wall_impairment`. Global modifiers are necessary because vanilla breathing is supplied by the mouth bodypart while these wounds live on torso. Natural expiration avoids any dependency on a missing treatment callback.
+
+Both finite active impairment effects print one avatar-only easing message on
+actual expiration. This acknowledges an acute recovery milestone without claiming
+the independently timed wound has healed.
 
 ## Dormant compatibility infrastructure
 

@@ -474,7 +474,12 @@ def validate_requirements(records: list[Record], base: BaseData, report: Report)
 
 def validate_wound_fixes(records: list[Record], base: BaseData, report: Report) -> None:
     fixes = records_of_type(records, "wound_fix")
-    wound_ids = {record.obj["id"] for record in records_of_type(records, "wound") if "id" in record.obj}
+    wound_map = {
+        record.obj["id"]: record
+        for record in records_of_type(records, "wound")
+        if "id" in record.obj
+    }
+    wound_ids = set(wound_map)
     requirement_ids = {
         record.obj["id"] for record in records_of_type(records, "requirement") if "id" in record.obj
     }
@@ -484,6 +489,9 @@ def validate_wound_fixes(records: list[Record], base: BaseData, report: Report) 
 
     for record in fixes:
         obj = record.obj
+        success_msg = obj.get("success_msg")
+        if not isinstance(success_msg, str) or not success_msg.strip():
+            report.error(f"{record.label}: wound_fix needs a non-empty success_msg")
         for field in ("wounds_removed", "wounds_added"):
             values = obj.get(field)
             if not isinstance(values, list) or not values or not all(isinstance(value, str) for value in values):
@@ -499,6 +507,21 @@ def validate_wound_fixes(records: list[Record], base: BaseData, report: Report) 
         targets = obj.get("wounds_added", [])
         if isinstance(sources, list) and isinstance(targets, list) and set(sources) & set(targets):
             report.error(f"{record.label}: a wound_fix cannot add and remove the same wound ID")
+        if isinstance(sources, list) and isinstance(targets, list):
+            for source in sources:
+                for target in targets:
+                    if source not in wound_map or target not in wound_map:
+                        continue
+                    source_obj = wound_map[source].obj
+                    target_obj = wound_map[target].obj
+                    if source_obj.get("name") == target_obj.get("name"):
+                        report.error(
+                            f"{record.label}: treatment target '{target}' must have a distinct display name from '{source}'"
+                        )
+                    if source_obj.get("description") == target_obj.get("description"):
+                        report.error(
+                            f"{record.label}: treatment target '{target}' must have a distinct description from '{source}'"
+                        )
 
         time = duration_seconds(obj.get("time"))
         if time is None or time <= 0:
@@ -754,8 +777,55 @@ def validate_effect_classification(records: list[Record], report: Report) -> Non
     }
     for effect_id in sorted(ACTIVE_EFFECT_IDS - active_effect_references):
         report.error(f"Effect is classified active but has no production-reachable lifecycle entry: {effect_id}")
+    effect_map = {
+        record.obj["id"]: record
+        for record in records_of_type(records, "effect_type")
+        if isinstance(record.obj.get("id"), str)
+    }
+    for effect_id in sorted(ACTIVE_EFFECT_IDS):
+        record = effect_map.get(effect_id)
+        if record and (
+            not isinstance(record.obj.get("remove_message"), str)
+            or not record.obj["remove_message"].strip()
+        ):
+            report.error(f"{record.label}: active finite impairment needs a recovery remove_message")
     for effect_id in sorted(DORMANT_EFFECT_IDS):
         report.note(f"Intentional dormant effect: {effect_id}")
+
+
+def validate_feedback(records: list[Record], report: Report) -> None:
+    """Validate the deliberately bounded v0.2 player-feedback layer.
+
+    Production secondary and respiratory entry EOCs know that they have just added
+    a wound to the damaged character. Native primary selection, wound_progression,
+    and natural completion do not expose equivalent JSON lifecycle context and are
+    intentionally outside this check.
+    """
+    eoc_map = {
+        record.obj["id"]: record
+        for record in records_of_type(records, "effect_on_condition")
+        if isinstance(record.obj.get("id"), str)
+    }
+    for eoc_id in sorted(production_reachable_eocs(records)):
+        record = eoc_map[eoc_id]
+        wound_additions = sum(
+            1
+            for key, _, _ in walk(record.obj)
+            if key in {"u_add_wound", "npc_add_wound"}
+        )
+        messages = [
+            value
+            for key, value, _ in walk(record.obj)
+            if key in {"u_message", "npc_message"}
+        ]
+        if wound_additions and len(messages) < wound_additions:
+            report.error(
+                f"{record.label}: production wound entry has {wound_additions} wound addition(s) "
+                f"but only {len(messages)} acquisition message(s)"
+            )
+        for message in messages:
+            if not isinstance(message, str) or not message.strip():
+                report.error(f"{record.label}: feedback message must be a non-empty string")
 
 
 def validate_treatment_reachability(records: list[Record], report: Report) -> None:
@@ -1054,7 +1124,7 @@ def healing_matrix_markdown(records: list[Record]) -> str:
         "# Healing classification matrix",
         "",
         "Generated by `python3 tools/validate_mod.py --healing-matrix-output docs/HEALING_MATRIX.md`.",
-        "Every current wound belongs to exactly one category. This is the audited v0.1 baseline;",
+        "Every current wound belongs to exactly one category in the wound catalog carried into v0.2;",
         "the installed CDDA JSON API cannot safely observe or transition native wound healing",
         "progress, so no timed visible-stage controller is enabled.",
         "",
@@ -1152,6 +1222,119 @@ def healing_duration_markdown(records: list[Record]) -> str:
     for record in sorted(indefinite, key=lambda value: value.obj["id"]):
         lines.append(f"- `{record.obj['id']}` (category {classifications[record.obj['id']]})")
     lines.append("")
+    return "\n".join(lines)
+
+
+def message_audit_markdown(records: list[Record]) -> str:
+    eoc_map = {
+        record.obj["id"]: record
+        for record in records_of_type(records, "effect_on_condition")
+        if isinstance(record.obj.get("id"), str)
+    }
+    acquisition: list[tuple[str, list[str], list[str]]] = []
+    for eoc_id in sorted(production_reachable_eocs(records)):
+        record = eoc_map[eoc_id]
+        wound_ids = [
+            value
+            for key, raw, _ in walk(record.obj)
+            if key == "wound_id"
+            for value in strings(raw)
+        ]
+        messages = [
+            raw
+            for key, raw, _ in walk(record.obj)
+            if key in {"u_message", "npc_message"} and isinstance(raw, str)
+        ]
+        if wound_ids and messages:
+            acquisition.append((eoc_id, wound_ids, messages))
+
+    fixes = sorted(
+        records_of_type(records, "wound_fix"), key=lambda record: record.obj["id"]
+    )
+    active_effects = {
+        record.obj["id"]: record.obj
+        for record in records_of_type(records, "effect_type")
+        if record.obj.get("id") in ACTIVE_EFFECT_IDS
+    }
+    acquisition_message_count = sum(len(messages) for _, _, messages in acquisition)
+    treatment_message_count = sum(
+        isinstance(record.obj.get("success_msg"), str) and bool(record.obj["success_msg"].strip())
+        for record in fixes
+    )
+    recovery_message_count = sum(
+        isinstance(obj.get("remove_message"), str) and bool(obj["remove_message"].strip())
+        for obj in active_effects.values()
+    )
+
+    lines = [
+        "# v0.2 message coverage audit",
+        "",
+        "Generated by `python3 tools/validate_mod.py --message-audit-output docs/V02_MESSAGE_AUDIT.md`.",
+        "Messages are attached only where JSON observes the real transition. `u_message` and",
+        "effect `remove_message` are avatar-facing; NPC recovery remains silent.",
+        "",
+        "## Summary",
+        "",
+        f"- Production acquisition messages: {acquisition_message_count}",
+        f"- Native wound-fix success messages: {treatment_message_count}",
+        f"- Finite acute recovery milestones: {recovery_message_count}",
+        "- Distinct native wound-progression messages: 0 (no success callback/context)",
+        "- Exact natural wound-healing messages: 0 (no wound-healed event/query)",
+        "",
+        "## Production acquisition feedback",
+        "",
+        "| EOC | Wound outcome(s) | Message(s) |",
+        "|---|---|---|",
+    ]
+    for eoc_id, wound_ids, messages in acquisition:
+        lines.append(
+            f"| `{eoc_id}` | "
+            + ", ".join(f"`{wound_id}`" for wound_id in wound_ids)
+            + " | "
+            + "<br>".join(messages)
+            + " |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Treatment completion feedback",
+            "",
+            "| Wound fix | Success message |",
+            "|---|---|",
+        ]
+    )
+    for record in fixes:
+        lines.append(f"| `{record.obj['id']}` | {record.obj['success_msg']} |")
+    lines.extend(
+        [
+            "",
+            "## Safe recovery milestones",
+            "",
+            "| Effect | Removal message | Meaning |",
+            "|---|---|---|",
+        ]
+    )
+    meanings = {
+        "dw_respiratory_impairment": "The finite acute breathing restriction expired; the longer wound may remain.",
+        "dw_chest_wall_impairment": "The finite acute chest restriction expired; the longer wound may remain.",
+    }
+    for effect_id in sorted(active_effects):
+        lines.append(
+            f"| `{effect_id}` | {active_effects[effect_id]['remove_message']} | {meanings[effect_id]} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Deliberate gaps",
+            "",
+            "Natural primary acquisition is silent because native wound selection exposes no chosen wound ID.",
+            "Native `wound_progression` exposes neither success nor old/new wound context, so production",
+            "messages describe a structural event in wording valid for either a new injury or aggravation.",
+            "Natural wound completion remains silent because CDDA erases the wound without a JSON event.",
+            "No parallel timer or unverified healing claim is used.",
+            "",
+        ]
+    )
     return "\n".join(lines)
 
 
@@ -1352,6 +1535,28 @@ def print_report(records: list[Record], base: BaseData, report: Report) -> None:
         if isinstance(record.obj.get("wound_progression", []), list)
     )
     healing_categories = Counter(healing_classifications(records).values())
+    reachable_eocs = production_reachable_eocs(records)
+    eoc_map = {
+        record.obj["id"]: record.obj
+        for record in records_of_type(records, "effect_on_condition")
+        if isinstance(record.obj.get("id"), str)
+    }
+    acquisition_messages = sum(
+        1
+        for eoc_id in reachable_eocs
+        for key, _, _ in walk(eoc_map[eoc_id])
+        if key == "u_message"
+    )
+    treatment_messages = sum(
+        isinstance(record.obj.get("success_msg"), str) and bool(record.obj["success_msg"].strip())
+        for record in records_of_type(records, "wound_fix")
+    )
+    recovery_messages = sum(
+        record.obj.get("id") in ACTIVE_EFFECT_IDS
+        and isinstance(record.obj.get("remove_message"), str)
+        and bool(record.obj["remove_message"].strip())
+        for record in records_of_type(records, "effect_type")
+    )
     print(f"Parsed {len(json_paths(ROOT))} JSON files and {len(records)} objects.")
     if base.root:
         print(f"CDDA base data: {base.root}")
@@ -1376,6 +1581,11 @@ def print_report(records: list[Record], base: BaseData, report: Report) -> None:
             f"{category}={healing_categories.get(category, 0)}"
             for category in HEALING_CATEGORIES
         )
+    )
+    print(
+        "  feedback messages: "
+        f"acquisition={acquisition_messages}, treatment={treatment_messages}, "
+        f"acute_recovery={recovery_messages}"
     )
     for heading, messages in (
         ("ERRORS", report.errors),
@@ -1421,6 +1631,11 @@ def main() -> int:
         help="write the current healing-duration preservation audit inside the repository",
     )
     parser.add_argument(
+        "--message-audit-output",
+        metavar="PATH",
+        help="write the v0.2 acquisition/treatment/recovery message audit inside the repository",
+    )
+    parser.add_argument(
         "--strict",
         action="store_true",
         help="return a failure status for warnings as well as errors",
@@ -1436,6 +1651,7 @@ def main() -> int:
     validate_eocs(records, base, report)
     validate_damage_overlays(records, report)
     validate_effect_classification(records, report)
+    validate_feedback(records, report)
     validate_treatment_reachability(records, report)
     validate_healing_classifications(records, report)
     regression_checks(records, report)
@@ -1456,6 +1672,7 @@ def main() -> int:
     generated_documents = (
         (args.healing_matrix_output, healing_matrix_markdown(records), "Healing matrix"),
         (args.healing_duration_output, healing_duration_markdown(records), "Healing duration audit"),
+        (args.message_audit_output, message_audit_markdown(records), "Message audit"),
     )
     for destination, contents, label in generated_documents:
         if not destination:
