@@ -96,6 +96,27 @@ and this API offers no reliable conversion from a dynamic context value to a
 localized possessive bodypart name. Correct generic phrasing such as “the struck
 limb” is preferred over exposing `arm_l` or relying on fragile tag behavior.
 
+### Region-aware aggravation flavor
+
+The installed dialogue/EOC API has no `u_has_wound`/`npc_has_wound` condition and
+cannot query a wound ID on the bodypart held in `bp`. `u_pick_bodypart` can select
+a bodypart that has some wound, but it is an interactive selector, does not verify
+the supplied damage-event bodypart, and does not expose which wound is present.
+
+Production damage hooks therefore cannot prove that the struck region was already
+injured before printing an occasional aggravation line. No extra roll/message was
+added. The one selected structural outcome message uses sensation-based wording
+that remains valid for a new event or repeated trauma without asserting a state
+transition.
+
+### Mod help pages
+
+Installed `doc/JSON/HELP_MENU.md` documents mod-owned `help` objects.
+`help::load_object` in `src/help.cpp` offsets each source's local order and appends
+its categories to the normal help menu. This is a complete JSON lifecycle with no
+callback requirement. v0.2 therefore adds one Detailed Wounds page using the
+validated `<press_medical>` keybind tag.
+
 ## Resulting v0.2 architecture
 
 ```text

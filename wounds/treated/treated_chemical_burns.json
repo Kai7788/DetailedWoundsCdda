@@ -5,7 +5,7 @@
         "name": {
             "str": "irrigated mild chemical burn"
         },
-        "description": "The corrosive substance has been thoroughly flushed from the affected area.  Mild chemical damage remains, but continued tissue destruction from the original contaminant has been stopped.",
+        "description": "The corrosive substance has been thoroughly flushed from the affected area.  Mild rawness and tenderness remain, but continuing chemical destruction has stopped and the protected tissue can now recover.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

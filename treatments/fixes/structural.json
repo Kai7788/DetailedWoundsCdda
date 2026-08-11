@@ -20,7 +20,7 @@
     "wounds_added": [
       "dw_supported_muscle_strain"
     ],
-    "success_msg": "You support the strained muscle.",
+    "success_msg": "You wrap and support the strained muscle, limiting painful movement.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care",
@@ -182,7 +182,7 @@
     "wounds_added": [
       "dw_supported_tendon_strain"
     ],
-    "success_msg": "You support the strained tendon.",
+    "success_msg": "You support the injured tendon and limit strain across it.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care",
@@ -310,7 +310,7 @@
     "wounds_added": [
       "dw_supported_ligament_sprain"
     ],
-    "success_msg": "You support the sprained ligament.",
+    "success_msg": "You brace the sprained joint and limit stress on its ligaments.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care",
@@ -469,7 +469,7 @@
     "wounds_added": [
       "dw_protected_peripheral_nerve_injury"
     ],
-    "success_msg": "You protect the injured peripheral nerve.",
+    "success_msg": "You pad the injured limb and protect the damaged nerve from further pressure.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care",
@@ -499,7 +499,7 @@
     "wounds_added": [
       "dw_stabilized_severe_peripheral_nerve_injury"
     ],
-    "success_msg": "You stabilize the severe peripheral nerve injury.",
+    "success_msg": "You stabilize the limb and protect the severely injured nerve pathway.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care_expert",
@@ -563,7 +563,7 @@
     "wounds_added": [
       "dw_treated_soft_tissue_crush_injury"
     ],
-    "success_msg": "You protect and support the soft tissue crush injury.",
+    "success_msg": "You protect the crushed tissue and secure support around the swollen limb.",
     "proficiencies": [
       {
         "proficiency": "prof_wound_care",

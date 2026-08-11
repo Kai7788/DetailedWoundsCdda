@@ -36,7 +36,7 @@
     "name": {
       "str": "internal soft-tissue trauma"
     },
-    "description": "The force of the impact has damaged muscle, connective tissue, and other structures beneath the body wall.  Little may be visible externally despite the significant injury underneath.",
+    "description": "The force of the impact has damaged muscle, connective tissue, and other structures beneath the body wall.  Little is visible externally, but deep aching and pressure worsen whenever the torso moves or is compressed.",
     "weight": 6,
     "limit": 2,
     "wound_progression": [ { "id": "dw_internal_organ_contusion", "chance": 15 } ],
@@ -67,7 +67,7 @@
     "name": {
       "str": "internal organ contusion"
     },
-    "description": "A severe blunt impact has transferred enough force through the body wall to bruise internal organs.  The injury causes deep, persistent pain and requires considerable time to recover.",
+    "description": "A severe blunt impact has transferred enough force through the body wall to bruise internal organs.  Deep, poorly localized pain and a sickened feeling persist, especially when the torso bends or bears pressure.",
     "weight": 3,
     "limit": 1,
     "wound_progression": [ { "id": "dw_severe_crush_trauma", "chance": 10 } ],
@@ -98,7 +98,7 @@
     "name": {
       "str": "severe internal crush trauma"
     },
-    "description": "The torso has been subjected to devastating compressive force.  Deep tissues and internal structures are extensively bruised and damaged despite the limited external appearance of the injury.",
+    "description": "The torso has been subjected to devastating compressive force.  Deep tissues and internal structures are extensively bruised, leaving oppressive pressure, weakness, and severe pain despite limited injury at the skin.",
     "weight": 1,
     "limit": 1,
     "damage_types": [
@@ -161,7 +161,7 @@
       "str": "severe penetrating torso injury",
       "str_pl": "severe penetrating torso injuries"
     },
-    "description": "A deep penetrating wound has torn through multiple layers of tissue within the torso.  Important internal structures may have been damaged along the path of the weapon.",
+    "description": "A deep penetrating wound has torn through multiple layers of tissue within the torso.  Sharp internal pain follows the wound channel, accompanied by a sickening pressure that movement makes worse.",
     "weight": 3,
     "limit": 1,
     "wound_progression": [ { "id": "dw_major_penetrating_organ_trauma", "chance": 15 } ],
@@ -192,7 +192,7 @@
     "name": {
       "str": "major penetrating organ trauma"
     },
-    "description": "The penetrating injury has reached and seriously damaged structures deep within the torso.  The wound is severe and recovery will require prolonged rest and careful medical management.",
+    "description": "The penetrating injury has reached and seriously damaged structures deep within the torso.  Severe internal pain, pressure, and growing weakness make even careful movement difficult.",
     "weight": 1,
     "limit": 1,
     "damage_types": [
@@ -284,7 +284,7 @@
     "name": {
       "str": "devastating ballistic internal trauma"
     },
-    "description": "A powerful projectile has caused massive disruption inside the torso.  Deep tissues and internal structures have suffered extensive traumatic damage.",
+    "description": "A powerful projectile has caused massive disruption inside the torso.  Burning pain radiates from the wound channel through badly torn deep tissue, leaving the body weak and shocked.",
     "weight": 1,
     "limit": 1,
     "damage_types": [
@@ -380,7 +380,7 @@
     "name": {
       "str": "major internal hemorrhage"
     },
-    "description": "Major blood vessels or highly vascular tissues inside the torso have been damaged.  Significant internal bleeding is occurring, creating a serious and debilitating injury.",
+    "description": "Major blood vessels or highly vascular tissues inside the torso have been damaged.  Mounting internal pressure, deep pain, dizziness, and growing weakness make the ongoing bleeding profoundly debilitating.",
     "weight": 1,
     "limit": 1,
     "damage_types": [

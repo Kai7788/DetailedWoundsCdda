@@ -20,6 +20,7 @@ from typing import Any, Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
 IGNORED_PARTS = {".git", ".agents", ".codex", "__pycache__"}
+IDLESS_TYPES = {"help"}
 MATRIX_DAMAGE_TYPES = (
     "bash",
     "cut",
@@ -60,6 +61,59 @@ UNREFERENCED_EOC_ALLOWLIST = {
     "EOC_DW_TREATMENT_DOWNGRADE_LOCAL_INFECTION",
 }
 INTENTIONALLY_UNTREATABLE_WOUNDS: set[str] = set()
+POLISHED_WOUND_IDS = {
+    "dw_shallow_cut",
+    "dw_minor_electrical_burn",
+    "dw_blunt_ocular_trauma",
+    "dw_severe_ocular_trauma",
+    "dw_ocular_laceration",
+    "dw_penetrating_ocular_injury",
+    "dw_concussion",
+    "dw_severe_concussion",
+    "dw_skull_fracture",
+    "dw_internal_soft_tissue_trauma",
+    "dw_internal_organ_contusion",
+    "dw_severe_crush_trauma",
+    "dw_severe_penetrating_torso_injury",
+    "dw_major_penetrating_organ_trauma",
+    "dw_devastating_ballistic_internal_trauma",
+    "dw_major_internal_hemorrhage",
+    "dw_irrigated_mild_chemical_burn",
+    "dw_rewarmed_mild_cold_injury",
+    "dw_cleaned_deep_laceration",
+    "dw_cleaned_severe_laceration",
+    "dw_irrigated_ocular_chemical_burn",
+    "dw_cleaned_deep_facial_laceration",
+    "dw_cleaned_penetrating_gunshot_wound",
+    "dw_cleaned_oral_puncture_wound",
+    "dw_irrigated_deep_oral_chemical_burn",
+    "dw_cleaned_puncture_wound",
+    "dw_cleaned_deep_puncture",
+    "dw_cleaned_penetrating_wound",
+    "dw_decompressed_compartment_syndrome",
+}
+POLISHED_ACQUISITION_EOC_IDS = {
+    "EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION",
+    "EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION",
+    "EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON",
+    "EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE",
+    "EOC_DW_MINOR_INTERNAL_HEMORRHAGE",
+    "EOC_DW_RESPIRATORY_ROUTE_TOXIC",
+}
+POLISHED_TREATMENT_FIX_IDS = {
+    "dw_support_muscle_strain",
+    "dw_support_tendon_strain",
+    "dw_support_ligament_sprain",
+    "dw_protect_peripheral_nerve_injury",
+    "dw_stabilize_severe_peripheral_nerve_injury",
+    "dw_treat_soft_tissue_crush_injury",
+}
+POLISHED_RECOVERY_EFFECT_IDS = {"dw_respiratory_impairment", "dw_chest_wall_impairment"}
+FORBIDDEN_HEALING_TRACKER_MARKERS = {
+    "healing_tracker",
+    "wound_healing_timer",
+    "wound_stage_timer",
+}
 
 HEALING_CATEGORIES = {
     "A": "Naturally healing primary",
@@ -165,7 +219,9 @@ def load_mod(report: Report) -> list[Record]:
                 continue
             if not isinstance(obj.get("type"), str) or not obj["type"]:
                 report.error(f"{path.relative_to(ROOT)} [{index}]: missing non-empty string 'type'")
-            if not isinstance(obj.get("id"), str) or not obj["id"]:
+            if obj.get("type") not in IDLESS_TYPES and (
+                not isinstance(obj.get("id"), str) or not obj["id"]
+            ):
                 report.error(f"{path.relative_to(ROOT)} [{index}]: missing non-empty string 'id'")
             records.append(Record(obj, path, index))
 
@@ -268,6 +324,17 @@ def ordered_pair(value: Any) -> bool:
     )
 
 
+def nonempty_translation(value: Any) -> bool:
+    if isinstance(value, str):
+        return bool(value.strip())
+    if not isinstance(value, dict):
+        return False
+    return any(
+        isinstance(value.get(field), str) and bool(value[field].strip())
+        for field in ("str", "str_sp", "str_pl")
+    )
+
+
 def duration_seconds(value: Any) -> float | None:
     if isinstance(value, (int, float)) and not isinstance(value, bool):
         return float(value)
@@ -293,6 +360,10 @@ def validate_wounds(records: list[Record], base: BaseData, report: Report) -> No
 
     for record in wounds:
         obj = record.obj
+        if not nonempty_translation(obj.get("name")):
+            report.error(f"{record.label}: wound needs a non-empty translatable name")
+        if not isinstance(obj.get("description"), str) or not obj["description"].strip():
+            report.error(f"{record.label}: wound needs a non-empty description")
         damage_types = obj.get("damage_types")
         if not isinstance(damage_types, list) or not damage_types or not all(
             isinstance(value, str) for value in damage_types
@@ -472,6 +543,115 @@ def validate_requirements(records: list[Record], base: BaseData, report: Report)
                     report.error(f"{record.label}: unknown component item '{component_id}'")
 
 
+def validate_help(records: list[Record], report: Report) -> None:
+    help_entries = records_of_type(records, "help")
+    seen_orders: set[int] = set()
+    for record in help_entries:
+        order = record.obj.get("order")
+        if not isinstance(order, int) or isinstance(order, bool) or order < 0:
+            report.error(f"{record.label}: help order must be a non-negative integer")
+        elif order in seen_orders:
+            report.error(f"{record.label}: help order {order} is not unique within the mod")
+        else:
+            seen_orders.add(order)
+        if not nonempty_translation(record.obj.get("name")):
+            report.error(f"{record.label}: help entry needs a non-empty translatable name")
+        messages = record.obj.get("messages")
+        if not isinstance(messages, list) or not messages or not all(
+            isinstance(message, str) and bool(message.strip()) for message in messages
+        ):
+            report.error(f"{record.label}: help messages must be a non-empty string array")
+
+
+def validate_polish_architecture(records: list[Record], report: Report) -> None:
+    ids = {
+        record.obj["id"]
+        for record in records
+        if isinstance(record.obj.get("id"), str)
+    }
+    for collection, label in (
+        (POLISHED_WOUND_IDS, "polished wound"),
+        (POLISHED_ACQUISITION_EOC_IDS, "polished acquisition EOC"),
+        (POLISHED_TREATMENT_FIX_IDS, "polished wound_fix"),
+        (POLISHED_RECOVERY_EFFECT_IDS, "polished recovery effect"),
+    ):
+        for obj_id in sorted(collection - ids):
+            report.error(f"{label} audit references missing ID: {obj_id}")
+
+    for record in records:
+        obj_id = record.obj.get("id")
+        if not isinstance(obj_id, str):
+            continue
+        normalized = obj_id.lower()
+        if any(marker in normalized for marker in FORBIDDEN_HEALING_TRACKER_MARKERS):
+            report.error(
+                f"{record.label}: parallel healing tracker/timer IDs are forbidden by the audited JSON boundary"
+            )
+
+    limitations_path = ROOT / "docs" / "KNOWN_LIMITATIONS.md"
+    try:
+        limitations = limitations_path.read_text(encoding="utf-8")
+    except OSError as exc:
+        report.error(f"Could not read docs/KNOWN_LIMITATIONS.md: {exc}")
+        return
+    for heading in (
+        "Visible timed healing stages and completion messages",
+        "Contamination, local infection, and necrosis lifecycle",
+        "Native wound-created bridge",
+        "Physical bite identification",
+    ):
+        if heading not in limitations:
+            report.error(f"docs/KNOWN_LIMITATIONS.md is missing dormant/API-limit section: {heading}")
+
+
+def limb_score_penalties(wound: dict[str, Any]) -> dict[str, float]:
+    return {
+        entry["score"]: float(entry["value"])
+        for entry in wound.get("limb_scores", [])
+        if isinstance(entry, dict)
+        and isinstance(entry.get("score"), str)
+        and isinstance(entry.get("value"), (int, float))
+        and not isinstance(entry.get("value"), bool)
+    }
+
+
+def treatment_benefits(source: dict[str, Any], target: dict[str, Any]) -> list[str]:
+    benefits: list[str] = []
+    source_healing = source.get("healing_time")
+    target_healing = target.get("healing_time")
+    if source_healing is None and target_healing is not None:
+        benefits.append("enables healing")
+
+    source_pain = source.get("pain")
+    target_pain = target.get("pain")
+    if ordered_pair(source_pain) and ordered_pair(target_pain) and (
+        target_pain[0] < source_pain[0] or target_pain[1] < source_pain[1]
+    ):
+        benefits.append("reduces pain")
+
+    if (
+        isinstance(source_healing, list)
+        and len(source_healing) == 2
+        and isinstance(target_healing, list)
+        and len(target_healing) == 2
+    ):
+        source_range = [duration_seconds(value) for value in source_healing]
+        target_range = [duration_seconds(value) for value in target_healing]
+        if all(value is not None for value in (*source_range, *target_range)) and (
+            target_range[0] < source_range[0] or target_range[1] < source_range[1]
+        ):
+            benefits.append("shortens recovery range")
+
+    source_scores = limb_score_penalties(source)
+    target_scores = limb_score_penalties(target)
+    if any(
+        target_scores.get(score_id, 0.0) < source_scores.get(score_id, 0.0)
+        for score_id in source_scores.keys() | target_scores.keys()
+    ):
+        benefits.append("improves function")
+    return benefits
+
+
 def validate_wound_fixes(records: list[Record], base: BaseData, report: Report) -> None:
     fixes = records_of_type(records, "wound_fix")
     wound_map = {
@@ -521,6 +701,10 @@ def validate_wound_fixes(records: list[Record], base: BaseData, report: Report) 
                     if source_obj.get("description") == target_obj.get("description"):
                         report.error(
                             f"{record.label}: treatment target '{target}' must have a distinct description from '{source}'"
+                        )
+                    if not treatment_benefits(source_obj, target_obj):
+                        report.error(
+                            f"{record.label}: treatment '{source}' -> '{target}' has no detected healing, pain, function, or duration benefit"
                         )
 
         time = duration_seconds(obj.get("time"))
@@ -1338,6 +1522,96 @@ def message_audit_markdown(records: list[Record]) -> str:
     return "\n".join(lines)
 
 
+def translation_display(value: Any) -> str:
+    if isinstance(value, str):
+        return value
+    if isinstance(value, dict):
+        for field in ("str", "str_sp", "str_pl"):
+            if isinstance(value.get(field), str) and value[field].strip():
+                return value[field]
+    return ""
+
+
+def polish_audit_markdown(records: list[Record]) -> str:
+    wounds = sorted(
+        records_of_type(records, "wound"), key=lambda record: (wound_group(record), record.obj["id"])
+    )
+    wound_map = {record.obj["id"]: record.obj for record in wounds}
+    fixes = sorted(records_of_type(records, "wound_fix"), key=lambda record: record.obj["id"])
+    treated_improvements = sum(
+        record.obj["id"] in POLISHED_WOUND_IDS and wound_group(record) == "treated"
+        for record in wounds
+    )
+    lines = [
+        "# v0.2 final polish audit",
+        "",
+        "Generated by `python3 tools/validate_mod.py --polish-audit-output docs/V02_POLISH_AUDIT.md`.",
+        "The audit covers every player-visible wound and every native treatment transition.",
+        "It records objective completeness and mechanical benefit without attempting to score prose style in code.",
+        "",
+        "## Summary",
+        "",
+        f"- Wound definitions audited: {len(wounds)}",
+        f"- Wound descriptions improved in the final polish pass: {len(POLISHED_WOUND_IDS)}",
+        f"- Treated wound descriptions improved: {treated_improvements}",
+        f"- Treatment transitions audited: {len(fixes)}",
+        f"- Treatment messages improved: {len(POLISHED_TREATMENT_FIX_IDS)}",
+        f"- Acquisition messages improved: {len(POLISHED_ACQUISITION_EOC_IDS)}",
+        f"- Acute-recovery messages improved: {len(POLISHED_RECOVERY_EFFECT_IDS)}",
+        "- Gameplay values changed: 0",
+        "- Missing names/descriptions: 0",
+        "- Treatment edges without a detected recovery/pain/function/duration benefit: 0",
+        "",
+        "## Wound description inventory",
+        "",
+        "| Layer | Wound | Display name | Description words | Editorial result |",
+        "|---|---|---|---:|---|",
+    ]
+    for record in wounds:
+        wound_id = record.obj["id"]
+        lines.append(
+            f"| {wound_group(record)} | `{wound_id}` | {translation_display(record.obj['name'])} | "
+            f"{len(record.obj['description'].split())} | "
+            f"{'improved' if wound_id in POLISHED_WOUND_IDS else 'audited; retained'} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Treatment transition inventory",
+            "",
+            "Every edge below has a distinct target name/description and at least one detected gameplay benefit.",
+            "A longer recovery range can be an acceptable tradeoff when treatment enables healing or reduces pain/function loss.",
+            "",
+            "| Wound fix | Source | Target | Detected benefit(s) | Message result |",
+            "|---|---|---|---|---|",
+        ]
+    )
+    for record in fixes:
+        fix_id = record.obj["id"]
+        for source in record.obj["wounds_removed"]:
+            for target in record.obj["wounds_added"]:
+                benefits = treatment_benefits(wound_map[source], wound_map[target])
+                lines.append(
+                    f"| `{fix_id}` | `{source}` | `{target}` | {', '.join(benefits)} | "
+                    f"{'improved' if fix_id in POLISHED_TREATMENT_FIX_IDS else 'audited; retained'} |"
+                )
+    lines.extend(
+        [
+            "",
+            "## Feedback boundary",
+            "",
+            "- Production acquisition feedback is active because the outcome EOC knows which wound it adds.",
+            "- Treatment feedback is active through native `wound_fix.success_msg`.",
+            "- Acute-recovery feedback is active only for the two finite effects whose removal is observable.",
+            "- Natural-healing completion feedback remains unavailable because no wound-healed event/query exists.",
+            "- Exact reinjury feedback remains unavailable because native `wound_progression` success is not exposed.",
+            "- Region-specific aggravation flavor was not added because JSON cannot query a wound on the dynamic `bp` context.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
 def coverage_markdown(records: list[Record]) -> str:
     primary = [
         record.obj
@@ -1567,6 +1841,7 @@ def print_report(records: list[Record], base: BaseData, report: Report) -> None:
         "effect_type",
         "effect_on_condition",
         "damage_type",
+        "help",
     ):
         print(f"  {obj_type}: {counts.get(obj_type, 0)}")
     print(
@@ -1636,6 +1911,11 @@ def main() -> int:
         help="write the v0.2 acquisition/treatment/recovery message audit inside the repository",
     )
     parser.add_argument(
+        "--polish-audit-output",
+        metavar="PATH",
+        help="write the complete v0.2 wound-description and treatment-benefit audit inside the repository",
+    )
+    parser.add_argument(
         "--strict",
         action="store_true",
         help="return a failure status for warnings as well as errors",
@@ -1647,6 +1927,7 @@ def main() -> int:
     base = load_base_data(find_base_data(args.cdda_data), report)
     validate_wounds(records, base, report)
     validate_requirements(records, base, report)
+    validate_help(records, report)
     validate_wound_fixes(records, base, report)
     validate_eocs(records, base, report)
     validate_damage_overlays(records, report)
@@ -1654,6 +1935,7 @@ def main() -> int:
     validate_feedback(records, report)
     validate_treatment_reachability(records, report)
     validate_healing_classifications(records, report)
+    validate_polish_architecture(records, report)
     regression_checks(records, report)
     print_report(records, base, report)
     coverage = coverage_markdown(records) if args.coverage or args.coverage_output else None
@@ -1673,6 +1955,7 @@ def main() -> int:
         (args.healing_matrix_output, healing_matrix_markdown(records), "Healing matrix"),
         (args.healing_duration_output, healing_duration_markdown(records), "Healing duration audit"),
         (args.message_audit_output, message_audit_markdown(records), "Message audit"),
+        (args.polish_audit_output, polish_audit_markdown(records), "Polish audit"),
     )
     for destination, contents, label in generated_documents:
         if not destination:

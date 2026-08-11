@@ -48,6 +48,8 @@ The following are deliberately unmarked. They are useful for later balancing/pla
 
 ### v0.2 feedback
 
+- [ ] The Detailed Wounds in-game help page appears and its medical-menu keybinding renders correctly.
+- [ ] Representative untreated and treated wound descriptions clearly distinguish the injury from its stabilized recovery state.
 - [ ] Each production structural outcome prints exactly one severity-appropriate acquisition message for the avatar.
 - [ ] NPC structural injury does not print an avatar log message.
 - [ ] Smoke, irritant, toxic, and fungal respiratory routes print the matching source/severity message.

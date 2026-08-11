@@ -16,6 +16,14 @@ The mod uses five conceptual categories:
 The installed build provides no safe hook for categories 2 and 5. They remain
 documented gaps rather than being simulated with unsynchronized timers.
 
+## Final capability map
+
+- **Acquisition messages:** active where a production outcome EOC knows which wound it actually adds.
+- **Treatment messages:** active through native `wound_fix.success_msg` after successful replacement.
+- **Acute-recovery messages:** active only for finite effects whose real expiration is observable.
+- **Natural wound-healing messages:** unavailable because CDDA emits no usable wound-healed callback and exposes no wound progress query.
+- **Exact reopening messages:** unavailable because native `wound_progression` success and old/new wound context are not exposed.
+
 ## Spam policy
 
 - Native minor primary wounds rely on the wound UI and normal combat feedback.
@@ -68,3 +76,9 @@ is easier; it may not say the torso wound has healed. A repeated structural even
 may describe pain or tissue giving; it may not assert that native
 `wound_progression` succeeded. Natural completion stays silent until CDDA exposes
 a wound-healed event or equivalent query.
+
+Additional region-aware aggravation flavor is not enabled. The installed EOC API
+cannot ask whether the dynamic `bp` already carries a wound, so even a deliberately
+non-state-claiming line could not reliably distinguish an injured region from a
+newly injured one. The existing selected outcome message remains the single bounded
+feedback line for that damage-type route.

@@ -6,7 +6,7 @@
             "str": "rewarmed mild cold injury",
             "str_pl": "rewarmed mild cold injuries"
         },
-        "description": "The mildly cold-damaged tissue has been gradually rewarmed.  Circulation has returned and the area remains tender and sensitive, but no significant lasting tissue damage is apparent.",
+        "description": "The mildly cold-damaged tissue has been gradually rewarmed.  Circulation and painful sensation have returned; the area remains tender, but it is stable and able to recover normally.",
         "weight": 1,
         "limit": 3,
         "damage_types": [

@@ -91,7 +91,7 @@
         "else": [
           { "u_add_wound": "torso", "wound_id": "dw_toxic_inhalation_injury" },
           { "u_add_effect": "dw_respiratory_impairment", "duration": "6 hours", "intensity": 2 },
-          { "u_message": "A harsh chemical burn settles into your breathing.", "type": "bad" }
+          { "u_message": "A harsh chemical taste fills your mouth as your chest tightens.", "type": "bad" }
         ]
       }
     ]

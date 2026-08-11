@@ -109,7 +109,7 @@
                 "wound_id": "dw_muscle_laceration"
             },
             {
-                "u_message": "The wound cuts painfully into deeper muscle.",
+                "u_message": "A hot, pulling pain bites into the deeper muscle.",
                 "type": "warning"
             }
         ]
@@ -132,7 +132,7 @@
                 "wound_id": "dw_severe_muscle_laceration"
             },
             {
-                "u_message": "The wound tears through deep muscle tissue.",
+                "u_message": "A searing tear rips through deep muscle tissue.",
                 "type": "bad"
             }
         ]
@@ -224,7 +224,7 @@
                 "wound_id": "dw_severed_tendon"
             },
             {
-                "u_message": "A deep cut leaves part of the limb weak and unresponsive.",
+                "u_message": "The deep injury leaves part of the limb suddenly weak under load.",
                 "type": "bad"
             }
         ]
@@ -431,7 +431,7 @@
                 "wound_id": "dw_nerve_severance"
             },
             {
-                "u_message": "The deep wound leaves part of the limb numb and unresponsive.",
+                "u_message": "Sensation drops away as part of the injured limb becomes unresponsive.",
                 "type": "bad"
             }
         ]

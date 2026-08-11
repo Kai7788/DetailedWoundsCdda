@@ -50,7 +50,7 @@
         "name": {
             "str": "irrigated ocular chemical burn"
         },
-        "description": "The chemical contaminant has been thoroughly flushed from the eye.  Continued corrosive exposure has been stopped, but the ocular surface remains inflamed and damaged, leaving vision impaired and the eye painfully sensitive.",
+        "description": "The chemical contaminant has been thoroughly flushed from the eye.  Corrosive damage has stopped and the surface can begin recovering, though inflammation, painful sensitivity, and impaired vision remain.",
         "weight": 1,
         "limit": 1,
         "damage_types": [
@@ -277,7 +277,7 @@
         "name": {
             "str": "cleaned deep facial laceration"
         },
-        "description": "The deep facial wound has been thoroughly irrigated and disinfected.  Significant tissue remains divided and exposed, leaving the area painful, swollen, and mechanically impaired despite being clean.",
+        "description": "The deep facial wound has been thoroughly irrigated and disinfected.  Divided tissue remains painful, swollen, and exposed, but the clean wound is now prepared for careful closure.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

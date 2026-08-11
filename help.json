@@ -1,0 +1,15 @@
+[
+  {
+    "type": "help",
+    "order": 0,
+    "name": "Detailed Wounds",
+    "messages": [
+      "Detailed Wounds adds persistent injuries alongside ordinary limb HP.  Open the medical menu with <press_medical> to inspect them and see which treatments are currently available.",
+      "<color_light_red>Primary wounds</color> are the direct visible result of damage: bruises, cuts, punctures, burns, gunshot wounds, cold injuries, and specialized injuries to the eyes, mouth, face, head, or torso.",
+      "<color_light_red>Secondary wounds</color> are deeper structural consequences that may accompany the same hit.  A gunshot wound and a nerve injury on one body part are not duplicates: one describes the wound channel, while the other describes damage to a deeper structure.",
+      "Treatment replaces an injury with a visible recovery state such as <color_light_green>cleaned</color>, <color_light_green>sutured</color>, <color_light_green>splinted</color>, <color_light_green>irrigated</color>, or <color_light_green>repaired</color>.  The new name and description show what the intervention accomplished and what impairment remains.",
+      "Minor injuries can often heal naturally, and basic cleaning or dressing requires little expertise.  Serious wounds may not recover until they are stabilized, debrided, rewarmed, or repaired; advanced procedures require greater health care skill, suitable tools, materials, and sometimes medical proficiencies.",
+      "Further trauma can worsen eligible wounds through CDDA's native wound progression.  Native healing gradually reduces wound pain and eventually removes recoverable wounds, but the current JSON interface does not expose exact healing percentages or timed recovery stages."
+    ]
+  }
+]

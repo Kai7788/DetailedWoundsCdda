@@ -110,6 +110,23 @@ does not falsely label them as confirmed reopening.
 
 Required CDDA capability: progression of existing wounds whenever their bodypart is damaged, or a bodypart-specific `has_wound` EOC condition.
 
+## Region-aware aggravation flavor
+
+Blocked as a distinct conditional message.
+
+Production damage hooks know the current `bp`, but this build exposes no condition
+that asks whether that dynamic bodypart already carries a wound. `u_pick_bodypart`
+is an interactive selector for a bodypart with any wound; it cannot safely test the
+damage-event bodypart or identify its wound state.
+
+The existing production outcome line is deliberately sensation-based and can fit
+either a new structural injury or repeated trauma. No additional “injured region”
+message is rolled, avoiding both false claims and duplicate log noise.
+
+Required CDDA capability: a non-interactive `u_has_wound`/`npc_has_wound` condition
+accepting wound ID and a bodypart context variable, or a progression event carrying
+old/new wound and bodypart context.
+
 ## Nonstandard and bionic limbs
 
 Production structural hooks use explicit vanilla flesh IDs (`arm_l/r`, `hand_l/r`, `leg_l/r`, `foot_l/r`, and `torso`). Full bionic replacement limbs use different IDs in the audited data and are therefore excluded safely.

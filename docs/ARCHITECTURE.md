@@ -20,6 +20,10 @@ v0.2 adds feedback only at transitions the JSON layer owns or directly observes.
 The message rules and exact coverage are documented in [Message design](MESSAGE_DESIGN.md)
 and [the generated message audit](V02_MESSAGE_AUDIT.md).
 
+The mod also contributes one native JSON `help` page. It explains primary versus
+secondary wounds, treatment states, natural recovery, and reinjury without adding
+an EOC, popup, or recurring tutorial state.
+
 ## Damage paths
 
 ```text

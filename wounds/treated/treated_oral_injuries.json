@@ -5,7 +5,7 @@
     "name": {
       "str": "cleaned oral puncture wound"
     },
-    "description": "The small puncture in the mouth has been carefully flushed.  Mild tenderness remains, but loose debris and accessible contamination have been removed.",
+    "description": "The small puncture in the mouth has been carefully flushed.  Mild tenderness remains, but debris and accessible contamination have been removed and the clean tissue can now close normally.",
     "weight": 1,
     "limit": 2,
     "damage_types": [
@@ -466,7 +466,7 @@
     "name": {
       "str": "irrigated deep oral chemical burn"
     },
-    "description": "The corrosive material has been flushed from the deep oral injury.  Raw and swollen tissue still impairs eating and breathing, but continuing chemical damage has been stopped.",
+    "description": "The corrosive material has been flushed from the deep oral injury.  Raw swelling still impairs eating and breathing, but continuing chemical damage has stopped and the tissue can begin a guarded recovery.",
     "weight": 1,
     "limit": 1,
     "damage_types": [

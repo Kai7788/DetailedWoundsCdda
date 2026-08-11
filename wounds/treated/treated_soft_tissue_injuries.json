@@ -1381,7 +1381,7 @@
         "name": {
             "str": "decompressed compartment syndrome"
         },
-        "description": "The dangerously elevated pressure within the injured tissue compartment has been relieved.  Muscle, nerve, and vascular tissue remain badly traumatized, but ongoing pressure-related destruction has been stopped.",
+        "description": "The dangerously elevated pressure within the injured tissue compartment has been relieved.  Muscle, nerve, and vascular tissue remain badly traumatized, but ongoing compression has stopped and guarded recovery can begin.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

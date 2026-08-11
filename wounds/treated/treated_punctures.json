@@ -37,7 +37,7 @@
         "name": {
             "str": "cleaned puncture wound"
         },
-        "description": "The puncture wound has been thoroughly flushed and disinfected.  The narrow channel remains painful and damaged beneath the surface, but most accessible contamination has been removed.",
+        "description": "The puncture wound has been thoroughly flushed and disinfected.  Its narrow channel remains tender beneath the surface, but accessible contamination has been removed and the protected tissue can now recover.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -103,7 +103,7 @@
         "name": {
             "str": "cleaned deep puncture wound"
         },
-        "description": "The deep wound channel has been carefully irrigated and disinfected.  Significant tissue damage remains beneath the small surface opening, and movement can still disturb the injured tissue.",
+        "description": "The deep wound channel has been carefully irrigated and disinfected.  Significant hidden damage remains and movement can still disturb it, but the cleaner injury is protected well enough to begin recovery.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -169,7 +169,7 @@
         "name": {
             "str": "cleaned penetrating wound"
         },
-        "description": "The penetrating wound has been irrigated and disinfected as thoroughly as possible.  The long wound channel remains seriously damaged, and deeper structures may still be injured despite the cleaner external wound.",
+        "description": "The penetrating wound has been irrigated and disinfected as thoroughly as possible.  The long channel and deeper structures remain seriously damaged, but the clean, protected injury is now in a safer condition for recovery.",
         "weight": 1,
         "limit": 2,
         "damage_types": [

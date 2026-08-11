@@ -290,7 +290,7 @@
         "name": {
             "str": "cleaned deep laceration"
         },
-        "description": "The deep wound has been thoroughly irrigated and disinfected.  Significant tissue remains exposed and damaged, and movement continues to pull painfully at the open wound.",
+        "description": "The deep wound has been thoroughly irrigated and disinfected.  Significant tissue remains exposed and movement still pulls painfully at it, but the cleaner wound is prepared for closure or protected natural recovery.",
         "weight": 1,
         "limit": 2,
         "damage_types": [
@@ -488,7 +488,7 @@
         "name": {
             "str": "cleaned severe laceration"
         },
-        "description": "The extensive wound has been aggressively irrigated and disinfected.  Large areas of tissue remain exposed and badly damaged, making the injury painful and mechanically disruptive despite being clean.",
+        "description": "The extensive wound has been aggressively irrigated and disinfected.  Large areas remain open, painful, and mechanically disruptive, but debris has been removed and the injury is prepared for definitive closure.",
         "weight": 1,
         "limit": 1,
         "damage_types": [

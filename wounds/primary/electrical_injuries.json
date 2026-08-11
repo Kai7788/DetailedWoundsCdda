@@ -5,7 +5,7 @@
     "name": {
       "str": "minor electrical burn"
     },
-    "description": "Electrical current has scorched a small area of skin.  The tissue is reddened and tender around the point of contact.",
+    "description": "Electrical current has scorched a small area of skin.  The tissue is reddened and tender around the contact point, with faint tingling lingering beneath the burn.",
     "weight": 20,
     "limit": 3,
     "damage_types": [

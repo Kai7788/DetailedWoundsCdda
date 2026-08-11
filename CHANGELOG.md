@@ -6,6 +6,10 @@
 - Added restrained recovery messages when finite acute respiratory and chest-wall impairment actually expires.
 - Audited all 109 native treatment success messages and replaced generic chest-support text with procedure-specific feedback.
 - Added a documented anti-spam and non-clinical message policy plus generated feedback coverage auditing.
+- Audited all 256 wound descriptions and refined 29 weak or overly generic states, including 13 treated recovery states.
+- Refined six acquisition messages, six structural treatment messages, and both finite acute-recovery messages for clearer family identity.
+- Added an in-game Detailed Wounds help page explaining primary wounds, secondary trauma, treatment states, natural recovery, and reinjury.
+- Added generated treatment-benefit and prose-completeness auditing; all 109 treatment transitions retain at least one mechanical or recovery benefit.
 - Audited the proposed visible healing lifecycle against installed CDDA commit `251cf6cf23a0277d5118b67bee0efc9625c6cfeb`.
 - Added complete healing classification and unchanged-duration reports for all 256 existing wounds.
 - Extended strict validation so every wound has one unambiguous healing category and production feedback cannot silently lose its messages.

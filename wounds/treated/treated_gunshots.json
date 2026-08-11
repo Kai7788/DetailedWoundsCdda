@@ -103,7 +103,7 @@
         "name": {
             "str": "cleaned penetrating gunshot wound"
         },
-        "description": "The penetrating ballistic wound has been thoroughly irrigated, disinfected, and covered with a substantial dressing.  The wound channel remains deep and significant tissue damage persists beneath the surface.",
+        "description": "The penetrating ballistic wound has been thoroughly irrigated, disinfected, and covered with a substantial dressing.  Deep tissue disruption remains along the channel, but the cleaned and protected injury can now recover more safely.",
         "weight": 1,
         "limit": 2,
         "damage_types": [

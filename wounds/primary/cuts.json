@@ -36,7 +36,7 @@
     "name": {
       "str": "shallow cut"
     },
-    "description": "The skin has been split, leaving a narrow superficial wound.  The tissue beneath appears largely intact.",
+    "description": "The skin has been split, leaving a narrow superficial wound.  The exposed edges sting and pull slightly with movement, though the tissue beneath appears largely intact.",
     "weight": 18,
     "limit": 2,
     "damage_types": [

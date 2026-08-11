@@ -48,7 +48,7 @@
     "name": {
       "str": "blunt ocular trauma"
     },
-    "description": "A strong blunt impact has injured the eye and surrounding tissue.  Swelling, deep aching, and visual disturbance are likely.",
+    "description": "A strong blunt impact has injured the eye and surrounding tissue.  The eye waters around deep aching and swelling, while focus and visual clarity come and go.",
     "weight": 12,
     "limit": 1,
     "damage_types": [
@@ -91,7 +91,7 @@
     "name": {
       "str": "severe ocular trauma"
     },
-    "description": "The eye has suffered severe blunt trauma.  The surrounding tissue is badly swollen and the internal structures of the eye may be damaged.",
+    "description": "The eye has suffered severe blunt trauma.  Heavy swelling and throbbing pressure distort vision, and even small eye movements provoke sharp pain.",
     "weight": 5,
     "limit": 1,
     "damage_types": [
@@ -177,7 +177,7 @@
     "name": {
       "str": "ocular laceration"
     },
-    "description": "A sharp object has cut into the tissues of the eye.  The injury is painful and potentially damaging to vision.",
+    "description": "A sharp object has cut into the tissues of the eye.  Tears stream from the painfully open injury, and vision through the damaged eye is blurred and unreliable.",
     "weight": 10,
     "limit": 1,
     "damage_types": [
@@ -221,7 +221,7 @@
       "str": "penetrating ocular injury",
       "str_pl": "penetrating ocular injuries"
     },
-    "description": "A penetrating object has entered the eye and damaged delicate internal structures.  The injury is extremely serious and threatens normal vision.",
+    "description": "A penetrating object has entered the eye and damaged delicate internal structures.  Sharp pain, uncontrollable watering, and severe visual distortion make the injured eye difficult to use.",
     "weight": 4,
     "limit": 1,
     "damage_types": [
@@ -820,7 +820,7 @@
     "name": {
       "str": "concussion"
     },
-    "description": "A hard impact has violently shaken the head.  The injury leaves a persistent ache and may interfere with normal neurological function.",
+    "description": "A hard impact has violently shaken the head.  Persistent headache, dizziness, and a foggy sense of concentration make quick reactions and clear thought more difficult.",
     "weight": 5,
     "limit": 1,
     "damage_types": [
@@ -855,7 +855,7 @@
     "name": {
       "str": "severe concussion"
     },
-    "description": "A violent impact has caused significant traumatic injury to the head.  The damage is serious and recovery is likely to be prolonged.",
+    "description": "A violent impact has badly shaken the brain.  A pounding headache, waves of dizziness, nausea, and confused concentration make normal activity difficult and recovery likely to be prolonged.",
     "weight": 3,
     "limit": 1,
     "damage_types": [
@@ -890,7 +890,7 @@
     "name": {
       "str": "skull fracture"
     },
-    "description": "The force of the impact has fractured the skull.  The injury is severe and the surrounding tissue is badly traumatized.",
+    "description": "The force of the impact has fractured the skull.  Deep focal pain and heavy swelling surround the break, while movement sends a sickening ache through the injured head.",
     "weight": 2,
     "limit": 1,
     "damage_types": [

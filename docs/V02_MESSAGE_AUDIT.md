@@ -17,11 +17,11 @@ effect `remove_message` are avatar-facing; NPC recovery remains silent.
 | EOC | Wound outcome(s) | Message(s) |
 |---|---|---|
 | `EOC_DW_MAJOR_INTERNAL_HEMORRHAGE` | `dw_major_internal_hemorrhage` | Something is badly wrong inside your torso.  You feel deep pain and growing weakness. |
-| `EOC_DW_MINOR_INTERNAL_HEMORRHAGE` | `dw_minor_internal_hemorrhage` | A deep ache develops inside your torso. |
+| `EOC_DW_MINOR_INTERNAL_HEMORRHAGE` | `dw_minor_internal_hemorrhage` | A dull pressure gathers deep inside your torso. |
 | `EOC_DW_RESPIRATORY_ROUTE_FUNGAL` | `dw_fungal_airway_exposure`, `dw_fungal_respiratory_irritation`, `dw_fungal_lung_involvement` | A strange irritation settles into your airways.<br>Your chest tightens as the fungal irritation spreads.<br>Your lungs feel heavy and raw as the fungal exposure takes hold. |
 | `EOC_DW_RESPIRATORY_ROUTE_IRRITANT` | `dw_upper_airway_irritation` | Your throat burns and your eyes water as you cough. |
 | `EOC_DW_RESPIRATORY_ROUTE_SMOKE` | `dw_mild_smoke_inhalation`, `dw_smoke_inhalation_injury`, `dw_severe_smoke_inhalation` | Smoke catches in your throat and makes you cough.<br>Your airways burn, and each breath triggers a harsh cough.<br>You struggle for breath as smoke sears your lungs. |
-| `EOC_DW_RESPIRATORY_ROUTE_TOXIC` | `dw_severe_toxic_lung_injury`, `dw_toxic_inhalation_injury` | Your breathing turns labored as the toxic fumes take hold.<br>A harsh chemical burn settles into your breathing. |
+| `EOC_DW_RESPIRATORY_ROUTE_TOXIC` | `dw_severe_toxic_lung_injury`, `dw_toxic_inhalation_injury` | Your breathing turns labored as the toxic fumes take hold.<br>A harsh chemical taste fills your mouth as your chest tightens. |
 | `EOC_DW_SIGNIFICANT_INTERNAL_HEMORRHAGE` | `dw_significant_internal_hemorrhage` | A spreading pressure and deep pain build inside your torso. |
 | `EOC_DW_STRUCTURAL_ADD_BALLISTIC_INTERNAL_TRAUMA` | `dw_ballistic_internal_trauma` | The shot leaves a deep burning pain inside your torso. |
 | `EOC_DW_STRUCTURAL_ADD_BONE_CONTUSION` | `dw_bone_contusion` | A deep ache settles into the struck limb. |
@@ -45,11 +45,11 @@ effect `remove_message` are avatar-facing; NPC recovery remains silent.
 | `EOC_DW_STRUCTURAL_ADD_MAJOR_PENETRATING_ORGAN_TRAUMA` | `dw_major_penetrating_organ_trauma` | Something deep inside you gives under the penetrating blow. |
 | `EOC_DW_STRUCTURAL_ADD_MULTIPLE_RIB_FRACTURES` | `dw_multiple_rib_fractures` | Several points in your chest flare with sharp pain. |
 | `EOC_DW_STRUCTURAL_ADD_MUSCLE_CONTUSION` | `dw_muscle_contusion` | The struck muscle begins to ache. |
-| `EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION` | `dw_muscle_laceration` | The wound cuts painfully into deeper muscle. |
+| `EOC_DW_STRUCTURAL_ADD_MUSCLE_LACERATION` | `dw_muscle_laceration` | A hot, pulling pain bites into the deeper muscle. |
 | `EOC_DW_STRUCTURAL_ADD_MUSCLE_RUPTURE` | `dw_muscle_rupture` | The muscle gives violently with intense pain. |
 | `EOC_DW_STRUCTURAL_ADD_MUSCLE_STRAIN` | `dw_muscle_strain` | The muscle pulls painfully under the impact. |
 | `EOC_DW_STRUCTURAL_ADD_NERVE_CONTUSION` | `dw_nerve_contusion` | Tingling pain flashes through the struck limb. |
-| `EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE` | `dw_nerve_severance` | The deep wound leaves part of the limb numb and unresponsive. |
+| `EOC_DW_STRUCTURAL_ADD_NERVE_SEVERANCE` | `dw_nerve_severance` | Sensation drops away as part of the injured limb becomes unresponsive. |
 | `EOC_DW_STRUCTURAL_ADD_OPEN_FRACTURE` | `dw_open_fracture` | Bone and tissue give way under the impact. |
 | `EOC_DW_STRUCTURAL_ADD_PARTIAL_LIGAMENT_TEAR` | `dw_partial_ligament_tear` | The joint buckles as supporting tissue tears. |
 | `EOC_DW_STRUCTURAL_ADD_PARTIAL_MUSCLE_TEAR` | `dw_partial_muscle_tear` | Something tears painfully in the struck muscle. |
@@ -57,11 +57,11 @@ effect `remove_message` are avatar-facing; NPC recovery remains silent.
 | `EOC_DW_STRUCTURAL_ADD_PERIPHERAL_NERVE_INJURY` | `dw_peripheral_nerve_injury` | A sharp, electric pain shoots through the injured limb. |
 | `EOC_DW_STRUCTURAL_ADD_RIB_CONTUSION` | `dw_rib_contusion` | The blow leaves your ribs deeply sore. |
 | `EOC_DW_STRUCTURAL_ADD_RIB_FRACTURE` | `dw_rib_fracture` | Something gives in your ribs with a stab of pain. |
-| `EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON` | `dw_severed_tendon` | A deep cut leaves part of the limb weak and unresponsive. |
+| `EOC_DW_STRUCTURAL_ADD_SEVERED_TENDON` | `dw_severed_tendon` | The deep injury leaves part of the limb suddenly weak under load. |
 | `EOC_DW_STRUCTURAL_ADD_SEVERE_BALLISTIC_INTERNAL_TRAUMA` | `dw_severe_ballistic_internal_trauma` | The shot sends a wave of searing pain through your torso. |
 | `EOC_DW_STRUCTURAL_ADD_SEVERE_CHEST_WALL_TRAUMA` | `dw_severe_chest_wall_trauma` | Your chest feels unstable, and every breath hurts. |
 | `EOC_DW_STRUCTURAL_ADD_SEVERE_CRUSH_TRAUMA` | `dw_severe_crush_trauma` | Crushing pain tears through your torso. |
-| `EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION` | `dw_severe_muscle_laceration` | The wound tears through deep muscle tissue. |
+| `EOC_DW_STRUCTURAL_ADD_SEVERE_MUSCLE_LACERATION` | `dw_severe_muscle_laceration` | A searing tear rips through deep muscle tissue. |
 | `EOC_DW_STRUCTURAL_ADD_SEVERE_PENETRATING_TORSO_INJURY` | `dw_severe_penetrating_torso_injury` | The penetrating blow leaves a deep, searing pain in your torso. |
 | `EOC_DW_STRUCTURAL_ADD_SEVERE_PERIPHERAL_NERVE_INJURY` | `dw_severe_peripheral_nerve_injury` | Burning pain and numbness race through the injured limb. |
 | `EOC_DW_STRUCTURAL_ADD_SEVERE_SOFT_TISSUE_CRUSH` | `dw_severe_soft_tissue_crush_injury` | The limb is compressed with brutal, deep tissue pain. |
@@ -142,7 +142,7 @@ effect `remove_message` are avatar-facing; NPC recovery remains silent.
 | `dw_irrigate_ocular_chemical_burn` | You thoroughly flush the chemically injured eye. |
 | `dw_irrigate_oral_chemical_burn` | You thoroughly irrigate the oral chemical burn. |
 | `dw_irrigate_severe_corrosive_oral_injury` | You repeatedly irrigate the severe corrosive oral injury. |
-| `dw_protect_peripheral_nerve_injury` | You protect the injured peripheral nerve. |
+| `dw_protect_peripheral_nerve_injury` | You pad the injured limb and protect the damaged nerve from further pressure. |
 | `dw_reduce_joint_dislocation` | You reduce and immobilize the dislocated joint. |
 | `dw_reduce_joint_subluxation` | You reduce and stabilize the subluxated joint. |
 | `dw_repair_ligament_rupture` | You repair and immobilize the ruptured ligament. |
@@ -170,26 +170,26 @@ effect `remove_message` are avatar-facing; NPC recovery remains silent.
 | `dw_stabilize_multiple_rib_fractures` | You stabilize the injured ribs with firm chest support. |
 | `dw_stabilize_open_fracture` | You clean, cover, and immobilize the open fracture. |
 | `dw_stabilize_severe_chest_wall_trauma` | You stabilize the damaged chest wall. |
-| `dw_stabilize_severe_peripheral_nerve_injury` | You stabilize the severe peripheral nerve injury. |
+| `dw_stabilize_severe_peripheral_nerve_injury` | You stabilize the limb and protect the severely injured nerve pathway. |
 | `dw_stabilize_sternal_fracture` | You secure support across the injured sternum. |
 | `dw_support_cracked_rib` | You bind and support the cracked rib. |
-| `dw_support_ligament_sprain` | You support the sprained ligament. |
-| `dw_support_muscle_strain` | You support the strained muscle. |
+| `dw_support_ligament_sprain` | You brace the sprained joint and limit stress on its ligaments. |
+| `dw_support_muscle_strain` | You wrap and support the strained muscle, limiting painful movement. |
 | `dw_support_partial_muscle_tear` | You support the partially torn muscle. |
 | `dw_support_rib_fracture` | You secure support around the fractured rib. |
-| `dw_support_tendon_strain` | You support the strained tendon. |
+| `dw_support_tendon_strain` | You support the injured tendon and limit strain across it. |
 | `dw_suture_deep_facial_laceration` | You carefully suture and protect the deep facial laceration. |
 | `dw_suture_deep_laceration` | You carefully suture and dress the deep laceration. |
 | `dw_suture_laceration` | You carefully close and dress the laceration. |
 | `dw_suture_severe_laceration` | You carefully close and dress the severe laceration. |
-| `dw_treat_soft_tissue_crush_injury` | You protect and support the soft tissue crush injury. |
+| `dw_treat_soft_tissue_crush_injury` | You protect the crushed tissue and secure support around the swollen limb. |
 
 ## Safe recovery milestones
 
 | Effect | Removal message | Meaning |
 |---|---|---|
-| `dw_chest_wall_impairment` | The tightness in your injured chest begins to ease. | The finite acute chest restriction expired; the longer wound may remain. |
-| `dw_respiratory_impairment` | Your breathing becomes easier. | The finite acute breathing restriction expired; the longer wound may remain. |
+| `dw_chest_wall_impairment` | Breathing becomes less restricted as the acute tightness in your injured chest eases. | The finite acute chest restriction expired; the longer wound may remain. |
+| `dw_respiratory_impairment` | Breathing comes more easily as the acute airway irritation subsides. | The finite acute breathing restriction expired; the longer wound may remain. |
 
 ## Deliberate gaps
 

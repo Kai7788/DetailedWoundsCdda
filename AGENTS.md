@@ -62,7 +62,10 @@ present. A different build can be selected with `--cdda-data PATH`. Use
 Use `--healing-matrix-output docs/HEALING_MATRIX.md` and
 `--healing-duration-output docs/HEALING_DURATION_AUDIT.md` to regenerate the
 healing audits. Use `--message-audit-output docs/V02_MESSAGE_AUDIT.md` to
-regenerate the feedback coverage report.
+regenerate the feedback coverage report. Use
+`--polish-audit-output docs/V02_POLISH_AUDIT.md` to regenerate the complete wound
+description and treatment-benefit audit. Mod help pages use the id-less CDDA
+`help` object schema and are intentionally included in strict validation.
 
 Do not mark runtime checks passed without an actual game test. Headless
 `--check-mods` confirms loading and references, not combat frequency or balance.

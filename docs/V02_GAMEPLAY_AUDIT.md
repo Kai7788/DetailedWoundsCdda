@@ -49,6 +49,10 @@ disappears.
 
 ## Cross-system findings
 
+- All 256 wound names and descriptions were reviewed; 29 descriptions were refined
+  where symptoms, severity, or treated stability were genuinely vague.
+- Thirteen of those refinements are treated wounds, making cleaning, irrigation,
+  rewarming, protection, closure preparation, or decompression more explicit.
 - All 109 native wound fixes have non-empty success messages.
 - Every source/target pair has a distinct display name and description, so treatment
   produces a visibly different state rather than a hidden ID-only replacement.

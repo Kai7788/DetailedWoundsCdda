@@ -23,6 +23,34 @@ Detailed Wounds is a JSON-only Cataclysm: Dark Days Ahead mod that adds persiste
 
 Secondary routing deliberately selects at most one result per damage type in a hit. Low damage usually produces no structural wound; higher post-armor damage increases both the chance and severity.
 
+## How Detailed Wounds works
+
+```text
+Take damage
+→ receive a visible primary wound
+→ possibly receive one deeper structural injury
+→ inspect the medical menu
+→ apply an appropriate treatment
+→ see the cleaned, closed, supported, or repaired state
+→ recover on CDDA's native wound timer
+```
+
+Primary wounds describe the direct injury. Secondary wounds describe deeper damage
+caused by the same event, so two wounds on one bodypart are not necessarily
+duplicates. For example:
+
+- a cut can become `laceration → cleaned laceration → sutured laceration`;
+- a gunshot wound may appear alongside a tendon or nerve injury when the projectile
+  damages deeper structures;
+- a severe cold injury may remain unable to heal until controlled rewarming or
+  debridement produces a recoverable treated state.
+
+Minor scratches and bruises usually recover without expert care. Serious fractures,
+deep tissue destruction, ruptures, and similar injuries may require stabilization
+or repair before their native recovery timer can run. Further damage can worsen
+eligible injuries. An in-game **Detailed Wounds** help page is also appended to
+CDDA's normal help menu.
+
 ## Installation
 
 Place this directory in CDDA's `mods` directory and enable **Detailed Wounds** (`detailed_wounds`) when creating a world. It depends only on `dda`.
@@ -75,7 +103,8 @@ Regenerate the healing audits with:
 python3 tools/validate_mod.py --strict \
   --healing-matrix-output docs/HEALING_MATRIX.md \
   --healing-duration-output docs/HEALING_DURATION_AUDIT.md \
-  --message-audit-output docs/V02_MESSAGE_AUDIT.md
+  --message-audit-output docs/V02_MESSAGE_AUDIT.md \
+  --polish-audit-output docs/V02_POLISH_AUDIT.md
 ```
 
 The validator checks JSON structure, duplicate IDs, CDDA references, wound and treatment graphs, permanently non-healing wounds, damage overlays, EOC graphs, weighted distributions, progression relationships, limb-score anatomy, reserved data, and known regressions.
@@ -96,6 +125,7 @@ The validator checks JSON structure, duplicate IDs, CDDA references, wound and t
 - [v0.2 gameplay-feel audit](docs/V02_GAMEPLAY_AUDIT.md)
 - [Message design policy](docs/MESSAGE_DESIGN.md)
 - [Generated message coverage](docs/V02_MESSAGE_AUDIT.md)
+- [Final wound/treatment polish audit](docs/V02_POLISH_AUDIT.md)
 - [Changelog](CHANGELOG.md)
 
 Visible timed healing stages/exact completion messages, distinct native-progression success messages, the contamination/infection treatment lifecycle, generic physical bite identification, thermal-airway source detection, and treated-suture reopening remain explicitly limited by the installed JSON API. They are not claimed as working features.
